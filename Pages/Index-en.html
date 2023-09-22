@@ -5,17 +5,23 @@
 	<title>FOAEA - Justice Canada</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
 
 	<!-- TODO ../wwwroot To be replace with ~/ once we transition to actual front end -->
 	<!-- TODO Probably DL all stylesheet and image that links to web address -->
 
-
-	<link href="../wwwroot/favicon.ico" rel="icon" type="image/x-icon" data-filename="my-mobile-favicon.ico" data-rel="default-favicon">
+	<link href="../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
+		  data-filename="my-mobile-favicon.ico"
+		  data-path="../wwwroot/"
+		  data-rel="apple-touch-icon-precomposed"
+		  data-sizes="57x57">
 
 
 	<link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
 
+
 	<link rel="stylesheet" href="../wwwroot/lib/GCWeb/css/theme.min.css">
+	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
 
 
 	<noscript>
@@ -26,6 +32,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
 	<link rel="stylesheet" href="../wwwroot/css/site.css" />
+
 
 </head>
 <body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
@@ -202,8 +209,6 @@
 						<div class="row">
 							<h1 id="wb-cont" property="name">Home</h1>
 						</div>
-					</div>
-					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 								<h2>Search</h2>
@@ -393,158 +398,361 @@
 
 							</div>
 						</div>
+
 						<div class="row">
 							<div class="line"></div>
-
-							<div class="col-3">
-
-								<div class="card text-left">
+							
+							<div class="col-4">
+								<div class="card">
 									<div class="card-header">
-										<div class="ml-auto justify-content-end">
-											<div class="card-header bg-transparent border-bottom-0">
-												<button data-bs-toggle="collapse" data-bs-target="#closeablecard" type="button" class="close" aria-controls="closeablecard" aria-label="Close">
-													<i class="bi bi-justify"></i>
-												</button>
-
-												<span class="nav nav-pills card-header-pills">TO1 Applications</span>
+										SIN Not Confirmed
+									</div>
+									<div class="row d-flex justify-content-center text-center">
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
+												<a href="#" class="btn btn-primary">Total</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
+												<a href="#" class="btn btn-primary">New</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
 											</div>
 										</div>
 									</div>
-									<div class="card-body" id="closeablecard">
-										<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Total</a>
-												</div>
-												<div class="col-auto">
-													<i class="text-success bi bi-arrow-up"></i>
-													<span class="fw-bold pe-3">10</span>
-												</div>
-											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Affidavit #1011</a>
-													<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-success fw-bold pe-3">Edit</span>
-												</div>
-											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">License Denial Application #932</a>
-													<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-danger fw-bold pe-3">Cancelled/Terminated</span>
-												</div>
-											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-													<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-warning fw-bold pe-3">Transfer</span>
-												</div>
-											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">License Denial Affidavit #795</a>
-													<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-warning fw-bold pe-3">De-linked/Linked</span>
-												</div>
-											</div>
-										</div>
-										<!--<div class="row">
-		<div class="col-3">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">Total</a>
-		</div>
-		<div class="col-2">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">New</a>
-		</div>
 
-		<div class="col-1">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">Linked</a>
-		</div>
-		<div class="col-1">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">Non-Linked</a>
-		</div>
-		<div class="col-1">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">ESDC Only</a>
-		</div>
-		<div class="col-1">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">CRA Only</a>
-		</div>
-		<div class="col-1">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">Both</a>
-		</div>
-		<div class="col-1">
-			<p class="card-title">10</p>
-			<a href="#" class="btn btn-primary">Last 7 days</a>
-		</div>
-	</div>-->
-
-									</div>
 								</div>
 							</div>
 
-
-							<div class="col-6">
-								<div class="card text-center">
+							<div class="col-4">
+								<div class="card">
 									<div class="card-header">
-										<ul class="nav nav-pills card-header-pills">
-											<li class="nav-item">
-												<a class="nav-link active" href="#">Active</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link" href="#">Link</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link disabled">Disabled</a>
-											</li>
-										</ul>
+										SIN Pending
 									</div>
-									<div class="card-body">
-										<h5 class="card-title nav-pills  card-header-pills">10</h5>
-										<p class="card-text">10</p>
-										<a href="#" class="btn btn-primary">Go somewhere</a>
+									<div class="row d-flex justify-content-center text-center">
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
+												<a href="#" class="btn btn-primary">Total</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
+												<a href="#" class="btn btn-primary">New</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-4">
+								<div class="card">
+									<div class="card-header">
+										Cancelled Applications
+									</div>
+									<div class="row d-flex justify-content-center text-center">
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-danger bi bi-arrow-up"></i>6</h2>
+												<a href="#" class="btn btn-primary">Total</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
+												<a href="#" class="btn btn-primary">New</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
+												<a href="#" class="btn btn-primary">Last 2 week</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
+						<div class="row">
+							<div class="line"></div>
+							<div class="col-5">
+								<div class="card">
+									<div class="card-header">
+										TO1 Applications
+									</div>
+									<div class="row d-flex justify-content-center text-center">
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
+												<a href="#" class="btn btn-primary">Total</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
+												<a href="#" class="btn btn-primary">New</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-1">
+								<div class="card text-center">
+									<div class="card-header">
+										Submitted Today
+									</div>
+
+									<div class="card-body">
+										<h2 class="card-title nav-pills  card-header-pills display-1">10</h2>
+										<a href="#" class="btn btn-primary">Total</a>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-6">
+								<div class="card">
+									<div class="card-header">
+										Orphaned T01 Applications
+									</div>
+									<div class="row d-flex justify-content-center text-center">
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
+												<a href="#" class="btn btn-primary">Total</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
+												<a href="#" class="btn btn-primary">New</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="display-1 card-title nav-pills card-header-pills">5</h2>
+												<a href="#" class="btn btn-primary">New</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">9</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">10</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+
 						<div class="row">
 							<div class="line"></div>
 
 							<h2>Lorem Ipsum Dolor</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+							<div class="wb-frmvld provisional wb-steps">
+								<form action="#" method="get" id="steps-example">
+									<fieldset id="client">
+										<legend>Client Information</legend>
+										<div>
+											<div class="form-group">
+												<label for="firstname" class="required"><span class="field-name">First name</span></label>
+												<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required">
+											</div>
+											<div class="form-group">
+												<label for="lastname" class="required"><span class="field-name">Last name</span></label>
+												<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
+											</div>
+											<div class="form-group">
+												<label for="dateOfBirth" class="required"><span class="field-name">Date of Birth</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+												<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
+											</div>
+										</div>
+									</fieldset>
+									<fieldset id="contact">
+										<legend>Contact Information</legend>
+										<div>
+											<div class="form-group">
+												<label for="preferredNumber" class="required">Preferred: <span class="field-name">Phone Number</span></label>
+												<input class="form-control" id="preferredNumber" name="preferredNumber" type="tel" data-rule-phoneus="true" required="required">
+											</div>
+											<div class="form-group">
+												<label for="secondaryNumber">Secondary: <span class="field-name">Phone Number</span></label>
+												<input class="form-control" id="secondaryNumber" name="secondaryNumber" type="tel" data-rule-phoneus="true">
+											</div>
+											<div class="form-group">
+												<label for="email"><span class="field-name">Email Address</span> (test@domain)</label>
+												<input class="form-control" id="email" name="email" type="email">
+											</div>
+										</div>
+									</fieldset>
+									<fieldset id="questionaire">
+										<legend>Ethics Questionnaire</legend>
+										<div>
+											<p><small>For each of the following examples, indicate whether or not you feel that there is an ethical issue.</small></p>
+											<fieldset class="subfields">
+												<legend><span class="field-name">Ethics 1</span>: You pay $10.00 bucks for a purchase, but receive change for $20.00 bucks. Would you keep the extra money?</legend>
+												<div class="radio">
+													<label for="defNot-1"><input type="radio" name="ethics1" value="defNot-1" id="defNot-1">&#160;Definitely Not</label>&#160;
+													<label for="probNot-1"><input type="radio" name="ethics1" value="probNot-1" id="probNot-1">&#160;Probably Not</label>&#160;
+													<label for="maybe-1"><input type="radio" name="ethics1" value="maybe-1" id="maybe-1">&#160;Maybe (Not Sure)</label>&#160;
+													<label for="probably-1"><input type="radio" name="ethics1" value="probably-1" id="probably-1">&#160;Probably</label>&#160;
+													<label for="definitely-1"><input type="radio" name="ethics1" value="definitely-1" id="definitely-1">&#160;Definitely</label>
+												</div>
+											</fieldset>
+											<fieldset class="subfields">
+												<legend><span class="field-name">Ethics 2</span>: You need a software, but can't wait for office to make a decision. Against license restrictions would you download it?</legend>
+												<div class="radio">
+													<label for="defNot-2"><input type="radio" name="ethics2" value="defNot-2" id="defNot-2">&#160;Definitely Not</label>&#160;
+													<label for="probNot-2"><input type="radio" name="ethics2" value="probNot-2" id="probNot-2">&#160;Probably Not</label>&#160;
+													<label for="maybe-2"><input type="radio" name="ethics2" value="maybe-2" id="maybe-2">&#160;Maybe (Not Sure)</label>&#160;
+													<label for="probably-2"><input type="radio" name="ethics2" value="probably-2" id="probably-2">&#160;Probably</label>&#160;
+													<label for="definitely-2"><input type="radio" name="ethics2" value="definitely-2" id="definitely-2">&#160;Definitely</label>
+												</div>
+											</fieldset>
+										</div>
+									</fieldset>
+									<input type="submit" name="submit" value="Submit" class="btn btn-primary">
+								</form>
+							</div>
 						</div>
+
 					</div>
+				
 				</div>
 
 			</main>
@@ -556,7 +764,7 @@
 						<nav>
 							<h3>Department of Justice Canada</h3>
 							<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
-								<li><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782">Contact us</a></li>
+								<li><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782" class="wb-exitscript">Contact us</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -567,8 +775,12 @@
 						<nav>
 							<h3 class="wb-inv">Government of Canada Corporate</h3>
 							<ul>
-								<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/">Terms and conditions</a></li>
-								<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+								<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/" class="wb-exitscript">Terms and conditions</a></li>
+								<li>
+									<a href="https://www.canada.ca/en/transparency/privacy.html" class="wb-exitscript">
+										Privacy
+									</a>
+								</li>
 							</ul>
 						</nav>
 						<div class="wtrmrk align-self-end">
@@ -585,13 +797,15 @@
 
 
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+
+	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
 
 	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
-	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.magnific-popup.min.js"></script>
 
 
-	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 	<script type="text/javascript">
@@ -600,7 +814,6 @@
 			$('#sidebarCollapse').on('click', function () {
 				$('#sidebar').toggleClass('active');
 			});
-
 		});
 	</script>
 </body>
