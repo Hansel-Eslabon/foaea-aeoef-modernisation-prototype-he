@@ -8,6 +8,69 @@
 }
 
 
+header .brand {
+	margin-bottom: 10px;
+	padding-bottom: 0;
+	padding-top: 10px;
+}
+
+
+
+
+
+.advanced {
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:active {
+	color: #fff;
+	background-color: #00838f !important;
+	border-color: #00838f !important;
+	box-shadow: none;
+}
+
+
+.advanced {
+	color: #00838f !important;
+}
+
+.form-control:focus {
+	box-shadow: none;
+	border: 1px solid #00838f;
+}
+
+select.minimal {
+	padding-right: 44px;
+	background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+	background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+	background-size: 5px 5px, 5px 5px, 1px 1.5em;
+	background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+  background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+
+
 
 .navbar {
 	padding: 15px 10px;

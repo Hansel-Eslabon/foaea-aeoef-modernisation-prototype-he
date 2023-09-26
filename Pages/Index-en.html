@@ -35,362 +35,244 @@
 
 
 </head>
-<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
-	<div class="wrapper">
-		<!-- Sidebar  -->
-		<nav id="sidebar" class="sticky-top">
-			<div class="sidebar-header">
-				<h3>FOAEA</h3>
-				<strong>FOAEA</strong>
+	<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+		<div class="wrapper">
+			<!-- Sidebar  -->
+	<nav id="sidebar" class="sticky-top">
+		<div class="sidebar-header">
+			<h3>FOAEA</h3>
+			<strong>FOAEA</strong>
+		</div>
+
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="#">
+					<i class="bi bi-house"></i>
+					<span>Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-search"></i>
+					<span>Trace and Locate</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-file-earmark-plus"></i>
+					<span>New Application</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-pencil-fill"></i>
+					<span>Edit</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="list-unstyled components">
+			<li>
+				<a href="#">
+					<i class="bi bi-currency-dollar"></i>
+					<span>Garnishment</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-clipboard-plus"></i>
+					<span>New Application</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-pencil-square"></i>
+					<span>Edit</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="list-unstyled components">
+			<li>
+				<a href="#">
+					<i class="bi bi-person-vcard"></i>
+					<span>License Denial</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-person-plus-fill"></i>
+					<span>New Application</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-pencil"></i>
+					<span>Edit</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bi bi-terminal-x"></i>
+					<span>Termination</span>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="list-unstyled components">
+			<li>
+				<a href="#">
+					<i class="bi bi-question-circle"></i>
+					<span>Help</span>
+				</a>
+			</li>
+		</ul>
+		<div id="version">
+			<span>Version: Prototype</span>
+		</div>
+	</nav>
+
+	<!-- Page Content  -->
+	<div id="content-fluid">
+		<header>
+			<div class="container-fluid">
+				<div class="row">
+					<div id="wb-bnr" class="container-fluid">
+						<div class="row">
+							<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+								<a href="#" property="url">
+									<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+								</a>
+								<meta property="name" content="Government of Canada">
+								<meta property="areaServed" typeof="Country" content="Canada">
+								<link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" rel="logo">
+							</div>
+
+							<section id="wb-lng" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4 pull-right text-center">
+								<h2 class="wb-inv">Language selection</h2>
+								<ul class="list-inline mrgn-bttm-0">
+									<li>
+										<a lang="fr" hreflang="fr" href="https://conception.canada.ca">
+											<span class="hidden-xs" translate="no">Français</span>
+											<abbr title="Français" translate="no" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+										</a>
+									</li>
+								</ul>
+							</section>
+						</div>
+					</div>
+					<nav class="navbar navbar-expand-lg">
+						<div class="container-fluid">
+
+							<button type="button" id="sidebarCollapse" class="btn btn-light">
+								<i class="bi bi-arrow-left-right"></i>
+								<span>Toggle Sidebar</span>
+							</button>
+
+							<button class="btn btn-light d-inline-block d-lg-none ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+									aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+								<i class="bi bi-justify"></i>
+							</button>
+
+
+							<div class="collapse navbar-collapse" id="navbarCollapse">
+								<ul class="navbar-nav ml-auto w-100 justify-content-end">
+									<li class="nav-item">
+
+										<a class="nav-link" href="#">
+											<i class="bi bi-bell"></i> Notification
+											<span class="badge rounded-pill bg-danger">4</span>
+
+										</a>
+
+									</li>
+									<li class="nav-item dropdown">
+										<a href="#signOutSubMenu" data-bs-toggle="collapse" data-bs-target="#signOutSubMenu" id="navbarScrollingDropdown" aria-expanded="false" class="nav-link">
+											<span class="bi bi-person-circle"> Santa Claus (MEP)</span>
+											<i class="bi bi-caret-down-fill"></i>
+										</a>
+										<ul class="dropdown-menu collapse" id="signOutSubMenu" aria-labelledby="navbarScrollingDropdown">
+											<li><a class="dropdown-item" href="#">Sign-Out</a></li>
+										</ul>
+
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
 			</div>
+		</header>
 
-			<ul class="list-unstyled components">
-				<li class="active">
-					<a href="#">
-						<i class="bi bi-house"></i>
-						<span>Home</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-search"></i>
-						<span>Trace and Locate</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-file-earmark-plus"></i>
-						<span>New Application</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-pencil-fill"></i>
-						<span>Edit</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="list-unstyled components">
-				<li>
-					<a href="#">
-						<i class="bi bi-currency-dollar"></i>
-						<span>Garnishment</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-clipboard-plus"></i>
-						<span>New Application</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-pencil-square"></i>
-						<span>Edit</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="list-unstyled components">
-				<li>
-					<a href="#">
-						<i class="bi bi-person-vcard"></i>
-						<span>License Denial</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-person-plus-fill"></i>
-						<span>New Application</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-pencil"></i>
-						<span>Edit</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-terminal-x"></i>
-						<span>Termination</span>
-					</a>
-				</li>
-			</ul>
-
-			<ul class="list-unstyled components">
-				<li>
-					<a href="#">
-						<i class="bi bi-question-circle"></i>
-						<span>Help</span>
-					</a>
-				</li>
-			</ul>
-			<div id="version">
-				<span>Version: Prototype</span>
-			</div>
-		</nav>
-
-		<!-- Page Content  -->
-		<div id="content-fluid">
-			<header>
+		<main>
+			<div class="ps-4">
+				<!-- Page Title -->
 				<div class="container-fluid">
 					<div class="row">
-						<div id="wb-bnr" class="container-fluid">
-							<div class="row">
-								<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-									<a href="#" property="url">
-										<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
-									</a>
-									<meta property="name" content="Government of Canada">
-									<meta property="areaServed" typeof="Country" content="Canada">
-									<link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" rel="logo">
-								</div>
-
-								<section id="wb-lng" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4 pull-right text-center">
-									<h2 class="wb-inv">Language selection</h2>
-									<ul class="list-inline mrgn-bttm-0">
-										<li>
-											<a lang="fr" hreflang="fr" href="https://conception.canada.ca">
-												<span class="hidden-xs" translate="no">Français</span>
-												<abbr title="Français" translate="no" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
-											</a>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-						<nav class="navbar navbar-expand-lg">
-							<div class="container-fluid">
-
-								<button type="button" id="sidebarCollapse" class="btn btn-light">
-									<i class="bi bi-arrow-left-right"></i>
-									<span>Toggle Sidebar</span>
-								</button>
-
-								<button class="btn btn-light d-inline-block d-lg-none ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-										aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-									<i class="bi bi-justify"></i>
-								</button>
-
-
-								<div class="collapse navbar-collapse" id="navbarCollapse">
-									<ul class="navbar-nav ml-auto w-100 justify-content-end">
-										<li class="nav-item">
-
-											<a class="nav-link" href="#">
-												<i class="bi bi-menu-button-wide"></i> Notification
-												<span class="badge rounded-pill bg-danger">4</span>
-
-											</a>
-
-										</li>
-										<li class="nav-item dropdown">
-											<a href="#signOutSubMenu" data-bs-toggle="collapse" data-bs-target="#signOutSubMenu" id="navbarScrollingDropdown" aria-expanded="false" class="nav-link">
-												<span class="bi bi-person-circle"> Santa Claus (Agent)</span>
-												<i class="bi bi-caret-down-fill"></i>
-											</a>
-											<ul class="dropdown-menu collapse" id="signOutSubMenu" aria-labelledby="navbarScrollingDropdown">
-												<li><a class="dropdown-item" href="#">Sign-Out</a></li>
-											</ul>
-
-										</li>
-									</ul>
-								</div>
-							</div>
-						</nav>
+						<h1 id="wb-cont" property="name">Home</h1>
 					</div>
-				</div>
-			</header>
-
-			<main>
-				<div class="ps-4">
-					<!-- Page Title -->
-					<div class="container-fluid">
-						<div class="row">
-							<h1 id="wb-cont" property="name">Home</h1>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-								<h2>Search</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-								<h2>Last 5 recently viewed actioned</h2>
-								<div class="card">
-									<div class="card-body">
-										<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-													<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-success fw-bold pe-3">New</span>
-												</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+							<h2>Last 5 recently viewed actioned</h2>
+							<div class="card">
+								<div class="card-body">
+									<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Affidavit #1011</a>
-													<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-success fw-bold pe-3">Edit</span>
-												</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
+												<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">License Denial Application #932</a>
-													<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-danger fw-bold pe-3">Cancelled/Terminated</span>
-												</div>
-											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-													<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-warning fw-bold pe-3">Transfer</span>
-												</div>
-											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">License Denial Affidavit #795</a>
-													<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-												</div>
-												<div class="col-auto">
-													<span class="text-warning fw-bold pe-3">De-linked/Linked</span>
-												</div>
+											<div class="col-auto">
+												<span class="text-success fw-bold pe-3">New</span>
 											</div>
 										</div>
-									</div>
-
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-								<h2>My Tracking</h2>
-								<div class="card">
-									<div class="card-body">
-										<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-													<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-												</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">
-														Tracing Affidavit #1011
-													</a>
-													<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-												</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">Tracing Affidavit #1011</a>
+												<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">
-														License Denial Application #932
-													</a>
-													<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-												</div>
+											<div class="col-auto">
+												<span class="text-success fw-bold pe-3">Edit</span>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-													<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-												</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">
-														License Denial Affidavit #795
-													</a>
-													<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
-												</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">License Denial Application #932</a>
+												<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-													<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-												</div>
+											<div class="col-auto">
+												<span class="text-danger fw-bold pe-3">Cancelled/Terminated</span>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">
-														Tracing Affidavit #1011
-													</a>
-													<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-												</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">
-														License Denial Application #932
-													</a>
-													<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-												</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
+												<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-													<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-												</div>
+											<div class="col-auto">
+												<span class="text-warning fw-bold pe-3">Transfer</span>
 											</div>
-											<div class="row py-1 align-items-center">
-												<div class="col-auto">
-													<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-												</div>
-												<div class="col ps-0">
-													<a href="javascript:void(0);" class="text-body">
-														License Denial Affidavit #795
-													</a>
-													<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
-												</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">License Denial Affidavit #795</a>
+												<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
+											</div>
+											<div class="col-auto">
+												<span class="text-warning fw-bold pe-3">De-linked/Linked</span>
 											</div>
 										</div>
 									</div>
@@ -398,400 +280,565 @@
 
 							</div>
 						</div>
-
-						<div class="row">
-							<div class="line"></div>
-							
-							<div class="col-4">
-								<div class="card">
-									<div class="card-header">
-										SIN Not Confirmed
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+							<h2>My Tracking</h2>
+							<div class="card">
+								<div class="card-body">
+									<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
+												<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">
+													Tracing Affidavit #1011
+												</a>
+												<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">
+													License Denial Application #932
+												</a>
+												<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
+												<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">
+													License Denial Affidavit #795
+												</a>
+												<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
+												<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">
+													Tracing Affidavit #1011
+												</a>
+												<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">
+													License Denial Application #932
+												</a>
+												<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
+												<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
+											</div>
+										</div>
+										<div class="row py-1 align-items-center">
+											<div class="col-auto">
+												<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+											</div>
+											<div class="col ps-0">
+												<a href="javascript:void(0);" class="text-body">
+													License Denial Affidavit #795
+												</a>
+												<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
+											</div>
+										</div>
 									</div>
-									<div class="row d-flex justify-content-center text-center">
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
-												<a href="#" class="btn btn-primary">Total</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
-												<a href="#" class="btn btn-primary">New</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
-												<a href="#" class="btn btn-primary">Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
-												<a href="#" class="btn btn-primary">Last 2 weeks</a>
-											</div>
-										</div>
-									</div>
-
 								</div>
 							</div>
 
-							<div class="col-4">
-								<div class="card">
-									<div class="card-header">
-										SIN Pending
-									</div>
-									<div class="row d-flex justify-content-center text-center">
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
-												<a href="#" class="btn btn-primary">Total</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
-												<a href="#" class="btn btn-primary">New</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-												<a href="#" class="btn btn-primary">Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
-												<a href="#" class="btn btn-primary">Last 2 weeks</a>
-											</div>
-										</div>
-									</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+							<h2>Search</h2>
+							<div class="wb-tabs">
+								<div class="tabpanels">
+									<details id="details-panel1">
+										<summary>My Search</summary>
+										<div class="wb-frmvld provisional">
+											<form action="#" method="get" id="steps-example">
+												<fieldset id="client">
+													<div>
+														<div class="form-group">
+															<label for="sin" id="sin" class="">SIN # </label>
+															<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="9" data-mask="999-999-999" placeholder="999-999-999">
 
+														</div>
+														<div class="form-group">
+															<label for="ctrlCode" class="">Ctrl Code</label>
+															<input class="form-control" id="ctrlCode" name="ctrlCode" type="text" data-rule-minlength="2">
+														</div>
+														<div class="form-group">
+															<label for="justiceNo" class="">Justice #</label>
+															<input class="form-control" id="justiceNo" name="justiceNo" type="text" data-rule-minlength="2">
+														</div>
+														<div class="form-group">
+															<label for="enfRefSource" class="">Enf Ref Source #</label>
+															<input class="form-control" id="enfRefSource" name="enfRefSource" type="text" data-rule-minlength="2">
+														</div>
+														<div class="form-group">
+															<label for="state" class="">State</label>
+															<select name="state" id="state" class="form-control  minimal">
+																<option selected="selected" value="0">Please select an option</option>
+																<option value="Cancelled">Cancelled</option>
+																<option value="Orphaned">Orphaned</option>
+																<option value="Non linked">Non linked</option>
+																<option value="Linked">Linked</option>
+																<option value="Transferred">Transferred</option>
+																<option value="New">New</option>
+																<option value="Terminated">Terminated</option>
+															</select>
+
+														</div>
+													</div>
+												</fieldset>
+												<input type="submit" name="submit" value="Search" class="btn btn-primary">
+											</form>
+										</div>
+									</details>
+									<details id="details-panel2" open="open">
+										<summary>Advanced Search</summary>
+									</details>
 								</div>
 							</div>
+						</div>
 
-							<div class="col-4">
-								<div class="card">
-									<div class="card-header">
-										Cancelled Applications
+
+					</div>
+
+					<div class="row">
+						<div class="line"></div>
+
+						<div class="col-4">
+							<div class="card">
+								<div class="card-header">
+									SIN Not Confirmed
+								</div>
+								<div class="row d-flex justify-content-center text-center">
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
+											<a href="#" class="btn btn-primary">Total</a>
+										</div>
 									</div>
-									<div class="row d-flex justify-content-center text-center">
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-danger bi bi-arrow-up"></i>6</h2>
-												<a href="#" class="btn btn-primary">Total</a>
-											</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
+											<a href="#" class="btn btn-primary">New</a>
 										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
-												<a href="#" class="btn btn-primary">New</a>
-											</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
+											<a href="#" class="btn btn-primary">Linked</a>
 										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-												<a href="#" class="btn btn-primary">Linked</a>
-											</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+											<a href="#" class="btn btn-primary">Non Linked</a>
 										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
+											<a href="#" class="btn btn-primary">Last 2 weeks</a>
 										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
-												<a href="#" class="btn btn-primary">Last 2 week</a>
-											</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="card">
+								<div class="card-header">
+									SIN Pending
+								</div>
+								<div class="row d-flex justify-content-center text-center">
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
+											<a href="#" class="btn btn-primary">Total</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
+											<a href="#" class="btn btn-primary">New</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+											<a href="#" class="btn btn-primary">Linked</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+											<a href="#" class="btn btn-primary">Non Linked</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
+											<a href="#" class="btn btn-primary">Last 2 weeks</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="card">
+								<div class="card-header">
+									Cancelled Applications
+								</div>
+								<div class="row d-flex justify-content-center text-center">
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-danger bi bi-arrow-up"></i>6</h2>
+											<a href="#" class="btn btn-primary">Total</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
+											<a href="#" class="btn btn-primary">New</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+											<a href="#" class="btn btn-primary">Linked</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+											<a href="#" class="btn btn-primary">Non Linked</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
+											<a href="#" class="btn btn-primary">Last 2 week</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
 
-						<div class="row">
-							<div class="line"></div>
-							<div class="col-5">
-								<div class="card">
-									<div class="card-header">
-										TO1 Applications
-									</div>
-									<div class="row d-flex justify-content-center text-center">
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
-												<a href="#" class="btn btn-primary">Total</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
-												<a href="#" class="btn btn-primary">New</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-												<a href="#" class="btn btn-primary">Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
-												<a href="#" class="btn btn-primary">Last 2 weeks</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
-												<a href="#" class="btn btn-primary">Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
-												<a href="#" class="btn btn-primary">Last 2 weeks</a>
-											</div>
-										</div>
-									</div>
-
+					<div class="row">
+						<div class="line"></div>
+						<div class="col-5">
+							<div class="card">
+								<div class="card-header">
+									TO1 Applications
 								</div>
-							</div>
-							<div class="col-1">
-								<div class="card text-center">
-									<div class="card-header">
-										Submitted Today
+								<div class="row d-flex justify-content-center text-center">
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
+											<a href="#" class="btn btn-primary">Total</a>
+										</div>
 									</div>
-
-									<div class="card-body">
-										<h2 class="card-title nav-pills  card-header-pills display-1">10</h2>
-										<a href="#" class="btn btn-primary">Total</a>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
+											<a href="#" class="btn btn-primary">New</a>
+										</div>
 									</div>
-
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+											<a href="#" class="btn btn-primary">Linked</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
+											<a href="#" class="btn btn-primary">Non Linked</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
+											<a href="#" class="btn btn-primary">ESDC Only</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
+											<a href="#" class="btn btn-primary">CRA Only</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
+											<a href="#" class="btn btn-primary">Both</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
+											<a href="#" class="btn btn-primary">Last 2 weeks</a>
+										</div>
+									</div>
 								</div>
+
 							</div>
-
-							<div class="col-6">
-								<div class="card">
-									<div class="card-header">
-										Orphaned T01 Applications
-									</div>
-									<div class="row d-flex justify-content-center text-center">
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
-												<a href="#" class="btn btn-primary">Total</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
-												<a href="#" class="btn btn-primary">New</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-												<a href="#" class="btn btn-primary">Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
-												<a href="#" class="btn btn-primary">Last 2 weeks</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="display-1 card-title nav-pills card-header-pills">5</h2>
-												<a href="#" class="btn btn-primary">New</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
-												<a href="#" class="btn btn-primary">Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-												<a href="#" class="btn btn-primary">Last 2 weeks</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">9</h2>
-												<a href="#" class="btn btn-primary">Non Linked</a>
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="card-body">
-												<h2 class="card-title nav-pills  card-header-pills display-1">10</h2>
-												<a href="#" class="btn btn-primary">Last 2 weeks</a>
-											</div>
-										</div>
-									</div>
-
+						</div>
+						<div class="col-1">
+							<div class="card text-center">
+								<div class="card-header">
+									Submitted Today
 								</div>
-							</div>
 
+								<div class="card-body">
+									<h2 class="card-title nav-pills  card-header-pills display-1">10</h2>
+									<a href="#" class="btn btn-primary">Total</a>
+								</div>
+
+							</div>
 						</div>
 
+						<div class="col-6">
+							<div class="card">
+								<div class="card-header">
+									Orphaned T01 Applications
+								</div>
+								<div class="row d-flex justify-content-center text-center">
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
+											<a href="#" class="btn btn-primary">Total</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
+											<a href="#" class="btn btn-primary">New</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+											<a href="#" class="btn btn-primary">Cancelled I01's</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
+											<a href="#" class="btn btn-primary">Expired I01's</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
+											<a href="#" class="btn btn-primary">Rejected I01's</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="display-1 card-title nav-pills card-header-pills">5</h2>
+											<a href="#" class="btn btn-primary">Transferred I01's</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
+											<a href="#" class="btn btn-primary">ESDC Only</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
+											<a href="#" class="btn btn-primary">CRA Only</a>
+										</div>
+									</div>
 
-						<div class="row">
-							<div class="line"></div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">9</h2>
+											<a href="#" class="btn btn-primary">Both</a>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="card-body">
+											<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
+											<a href="#" class="btn btn-primary">Last 2 weeks</a>
+										</div>
+									</div>
 
-							<h2>Lorem Ipsum Dolor</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<div class="wb-frmvld provisional wb-steps">
-								<form action="#" method="get" id="steps-example">
-									<fieldset id="client">
-										<legend>Client Information</legend>
-										<div>
-											<div class="form-group">
-												<label for="firstname" class="required"><span class="field-name">First name</span></label>
-												<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required">
-											</div>
-											<div class="form-group">
-												<label for="lastname" class="required"><span class="field-name">Last name</span></label>
-												<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
-											</div>
-											<div class="form-group">
-												<label for="dateOfBirth" class="required"><span class="field-name">Date of Birth</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-												<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
-											</div>
-										</div>
-									</fieldset>
-									<fieldset id="contact">
-										<legend>Contact Information</legend>
-										<div>
-											<div class="form-group">
-												<label for="preferredNumber" class="required">Preferred: <span class="field-name">Phone Number</span></label>
-												<input class="form-control" id="preferredNumber" name="preferredNumber" type="tel" data-rule-phoneus="true" required="required">
-											</div>
-											<div class="form-group">
-												<label for="secondaryNumber">Secondary: <span class="field-name">Phone Number</span></label>
-												<input class="form-control" id="secondaryNumber" name="secondaryNumber" type="tel" data-rule-phoneus="true">
-											</div>
-											<div class="form-group">
-												<label for="email"><span class="field-name">Email Address</span> (test@domain)</label>
-												<input class="form-control" id="email" name="email" type="email">
-											</div>
-										</div>
-									</fieldset>
-									<fieldset id="questionaire">
-										<legend>Ethics Questionnaire</legend>
-										<div>
-											<p><small>For each of the following examples, indicate whether or not you feel that there is an ethical issue.</small></p>
-											<fieldset class="subfields">
-												<legend><span class="field-name">Ethics 1</span>: You pay $10.00 bucks for a purchase, but receive change for $20.00 bucks. Would you keep the extra money?</legend>
-												<div class="radio">
-													<label for="defNot-1"><input type="radio" name="ethics1" value="defNot-1" id="defNot-1">&#160;Definitely Not</label>&#160;
-													<label for="probNot-1"><input type="radio" name="ethics1" value="probNot-1" id="probNot-1">&#160;Probably Not</label>&#160;
-													<label for="maybe-1"><input type="radio" name="ethics1" value="maybe-1" id="maybe-1">&#160;Maybe (Not Sure)</label>&#160;
-													<label for="probably-1"><input type="radio" name="ethics1" value="probably-1" id="probably-1">&#160;Probably</label>&#160;
-													<label for="definitely-1"><input type="radio" name="ethics1" value="definitely-1" id="definitely-1">&#160;Definitely</label>
-												</div>
-											</fieldset>
-											<fieldset class="subfields">
-												<legend><span class="field-name">Ethics 2</span>: You need a software, but can't wait for office to make a decision. Against license restrictions would you download it?</legend>
-												<div class="radio">
-													<label for="defNot-2"><input type="radio" name="ethics2" value="defNot-2" id="defNot-2">&#160;Definitely Not</label>&#160;
-													<label for="probNot-2"><input type="radio" name="ethics2" value="probNot-2" id="probNot-2">&#160;Probably Not</label>&#160;
-													<label for="maybe-2"><input type="radio" name="ethics2" value="maybe-2" id="maybe-2">&#160;Maybe (Not Sure)</label>&#160;
-													<label for="probably-2"><input type="radio" name="ethics2" value="probably-2" id="probably-2">&#160;Probably</label>&#160;
-													<label for="definitely-2"><input type="radio" name="ethics2" value="definitely-2" id="definitely-2">&#160;Definitely</label>
-												</div>
-											</fieldset>
-										</div>
-									</fieldset>
-									<input type="submit" name="submit" value="Submit" class="btn btn-primary">
-								</form>
+								</div>
+
 							</div>
 						</div>
 
 					</div>
-				
-				</div>
 
-			</main>
 
-			<footer id="wb-info">
-				<h2 class="wb-inv">About this site</h2>
-				<div class="gc-contextual">
-					<div class="container">
-						<nav>
-							<h3>Department of Justice Canada</h3>
-							<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
-								<li><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782" class="wb-exitscript">Contact us</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
+					<div class="row">
+						<div class="line"></div>
 
-				<div class="gc-sub-footer">
-					<div class="container d-flex align-items-center">
-						<nav>
-							<h3 class="wb-inv">Government of Canada Corporate</h3>
-							<ul>
-								<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/" class="wb-exitscript">Terms and conditions</a></li>
-								<li>
-									<a href="https://www.canada.ca/en/transparency/privacy.html" class="wb-exitscript">
-										Privacy
-									</a>
-								</li>
-							</ul>
-						</nav>
-						<div class="wtrmrk align-self-end">
-							<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+						<h2>Lorem Ipsum Dolor</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<div class="wb-frmvld provisional wb-steps">
+							<form action="#" method="get" id="steps-example">
+								<fieldset id="client">
+									<legend>Client Information</legend>
+									<div>
+										<div class="form-group">
+											<label for="firstname" id="firstname" class="required">First Name: <strong class="required" aria-hidden="true">(required)</strong></label>
+											<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required">
+
+										</div>
+										<div class="form-group">
+											<label for="lastname" class="required">Last name: <strong class="required" aria-hidden="true">(required)</strong></label>
+											<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
+										</div>
+										<div class="form-group">
+											<label for="dateOfBirth" class="required">Date of Birth: <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+											<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
+										</div>
+									</div>
+								</fieldset>
+								<fieldset id="contact">
+									<legend>Contact Information</legend>
+									<div>
+										<div class="form-group">
+											<label for="preferredNumber" class="required">Preferred: Phone Number <strong class="required" aria-hidden="true">(required)</strong></label>
+											<input class="form-control" id="preferredNumber" name="preferredNumber" type="tel" data-rule-phoneus="true" required="required">
+										</div>
+										<div class="form-group">
+											<label for="secondaryNumber">Secondary: Phone Number</label>
+											<input class="form-control" id="secondaryNumber" name="secondaryNumber" type="tel" data-rule-phoneus="true">
+										</div>
+										<div class="form-group">
+											<label for="email">Email Address (test@domain):</label>
+											<input class="form-control" id="email" name="email" type="email">
+										</div>
+									</div>
+								</fieldset>
+								<fieldset id="questionaire">
+									<legend>Ethics Questionnaire</legend>
+									<div>
+										<p><small>For each of the following examples, indicate whether or not you feel that there is an ethical issue.</small></p>
+										<fieldset class="subfields">
+											<legend><span class="field-name">Ethics 1</span>: You pay $10.00 bucks for a purchase, but receive change for $20.00 bucks. Would you keep the extra money?</legend>
+											<div class="radio">
+												<label for="defNot-1"><input type="radio" name="ethics1" value="defNot-1" id="defNot-1">Definitely Not</label>
+												<label for="probNot-1"><input type="radio" name="ethics1" value="probNot-1" id="probNot-1">Probably Not</label>
+												<label for="maybe-1"><input type="radio" name="ethics1" value="maybe-1" id="maybe-1">Maybe (Not Sure)</label>
+												<label for="probably-1"><input type="radio" name="ethics1" value="probably-1" id="probably-1">Probably</label>
+												<label for="definitely-1"><input type="radio" name="ethics1" value="definitely-1" id="definitely-1">Definitely</label>
+											</div>
+										</fieldset>
+										<fieldset class="subfields">
+											<legend><span class="field-name">Ethics 2</span>: You need a software, but can't wait for office to make a decision. Against license restrictions would you download it?</legend>
+											<div class="radio">
+												<label for="defNot-2"><input type="radio" name="ethics2" value="defNot-2" id="defNot-2">&#160;Definitely Not</label>&#160;
+												<label for="probNot-2"><input type="radio" name="ethics2" value="probNot-2" id="probNot-2">&#160;Probably Not</label>&#160;
+												<label for="maybe-2"><input type="radio" name="ethics2" value="maybe-2" id="maybe-2">&#160;Maybe (Not Sure)</label>&#160;
+												<label for="probably-2"><input type="radio" name="ethics2" value="probably-2" id="probably-2">&#160;Probably</label>&#160;
+												<label for="definitely-2"><input type="radio" name="ethics2" value="definitely-2" id="definitely-2">&#160;Definitely</label>
+											</div>
+										</fieldset>
+									</div>
+								</fieldset>
+								<input type="submit" name="submit" value="Submit" class="btn btn-primary">
+							</form>
 						</div>
 					</div>
+
 				</div>
-			</footer>
+
+			</div>
+
+		</main>
+
+		<footer id="wb-info">
+			<h2 class="wb-inv">About this site</h2>
+			<div class="gc-contextual">
+				<div class="container">
+					<nav>
+						<h3>Department of Justice Canada</h3>
+						<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
+							<li><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782" class="wb-exitscript">Contact us</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="gc-sub-footer">
+				<div class="container d-flex align-items-center">
+					<nav>
+						<h3 class="wb-inv">Government of Canada Corporate</h3>
+						<ul>
+							<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/" class="wb-exitscript">Terms and conditions</a></li>
+							<li>
+								<a href="https://www.canada.ca/en/transparency/privacy.html" class="wb-exitscript">
+									Privacy
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="wtrmrk align-self-end">
+						<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+					</div>
+				</div>
+			</div>
+		</footer>
 
 
-		</div>
+	</div>
 	</div>
 
 
@@ -816,7 +863,7 @@
 			});
 		});
 	</script>
-</body>
+	</body>
 
 
 </html>
