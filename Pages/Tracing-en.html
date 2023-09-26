@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>NEW TO1 - Justice Canada</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
+
+	<!-- TODO ../wwwroot To be replace with ~/ once we transition to actual front end -->
+	<!-- TODO Probably DL all stylesheet and image that links to web address -->
+
+	<link href="../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
+		  data-filename="my-mobile-favicon.ico"
+		  data-path="../wwwroot/"
+		  data-rel="apple-touch-icon-precomposed"
+		  data-sizes="57x57">
+
+
+
+
+
+	<noscript>
+		<link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css" />
+	</noscript>
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+
+	<link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+
+
+	<link rel="stylesheet" href="../wwwroot/lib/GCWeb/css/theme.min.css">
+	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
+
+	<link rel="stylesheet" href="../wwwroot/css/site.css" />
+
+
+</head>
+<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+	<div class="wrapper">
+		<!-- Sidebar  -->
+		<nav id="sidebar" class="sticky-top">
+			<div class="sidebar-header">
+				<h3>FOAEA</h3>
+				<strong>FOAEA</strong>
+			</div>
+
+			<ul class="list-unstyled components">
+				<li class="active">
+					<a href="#">
+						<i class="bi bi-house"></i>
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-search"></i>
+						<span>Trace and Locate</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-file-earmark-plus"></i>
+						<span>New Application</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-pencil-fill"></i>
+						<span>Edit</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="list-unstyled components">
+				<li>
+					<a href="#">
+						<i class="bi bi-currency-dollar"></i>
+						<span>Garnishment</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-clipboard-plus"></i>
+						<span>New Application</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-pencil-square"></i>
+						<span>Edit</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="list-unstyled components">
+				<li>
+					<a href="#">
+						<i class="bi bi-person-vcard"></i>
+						<span>License Denial</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-person-plus-fill"></i>
+						<span>New Application</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-pencil"></i>
+						<span>Edit</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bi bi-terminal-x"></i>
+						<span>Termination</span>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="list-unstyled components">
+				<li>
+					<a href="#">
+						<i class="bi bi-question-circle"></i>
+						<span>Help</span>
+					</a>
+				</li>
+			</ul>
+			<div id="version">
+				<span>Version: Prototype</span>
+			</div>
+		</nav>
+
+		<!-- Page Content  -->
+		<div id="content-fluid">
+			<header>
+				<div class="container-fluid">
+					<div class="row">
+						<div id="wb-bnr" class="container-fluid">
+							<div class="row">
+								<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+									<a href="#" property="url">
+										<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+									</a>
+									<meta property="name" content="Government of Canada">
+									<meta property="areaServed" typeof="Country" content="Canada">
+									<link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" rel="logo">
+								</div>
+
+								<section id="wb-lng" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4 pull-right text-center">
+									<h2 class="wb-inv">Language selection</h2>
+									<ul class="list-inline mrgn-bttm-0">
+										<li>
+											<a lang="fr" hreflang="fr" href="https://conception.canada.ca">
+												<span class="hidden-xs" translate="no">Français</span>
+												<abbr title="Français" translate="no" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+											</a>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+						<nav class="navbar navbar-expand-lg">
+							<div class="container-fluid">
+
+								<button type="button" id="sidebarCollapse" class="btn btn-light">
+									<i class="bi bi-arrow-left-right"></i>
+									<span>Toggle Sidebar</span>
+								</button>
+
+								<button class="btn btn-light d-inline-block d-lg-none ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+										aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+									<i class="bi bi-justify"></i>
+								</button>
+								<div class="collapse navbar-collapse" id="navbarCollapse">
+									<ul class="navbar-nav ml-auto w-100 justify-content-end">
+										<li class="nav-item">
+											<a class="nav-link" href="#">
+												<i class="bi bi-bell"></i> Notification
+												<span class="badge rounded-pill bg-danger">4</span>
+
+											</a>
+										</li>
+										<li class="nav-item dropdown">
+											<a href="#signOutSubMenu" data-bs-toggle="collapse" data-bs-target="#signOutSubMenu" id="navbarScrollingDropdown" aria-expanded="false" class="nav-link">
+												<span class="bi bi-person-circle"> Santa Claus (MEP)</span>
+												<i class="bi bi-caret-down-fill"></i>
+											</a>
+											<ul class="dropdown-menu collapse" id="signOutSubMenu" aria-labelledby="navbarScrollingDropdown">
+												<li><a class="dropdown-item" href="#">Sign-Out</a></li>
+											</ul>
+
+										</li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<div class="ps-4">
+					<!-- Page Title -->
+					<div class="container-fullwidth">
+						<div class="row">
+							<h1 id="wb-cont" property="name">Tracing Application T01</h1>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div class="card">
+									<div class="row d-flex justify-content-center text-center">
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
+												<a href="#" class="btn btn-primary">Total</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
+												<a href="#" class="btn btn-primary">New</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
+												<a href="#" class="btn btn-primary">Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
+												<a href="#" class="btn btn-primary">Non Linked</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
+												<a href="#" class="btn btn-primary">ESDC Only</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
+												<a href="#" class="btn btn-primary">CRA Only</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
+												<a href="#" class="btn btn-primary">Both</a>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="card-body">
+												<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
+												<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div id="menubar">
+									<div class="justify-content-center">
+										<button type="button" class="btn btn-primary"><i class="far fa-eye"></i>Notes</button>
+										<button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i>Transfer</button>
+										<button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i>Cancel</button>
+										<button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i>Linked/De-Link I01</button>
+									</div>
+								</div>
+
+								<table id="example" class="display wb-tables tablee">
+									<thead>
+										<tr>
+											<th><input type="checkbox" name="" /> &nbsp; </th>
+											<th>Record No.</th>
+											<th>Category</th>
+											<th>Date Received</th>
+											<th>Submitter</th>
+											<th>Recipient</th>
+											<th>Service</th>
+											<th>Ctrl Code</th>
+											<th>Debtor Surname</th>
+											<th>Source Ref #</th>
+											<th>Expiry Date</th>
+											<th>Justice #</th>
+											<th>State</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">1</a></td>
+											<td>T01</td>
+											<td>2011-04-25</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>123456</td>
+											<td>Architect</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">2</a></td>
+											<td>T01</td>
+											<td>2011-07-25</td>
+											<td>NPW204</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>123456</td>
+											<td>Winters</td>
+											<td>REF312</td>
+											<td>2019-04-07</td>
+											<td>ABCD6755</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">3</a></td>
+											<td>T01</td>
+											<td>2009-01-12</td>
+											<td>NPW304</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Cox</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">4</a></td>
+											<td>T01</td>
+											<td>2012-03-29</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Kelly</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">5</a></td>
+											<td>T01</td>
+											<td>2008-11-28</td>
+											<td>NPW101</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Satou</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">6</a></td>
+											<td>T01</td>
+											<td>2012-12-02</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>178986</td>
+											<td>Williamson</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">7</a></td>
+											<td>T01</td>
+											<td>2012-08-06</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>44444</td>
+											<td>Chandler</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">8</a></td>
+											<td>T01</td>
+											<td>2010-10-14</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>411133</td>
+											<td>Davidson</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">9</a></td>
+											<td>T01</td>
+											<td>2009-09-15</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>29833</td>
+											<td>Hurst</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">10</a></td>
+											<td>T01</td>
+											<td>2008-12-13</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Frost</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" name="" />
+											</td>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i></a><a href="#View">11</a></td>
+											<td>T01</td>
+											<td>2011-04-25</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>123456</td>
+											<td>Architect</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+										</tr>
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+
+
+			<footer id="wb-info">
+				<h2 class="wb-inv">About this site</h2>
+				<div class="gc-contextual">
+					<div class="container">
+						<nav>
+							<h3>Department of Justice Canada</h3>
+							<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
+								<li><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782" class="wb-exitscript">Contact us</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="gc-sub-footer">
+					<div class="container d-flex align-items-center">
+						<nav>
+							<h3 class="wb-inv">Government of Canada Corporate</h3>
+							<ul>
+								<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/" class="wb-exitscript">Terms and conditions</a></li>
+								<li>
+									<a href="https://www.canada.ca/en/transparency/privacy.html" class="wb-exitscript">
+										Privacy
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="wtrmrk align-self-end">
+							<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+
+
+	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+
+	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
+
+	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
+
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('#sidebarCollapse').on('click', function () {
+				$('#sidebar').toggleClass('active');
+			});
+		});
+	</script>
+</body>
+
+
+</html>
