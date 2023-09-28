@@ -1,3 +1,6 @@
+
+/* Start Banner and Footer*/
+
 #wb-bnr {
 	background: #fff;
 }
@@ -14,7 +17,97 @@ header .brand {
 	padding-top: 10px;
 }
 
+header .brand img, header .brand object {
+		height: auto;
+		max-height: 40px;
+	}
 
+#wb-lng {
+	padding-top: 10px;
+}
+
+#wb-info .gc-contextual {
+	background-color: #33465c;
+	color: #fff;
+}
+
+
+	#wb-info .gc-contextual a {
+		color: #fff;
+	}
+
+#wb-info a {
+	font-size: .875em;
+	text-decoration: none;
+}
+
+ul[class*="list-col"] {
+	list-style: none;
+}
+
+#wb-info h3 {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+#wb-info .brand, #wb-info .gc-sub-footer {
+	background: #f8f8f8;
+	color: #333;
+	padding: 1.5em 0 2em;
+}
+
+	#wb-info .brand nav, #wb-info .gc-sub-footer nav {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+#wb-info nav {
+	padding-bottom: 1em;
+	padding-top: 1.4em;
+	position: relative;
+}
+
+#wb-info .brand nav ul li, #wb-info .gc-sub-footer nav ul li {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-right: .5em;
+}
+
+#wb-info .brand .wtrmrk, #wb-info .gc-sub-footer .wtrmrk {
+	text-align: right;
+}
+
+#wb-info .brand img, #wb-info .brand object, #wb-info .gc-sub-footer img, #wb-info .gc-sub-footer object {
+	height: 40px;
+	width: auto;
+}
+
+/*End Banner and Footer*/
+
+
+/*Override default bootstrap padding left*/
+ol, ul {
+	padding-left: 0;
+}
+
+
+
+
+
+#tableMenubar-container {
+	padding-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 0;
+	font-weight: 700;
+}
+
+
+.alert > ul {
+	margin-left: 60px;
+}
 
 
 
@@ -106,9 +199,7 @@ span {
 	text-decoration:none;
 }
 
-	.navbar-nav > li > a:hover {
-		/*text-decoration: underline;*/
-	}
+	
 
 
 
