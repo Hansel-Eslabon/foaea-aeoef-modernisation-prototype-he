@@ -30,11 +30,10 @@
 
 	<link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
 
-	<!--<link rel="stylesheet" href="../wwwroot/lib/GCWeb/css/theme.min.css">-->
 	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
 
 
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
 	<link rel="stylesheet" href="../wwwroot/css/site.css" />
 
@@ -66,12 +65,6 @@
 					<a href="New-Tracing-en.html">
 						<i class="bi bi-file-earmark-plus"></i>
 						<span>New Application</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-pencil-fill"></i>
-						<span>Edit</span>
 					</a>
 				</li>
 			</ul>
@@ -134,9 +127,9 @@
 				<span>Version: Prototype</span>
 			</div>
 		</nav>
-		<div class="w-100" >
+		<div class="w-100">
 			<header>
-				
+
 				<div class="container-fluid">
 					<div class="row">
 						<div id="wb-bnr" class="container-fluid">
@@ -219,49 +212,49 @@
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
-											<a href="#" class="btn btn-primary">Total</a>
+											<a href="Tracing-en.html?filterBy=Total" class="btn btn-primary">Total</a>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
-											<a href="#" class="btn btn-primary">New</a>
+											<a href="Tracing-en.html?filterBy=New" class="btn btn-primary">New</a>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-											<a href="#" class="btn btn-primary">Linked</a>
+											<a href="Tracing-en.html?filterBy=Linked" class="btn btn-primary">Linked</a>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
-											<a href="#" class="btn btn-primary">Non Linked</a>
+											<a href="Tracing-en.html?filterBy=NonLinked" class="btn btn-primary">Non Linked</a>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
-											<a href="#" class="btn btn-primary">ESDC Only</a>
+											<a href="Tracing-en.html?filterBy=ESDC" class="btn btn-primary">ESDC Only</a>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
-											<a href="#" class="btn btn-primary">CRA Only</a>
+											<a href="Tracing-en.html?filterBy=CRA" class="btn btn-primary">CRA Only</a>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
-											<a href="#" class="btn btn-primary">Both</a>
+											<a href="Tracing-en.html?filterBy=Both" class="btn btn-primary">Both</a>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="card-body">
 											<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
-											<a href="#" class="btn btn-primary">Last 2 weeks</a>
+											<a href="Tracing-en.html?filterBy=Last2Weeks" class="btn btn-primary">Last 2 weeks</a>
 										</div>
 									</div>
 								</div>
@@ -271,6 +264,76 @@
 					<!-- Main Body -->
 					<div class="row">
 						<div class="col-12" id="tableSection">
+							<div class="m-3" id="tableSearch-container">
+								<details id="detailsAdvSearch">
+									<summary>Advanced Search</summary>
+									<form action="#" method="get" id="advSearchForm">
+										<ul class="list-unstyled">
+											<li>
+												<details id="detailExpression0" class="cloneInput">
+													<summary>Expression A</summary>
+													<fieldset id="advSearchFormFieldSet0">
+														<div>
+															<div class="form-group">
+																<label for="fields" class="">Fields</label>
+																<select name="fieldSelect" id="fieldSelect0" class="form-control">
+																	<option selected="selected" value="0">Please select a fields</option>
+																	<option value="sin" data-type="integer">SIN #</option>
+																	<option value="justiceNo" data-type="integer">Justice #</option>
+																	<option value="category" data-type="text">Category</option>
+																	<option value="ctrlCode" data-type="text">Ctrl Code</option>
+																	<option value="debtName" data-type="text">Debtor Name</option>
+																	<option value="state" data-type="lookup" data-lookup-table="state">State</option>
+																	<option value="dateCreate" data-type="date">Date Created</option>
+																	<option value="isActive" data-type="boolean">Is Active?</option>
+																</select>
+
+															</div>
+															<div class="form-group">
+																<select name="operatorSelect" id="operatorSelect0" class="form-control">
+																	<option selected="selected" value="0" data-type="test">Please select a operator</option>
+																	<option value="equal" data-type="integer,text,boolean">Equals</option>
+																	<option value="contains" data-type="text">Contains</option>
+																	<option value="greaterThan" data-type="integer">Greater than</option>
+																	<option value="greaterThanEqual" data-type="integer">Greater than or equals to</option>
+																	<option value="lessThan" data-type="integer">Less than</option>
+																	<option value="lessThanEqual" data-type="integer">Less than or equals to</option>
+																	<option value="today" data-type="date">Today</option>
+																	<option value="last7days" data-type="date">Last 7 days</option>
+																	<option value="last30days" data-type="date">Last 30 days</option>
+																</select>
+																<input class="form-control" id="integerInput0" name="integerInput" type="number" data-rule-minlength="1" placeholder="123456789">
+																<input class="form-control" id="textInput0" name="textInput" type="text" data-rule-minlength="2">
+																<input class="form-control" id="dateInput0" name="dateInput" type="date">
+																<select name="lookupInput" id="lookupInput0" class="form-control">
+																	<option selected="selected" value="-999">Please select a value</option>
+																</select>
+																<select name="booleanInput" id="booleanInput0" class="form-control">
+																	<option selected="selected" value="-999">Please select a value</option>
+																	<option value="1">Yes</option>
+																	<option value="0">No</option>
+																	<option value="null">Null</option>
+																</select>
+															</div>
+
+														</div>
+													</fieldset>
+												</details>
+											</li>
+										</ul>
+										<div class="form-group">
+											<button class="btn btn-primary" id="btnAddExpression"><span class="glyphicon glyphicon-plus"></span> Add more expression</button>
+										</div>
+										<div class="form-group">
+											<label for="expression" class="">Expression</label>
+											<input class="form-control" id="expression" name="expression" type="text" data-rule-minlength="4" placeholder="A or B">
+
+										</div>
+										<input type="submit" name="submit" value="Search" class="btn btn-primary">
+
+									</form>
+								</details>
+							</div>
 							<div id="tableMenubar-container">
 								<a href="New-Tracing-en.html" class="p-2" role="button"><i class="bi bi-patch-plus"></i><span class="ps-2">New</span></a>
 								<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-card-text"></i><span class="ps-2">Notes</span></a>
@@ -279,6 +342,10 @@
 								<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button">
 									<i class="bi bi-plus-slash-minus"></i>
 									<span class="ps-2">Linked/De-Link I01</span>
+								</a>
+								<a href="Tracing-en.html" class="p-2" aria-controls="Tracing-en.html" role="button">
+									<i class="bi bi-arrow-repeat"></i>
+									<span class="ps-2">List All</span>
 								</a>
 							</div>
 							<table id="t01Tables" class="wb-tables table table-striped table-hover">
@@ -554,7 +621,7 @@
 			</footer>
 		</div>
 
-		<!-- Modal -->
+		<!-- Modal/Overlay -->
 		<section id="transfer-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
 			<header class="modal-header">
 				<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Transfer Application - 01</h2>
@@ -596,12 +663,10 @@
 
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-primary overlay-close" type="button" id="modalSubmit">Confirm</button>
+				<button class="btn btn-primary overlay-close" type="button" id="btnModalSubmit">Confirm</button>
 			</div>
 
 		</section>
-
-
 	</div>
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 
@@ -611,6 +676,7 @@
 
 	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -621,19 +687,56 @@
 		});
 
 		const myForm = $("#transferApplicationForm");
-
-		$("#modalSubmit").click(function () {
-
-			myForm.submit();
-		});
-
-		$(myForm).submit(function () {
+		$(myForm).submit(function (event) {
 			if ($(this).valid()) {
-				//TODO Progress Bar or any notification
+				toastr.success('Your application has been transfer', 'Thank you!');
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$(".popup-modal-dismiss").trigger("click");
+				return false;
 			}
-			return;
+			return false;
 		});
 
+		$("#btnModalSubmit").on('click', function ()
+		{
+			myForm.trigger("submit");
+		});
+
+		
+		$("#btnAddExpression").on('click', function (event) {
+			event.stopPropagation();
+			event.preventDefault();
+
+			let regex = /^(.+?)(\d+)$/i;
+			let cloneIndex = $(".cloneInput").length;
+			let curIndex = parseInt(cloneIndex) - 1;
+
+
+			let cloneHtml = $("#detailExpression" + curIndex).parent().clone()
+				.attr("id", "clonedInput" + cloneIndex)
+				.find("*")
+				.each(function () {
+					let id = this.id || "";
+					let match = id.match(regex) || [];
+					if (match.length == 3) {
+						this.id = match[1] + (cloneIndex);
+					}
+				})[0].outerHTML;
+
+			$("#detailExpression" + curIndex).parent().append(cloneHtml);
+
+
+			$("#detailExpression" + cloneIndex).find('summary')
+				.text("Expression " + String.fromCharCode(cloneIndex + 65))
+
+			cloneIndex++;
+
+			expressionFilterOnChangeEvent();
+
+		});
 
 
 
@@ -652,6 +755,99 @@
 				}
 			});
 		});
+
+		hideOperatorInput(0);
+		expressionFilterOnChangeEvent();
+
+		toastr.options = {
+			"closeButton": true,
+			"debug": false,
+			"newestOnTop": false,
+			"progressBar": false,
+			"positionClass": "toast-top-right",
+			"preventDuplicates": false,
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "5000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		}
+
+
+		
+		function expressionFilterOnChangeEvent() {
+			let cloneIndex = $(".cloneInput").length;
+		
+
+			for (let i = 0; i < cloneIndex; i++)
+			{
+				$('#fieldSelect' + i).on('change', function ()
+				{
+					var dataType = $('option:selected', this).attr('data-type');
+
+					$('#operatorSelect'+ i +' option:selected').prop('selected', false)
+
+					$('#operatorSelect' + i)
+						.find('option')
+						.show()
+						.not("option[data-type*='" + dataType + "']").hide();
+
+
+					$('#operatorSelect' + i  +'  option:first-child').show();
+
+					toggleOperatorInput(dataType,i);
+				});
+			} 
+		}
+
+		function toggleOperatorInput(dataType, index) {
+			hideOperatorInput(index);
+
+			if (typeof dataType === 'undefined') {
+				return;
+			}
+
+
+			if (dataType.toUpperCase() === 'integer'.toUpperCase()) {
+				$('#integerInput' + index).show();
+				return;
+			}
+
+			if (dataType.toUpperCase() === 'text'.toUpperCase()) {
+				$('#textInput' + index).show();
+				return;
+			}
+
+			if (dataType.toUpperCase() === 'date'.toUpperCase()) {
+				$('#dateInput' + index).show();
+				return;
+			}
+
+			if (dataType.toUpperCase() === 'lookup'.toUpperCase()) {
+				$('#lookupInput' + index).show();
+				return;
+			}
+
+			if (dataType.toUpperCase() === 'boolean'.toUpperCase()) {
+				$('#booleanInput' + index).show();
+				return;
+			}
+
+			return;
+		};
+
+		function hideOperatorInput(index) {
+			$('#integerInput' + index).hide();
+			$('#textInput' + index).hide();
+			$('#dateInput' + index).hide();
+			$('#lookupInput' + index).hide();
+			$('#booleanInput' + index).hide();
+		};
+
 
 	</script>
 
