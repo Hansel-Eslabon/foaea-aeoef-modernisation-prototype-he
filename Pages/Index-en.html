@@ -397,8 +397,16 @@
 																	<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="9" data-mask="999-999-999" placeholder="999-999-999">
 																</div>
 																<div class="form-group">
+																	<label for="ctrlCode" class="">Ctrl Code</label>
+																	<input class="form-control" id="ctrlCode" name="ctrlCode" type="text" data-rule-minlength="2">
+																</div>
+																<div class="form-group">
 																	<label for="justiceNo" class="">Justice #</label>
 																	<input class="form-control" id="justiceNo" name="justiceNo" type="text" data-rule-minlength="2">
+																</div>
+																<div class="form-group">
+																	<label for="endRefSource" class="">End Ref Source #</label>
+																	<input class="form-control" id="endRefSource" name="endRefSource" type="text" data-rule-minlength="2">
 																</div>
 																<div class="form-group">
 																	<label for="status" class="">State</label>
@@ -422,71 +430,123 @@
 											</details>
 											<details id="detailsAdvSearch">
 												<summary>Advanced Search</summary>
-												<form action="#" method="get" id="advSearchForm">
-													<ul class="list-unstyled">
-														<li>
-															<details id="detailExpression0" class="cloneInput">
-																<summary>Expression A</summary>
-																<fieldset id="advSearchFormFieldSet0">
-																	<div>
-																		<div class="form-group">
-																			<label for="fields" class="">Fields</label>
-																			<select name="fieldSelect" id="fieldSelect0" class="form-control">
-																				<option selected="selected" value="0">Please select a fields</option>
-																				<option value="sin" data-type="integer">SIN #</option>
-																				<option value="justiceNo" data-type="integer">Justice #</option>
-																				<option value="category" data-type="text">Category</option>
-																				<option value="ctrlCode" data-type="text">Ctrl Code</option>
-																				<option value="debtName" data-type="text">Debtor Name</option>
-																				<option value="state" data-type="lookup" data-lookup-table="state">State</option>
-																				<option value="dateCreate" data-type="date">Date Created</option>
-																				<option value="isActive" data-type="boolean">Is Active?</option>
-																			</select>
+												<div id="instructionDiv" class="alert alert-info" role="alert">
+													<h4> <input id="chkboxInstruction" type="checkbox" checked disabled> Select to add to My Search - 5 max</h4>
+												</div>
 
-																		</div>
-																		<div class="form-group">
-																			<select name="operatorSelect" id="operatorSelect0" class="form-control">
-																				<option selected="selected" value="0" data-type="test">Please select a operator</option>
-																				<option value="equal" data-type="integer,text,boolean">Equals</option>
-																				<option value="contains" data-type="text">Contains</option>
-																				<option value="greaterThan" data-type="integer">Greater than</option>
-																				<option value="greaterThanEqual" data-type="integer">Greater than or equals to</option>
-																				<option value="lessThan" data-type="integer">Less than</option>
-																				<option value="lessThanEqual" data-type="integer">Less than or equals to</option>
-																				<option value="today" data-type="date">Today</option>
-																				<option value="last7days" data-type="date">Last 7 days</option>
-																				<option value="last30days" data-type="date">Last 30 days</option>
-																			</select>
-																			<input class="form-control" id="integerInput0" name="integerInput" type="number" data-rule-minlength="1" placeholder="123456789">
-																			<input class="form-control" id="textInput0" name="textInput" type="text" data-rule-minlength="2">
-																			<input class="form-control" id="dateInput0" name="dateInput" type="date">
-																			<select name="lookupInput" id="lookupInput0" class="form-control">
-																				<option selected="selected" value="-999">Please select a value</option>
-																			</select>
-																			<select name="booleanInput" id="booleanInput0" class="form-control">
-																				<option selected="selected" value="-999">Please select a value</option>
-																				<option value="1">Yes</option>
-																				<option value="0">No</option>
-																				<option value="null">Null</option>
-																			</select>
-																		</div>
+												<form action="#" method="get" class="form-horizontal">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="lastName"> <input id="chkboxLastName" type="checkbox" value=""> Last Name</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="lastName" name="lastName" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="firstName"> <input id="chkboxFirstName" type="checkbox" value=""> First Name</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="firstName" name="firstName" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="middleName"> <input id="chkboxMiddleName" type="checkbox" value=""> Middle Name</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="middleName" name="middleName" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="endRefSource"> <input id="chkboxEndRefSource" type="checkbox" value=""> End Ref Source #</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="endRefSource" name="endRefSource" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="state"> <input id="chkboxState" type="checkbox" value=""> State</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="state" name="state" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="sin"> <input id="chkboxSIN" type="checkbox" value=""> SIN</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="ctrlCode"> <input id="chkboxCtrlCode" type="checkbox" value=""> Ctrl Code</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="ctrlCode" name="ctrlCode" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="justiceNo"> <input id="chkboxJusticeNo" type="checkbox" value=""> Justice #</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="justiceNo" name="justiceNo" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="status"> <input id="chkboxStatus" type="checkbox" value=""> Status</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="status" name="status" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="category"> <input id="chkboxCategory" type="checkbox" value=""> Category</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="category" name="category" type="text" data-rule-minlength="2">
+																</div>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="appReceiptDateFrom"> <input id="chkboxAppReceiptDateFrom" type="checkbox" value=""> Application Receipt Date - From</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="appReceiptDateFrom" name="appReceiptDateFrom" type="date">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="chkboxAppReceiptDateTo"> Application Receipt Date - To</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="appReceiptDateTo" name="appReceiptDateTO" type="date">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="appReceiptExpiryFrom"> <input id="chkboxAppReceiptExpiryFrom" type="checkbox" value=""> Application Expiry Date - From</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="appReceiptExpiryFrom" name="appReceiptExpiryFrom" type="date">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="appReceiptExpiryTo"> Application Expiry Date - To</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="appReceiptExpiryTo" name="appReceiptExpiryTo" type="date">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="dOBFrom"> <input id="chkboxDOBFrom" type="checkbox" value=""> Date of Birth - From</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="dOBFrom" name="dOBFrom" type="date">
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="col-sm-5 control-label" for="dOBTo"> Date of Birth - To</label>
+																<div class="col-md-7">
+																	<input class="form-control" id="dOBFrom" name="dOBFrom" type="date">
+																</div>
+															</div>
 
-																	</div>
-																</fieldset>
-															</details>
-														</li>
-													</ul>
-													<div class="form-group">
-														<button class="btn btn-primary" id="btnAddExpression"><span class="glyphicon glyphicon-plus"></span> Add more expression</button>
+
+														</div>
 													</div>
-													<div class="form-group">
-														<label for="expression" class="">Expression</label>
-														<input class="form-control" id="expression" name="expression" type="text" data-rule-minlength="4" placeholder="A or B">
 
-													</div>
-													<input type="submit" name="submit" value="Search" class="btn btn-primary">
+													<input type="submit" name="submit" value="Advanced Search" class="btn btn-primary">
 
 												</form>
+											</details>
+											<details id="saveSearch">
+												<summary>Save Searches</summary>
+											
 											</details>
 										</div>
 									</div>
@@ -904,121 +964,119 @@
 				$('#sidebar').toggleClass('active');
 			});
 
-			$("btnAddExpression").trigger("click");
-
 			//when the tab is click, add event on adv search tab
-			wb.doc.on("wb-ready.wb", function () {
-				$('#btnAddExpression').on('click', function (event) {
+			//wb.doc.on("wb-ready.wb", function () {
+			//	$('#btnAddExpression').on('click', function (event) {
 
-					event.stopPropagation();
-					event.preventDefault();
+			//		event.stopPropagation();
+			//		event.preventDefault();
 
-					let regex = /^(.+?)(\d+)$/i;
-					let cloneIndex = $(".cloneInput").length;
-					let curIndex = parseInt(cloneIndex) - 1;
-
-
-					let cloneHtml = $("#detailExpression" + curIndex).parent().clone()
-						.attr("id", "clonedInput" + cloneIndex)
-						.find("*")
-						.each(function () {
-							let id = this.id || "";
-							let match = id.match(regex) || [];
-							if (match.length == 3) {
-								this.id = match[1] + (cloneIndex);
-							}
-						})[0].outerHTML;
-
-					$("#detailExpression" + curIndex).parent().append(cloneHtml);
+			//		let regex = /^(.+?)(\d+)$/i;
+			//		let cloneIndex = $(".cloneInput").length;
+			//		let curIndex = parseInt(cloneIndex) - 1;
 
 
-					$("#detailExpression" + cloneIndex).find('summary')
-						.text("Expression " + String.fromCharCode(cloneIndex + 65))
+			//		let cloneHtml = $("#detailExpression" + curIndex).parent().clone()
+			//			.attr("id", "clonedInput" + cloneIndex)
+			//			.find("*")
+			//			.each(function () {
+			//				let id = this.id || "";
+			//				let match = id.match(regex) || [];
+			//				if (match.length == 3) {
+			//					this.id = match[1] + (cloneIndex);
+			//				}
+			//			})[0].outerHTML;
 
-					cloneIndex++;
+			//		$("#detailExpression" + curIndex).parent().append(cloneHtml);
 
-					expressionFilterOnChangeEvent();
 
-				});
+			//		$("#detailExpression" + cloneIndex).find('summary')
+			//			.text("Expression " + String.fromCharCode(cloneIndex + 65))
 
-			});
+			//		cloneIndex++;
+
+			//		expressionFilterOnChangeEvent();
+
+			//	});
+
+			//});
 
 
 		
 		});
 
-		hideOperatorInput(0);
+		//hideOperatorInput(0);
 
-		expressionFilterOnChangeEvent();
+		//expressionFilterOnChangeEvent();
 
 		
 
 
-		function expressionFilterOnChangeEvent() {
-			let cloneIndex = $(".cloneInput").length;
+		//function expressionFilterOnChangeEvent() {
+		//	let cloneIndex = $(".cloneInput").length;
 
-			for (let i = 0; i < cloneIndex; i++) {
-				$('#fieldSelect' + i).on('change', function () {
-					var dataType = $('option:selected', this).attr('data-type');
+		//	for (let i = 0; i < cloneIndex; i++) {
+		//		$('#fieldSelect' + i).on('change', function () {
+		//			var dataType = $('option:selected', this).attr('data-type');
 
-					$('#operatorSelect' + i + ' option:selected').prop('selected', false)
+		//			$('#operatorSelect' + i + ' option:selected').prop('selected', false)
 
-					$('#operatorSelect' + i)
-						.find('option')
-						.show()
-						.not("option[data-type*='" + dataType + "']").hide();
-
-
-					$('#operatorSelect' + i + '  option:first-child').show();
-
-					toggleOperatorInput(dataType, i);
-				});
-			}
-		}
-
-		function toggleOperatorInput(dataType, index) {
-			hideOperatorInput(index);
-
-			if (typeof dataType === 'undefined') {
-				return;
-			}
+		//			$('#operatorSelect' + i)
+		//				.find('option')
+		//				.show()
+		//				.not("option[data-type*='" + dataType + "']").hide();
 
 
-			if (dataType.toUpperCase() === 'integer'.toUpperCase()) {
-				$('#integerInput' + index).show();
-				return;
-			}
+		//			$('#operatorSelect' + i + '  option:first-child').show();
 
-			if (dataType.toUpperCase() === 'text'.toUpperCase()) {
-				$('#textInput' + index).show();
-				return;
-			}
+		//			toggleOperatorInput(dataType, i);
+		//		});
+		//	}
+		//}
 
-			if (dataType.toUpperCase() === 'date'.toUpperCase()) {
-				$('#dateInput' + index).show();
-				return;
-			}
+		//function toggleOperatorInput(dataType, index) {
+		//	hideOperatorInput(index);
 
-			if (dataType.toUpperCase() === 'lookup'.toUpperCase()) {
-				$('#lookupInput' + index).show();
-				return;
-			}
+		//	if (typeof dataType === 'undefined') {
+		//		return;
+		//	}
 
-			if (dataType.toUpperCase() === 'boolean'.toUpperCase()) {
-				$('#booleanInput' + index).show();
-				return;
-			}
 
-			return;
-		};
+		//	if (dataType.toUpperCase() === 'integer'.toUpperCase()) {
+		//		$('#integerInput' + index).show();
+		//		return;
+		//	}
 
-		function hideOperatorInput(index) {
-			$('#integerInput' + index).hide();
-			$('#textInput' + index).hide();
-			$('#dateInput' + index).hide();
-			$('#lookupInput' + index).hide();
-			$('#booleanInput' + index).hide();
-		};
+		//	if (dataType.toUpperCase() === 'text'.toUpperCase()) {
+		//		$('#textInput' + index).show();
+		//		return;
+		//	}
+
+		//	if (dataType.toUpperCase() === 'date'.toUpperCase()) {
+		//		$('#dateInput' + index).show();
+		//		return;
+		//	}
+
+		//	if (dataType.toUpperCase() === 'lookup'.toUpperCase()) {
+		//		$('#lookupInput' + index).show();
+		//		return;
+		//	}
+
+		//	if (dataType.toUpperCase() === 'boolean'.toUpperCase()) {
+		//		$('#booleanInput' + index).show();
+		//		return;
+		//	}
+
+		//	return;
+		//};
+
+		//function hideOperatorInput(index) {
+		//	$('#integerInput' + index).hide();
+		//	$('#textInput' + index).hide();
+		//	$('#dateInput' + index).hide();
+		//	$('#lookupInput' + index).hide();
+		//	$('#booleanInput' + index).hide();
+		//};
 
 	</script>
 
