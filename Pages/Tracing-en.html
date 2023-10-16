@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title>NEW TO1 - Justice Canada</title>
+	<title>List TO1 - Justice Canada</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
@@ -55,7 +55,7 @@
 						<span>Home</span>
 					</a>
 				</li>
-				<li  class="active">
+				<li class="active">
 					<a href="Tracing-en.html">
 						<i class="bi bi-search"></i>
 						<span>Trace and Locate</span>
@@ -173,7 +173,7 @@
 								<div class="collapse navbar-collapse" id="navbarCollapse">
 									<ul class="navbar-nav ml-auto w-100 justify-content-end">
 										<li class="nav-item">
-											<a class="nav-link" href="#">
+											<a href="#right-panel" aria-controls="right-panel" class="overlay-lnk nav-link" role="button">
 												<i class="bi bi-bell"></i> Notification
 												<span class="badge rounded-pill bg-danger">4</span>
 
@@ -267,6 +267,12 @@
 							<div class="m-3" id="tableSearch-container">
 								<details id="detailsAdvSearch">
 									<summary>Advanced Search</summary>
+									<div class="row py-1 align-items-center">
+										<div class="col-auto">
+											<a href="javascript:void(0);" class="text-body p-2">Save Search 1</a>
+											<a href="javascript:void(0);" class="text-body p-2">Save Search 2</a>
+										</div>
+									</div>
 									<form action="#" method="get" id="advSearchForm">
 										<ul class="list-unstyled">
 											<li>
@@ -329,13 +335,23 @@
 											<input class="form-control" id="expression" name="expression" type="text" data-rule-minlength="4" placeholder="A or B">
 
 										</div>
-										<input type="submit" name="submit" value="Search" class="btn btn-primary">
+										<div class="form-group">
+											<input type="submit" name="submit" value="Search" class="btn btn-primary">
+										</div>
 
+
+										<div class="form-group">
+											<label for="searchName">Search Name </label>
+											<input class="form-control" id="searchName" name="searchName" type="text" data-rule-minlength="2">
+											<a href="#" class="btn btn-default" role="button">Save Search</a>
+										</div>
 									</form>
 								</details>
 							</div>
 							<div id="tableMenubar-container">
 								<a href="New-Tracing-en.html" class="p-2" role="button"><i class="bi bi-patch-plus"></i><span class="ps-2">New</span></a>
+								<a href="#Edit"><i class="bi bi-pencil"></i><span class="ps-2">Edit</span><span class="sr-only">Edit</span> </a>
+								<a href="#Edit"><i class="bi bi-eye"></i><span class="ps-2">View</span><span class="sr-only">View</span> </a>
 								<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-card-text"></i><span class="ps-2">Notes</span></a>
 								<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-arrow-left-right"></i><span class="ps-2">Transfer</span></a>
 								<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-earmark-minus"></i><span class="ps-2">Cancel</span></a>
@@ -347,241 +363,270 @@
 									<i class="bi bi-arrow-repeat"></i>
 									<span class="ps-2">List All</span>
 								</a>
+								<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
+								<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
 							</div>
-							<table id="t01Tables" class="wb-tables table table-striped table-hover">
-								<thead>
-									<tr>
-										<th>Record No.</th>
-										<th>Category</th>
-										<th>Date Received</th>
-										<th>Submitter</th>
-										<th>Recipient</th>
-										<th>Service</th>
-										<th>Ctrl Code</th>
-										<th>Debtor First Name</th>
-										<th>Debtor Surname</th>
-										<th>Source Ref #</th>
-										<th>Expiry Date</th>
-										<th>Justice #</th>
-										<th>State</th>
-										<td></td>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a>
-											<a href="#View" class="ps-2">1</a>
-										</td>
-										<td>T01</td>
-										<td>2011-04-25</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>123456</td>
-										<td>Solution</td>
-										<td>Architect</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">2</a></td>
-										<td>T01</td>
-										<td>2011-07-25</td>
-										<td>NPW204</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>123456</td>
-										<td>Winters</td>
-										<td>Summer</td>
-										<td>REF312</td>
-										<td>2019-04-07</td>
-										<td>ABCD6755</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">3</a></td>
-										<td>T01</td>
-										<td>2009-01-12</td>
-										<td>NPW304</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>454353</td>
-										<td>Cox</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">4</a></td>
-										<td>T01</td>
-										<td>2012-03-29</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>454353</td>
-										<td>Kelly</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">5</a></td>
-										<td>T01</td>
-										<td>2008-11-28</td>
-										<td>NPW101</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>454353</td>
-										<td>Winters</td>
-										<td>Satou</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">6</a></td>
-										<td>T01</td>
-										<td>2012-12-02</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>178986</td>
-										<td>Williamson</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">7</a></td>
-										<td>T01</td>
-										<td>2012-08-06</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>44444</td>
-										<td>Chandler</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">8</a></td>
-										<td>T01</td>
-										<td>2010-10-14</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>411133</td>
-										<td>Davidson</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">9</a></td>
-										<td>T01</td>
-										<td>2009-09-15</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>29833</td>
-										<td>Hurst</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">10</a></td>
-										<td>T01</td>
-										<td>2008-12-13</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>454353</td>
-										<td>Frost</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">11</a></td>
-										<td>T01</td>
-										<td>2011-04-25</td>
-										<td>NPW104</td>
-										<td>NPW104</td>
-										<td>NP01</td>
-										<td>123456</td>
-										<td>Architect</td>
-										<td>Winters</td>
-										<td>REF123</td>
-										<td>2017-04-07</td>
-										<td>ABCD1234</td>
-										<td>Application Accepted</td>
-										<td>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
-											<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							<div class="table-responsive">
+								<table id="t01Tables" class="wb-tables table table-striped table-hover">
+									<thead>
+										<tr>
+											<th>Record No.</th>
+											<th>Category</th>
+											<th>Date Received</th>
+											<th>Submitter</th>
+											<th>Recipient</th>
+											<th>Service</th>
+											<th>Ctrl Code</th>
+											<th>Debtor First Name</th>
+											<th>Debtor Surname</th>
+											<th>Source Ref #</th>
+											<th>Expiry Date</th>
+											<th>Justice #</th>
+											<th>State</th>
+											<td></td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-id="1234">
+											<td>
+												<a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a>
+												<a href="#View" class="ps-2">1</a>
+											</td>
+											<td>T01</td>
+											<td>2011-04-25</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>123456</td>
+											<td>Solution</td>
+											<td>Architect</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+												<!--<a data-action="bookmark" href="#" class="p-2" aria-controls="bookmark" role="button">
+													<i class="bi bi-star"></i>
+												</a>-->
+											</td>
+										</tr>
+										<tr data-id="2345">
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">2</a></td>
+											<td>T01</td>
+											<td>2011-07-25</td>
+											<td>NPW204</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>123456</td>
+											<td>Winters</td>
+											<td>Summer</td>
+											<td>REF312</td>
+											<td>2019-04-07</td>
+											<td>ABCD6755</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">3</a></td>
+											<td>T01</td>
+											<td>2009-01-12</td>
+											<td>NPW304</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Cox</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">4</a></td>
+											<td>T01</td>
+											<td>2012-03-29</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Kelly</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">5</a></td>
+											<td>T01</td>
+											<td>2008-11-28</td>
+											<td>NPW101</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Winters</td>
+											<td>Satou</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">6</a></td>
+											<td>T01</td>
+											<td>2012-12-02</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>178986</td>
+											<td>Williamson</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">7</a></td>
+											<td>T01</td>
+											<td>2012-08-06</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>44444</td>
+											<td>Chandler</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">8</a></td>
+											<td>T01</td>
+											<td>2010-10-14</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>411133</td>
+											<td>Davidson</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star hide"></i>
+													<i class="bi bi-star-fill "></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">9</a></td>
+											<td>T01</td>
+											<td>2009-09-15</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>29833</td>
+											<td>Hurst</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">10</a></td>
+											<td>T01</td>
+											<td>2008-12-13</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>454353</td>
+											<td>Frost</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star"></i>
+													<i class="bi bi-star-fill hide"></i>
+												</div>
+											</td>
+										</tr>
+										<tr data-id="11">
+											<td><a href="#Edit"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="#View" class="ps-2">11</a></td>
+											<td>T01</td>
+											<td>2011-04-25</td>
+											<td>NPW104</td>
+											<td>NPW104</td>
+											<td>NP01</td>
+											<td>123456</td>
+											<td>Architect</td>
+											<td>Winters</td>
+											<td>REF123</td>
+											<td>2017-04-07</td>
+											<td>ABCD1234</td>
+											<td>Application Accepted</td>
+											<td>
+												<div class="fav">
+													<i class="bi bi-star hide"></i>
+													<i class="bi bi-star-fill "></i>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -621,53 +666,58 @@
 			</footer>
 		</div>
 
-		<!-- Modal/Overlay -->
-		<section id="transfer-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
-			<header class="modal-header">
-				<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Transfer Application - 01</h2>
-			</header>
+	</div>
 
-			<div class="modal-body">
-				<div class="wb-frmvld">
-					<form action="#" method="post" id="transferApplicationForm">
-						<fieldset id="transferApplicationFormFieldset">
-							<div>
-								<div class="form-group">
-									<label for="office" class="required"><span class="field-name">Select Office:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-									<select name="office" id="office" class="form-control" required="required">
-										<option label="Please select an option"></option>
-										<option value="AB01">AB01</option>
-										<option value="BC01">BC01</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="recipient" class="required"><span class="field-name">Select Recipient:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-									<select name="recipient" id="recipient" class="form-control" required="required">
-										<option label="Please select an option"></option>
-										<option value="NPW102">NPW102</option>
-										<option value="NPW202">NPW202</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<div class="checkbox checkbox-standalone required">
-										<label for="isTransferLinkApplication">
-											<input id="isTransferLinkApplication" name="isTransferLinkApplication" type="checkbox">
-											<span class="field-name">Transfer Link Application</span> <strong class="required">(required)</strong>
-										</label>
-									</div>
+	<!-- Modal/Overlay -->
+	<section id="transfer-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
+		<header class="modal-header">
+			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Transfer Application - 01</h2>
+		</header>
+
+		<div class="modal-body">
+			<div class="wb-frmvld">
+				<form action="#" method="post" id="transferApplicationForm">
+					<fieldset id="transferApplicationFormFieldset">
+						<div>
+							<div class="form-group">
+								<label for="office" class="required"><span class="field-name">Select Office:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="office" id="office" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="AB01">AB01</option>
+									<option value="BC01">BC01</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="recipient" class="required"><span class="field-name">Select Recipient:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="recipient" id="recipient" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="NPW102">NPW102</option>
+									<option value="NPW202">NPW202</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<div class="checkbox checkbox-standalone required">
+									<label for="isTransferLinkApplication">
+										<input id="isTransferLinkApplication" name="isTransferLinkApplication" type="checkbox">
+										<span class="field-name">Transfer Link Application</span> <strong class="required">(required)</strong>
+									</label>
 								</div>
 							</div>
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-primary overlay-close" type="button" id="btnModalSubmit">Confirm</button>
+						</div>
+					</fieldset>
+				</form>
 			</div>
 
-		</section>
-	</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary overlay-close" type="button" id="btnModalSubmit">Confirm</button>
+		</div>
+
+	</section>
+
+
+
+
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 
 	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -678,14 +728,23 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.dataTables.min.js"></script>
+	<script src="../wwwroot/lib/extension/datatables/datatables.select.min.js"></script>
+
+
 	<script type="text/javascript">
 		$(document).ready(function () {
 
 			$('#sidebarCollapse').on('click', function () {
 				$('#sidebar').toggleClass('active');
 			});
+
+
+
+
 		});
 
+		//Transfer Modal
 		const myForm = $("#transferApplicationForm");
 		$(myForm).submit(function (event) {
 			if ($(this).valid()) {
@@ -700,12 +759,11 @@
 			return false;
 		});
 
-		$("#btnModalSubmit").on('click', function ()
-		{
+		$("#btnModalSubmit").on('click', function () {
 			myForm.trigger("submit");
 		});
 
-		
+		//Adv Search Expression
 		$("#btnAddExpression").on('click', function (event) {
 			event.stopPropagation();
 			event.preventDefault();
@@ -738,21 +796,34 @@
 
 		});
 
+		//Bookmark
+		$('#t01Tables td:nth-child(14) > div').on('click', ".bi", function (event) {
+
+			console.log($(this).parents("tr").attr("data-id"));
+			if ($(event.target).hasClass('bi-star-fill')) {
+				//Ajax Remove Bookmark
+				toastr.success('Remove from Tracking');
+			}
+			else {
+				//Ajax Add Bookmark
+				toastr.success('Added from Tracking');
+			}
+
+			event.target.classList.add("hide");
+			$(this).siblings('.bi').removeClass("hide");
+		});
 
 
+		
 		wb.doc.on("wb-ready.wb", function () {
-			Modernizr.load({
-				load: [
-					"../wwwroot/lib/wet-boew/js/deps/jquery.dataTables" + wb.getMode() + ".js",
-					"../wwwroot/lib/extension/datatables/datatables.select" + wb.getMode() + ".js"
-				],
-				complete: function () {
-					let selector = "#t01Tables", table;
-					table = $(selector);
-					table.attr("class", "table table-hover table-stripped wb-tables");
-					table.attr("data-wb-tables", '{"select":  {"style": "multi"}}');
-					table.trigger("wb-init.wb-tables");
-				}
+			//Need to hide the 4 datatable component to avoid duplicate
+			$('#t01Tables').DataTable({
+				bPaginate: false,
+				bFilter: false,
+				bInfo: false,
+				ordering: false,
+				select: 'single',
+				
 			});
 		});
 
@@ -778,18 +849,16 @@
 		}
 
 
-		
+
 		function expressionFilterOnChangeEvent() {
 			let cloneIndex = $(".cloneInput").length;
-		
 
-			for (let i = 0; i < cloneIndex; i++)
-			{
-				$('#fieldSelect' + i).on('change', function ()
-				{
+
+			for (let i = 0; i < cloneIndex; i++) {
+				$('#fieldSelect' + i).on('change', function () {
 					var dataType = $('option:selected', this).attr('data-type');
 
-					$('#operatorSelect'+ i +' option:selected').prop('selected', false)
+					$('#operatorSelect' + i + ' option:selected').prop('selected', false)
 
 					$('#operatorSelect' + i)
 						.find('option')
@@ -797,11 +866,11 @@
 						.not("option[data-type*='" + dataType + "']").hide();
 
 
-					$('#operatorSelect' + i  +'  option:first-child').show();
+					$('#operatorSelect' + i + '  option:first-child').show();
 
-					toggleOperatorInput(dataType,i);
+					toggleOperatorInput(dataType, i);
 				});
-			} 
+			}
 		}
 
 		function toggleOperatorInput(dataType, index) {
@@ -850,6 +919,7 @@
 
 
 	</script>
+
 
 </body>
 

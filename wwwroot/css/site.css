@@ -98,8 +98,19 @@ ol, ul {
 }
 
 
+/* Overlay */
+.wb-panel-l, .wb-panel-r {
+	height: 100%;
+	max-width: 15%;
+	top: 0;
+}
+
 
 /* Table */
+
+.wb-tables tr {
+	cursor: pointer;
+}
 
 
 #tableMenubar-container, #tableMenubar-container > a {

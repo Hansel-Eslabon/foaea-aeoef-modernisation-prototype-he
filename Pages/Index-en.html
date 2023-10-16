@@ -27,6 +27,7 @@
 
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
 	<link rel="stylesheet" href="../wwwroot/css/site.css" />
 </head>
@@ -167,7 +168,7 @@
 										<ul class="navbar-nav ml-auto w-100 justify-content-end">
 											<li class="nav-item">
 
-												<a class="nav-link" href="#">
+												<a class="nav-link overlay-lnk" href="#right-panel" aria-controls="right-panel" role="button">
 													<i class="bi bi-bell"></i> Notification
 													<span class="badge rounded-pill bg-danger">4</span>
 
@@ -200,188 +201,6 @@
 								<h1 id="wb-cont" property="name">Home</h1>
 							</div>
 							<div class="row">
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<h2>Last 5 recently viewed actioned</h2>
-									<div class="card">
-										<div class="card-body">
-											<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-success fw-bold pe-3">New</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Affidavit #1011</a>
-														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-success fw-bold pe-3">Edit</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">License Denial Application #932</a>
-														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-danger fw-bold pe-3">Cancelled/Terminated</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-warning fw-bold pe-3">Transfer</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">License Denial Affidavit #795</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-warning fw-bold pe-3">De-linked/Linked</span>
-													</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<h2>My Tracking</h2>
-									<div class="card">
-										<div class="card-body">
-											<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															Tracing Affidavit #1011
-														</a>
-														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Application #932
-														</a>
-														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Affidavit #795
-														</a>
-														<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															Tracing Affidavit #1011
-														</a>
-														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Application #932
-														</a>
-														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Affidavit #795
-														</a>
-														<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
 								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 									<h2>Search</h2>
 									<div class="wb-tabs ignore-session">
@@ -538,18 +357,279 @@
 
 
 														</div>
-													</div>
 
+													</div>
+													<div class="form-group p-4">
+														<label for="searchName">Search Name </label>
+														<input class="form-control" id="searchName" name="searchName" type="text" data-rule-minlength="2">
+														<a href="#" class="btn btn-link" role="button">Save Search</a>
+													</div>
 													<input type="submit" name="submit" value="Advanced Search" class="btn btn-primary">
 
 												</form>
 											</details>
 											<details id="saveSearch">
 												<summary>Save Searches</summary>
-											
+												<div class="card">
+													<div class="card-body">
+														<div class="row py-1 align-items-center">
+															<div class="col-auto">
+																<a href="javascript:void(0);" class="text-body">Save Search 1</a>
+															</div>
+														</div>
+														<div class="row py-1 align-items-center">
+															<div class="col-auto">
+																<a href="javascript:void(0);" class="text-body">Save Search 2</a>
+															</div>
+														</div>
+													</div>
+												</div>
 											</details>
 										</div>
 									</div>
+								</div>
+
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+									<h2>Last 5 recently viewed actioned</h2>
+									<div class="card">
+										<div class="card-body">
+											<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
+												<div class="row py-1 align-items-center">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
+														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<span class="text-success fw-bold pe-3">New</span>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">Tracing Affidavit #1011</a>
+														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<span class="text-success fw-bold pe-3">Edit</span>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">License Denial Application #932</a>
+														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<span class="text-danger fw-bold pe-3">Cancelled/Terminated</span>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
+														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<span class="text-warning fw-bold pe-3">Transfer</span>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">License Denial Affidavit #795</a>
+														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<span class="text-warning fw-bold pe-3">De-linked/Linked</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+									<h2>My Tracking</h2>
+									<div class="card" id="myTracking">
+										<div class="card-body">
+											<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
+												<div class="row py-1 align-items-center" data-id="1234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
+														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="2">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">
+															Tracing Affidavit #1011
+														</a>
+														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="13234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">
+															License Denial Application #932
+														</a>
+														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="1434">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
+														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="1234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">
+															License Denial Affidavit #795
+														</a>
+														<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="1234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
+														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="1234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">
+															Tracing Affidavit #1011
+														</a>
+														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="1234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">
+															License Denial Application #932
+														</a>
+														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="1234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
+														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+												<div class="row py-1 align-items-center" data-id="1234">
+													<div class="col-auto">
+														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
+													</div>
+													<div class="col ps-0">
+														<a href="javascript:void(0);" class="text-body">
+															License Denial Affidavit #795
+														</a>
+														<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
+													</div>
+													<div class="col-auto">
+														<div class="fav">
+															<i class="bi bi-star hide pe-4"></i>
+															<i class="bi bi-star-fill pe-4"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
 								</div>
 
 
@@ -942,11 +1022,42 @@
 						</div>
 					</div>
 				</footer>
-
-
 			</div>
+			
 		</div>
+	
 	</div>
+
+		<section id="right-panel" class="wb-overlay modal-content overlay-def wb-panel-r">
+			<header class="modal-header">
+				<h2 class="modal-title">Notifications</h2>
+			</header>
+			<div class="modal-body">
+				<ul class="list-unstyled">
+					<li>
+						<p><a href="#">T01 Applications #4545</a> has been transfer to your office</p>
+						<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+						<hr />
+					</li>
+					<li>
+						<a href="#">Link 2</a>
+					</li>
+					<li>
+						<a href="#">Link 3</a>
+					</li>
+					<li>
+						<a href="#">Link 4</a>
+					</li>
+					<li>
+						<a href="#">Link 5</a>
+					</li>
+					<li>
+						<a href="#">Link 6</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
 
 
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
@@ -957,126 +1068,42 @@
 
 	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function () {
 
 			$('#sidebarCollapse').on('click', function () {
 				$('#sidebar').toggleClass('active');
 			});
-
-			//when the tab is click, add event on adv search tab
-			//wb.doc.on("wb-ready.wb", function () {
-			//	$('#btnAddExpression').on('click', function (event) {
-
-			//		event.stopPropagation();
-			//		event.preventDefault();
-
-			//		let regex = /^(.+?)(\d+)$/i;
-			//		let cloneIndex = $(".cloneInput").length;
-			//		let curIndex = parseInt(cloneIndex) - 1;
-
-
-			//		let cloneHtml = $("#detailExpression" + curIndex).parent().clone()
-			//			.attr("id", "clonedInput" + cloneIndex)
-			//			.find("*")
-			//			.each(function () {
-			//				let id = this.id || "";
-			//				let match = id.match(regex) || [];
-			//				if (match.length == 3) {
-			//					this.id = match[1] + (cloneIndex);
-			//				}
-			//			})[0].outerHTML;
-
-			//		$("#detailExpression" + curIndex).parent().append(cloneHtml);
-
-
-			//		$("#detailExpression" + cloneIndex).find('summary')
-			//			.text("Expression " + String.fromCharCode(cloneIndex + 65))
-
-			//		cloneIndex++;
-
-			//		expressionFilterOnChangeEvent();
-
-			//	});
-
-			//});
-
-
-		
 		});
 
-		//hideOperatorInput(0);
+		//Bookmark
+		$('#myTracking .row').on('click', ".bi", function (event) {
+			if ($(event.target).hasClass('bi-star-fill')) {
+				//Ajax Remove Bookmark
+				toastr.success('Remove from Tracking');
+				$(this).closest(".row").hide();
+			}
+		});
 
-		//expressionFilterOnChangeEvent();
-
-		
-
-
-		//function expressionFilterOnChangeEvent() {
-		//	let cloneIndex = $(".cloneInput").length;
-
-		//	for (let i = 0; i < cloneIndex; i++) {
-		//		$('#fieldSelect' + i).on('change', function () {
-		//			var dataType = $('option:selected', this).attr('data-type');
-
-		//			$('#operatorSelect' + i + ' option:selected').prop('selected', false)
-
-		//			$('#operatorSelect' + i)
-		//				.find('option')
-		//				.show()
-		//				.not("option[data-type*='" + dataType + "']").hide();
-
-
-		//			$('#operatorSelect' + i + '  option:first-child').show();
-
-		//			toggleOperatorInput(dataType, i);
-		//		});
-		//	}
-		//}
-
-		//function toggleOperatorInput(dataType, index) {
-		//	hideOperatorInput(index);
-
-		//	if (typeof dataType === 'undefined') {
-		//		return;
-		//	}
-
-
-		//	if (dataType.toUpperCase() === 'integer'.toUpperCase()) {
-		//		$('#integerInput' + index).show();
-		//		return;
-		//	}
-
-		//	if (dataType.toUpperCase() === 'text'.toUpperCase()) {
-		//		$('#textInput' + index).show();
-		//		return;
-		//	}
-
-		//	if (dataType.toUpperCase() === 'date'.toUpperCase()) {
-		//		$('#dateInput' + index).show();
-		//		return;
-		//	}
-
-		//	if (dataType.toUpperCase() === 'lookup'.toUpperCase()) {
-		//		$('#lookupInput' + index).show();
-		//		return;
-		//	}
-
-		//	if (dataType.toUpperCase() === 'boolean'.toUpperCase()) {
-		//		$('#booleanInput' + index).show();
-		//		return;
-		//	}
-
-		//	return;
-		//};
-
-		//function hideOperatorInput(index) {
-		//	$('#integerInput' + index).hide();
-		//	$('#textInput' + index).hide();
-		//	$('#dateInput' + index).hide();
-		//	$('#lookupInput' + index).hide();
-		//	$('#booleanInput' + index).hide();
-		//};
+		toastr.options = {
+			"closeButton": true,
+			"debug": false,
+			"newestOnTop": false,
+			"progressBar": false,
+			"positionClass": "toast-top-right",
+			"preventDuplicates": false,
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "5000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		}
 
 	</script>
 

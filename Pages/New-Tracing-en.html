@@ -57,7 +57,7 @@
 						<span>Trace and Locate</span>
 					</a>
 				</li>
-				<li  class="active">
+				<li class="active">
 					<a href="New-Tracing-en.html">
 						<i class="bi bi-file-earmark-plus"></i>
 						<span>New Application</span>
@@ -208,6 +208,7 @@
 											<li>All questions are mandatory (*) unless indicated as "(Optional)" at the end of each question text. </li>
 											<li>Selecting a link on the menu bar will close your session. Any information entered during this session will be lost.</li>
 											<li>If you did not successfully complete the application due to technical difficulties, any information entered during this session will be lost and you will have to start over.</li>
+											<li>Protected B - Protected by the department of Justice under the Provisions of Privacy Act.</li>
 										</ul>
 										<noscript><span>Note that you need to have JavaScript enabled to properly use this questionnaire. Otherwise you won't benefit from all the features.</span></noscript>
 									</div>
@@ -215,7 +216,7 @@
 
 								<div class="wb-frmvld">
 									<h3>Form using Tab</h3>
-									<form action="#" method="get" id="newTracingApplicationForm">
+									<form action="Tracing-en.html" method="post" id="newTracingApplicationForm">
 										<div class="wb-tabs">
 											<div class="tabpanels">
 												<details id="details-panel1" open="open">
@@ -316,13 +317,13 @@
 												</details>
 											</div>
 										</div>
-										<input type="submit" name="submit" value="Submit" class="btn btn-primary">
+										<input id="btnSubmitTabType" type="submit" name="submit" value="Submit" class="btn btn-primary">
 									</form>
 								</div>
 
 								<div class="wb-frmvld">
 									<h3>Form using Details/Summary</h3>
-									<form action="#" method="get" id="newTracingApplicationDetailForm">
+									<form action="Tracing-en.html" method="post" id="newTracingApplicationDetailForm">
 										<ul class="list-unstyled">
 											<li>
 												<details open="open">
@@ -383,10 +384,10 @@
 														</div>
 													</fieldset>
 												</details>
-												
+
 											</li>
 											<li>
-												<details >
+												<details>
 													<summary>Applicant Information</summary>
 													<fieldset id="applicantInformationDetail">
 														<div>
@@ -408,7 +409,7 @@
 												</details>
 											</li>
 										</ul>
-										<input type="submit" name="submit" value="Submit" class="btn btn-primary">
+										<input id="btnSubmitFormType" type="submit" name="submit" value="Submit" class="btn btn-primary">
 									</form>
 								</div>
 							</div>
@@ -454,6 +455,15 @@
 		</div>
 	</div>
 
+	<div id="loader">
+		<div class="h-100 d-flex align-items-center justify-content-center text-white ">
+			<strong>Loading...</strong>
+			<div class="spinner-border" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+	</div>
+
 
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 
@@ -463,9 +473,7 @@
 
 	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 
-
-
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -474,7 +482,41 @@
 				$('#sidebar').toggleClass('active');
 			});
 		});
+
+		var spinner = $('#loader');
+
+		$(function () {
+			$('form').submit(function (e) {
+				e.preventDefault();
+				if ($(this).valid()) {
+					spinner.show();
+					//TODO Ajax here
+					setTimeout("pageRedirect()", 2000);
+				}
+			});
+		});
+
+		function pageRedirect() {
+			window.location.replace("Tracing-en.html");
+		}
+		
+
+
 	</script>
+	<style type="text/css">
+		#loader {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			background: rgba(0,0,0,0.75) url(images/loading2.gif) no-repeat center center;
+			z-index: 10000;
+		}
+	</style>
+
 </body>
 
 
