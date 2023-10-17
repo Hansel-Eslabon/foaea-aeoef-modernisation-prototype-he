@@ -715,7 +715,44 @@
 
 	</section>
 
-
+	<section id="right-panel" class="wb-overlay modal-content overlay-def wb-panel-r">
+		<header class="modal-header">
+			<h2 class="modal-title">Notifications</h2>
+		</header>
+		<div class="modal-body">
+			<ul class="list-unstyled">
+				<li>
+					<p><a href="#">T01 Applications #4545</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #1265</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #1234</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #9543</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #324</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #43434</a> has been cancelled by Santa Claus</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+			</ul>
+		</div>
+	</section>
 
 
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
@@ -814,7 +851,7 @@
 		});
 
 
-		
+
 		wb.doc.on("wb-ready.wb", function () {
 			//Need to hide the 4 datatable component to avoid duplicate
 			$('#t01Tables').DataTable({
@@ -823,7 +860,7 @@
 				bInfo: false,
 				ordering: false,
 				select: 'single',
-				
+
 			});
 		});
 
