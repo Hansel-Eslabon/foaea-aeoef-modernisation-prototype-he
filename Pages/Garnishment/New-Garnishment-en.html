@@ -632,37 +632,22 @@
 												</details>
 												<details id="details-panel3">
 													<summary>Part 3</summary>
-													<div id="instructionDiv" class="alert alert-info" role= ="alert">
-														<h4>Garnishment Options</h4>
-														<p>
-															26 Specific holdbacks per source of funds
-														</p>
-														<p>
-															Fill in <strong>A or B</strong> if you wish exemptions from garnishment to differ from default above, <strong>or C</strong> if you wish to have a set of amount garnished per transaction.
-														</p>
-														<p>
-															<strong>For A and B</strong>, indicate the amount of percentage you want exempted from garnishment.
-														</p>
-														<p>
-															<strong>For C</strong>, indicate the specific amount to be garnished.
-														</p>
-													</div>
-
+												
 													<details open="open">
 														<summary>Section 1</summary>
 														<div>
 															<div class="form-group">
-																<label for="lumpSumAmount" class="required"><span class="field-name">[21] Lump sum amount $:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-																<input class="form-control" id="lumpSumAmount" name="lumpSumAmount" type="text" data-rule-minlength="2" required="required">
+																<label for="lumpSumAmount" class=""><span class="field-name">[21] Lump sum amount $:</span> </label>
+																<input class="form-control" id="lumpSumAmount" name="lumpSumAmount" type="text" data-rule-minlength="2">
 															</div>
 															<div class="form-group">
-																<label for="periodicPayment" class="required"><span class="field-name">[22] Periodic payment $:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
-																<input class="form-control" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2" required="required">
+																<label for="periodicPayment" class=""><span class="field-name">[22] Periodic payment $:</span>  </label>
+																<input class="form-control" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2">
 															</div>
 															<fieldset class="chkbxrdio-grp">
-																<legend class="required"><span class="field-name">[23] Payment period code:</span> <strong class="required">(required)</strong></legend>
+																<legend class=""><span class="field-name">[23] Payment period code:</span> </legend>
 																<div class="radio">
-																	<label for="payperiodcode1"><input type="radio" name="payperiodcode" value="1" id="weely" data-rule-required="true" /> Weekly</label>
+																	<label for="payperiodcode1"><input type="radio" name="payperiodcode" value="1" id="weely" data-rule-required="false" /> Weekly</label>
 																</div>
 																<div class="radio">
 																	<label for="payperiodcode2"><input type="radio" name="payperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
@@ -685,15 +670,149 @@
 															</fieldset>
 
 															<fieldset class="chkbxrdio-grp">
-																<legend class="required"><span class="field-name">[24] Are periodic payment cumulative?</span> <strong class="required">(required)</strong></legend>
+																<legend class=""><span class="field-name">[24] Are periodic payment cumulative?</span> </legend>
 																<div class="radio">
-																	<label for="periodicPayCumulative0"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="true" /> No</label>
+																	<label for="periodicPayCumulative0"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="false" /> No</label>
 																</div>
 																<div class="radio">
 																	<label for="periodicPayCumulative1"><input type="radio" name="periodicPayCumulative" value="2" id="periodicPayCumulativeYes" />  Yes</label>
 																</div>
-
 															</fieldset>
+															<fieldset class="chkbxrdio-grp">
+																<legend class=""><span class="field-name">[25] Default Holdbacks</span> </legend>
+																<div class="radio">
+																	<label for="holdback1"><input type="radio" name="holdback" value="1" id="holdbackNoHoldback" data-rule-required="false" /> No holdback</label>
+																</div>
+																<div class="radio">
+																	<label for="holdback2"><input type="radio" name="holdback" value="2" id="holdbackpercentage" />  Percentage</label>
+																	<input class="form-control" id="holdback2" name="holdback2" type="text" data-rule-minlength="2" placeholder="%">
+
+																</div>
+																<div class="radio">
+																	<label for="holdback3"><input type="radio" name="holdback" value="2" id="holdbackFixed" />  Fixed Amount</label>
+																	<input class="form-control" id="holdback3" name="holdback3" type="text" data-rule-minlength="2" placeholder="$">
+																</div>
+															</fieldset>
+															<fieldset class="form-inline chkbxrdio-grp">
+																<legend class=""><span class="field-name">Fixed amount Period Code:</span></legend>
+																<div class="radio">
+																	<label for="fixPayperiodcode6"><input type="radio" name="fixPayperiodcode" value="6" id="monthly" /> Annually</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode2"><input type="radio" name="fixPayperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode3"><input type="radio" name="fixPayperiodcode" value="3" id="monthly" /> Monthly</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode4"><input type="radio" name="fixPayperiodcode" value="4" id="quarterly" /> Quarterly</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode5"><input type="radio" name="fixPayperiodcode" value="5" id="biweekly" /> Semi-annually</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode1"><input type="radio" name="fixPayperiodcode" value="1" id="weely" data-rule-required="true" /> Weekly</label>
+															</fieldset>
+
+														</div>
+													</details>
+													<details>
+														<summary>Section 2</summary>
+														<div id="instructionDiv" class="alert alert-info">
+															<h4>Garnishment Options</h4>
+															<p>
+																26 Specific holdbacks per source of funds
+															</p>
+															<p>
+																Fill in <strong>A or B</strong> if you wish exemptions from garnishment to differ from default above, <strong>or C</strong> if you wish to have a set of amount garnished per transaction.
+															</p>
+															<p>
+																<strong>For A and B</strong>, indicate the amount of percentage you want exempted from garnishment.
+															</p>
+															<p>
+																<strong>For C</strong>, indicate the specific amount to be garnished.
+															</p>
+														</div>
+
+														<div>
+															<div class="form-group">
+																<label for="lumpSumAmount" class=""><span class="field-name">[21] Lump sum amount $:</span> </label>
+																<input class="form-control" id="lumpSumAmount" name="lumpSumAmount" type="text" data-rule-minlength="2">
+															</div>
+															<div class="form-group">
+																<label for="periodicPayment" class=""><span class="field-name">[22] Periodic payment $:</span>  </label>
+																<input class="form-control" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2">
+															</div>
+															<fieldset class="chkbxrdio-grp">
+																<legend class=""><span class="field-name">[23] Payment period code:</span> </legend>
+																<div class="radio">
+																	<label for="payperiodcode1"><input type="radio" name="payperiodcode" value="1" id="weely" data-rule-required="false" /> Weekly</label>
+																</div>
+																<div class="radio">
+																	<label for="payperiodcode2"><input type="radio" name="payperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
+																</div>
+																<div class="radio">
+																	<label for="payperiodcode3"><input type="radio" name="payperiodcode" value="3" id="monthly" /> Monthly</label>
+																</div>
+																<div class="radio">
+																	<label for="payperiodcode4"><input type="radio" name="payperiodcode" value="4" id="quarterly" /> Quarterly</label>
+																</div>
+																<div class="radio">
+																	<label for="payperiodcode5"><input type="radio" name="payperiodcode" value="5" id="biweekly" /> Semi-annually</label>
+																</div>
+																<div class="radio">
+																	<label for="payperiodcode6"><input type="radio" name="payperiodcode" value="6" id="monthly" /> Annually</label>
+																</div>
+																<div class="radio">
+																	<label for="payperiodcode7"><input type="radio" name="payperiodcode" value="7" id="quarterly" /> Semi-monthly</label>
+																</div>
+															</fieldset>
+
+															<fieldset class="chkbxrdio-grp">
+																<legend class=""><span class="field-name">[24] Are periodic payment cumulative?</span> </legend>
+																<div class="radio">
+																	<label for="periodicPayCumulative0"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="false" /> No</label>
+																</div>
+																<div class="radio">
+																	<label for="periodicPayCumulative1"><input type="radio" name="periodicPayCumulative" value="2" id="periodicPayCumulativeYes" />  Yes</label>
+																</div>
+															</fieldset>
+															<fieldset class="chkbxrdio-grp">
+																<legend class=""><span class="field-name">[25] Default Holdbacks</span> </legend>
+																<div class="radio">
+																	<label for="holdback1"><input type="radio" name="holdback" value="1" id="holdbackNoHoldback" data-rule-required="false" /> No holdback</label>
+																</div>
+																<div class="radio">
+																	<label for="holdback2"><input type="radio" name="holdback" value="2" id="holdbackpercentage" />  Percentage</label>
+																	<input class="form-control" id="holdback2" name="holdback2" type="text" data-rule-minlength="2" placeholder="%">
+
+																</div>
+																<div class="radio">
+																	<label for="holdback3"><input type="radio" name="holdback" value="2" id="holdbackFixed" />  Fixed Amount</label>
+																	<input class="form-control" id="holdback3" name="holdback3" type="text" data-rule-minlength="2" placeholder="$">
+																</div>
+															</fieldset>
+															<fieldset class="form-inline chkbxrdio-grp">
+																<legend class=""><span class="field-name">Fixed amount Period Code:</span></legend>
+																<div class="radio">
+																	<label for="fixPayperiodcode6"><input type="radio" name="fixPayperiodcode" value="6" id="monthly" /> Annually</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode2"><input type="radio" name="fixPayperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode3"><input type="radio" name="fixPayperiodcode" value="3" id="monthly" /> Monthly</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode4"><input type="radio" name="fixPayperiodcode" value="4" id="quarterly" /> Quarterly</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode5"><input type="radio" name="fixPayperiodcode" value="5" id="biweekly" /> Semi-annually</label>
+																</div>
+																<div class="radio">
+																	<label for="fixPayperiodcode1"><input type="radio" name="fixPayperiodcode" value="1" id="weely" data-rule-required="true" /> Weekly</label>
+															</fieldset>
+
 														</div>
 													</details>
 												</details>
