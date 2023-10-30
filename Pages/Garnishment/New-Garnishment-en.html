@@ -46,19 +46,19 @@
 
 			<ul class="list-unstyled components">
 				<li>
-					<a href="Index-en.html">
+					<a href="../Index-en.html">
 						<i class="bi bi-house"></i>
 						<span>Home</span>
 					</a>
 				</li>
 				<li>
-					<a href="Tracing-en.html">
+					<a href="../Tracing/Tracing-en.html">
 						<i class="bi bi-search"></i>
 						<span>Trace and Locate</span>
 					</a>
 				</li>
 				<li>
-					<a href="New-Tracing-en.html">
+					<a href="../Tracing/New-Tracing-en.html">
 						<i class="bi bi-file-earmark-plus"></i>
 						<span>New Application</span>
 					</a>
@@ -215,7 +215,7 @@
 								</div>
 
 								<div class="wb-frmvld">
-									<h3>Form using Tab</h3>
+									<h3>Application Form</h3>
 									<form action="Tracing-en.html" method="post" id="newTracingApplicationForm">
 										<div class="wb-tabs">
 											<div class="tabpanels">
@@ -252,9 +252,9 @@
 													<summary>Part 2</summary>
 													<fieldset id="supportInformation">
 														<legend>Support Payer /  Support Recipient Information</legend>
-														<details open="open">
-															<summary>Support Payer</summary>
-															<div>
+														<hr/>
+															<div class="col-md-8 col-lg-8 col-xl-8 border-end border-end-2">
+																<h3>Support Payer</h3>
 																<div class="col-lg-6 col-xl-6">
 																	<div class="form-group">
 																		<label for="lastname" class="required"><span class="field-name">[5] Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
@@ -600,12 +600,8 @@
 
 																</div>
 															</div>
-														</details>
-
-
-														<details open="open">
-															<summary>Support Recipient</summary>
-															<div>
+															<div class="col-lg-4 col-xl-4">
+																<h3>Support Recipient</h3>
 																<div class="form-group">
 																	<label for="lastnameRecipient" class="required"><span class="field-name">[17] Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
 																	<input class="form-control" id="lastnameRecipient" name="lastnameRecipient" type="text" data-rule-minlength="2" required="required">
@@ -623,180 +619,187 @@
 																	<input class="form-control" id="dateOfBirthRecipient" name="dateOfBirthRecipient" type="date" required="required">
 																</div>
 															</div>
-														</details>
 
 
 
-
+														
 													</fieldset>
 												</details>
 												<details id="details-panel3">
 													<summary>Part 3</summary>
-
-													<details open="open">
-														<summary>Section 1</summary>
-														<div>
+													<div class="form-inline">
+														<button class="btn btn-primary">Section 1</button>
+														<button class="btn btn-primary">Section 2</button>
+													</div>
+														<div id="part3-section1">
+															<h3>Section 1</h3>
+															<hr/>
 															<div class="form-group">
 																<label for="lumpSumAmount" class=""><span class="field-name">[21] Lump sum amount $:</span> </label>
 																<input class="form-control" id="lumpSumAmount" name="lumpSumAmount" type="text" data-rule-minlength="2">
 															</div>
 															<div class="form-group">
-																<label for="periodicPayment" class=""><span class="field-name">[22] Periodic payment $:</span>  </label>
+																<label for="periodicPayment"><span class="field-name">[22] Periodic payment $:</span>  </label>
 																<input class="form-control" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2">
 															</div>
 															<fieldset class="chkbxrdio-grp">
 																<legend class=""><span class="field-name">[23] Payment period code:</span> </legend>
 																<div class="radio">
-																	<label for="payperiodcode1"><input type="radio" name="payperiodcode" value="1" id="weely" data-rule-required="false" /> Weekly</label>
+																	<label for="weekly"><input type="radio" name="payperiodcode" value="1" id="weekly" data-rule-required="false" /> Weekly</label>
 																</div>
 																<div class="radio">
-																	<label for="payperiodcode2"><input type="radio" name="payperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
+																	<label for="biweekly"><input type="radio" name="payperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
 																</div>
 																<div class="radio">
-																	<label for="payperiodcode3"><input type="radio" name="payperiodcode" value="3" id="monthly" /> Monthly</label>
+																	<label for="monthly"><input type="radio" name="payperiodcode" value="3" id="monthly" /> Monthly</label>
 																</div>
 																<div class="radio">
-																	<label for="payperiodcode4"><input type="radio" name="payperiodcode" value="4" id="quarterly" /> Quarterly</label>
+																	<label for="quarterly"><input type="radio" name="payperiodcode" value="4" id="quarterly" /> Quarterly</label>
 																</div>
 																<div class="radio">
-																	<label for="payperiodcode5"><input type="radio" name="payperiodcode" value="5" id="biweekly" /> Semi-annually</label>
+																	<label for="biAnnually"><input type="radio" name="payperiodcode" value="5" id="biAnnually" /> Semi-annually</label>
 																</div>
 																<div class="radio">
-																	<label for="payperiodcode6"><input type="radio" name="payperiodcode" value="6" id="monthly" /> Annually</label>
+																	<label for="annually"><input type="radio" name="payperiodcode" value="6" id="annually" /> Annually</label>
 																</div>
 																<div class="radio">
-																	<label for="payperiodcode7"><input type="radio" name="payperiodcode" value="7" id="quarterly" /> Semi-monthly</label>
+																	<label for="semiMonthly"><input type="radio" name="payperiodcode" value="7" id="semiMonthly" /> Semi-monthly</label>
 																</div>
 															</fieldset>
 
 															<fieldset class="chkbxrdio-grp">
 																<legend class=""><span class="field-name">[24] Are periodic payment cumulative?</span> </legend>
 																<div class="radio">
-																	<label for="periodicPayCumulative0"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="false" /> No</label>
+																	<label for="periodicPayCumulativeNo"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="false" /> No</label>
 																</div>
 																<div class="radio">
-																	<label for="periodicPayCumulative1"><input type="radio" name="periodicPayCumulative" value="2" id="periodicPayCumulativeYes" />  Yes</label>
+																	<label for="periodicPayCumulativeYes"><input type="radio" name="periodicPayCumulative" value="2" id="periodicPayCumulativeYes" />  Yes</label>
 																</div>
 															</fieldset>
 															<fieldset class="chkbxrdio-grp">
 																<legend class=""><span class="field-name">[25] Default Holdbacks</span> </legend>
 																<div class="radio">
-																	<label for="holdback1"><input type="radio" name="holdback" value="1" id="holdbackNoHoldback" data-rule-required="false" /> No holdback</label>
+																	<label for="holdbackNoHoldback"><input type="radio" name="holdback" value="1" id="holdbackNoHoldback" data-rule-required="false" /> No holdback</label>
 																</div>
 																<div class="radio">
-																	<label for="holdback2"><input type="radio" name="holdback" value="2" id="holdbackpercentage" />  Percentage</label>
-																	<input class="form-control" id="holdback2" name="holdback2" type="text" data-rule-minlength="2" placeholder="%">
+																	<label for="holdbackpercentage"><input type="radio" name="holdback" value="2" id="holdbackpercentage" />  Percentage</label>
+																	<label for="holdbackPercentageInput" class="sr-only">Percentage input</label>
+																	<input class="form-control" id="holdbackPercentageInput" name="holdbackPercentageInput" type="text" data-rule-minlength="2" placeholder="%">
 
 																</div>
 																<div class="radio">
-																	<label for="holdback3"><input type="radio" name="holdback" value="2" id="holdbackFixed" />  Fixed Amount</label>
-																	<input class="form-control" id="holdback3" name="holdback3" type="text" data-rule-minlength="2" placeholder="$">
+																	<label for="holdbackFixed"><input type="radio" name="holdback" value="2" id="holdbackFixed" />  Fixed Amount</label>
+																	<label for="holdbackFixedAmountInput" class="sr-only">Percentage input</label>
+																	<input class="form-control" id="holdbackFixedAmountInput" name="holdback3" type="text" data-rule-minlength="2" placeholder="$">
 																</div>
 															</fieldset>
 															<fieldset class="form-inline chkbxrdio-grp">
 																<legend class=""><span class="field-name">Fixed amount Period Code:</span></legend>
 																<div class="radio">
-																	<label for="fixPayperiodcode6"><input type="radio" name="fixPayperiodcode" value="6" id="monthly" /> Annually</label>
+																	<label for="fixAnnually"><input type="radio" name="fixPayperiodcode" value="6" id="fixAnnually" /> Annually</label>
 																</div>
 																<div class="radio">
-																	<label for="fixPayperiodcode2"><input type="radio" name="fixPayperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
+																	<label for="fixBiWeekly"><input type="radio" name="fixPayperiodcode" value="2" id="fixBiWeekly" /> Bi-weekly</label>
 																</div>
 																<div class="radio">
-																	<label for="fixPayperiodcode3"><input type="radio" name="fixPayperiodcode" value="3" id="monthly" /> Monthly</label>
+																	<label for="fixMonthly"><input type="radio" name="fixPayperiodcode" value="3" id="fixMonthly" /> Monthly</label>
 																</div>
 																<div class="radio">
-																	<label for="fixPayperiodcode4"><input type="radio" name="fixPayperiodcode" value="4" id="quarterly" /> Quarterly</label>
+																	<label for="fixQuarterly"><input type="radio" name="fixPayperiodcode" value="4" id="fixQuarterly" /> Quarterly</label>
 																</div>
 																<div class="radio">
-																	<label for="fixPayperiodcode5"><input type="radio" name="fixPayperiodcode" value="5" id="biweekly" /> Semi-annually</label>
+																	<label for="fixBiAnnually"><input type="radio" name="fixPayperiodcode" value="5" id="fixBiAnnually" /> Semi-annually</label>
 																</div>
 																<div class="radio">
-																	<label for="fixPayperiodcode1"><input type="radio" name="fixPayperiodcode" value="1" id="weely" data-rule-required="true" /> Weekly</label>
+																	<label for="fixWeekly"><input type="radio" name="fixPayperiodcode" value="1" id="fixWeekly" data-rule-required="true" /> Weekly</label>
+																	</div>
 															</fieldset>
-
 														</div>
-													</details>
-													<details>
-														<summary>Section 2</summary>
-														<div id="instructionDiv" class="alert alert-info">
-															<h4>Garnishment Options</h4>
-															<p>
-																26 Specific holdbacks per source of funds
-															</p>
-															<p>
-																Fill in <strong>A or B</strong> if you wish exemptions from garnishment to differ from default above, <strong>or C</strong> if you wish to have a set of amount garnished per transaction.
-															</p>
-															<p>
-																<strong>For A and B</strong>, indicate the amount of percentage you want exempted from garnishment.
-															</p>
-															<p>
-																<strong>For C</strong>, indicate the specific amount to be garnished.
-															</p>
+														<div id="part3-section2">
+															<h3>Section 2</h3>
+															<hr />
+															<div id="instructionDiv" class="alert alert-info">
+																<h4>Garnishment Options</h4>
+																<p>
+																	26 Specific holdbacks per source of funds
+																</p>
+																<p>
+																	Fill in <strong>A or B</strong> if you wish exemptions from garnishment to differ from default above, <strong>or C</strong> if you wish to have a set of amount garnished per transaction.
+																</p>
+																<p>
+																	<strong>For A and B</strong>, indicate the amount of percentage you want exempted from garnishment.
+																</p>
+																<p>
+																	<strong>For C</strong>, indicate the specific amount to be garnished.
+																</p>
+															</div>
+															<div>
+																<fieldset class="form-inline chkbxrdio-grp">
+																	<legend class=""><span class="field-name">Source Department:</span></legend>
+																	<div class="radio">
+																		<label for="cpp"><input type="radio" name="sourceDepartment" value="6" id="cpp" /> CPP</label>
+																	</div>
+																	<div class="radio">
+																		<label for="employmentInsurance"><input type="radio" name="sourceDepartment" value="2" id="employmentInsurance" /> Employment Insurance</label>
+																	</div>
+																	<div class="radio">
+																		<label for="oldAge"><input type="radio" name="sourceDepartment" value="3" id="oldAge" /> Old Age Security</label>
+																	</div>
+																	<div class="radio">
+																		<label for="revenueCanada"><input type="radio" name="sourceDepartment" value="4" id="revenueCanada" /> Revenue Canada</label>
+																	</div>
+																	<div class="radio">
+																		<label for="trainingBenefits"><input type="radio" name="sourceDepartment" value="5" id="trainingBenefits" /> Training Benefits</label>
+																	</div>
+																</fieldset>
+																<fieldset class="chkbxrdio-grp">
+																	<legend class=""><span class="field-name"></span> </legend>
+																	<div class="radio">
+																		<label for="percentageAmount"><input type="radio" name="percentageAmount" value="1" id="percentageAmount" data-rule-required="false" /> Percentage (Per transaction)
+																		</label>
+																		<label for="percentageAmtInput" class="sr-only">Percentage</label>
+																		<input class="form-control" id="percentageAmtInput" name="percentageAmtInput" type="text" data-rule-minlength="2" placeholder="%">
+																	</div>
+																	<div class="radio">
+																		<label for="fixedAmount"><input type="radio" name="fixedAmount" value="2" id="fixedAmount" />  Fixed amount (Per payment method)</label>
+																		<label for="fixedAmountInput" class="sr-only">Fixed amount (Per payment method)</label>
+																		<input class="form-control" id="fixedAmountInput" name="fixedAmountInput" type="text" data-rule-minlength="2" placeholder="$">
+
+																	</div>
+																	<div class="radio">
+																		<label for="garnishedAmount"><input type="radio" name="garnishedAmount" value="2" id="garnishedAmount" />  Amount to garnish per transaction</label>
+																		<label for="garnishedAmountInput" class="sr-only">Amount to garnish per transaction</label>
+																		<input class="form-control" id="garnishedAmountInput" name="garnishedAmountInput" type="text" data-rule-minlength="2" placeholder="$">
+																	</div>
+																</fieldset>
+																<button class="btn btn-primary">Add Another Source</button>
+
+																<table id="garnishmentOption2Tables" class="table table-striped table-hover">
+																	<thead>
+																		<tr>
+																			<th>Percentage</th>
+																			<th>Fixed amount</th>
+																			<th>Amount to garnished per transaction</th>
+																			<th>Source Department</th>
+																			<td></td>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr data-id="234234">
+
+																			<td></td>
+																			<td>$ 1,000.00</td>
+																			<td></td>
+																			<td>Revenue Canada</td>
+																			<td>
+																				<a href="Edit-Tracing-en.html"><i class="bi bi-trash3"></i><span class="sr-only">Delete</span></a>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+
+															</div>
 														</div>
-
-														<div>
-															<fieldset class="form-inline chkbxrdio-grp">
-																<legend class=""><span class="field-name">Source Department:</span></legend>
-																<div class="radio">
-																	<label for="sourceDepartment1"><input type="radio" name="sourceDepartment" value="6" id="cpp" /> CPP</label>
-																</div>
-																<div class="radio">
-																	<label for="sourceDepartment2"><input type="radio" name="sourceDepartment" value="2" id="employmentInsurance" /> Employment Insurance</label>
-																</div>
-																<div class="radio">
-																	<label for="sourceDepartment3"><input type="radio" name="sourceDepartment" value="3" id="oldAge" /> Old Age Security</label>
-																</div>
-																<div class="radio">
-																	<label for="sourceDepartment4"><input type="radio" name="sourceDepartment" value="4" id="revenueCanada" /> Revenue Canada</label>
-																</div>
-																<div class="radio">
-																	<label for="sourceDepartment5"><input type="radio" name="sourceDepartment" value="5" id="trainingBenefits" /> Training Benefits</label>
-																</div>
-															</fieldset>
-															<fieldset class="chkbxrdio-grp">
-																<legend class=""><span class="field-name"></span> </legend>
-																<div class="radio">
-																	<label for="holdback1"><input type="radio" name="percentageAmount" value="1" id="percentageAmount" data-rule-required="false" /> Percentage (Per transaction)</label>
-																	<input class="form-control" id="percentageAmtInput" name="percentageAmtInput" type="text" data-rule-minlength="2" placeholder="%">
-																</div>
-																<div class="radio">
-																	<label for="holdback2"><input type="radio" name="fixedAmount" value="2" id="fixedAmount" />  Fixed amount (Per payment method)</label>
-																	<input class="form-control" id="fixedAmountInput" name="fixedAmountInput" type="text" data-rule-minlength="2" placeholder="$">
-
-																</div>
-																<div class="radio">
-																	<label for="holdback3"><input type="radio" name="garnishedAmount" value="2" id="garnishedAmount" />  Amount to garnish per transaction</label>
-																	<input class="form-control" id="garnishedAmountInput" name="garnishedAmountInput" type="text" data-rule-minlength="2" placeholder="$">
-																</div>
-															</fieldset>
-															<button class="btn btn-primary">Add Another Source</button>
-
-															<table id="garnishmentOption2Tables" class="table table-striped table-hover">
-																<thead>
-																	<tr>
-																		<th>Percentage</th>
-																		<th>Fixed amount</th>
-																		<th>Amount to garnished per transaction</th>
-																		<th>Source Department</th>
-																		<th></th>
-																	</tr>
-																</thead>
-																<tbody>
-																	<tr data-id="234234">
-
-																		<td></td>
-																		<td>$ 1,000.00</td>
-																		<td></td>
-																		<td>Revenue Canada</td>
-																		<td>
-																			<a href="Edit-Tracing-en.html"><i class="bi bi-trash3"></i><span class="sr-only">Delete</span></a>
-																		</td>
-																	</tr>
-																</tbody>
-															</table>
-
-														</div>
-													</details>
 												</details>
 												<details id="details-panel4">
 													<summary>Attachments</summary>
@@ -817,11 +820,90 @@
 												</details>
 												<details id="details-panel5">
 													<summary>Comnments</summary>
-													<p>
-														The story of the Norsemen runs thus. Towards the end of the ninth century, or nearly two hundred years before the Norman conquest, there was a great exodus or outswarming of the Norsemen from their original home in Norway. A certain King Harold had succeeded in making himself supreme in Norway, and great numbers of the lesser chiefs or jarls preferred to seek new homes across the seas rather than submit to his rule. So they embarked with their seafaring followers—Vikings, as we still call them—often, indeed, with their wives and families, in great open ships, and sailed away, some to the coast of England, others to France, and others even to the Mediterranean, where they took service under the Byzantine emperors. But still others, loving the cold rough seas of the north, struck westward across the North Sea and beyond the coasts of Scotland till they reached Iceland. This was in the year 874. Here they made a settlement that presently grew to a population of fifty thousand people, having flocks and herds, solid houses of stone, and a fine trade in fish and oil with the countries of Northern Europe. These settlers in Iceland attained to a high standard of civilization. They had many books, and were fond of tales and stories, as are all these northern peoples who spend long winter evenings round the fireside. Some of the sagas, or stories, which they told were true accounts of the voyages and adventures of their forefathers; others were fanciful stories, like our modern romances, created by the imagination; others, again, were a mixture of the two. Thus it is sometimes hard to distinguish fact and fancy in these early tales of the Norsemen. We have, however, means of testing the stories. Among the books written in Iceland there was one called the 'National Name-Book,' in which all the names of the people were written down, with an account of their forefathers and of any notable things which they had done.
-													</p>
+													<div class="col-md-8 border">
+														<div class="card-body">
+															<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
+																<div class="row py-1 align-items-center" data-id="1234">
+																	<div class="col-auto">
+																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+																	</div>
+																	<div class="col ps-0">
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">MEP</span><span class="text-muted">- 2023-09-23</span></p>
+																		<p>Spoke with the debtor...</p>
+
+																	</div>
+																</div>
+																<div class="row py-1 align-items-center" data-id="2345">
+																	<div class="col-auto">
+																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+																	</div>
+																	<div class="col ps-0">
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW104</span><span class="text-muted">- 2022-02-11</span></p>
+																		<p>Debtor address has changed</p>
+
+																	</div>
+																</div>
+																<div class="row py-1 align-items-center" data-id="2345">
+																	<div class="col-auto">
+																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+																	</div>
+																	<div class="col ps-0">
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2021-12-20</span></p>
+																		<p>Debtor address has changed</p>
+
+																	</div>
+																</div>
+
+																<div class="row py-1 align-items-center" data-id="2345">
+																	<div class="col-auto">
+																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+																	</div>
+																	<div class="col ps-0">
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2020-01-16</span></p>
+																		<p>Debtor address has changed</p>
+
+																	</div>
+																</div>
+																<div class="row py-1 align-items-center" data-id="2345">
+																	<div class="col-auto">
+																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
+																	</div>
+																	<div class="col ps-0">
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2019-04-21</span></p>
+																		<p>Debtor address has changed</p>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group d-flex flex-column">
+															<label for="comment" class="sr-only">Add comment</label>
+															<textarea id="comment" class="form-control" rows="5" placeholder="Start typing..."></textarea>
+														</div>
+														<button id="btnSubmitTabType" class="btn btn-primary form-control">Add Comment</button>
+													</div>
+
 												</details>
 											</div>
+										</div>
+
+
+										<div class="form-group">
+											<label for="declarantName"><span class="field-name">Name of declarant: (print)</span></label>
+											<input class="form-control" id="declarantName" name="declarantName" type="text" value="Santa Claus" disabled>
+										</div>
+										<div class="form-group">
+											<label for="declarantDate"><span class="field-name">Date:</span></label>
+											<input class="form-control" id="declarantName" name="declarantName" type="text" value="2023-10-27" disabled>
+										</div>
+
+										<div class="checkbox">
+											<label for="garnishementAgreeCheck">
+												<input id="garnishementAgreeCheck" type="checkbox" value="true"> I declare that the information given in this application is true and is for the purpose of applying for the interception of federal moneys in
+												accordance with Family Orders and Agreements Enforcement Assistance Act.
+											</label>
 										</div>
 										<input id="btnSubmitTabType" type="submit" name="submit" value="Submit Application" class="btn btn-primary">
 									</form>

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title>Edit TO1 - Justice Canada</title>
+	<title>View TO1 - Justice Canada</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
@@ -10,9 +10,9 @@
 	<!-- TODO ../wwwroot To be replace with ~/ once we transition to actual front end -->
 	<!-- TODO Probably DL all stylesheet and image that links to web address -->
 
-	<link href="../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
+	<link href="../../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
 		  data-filename="my-mobile-favicon.ico"
-		  data-path="../wwwroot/"
+		  data-path="../../wwwroot/"
 		  data-rel="apple-touch-icon-precomposed"
 		  data-sizes="57x57">
 
@@ -21,17 +21,17 @@
 
 
 	<noscript>
-		<link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css" />
+		<link rel="stylesheet" href="../../wwwroot/lib/wet-boew/css/noscript.min.css" />
 	</noscript>
 
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
 
-	<link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
+	<link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../wwwroot/lib/theme-wet-boew/css/theme.min.css">
 
-	<link rel="stylesheet" href="../wwwroot/css/site.css" />
+	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 
 
 </head>
@@ -46,7 +46,7 @@
 
 			<ul class="list-unstyled components">
 				<li>
-					<a href="Index-en.html">
+					<a href="../Index-en.html">
 						<i class="bi bi-house"></i>
 						<span>Home</span>
 					</a>
@@ -72,7 +72,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="../Garnishment/New-Garnishment-en.html">
 						<i class="bi bi-clipboard-plus"></i>
 						<span>New Application</span>
 					</a>
@@ -198,7 +198,7 @@
 						<!-- Page Title -->
 						<div class="container-fluid">
 							<div class="row">
-								<h1 id="wb-cont" property="name">Edit Tracing Application T01 - #1415</h1>
+								<h1 id="wb-cont" property="name">View Tracing Application T01 - #1415</h1>
 							</div>
 							<div class="row">
 								<div class="col-12">
@@ -216,9 +216,8 @@
 								<div class="wb-frmvld">
 									<h3>Form using Details/Summary</h3>
 									<div id="detailMenubar-container" class="sticky-top border">
-										<a href="View-Tracing-en.html" class="p-2"><i class="bi bi-folder-check"></i><span class="ps-2">Save</span><span class="sr-only">Save</span></a>
-										<a href="View-Tracing-en.html"><i class="bi bi-x-circle"></i><span class="ps-2">Cancel</span><span class="sr-only">Cancel</span></a>
 										<a href="New-Tracing-en.html" class="p-2" role="button"><i class="bi bi-patch-plus"></i><span class="ps-2">New</span></a>
+										<a href="Edit-Tracing-en.html" class="p-2" role="button"><i class="bi bi-pencil"></i><span class="ps-2">Edit</span><span class="sr-only">Edit</span></a>
 										<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-card-text"></i><span class="ps-2">Notes</span></a>
 										<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-arrow-left-right"></i><span class="ps-2">Transfer</span></a>
 										<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-earmark-minus"></i><span class="ps-2">Cancel</span></a>
@@ -226,7 +225,7 @@
 										<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-file-text"></i><span class="ps-2">CRA Docs</span></a>
 										<a href="#transfer-application-popup-modal" class="p-2 wb-lbx lbx-modal" aria-controls="transfer-application-popup-modal" role="button"><i class="bi bi-calendar-check"></i><span class="ps-2">View Events</span></a>
 									</div>
-									<form action="View-Tracing-en.html" method="post" id="newTracingApplicationDetailForm">
+									<form action="Edit-Tracing-en.html" method="post" id="newTracingApplicationDetailForm">
 										<ul class="list-unstyled">
 											<li>
 												<details>
@@ -240,11 +239,11 @@
 															</div>
 															<div class="form-group">
 																<label for="applicationNoDetail">[2] Application reference code no.: (optional)</label>
-																<input class="form-control" id="applicationNoDetail" name="applicationNoDetail" type="text" data-rule-minlength="2">
+																<input class="form-control" id="applicationNoDetail" name="applicationNoDetail" type="text" data-rule-minlength="2" disabled>
 															</div>
 															<div class="form-group">
 																<label for="referenceNoDetail">[3] Court, peace officer or provincial enforcement service reference no.: (optional)</label>
-																<input class="form-control" id="referenceNoDetail" name="referenceNoDetail" type="text">
+																<input class="form-control" id="referenceNoDetail" name="referenceNoDetail" type="text" disabled>
 															</div>
 														</div>
 													</fieldset>
@@ -258,54 +257,54 @@
 
 															<div class="form-group">
 																<label for="lastnameDetail" class="required"><span class="field-name">[4] Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-																<input class="form-control" id="lastnameDetail" name="lastnameDetail" type="text" data-rule-minlength="2" required="required" value="Winter">
+																<input class="form-control" id="lastnameDetail" name="lastnameDetail" type="text" data-rule-minlength="2" required="required" value="Winter" disabled>
 															</div>
 															<div class="form-group">
 																<label for="firstnameDetail" class="required"><span class="field-name">[5] Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
-																<input class="form-control" id="firstnameDetail" name="firstnameDetail" type="text" data-rule-minlength="2" required="required" value="Frost">
+																<input class="form-control" id="firstnameDetail" name="firstnameDetail" type="text" data-rule-minlength="2" required="required" value="Frost" disabled>
 															</div>
 															<div class="form-group">
 																<label for="othername"><span class="field-name">[6] Other given name: (optional)</span> </label>
-																<input class="form-control" id="othername" name="othername" type="text" data-rule-minlength="2">
+																<input class="form-control" id="othername" name="othername" type="text" data-rule-minlength="2" disabled>
 															</div>
 															<div class="form-group">
 																<label for="dateOfBirth" class="required">
 																	<span class="field-name">[7] Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong>
 																	<span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>
 																</label>
-																<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required" value="2013-01-08">
+																<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required" value="2013-01-08" disabled>
 															</div>
 															<fieldset class="form-inline chkbxrdio-grp">
 																<legend class="required"><span class="field-name">[8] Gender</span><strong class="required">(required)</strong></legend>
-																<label for="gender1" class="radio-inline"><input type="radio" name="gender" value="1" id="gender1" required="required" />Male</label>
-																<label for="gender2" class="radio-inline"><input type="radio" name="gender" value="2" id="gender2" required="required" />Female</label>
-																<label for="gender3" class="radio-inline"><input type="radio" name="gender" value="3" id="gender3" required="required" />Another Gender</label>
-																<label for="gender4" class="radio-inline"><input type="radio" name="gender" value="4" id="gender4" required="required" checked="checked" />Information not available</label>
+																<label for="gender1" class="radio-inline"><input type="radio" name="gender" value="1" id="gender1" required="required" disabled/>Male</label>
+																<label for="gender2" class="radio-inline"><input type="radio" name="gender" value="2" id="gender2" required="required" disabled/>Female</label>
+																<label for="gender3" class="radio-inline"><input type="radio" name="gender" value="3" id="gender3" required="required" disabled/>Another Gender</label>
+																<label for="gender4" class="radio-inline"><input type="radio" name="gender" value="4" id="gender4" required="required" checked="checked" disabled/>Information not available</label>
 															</fieldset>
 															<div class="form-group">
 																<label for="sin">[9] Social Insurance Number: (optional)</label>
-																<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2" value="99999999">
+																<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2" value="99999999" disabled>
 															</div>
 
 															<div class="form-group">
 																<label for="surnameBirthParent">[10] Surname at Birth of a Parent</label>
-																<input class="form-control" id="surnameBirthParent" name="surnameBirthParent" type="text" data-rule-minlength="2">
+																<input class="form-control" id="surnameBirthParent" name="surnameBirthParent" type="text" data-rule-minlength="2" disabled>
 															</div>
 
 															<fieldset class="chkbxrdio-grp">
 																<legend class="required"><span class="field-name">Reason for application</span> <strong class="required">(required)</strong></legend>
 																<ul class="form-group list-unstyled">
 																	<li class="radio">
-																		<label for="reason1"><input type="radio" name="example2" value="1" id="reason1" required="required" />Person in default of the support provision</label>
+																		<label for="reason1"><input type="radio" name="example2" value="1" id="reason1" required="required" disabled/>Person in default of the support provision</label>
 																	</li>
 																	<li class="radio">
-																		<label for="reason2"><input type="radio" name="example2" value="2" id="reason2" required="required" />Person believed to have possession of the child or children in contravention of the custody provision</label>
+																		<label for="reason2"><input type="radio" name="example2" value="2" id="reason2" required="required" disabled/>Person believed to have possession of the child or children in contravention of the custody provision</label>
 																	</li>
 																	<li class="radio">
-																		<label for="reason3"><input type="radio" name="example2" value="3" id="reason3" required="required" checked="checked" />Person charged with an offence under 282 or 283 of the Criminal Code</label>
+																		<label for="reason3"><input type="radio" name="example2" value="3" id="reason3" required="required" checked="checked" disabled/>Person charged with an offence under 282 or 283 of the Criminal Code</label>
 																	</li>
 																	<li class="radio">
-																		<label for="reason4"><input type="radio" name="example2" value="4" id="reason4" required="required" />Missing child</label>
+																		<label for="reason4"><input type="radio" name="example2" value="4" id="reason4" required="required" disabled/>Missing child</label>
 																	</li>
 																</ul>
 															</fieldset>
@@ -316,7 +315,7 @@
 											</li>
 
 										</ul>
-										<input id="btnSubmitFormType" type="submit" name="submit" value="Save" class="btn btn-primary">
+										<input id="btnSubmitFormType" type="submit" name="submit" value="Edit" class="btn btn-primary">
 									</form>
 								</div>
 							</div>
@@ -458,13 +457,13 @@
 	</section>
 
 
-	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 
-	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
 
-	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
@@ -490,7 +489,7 @@
 		});
 
 		function pageRedirect() {
-			window.location.replace("View-Tracing-en.html");
+			window.location.replace("Edit-Tracing-en.html");
 		}
 
 

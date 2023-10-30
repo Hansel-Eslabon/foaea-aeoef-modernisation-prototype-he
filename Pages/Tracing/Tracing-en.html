@@ -10,9 +10,9 @@
 	<!-- TODO ../wwwroot To be replace with ~/ once we transition to actual front end -->
 	<!-- TODO Probably DL all stylesheet and image that links to web address -->
 
-	<link href="../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
+	<link href="../../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
 		  data-filename="my-mobile-favicon.ico"
-		  data-path="../wwwroot/"
+		  data-path="../../wwwroot/"
 		  data-rel="apple-touch-icon-precomposed"
 		  data-sizes="57x57">
 
@@ -21,21 +21,21 @@
 
 
 	<noscript>
-		<link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css" />
+		<link rel="stylesheet" href="../../wwwroot/lib/wet-boew/css/noscript.min.css" />
 	</noscript>
 
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
 
-	<link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
+	<link rel="stylesheet" href="../../wwwroot/lib/theme-wet-boew/css/theme.min.css">
 
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-	<link rel="stylesheet" href="../wwwroot/css/site.css" />
+	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 
 
 </head>
@@ -50,7 +50,7 @@
 
 			<ul class="list-unstyled components">
 				<li>
-					<a href="Index-en.html">
+					<a href="../Index-en.html">
 						<i class="bi bi-house"></i>
 						<span>Home</span>
 					</a>
@@ -76,7 +76,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="../Garnishment/New-Garnishment-en.html">
 						<i class="bi bi-clipboard-plus"></i>
 						<span>New Application</span>
 					</a>
@@ -281,7 +281,7 @@
 													<fieldset id="advSearchFormFieldSet0">
 														<div>
 															<div class="form-group">
-																<label for="fields" class="">Fields</label>
+																<label for="fields0">Fields</label>
 																<select name="fieldSelect" id="fieldSelect0" class="form-control">
 																	<option selected="selected" value="0">Please select a fields</option>
 																	<option value="sin" data-type="integer">SIN #</option>
@@ -296,9 +296,10 @@
 
 															</div>
 															<div class="form-group">
+																<label for="operatorSelect0" class="sr-only">Operator Selector</label>
 																<select name="operatorSelect" id="operatorSelect0" class="form-control">
 																	<option selected="selected" value="0" data-type="test">Please select a operator</option>
-																	<option value="equal" data-type="integer,text,boolean">Equals</option>
+																	<option value="equal" data-type="integer,text,boolean,lookup">Equals</option>
 																	<option value="contains" data-type="text">Contains</option>
 																	<option value="greaterThan" data-type="integer">Greater than</option>
 																	<option value="greaterThanEqual" data-type="integer">Greater than or equals to</option>
@@ -308,11 +309,18 @@
 																	<option value="last7days" data-type="date">Last 7 days</option>
 																	<option value="last30days" data-type="date">Last 30 days</option>
 																</select>
+																<label for="integerInput0" class="sr-only">Integer Input</label>
 																<input class="form-control" id="integerInput0" name="integerInput" type="number" data-rule-minlength="1" placeholder="123456789">
+																<label for="textInput0" class="sr-only">Text Input</label>
 																<input class="form-control" id="textInput0" name="textInput" type="text" data-rule-minlength="2">
+																<label for="dateInput0" class="sr-only">Date Input</label>
 																<input class="form-control" id="dateInput0" name="dateInput" type="date">
 																<select name="lookupInput" id="lookupInput0" class="form-control">
 																	<option selected="selected" value="-999">Please select a value</option>
+																	<option value="new">New</option>
+																	<option value="Cancelled">Cancelled</option>
+																	<option value="linked">Linked</option>
+																	<option value="pending">Pending</option>
 																</select>
 																<select name="booleanInput" id="booleanInput0" class="form-control">
 																	<option selected="selected" value="-999">Please select a value</option>
@@ -752,18 +760,18 @@
 	</section>
 
 
-	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 
-	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
 
-	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.dataTables.min.js"></script>
-	<script src="../wwwroot/lib/extension/datatables/datatables.select.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/jquery.dataTables.min.js"></script>
+	<script src="../../wwwroot/lib/extension/datatables/datatables.select.min.js"></script>
 
 
 	<script type="text/javascript">

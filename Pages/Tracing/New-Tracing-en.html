@@ -10,9 +10,9 @@
 	<!-- TODO ../wwwroot To be replace with ~/ once we transition to actual front end -->
 	<!-- TODO Probably DL all stylesheet and image that links to web address -->
 
-	<link href="../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
+	<link href="../../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
 		  data-filename="my-mobile-favicon.ico"
-		  data-path="../wwwroot/"
+		  data-path="../../wwwroot/"
 		  data-rel="apple-touch-icon-precomposed"
 		  data-sizes="57x57">
 
@@ -21,17 +21,17 @@
 
 
 	<noscript>
-		<link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css" />
+		<link rel="stylesheet" href="../../wwwroot/lib/wet-boew/css/noscript.min.css" />
 	</noscript>
 
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
 
-	<link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
+	<link rel="stylesheet" href="../../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../wwwroot/lib/theme-wet-boew/css/theme.min.css">
 
-	<link rel="stylesheet" href="../wwwroot/css/site.css" />
+	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 
 
 </head>
@@ -46,7 +46,7 @@
 
 			<ul class="list-unstyled components">
 				<li>
-					<a href="Index-en.html">
+					<a href="../Index-en.html">
 						<i class="bi bi-house"></i>
 						<span>Home</span>
 					</a>
@@ -72,7 +72,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="../Garnishment/New-Garnishment-en.html">
 						<i class="bi bi-clipboard-plus"></i>
 						<span>New Application</span>
 					</a>
@@ -214,113 +214,7 @@
 									</div>
 								</div>
 
-								<div class="wb-frmvld">
-									<h3>Form using Tab</h3>
-									<form action="Tracing-en.html" method="post" id="newTracingApplicationForm">
-										<div class="wb-tabs">
-											<div class="tabpanels">
-												<details id="details-panel1" open="open">
-													<summary>Part 1</summary>
-													<p><span class="bg-info">Protected B/Protégé B</span></p>
-													<p>
-														TO1 APPLICATION: RELEASE OF INFORMATION UNDER PART I OF THE FAMILY ORDERS AND AGREEMENTS ENFORCEMENT ASSISTANCE ACT.
-													</p>
-													<fieldset id="applicantInformation">
-														<legend>Applicant Information</legend>
-														<div>
-															<div class="form-group">
-																<label for="courtServiceName" id="courtServiceName">[01] Court, peace officer or provincial enforcement services name: (optional)</label>
-																<input class="form-control" id="courtServiceName" name="courtServiceName" type="text" data-rule-minlength="2" value="Santas Family Office" disabled>
-
-															</div>
-															<div class="form-group">
-																<label for="applicationNo">[2] Application reference code no.: (optional)</label>
-																<input class="form-control" id="applicationNo" name="applicationNo" type="text" data-rule-minlength="2">
-															</div>
-															<div class="form-group">
-																<label for="referenceNo">[3] Court, peace officer or provincial enforcement service reference no.: (optional)</label>
-																<input class="form-control" id="referenceNo" name="referenceNo" type="text">
-															</div>
-														</div>
-													</fieldset>
-												</details>
-												<details id="details-panel2" open="">
-													<summary>Part 2</summary>
-													<fieldset id="informationOnPersonToBeLocated">
-														<legend>Information on person to be located</legend>
-														<div>
-
-															<div class="form-group">
-																<label for="lastname" class="required"><span class="field-name">[4] Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-																<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
-															</div>
-															<div class="form-group">
-																<label for="firstname" class="required"><span class="field-name">[5] Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
-																<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required">
-															</div>
-															<div class="form-group">
-																<label for="othername"><span class="field-name">[6] Other given name: (optional)</span></label>
-																<input class="form-control" id="othername" name="othername" type="text" data-rule-minlength="2">
-															</div>
-															<div class="form-group">
-																<label for="dateOfBirth" class="required"><span class="field-name">[7] Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-																<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
-															</div>
-															<fieldset class="form-inline chkbxrdio-grp">
-																<legend class="required"><span class="field-name">[8] Gender</span><strong class="required">(required)</strong></legend>
-																<label for="gender1" class="radio-inline"><input type="radio" name="gender" value="1" id="gender1" required="required" />Male</label>
-																<label for="gender2" class="radio-inline"><input type="radio" name="gender" value="2" id="gender2" />Female</label>
-																<label for="gender3" class="radio-inline"><input type="radio" name="gender" value="3" id="gender3" />Another Gender</label>
-																<label for="gender4" class="radio-inline"><input type="radio" name="gender" value="4" id="gender4" />Information not available</label>
-															</fieldset>
-															<div class="form-group">
-																<label for="sin">[9] Social Insurance Number: (optional)</label>
-																<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2">
-															</div>
-
-															<div class="form-group">
-																<label for="surnameBirthParent">[10] Surname at Birth of a Parent</label>
-																<input class="form-control" id="surnameBirthParent" name="surnameBirthParent" type="text" data-rule-minlength="2">
-															</div>
-
-															<fieldset class="chkbxrdio-grp">
-																<legend class="required"><span class="field-name">Reason for application</span> <strong class="required">(required)</strong></legend>
-																<ul class="form-group list-unstyled">
-																	<li class="radio">
-																		<label for="reason1"><input type="radio" name="example2" value="1" id="reason1" required="required" />Person in default of the support provision</label>
-																	</li>
-																	<li class="radio">
-																		<label for="reason2"><input type="radio" name="example2" value="2" id="reason2" />Person believed to have possession of the child or children in contravention of the custody provision</label>
-																	</li>
-																	<li class="radio">
-																		<label for="reason3"><input type="radio" name="example2" value="3" id="reason3" />Person charged with an offence under 282 or 283 of the Criminal Code</label>
-																	</li>
-																	<li class="radio">
-																		<label for="reason4"><input type="radio" name="example2" value="4" id="reason4" />Missing child</label>
-																	</li>
-																</ul>
-															</fieldset>
-														</div>
-													</fieldset>
-												</details>
-												<details id="details-panel3">
-													<summary>Part 3</summary>
-													<p>
-														The story of the Norsemen runs thus. Towards the end of the ninth century, or nearly two hundred years before the Norman conquest, there was a great exodus or outswarming of the Norsemen from their original home in Norway. A certain King Harold had succeeded in making himself supreme in Norway, and great numbers of the lesser chiefs or jarls preferred to seek new homes across the seas rather than submit to his rule. So they embarked with their seafaring followers—Vikings, as we still call them—often, indeed, with their wives and families, in great open ships, and sailed away, some to the coast of England, others to France, and others even to the Mediterranean, where they took service under the Byzantine emperors. But still others, loving the cold rough seas of the north, struck westward across the North Sea and beyond the coasts of Scotland till they reached Iceland. This was in the year 874. Here they made a settlement that presently grew to a population of fifty thousand people, having flocks and herds, solid houses of stone, and a fine trade in fish and oil with the countries of Northern Europe. These settlers in Iceland attained to a high standard of civilization. They had many books, and were fond of tales and stories, as are all these northern peoples who spend long winter evenings round the fireside. Some of the sagas, or stories, which they told were true accounts of the voyages and adventures of their forefathers; others were fanciful stories, like our modern romances, created by the imagination; others, again, were a mixture of the two. Thus it is sometimes hard to distinguish fact and fancy in these early tales of the Norsemen. We have, however, means of testing the stories. Among the books written in Iceland there was one called the 'National Name-Book,' in which all the names of the people were written down, with an account of their forefathers and of any notable things which they had done.
-													</p>
-												</details>
-												<details id="details-panel4">
-													<summary>Part 4</summary>
-													<p>
-														The story of the Norsemen runs thus. Towards the end of the ninth century, or nearly two hundred years before the Norman conquest, there was a great exodus or outswarming of the Norsemen from their original home in Norway. A certain King Harold had succeeded in making himself supreme in Norway, and great numbers of the lesser chiefs or jarls preferred to seek new homes across the seas rather than submit to his rule. So they embarked with their seafaring followers—Vikings, as we still call them—often, indeed, with their wives and families, in great open ships, and sailed away, some to the coast of England, others to France, and others even to the Mediterranean, where they took service under the Byzantine emperors. But still others, loving the cold rough seas of the north, struck westward across the North Sea and beyond the coasts of Scotland till they reached Iceland. This was in the year 874. Here they made a settlement that presently grew to a population of fifty thousand people, having flocks and herds, solid houses of stone, and a fine trade in fish and oil with the countries of Northern Europe. These settlers in Iceland attained to a high standard of civilization. They had many books, and were fond of tales and stories, as are all these northern peoples who spend long winter evenings round the fireside. Some of the sagas, or stories, which they told were true accounts of the voyages and adventures of their forefathers; others were fanciful stories, like our modern romances, created by the imagination; others, again, were a mixture of the two. Thus it is sometimes hard to distinguish fact and fancy in these early tales of the Norsemen. We have, however, means of testing the stories. Among the books written in Iceland there was one called the 'National Name-Book,' in which all the names of the people were written down, with an account of their forefathers and of any notable things which they had done.
-													</p>
-												</details>
-											</div>
-										</div>
-										<input id="btnSubmitTabType" type="submit" name="submit" value="Submit" class="btn btn-primary">
-									</form>
-								</div>
-
+								
 								<div class="wb-frmvld">
 									<h3>Form using Details/Summary</h3>
 									<form action="Tracing-en.html" method="post" id="newTracingApplicationDetailForm">
@@ -503,13 +397,13 @@
 		</div>
 	</section>
 
-	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 
-	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
 
-	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 

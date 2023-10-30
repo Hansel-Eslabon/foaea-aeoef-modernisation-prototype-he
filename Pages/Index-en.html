@@ -48,13 +48,13 @@
 					</a>
 				</li>
 				<li>
-					<a href="Tracing-en.html">
+					<a href="../Pages/Tracing/Tracing-en.html">
 						<i class="bi bi-search"></i>
 						<span>Trace and Locate</span>
 					</a>
 				</li>
 				<li>
-					<a href="New-Tracing-en.html">
+					<a href="../Pages/Tracing/New-Tracing-en.html">
 						<i class="bi bi-file-earmark-plus"></i>
 						<span>New Application</span>
 					</a>
@@ -210,6 +210,7 @@
 												<div class="wb-frmvld provisional">
 													<form action="#" method="get" id="searchForm">
 														<fieldset id="serchFieldSet">
+															<legend>Quick Search</legend>
 															<div>
 																<div class="form-group">
 																	<label for="sin" id="sin" class="">SIN # </label>
@@ -250,108 +251,123 @@
 											<details id="detailsAdvSearch">
 												<summary>Advanced Search</summary>
 												<div id="instructionDiv" class="alert alert-info" role="alert">
-													<h4> <input id="chkboxInstruction" type="checkbox" checked disabled> Select to add to My Search - 5 max</h4>
+													<h4>
+														<label for="chkboxAdvSearchItems">Select to add to My Search - 5 max</label>
+													<input id="chkboxAdvSearchItems" type="checkbox" checked disabled> </h4>
 												</div>
 
 												<form action="#" method="get" class="form-horizontal">
 													<div class="row">
 														<div class="col-6">
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="lastName"> <input id="chkboxLastName" type="checkbox" value=""> Last Name</label>
+																<label class="col-sm-5 control-label" for="chkboxLastName"> <input id="chkboxLastName" type="checkbox" value=""> Last Name</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="lastName" name="lastName" type="text" data-rule-minlength="2">
+																	<label for="advLastName" class="sr-only">Last Name</label>
+																	<input class="form-control" id="advLastName" name="advLastName" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="firstName"> <input id="chkboxFirstName" type="checkbox" value=""> First Name</label>
+																<label class="col-sm-5 control-label" for="chkboxFirstName"> <input id="chkboxFirstName" type="checkbox" value=""> First Name</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="firstName" name="firstName" type="text" data-rule-minlength="2">
+																	<label for="advFirstName" class="sr-only">First Name</label>
+																	<input class="form-control" id="advFirstName" name="advFirstName" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="middleName"> <input id="chkboxMiddleName" type="checkbox" value=""> Middle Name</label>
+																<label class="col-sm-5 control-label" for="chkboxMiddleName"> <input id="chkboxMiddleName" type="checkbox" value=""> Middle Name</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="middleName" name="middleName" type="text" data-rule-minlength="2">
+																	<label for="advMiddleName" class="sr-only">Middle Name</label>
+																	<input class="form-control" id="advMiddleName" name="advMiddleName" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="endRefSource"> <input id="chkboxEndRefSource" type="checkbox" value=""> End Ref Source #</label>
+																<label class="col-sm-5 control-label" for="chkboxEndRefSource"> <input id="chkboxEndRefSource" type="checkbox" value=""> End Ref Source #</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="endRefSource" name="endRefSource" type="text" data-rule-minlength="2">
+																	<label for="advEndRefSource" class="sr-only">End Ref Source #</label>
+																	<input class="form-control" id="advEndRefSource" name="advEndRefSource" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="state"> <input id="chkboxState" type="checkbox" value=""> State</label>
+																<label class="col-sm-5 control-label" for="chkboxState"> <input id="chkboxState" type="checkbox" value=""> State</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="state" name="state" type="text" data-rule-minlength="2">
+																	<label for="advState" class="sr-only">State</label>
+																	<input class="form-control" id="advState" name="advState" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="sin"> <input id="chkboxSIN" type="checkbox" value=""> SIN</label>
+																<label class="col-sm-5 control-label" for="chkboxSIN"> <input id="chkboxSIN" type="checkbox" value=""> SIN</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2">
+																	<label for="advSIN" class="sr-only">SIN</label>
+																	<input class="form-control" id="advSIN" name="advSIN" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="ctrlCode"> <input id="chkboxCtrlCode" type="checkbox" value=""> Ctrl Code</label>
+																<label class="col-sm-5 control-label" for="chkboxCtrlCode"> <input id="chkboxCtrlCode" type="checkbox" value=""> Ctrl Code</label>
 																<div class="col-md-7">
 																	<input class="form-control" id="ctrlCode" name="ctrlCode" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="justiceNo"> <input id="chkboxJusticeNo" type="checkbox" value=""> Justice #</label>
+																<label class="col-sm-5 control-label" for="chkboxJusticeNo"> <input id="chkboxJusticeNo" type="checkbox" value=""> Justice #</label>
 																<div class="col-md-7">
 																	<input class="form-control" id="justiceNo" name="justiceNo" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="status"> <input id="chkboxStatus" type="checkbox" value=""> Status</label>
+																<label class="col-sm-5 control-label" for="chkboxStatus"> <input id="chkboxStatus" type="checkbox" value=""> Status</label>
 																<div class="col-md-7">
 																	<input class="form-control" id="status" name="status" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="category"> <input id="chkboxCategory" type="checkbox" value=""> Category</label>
+																<label class="col-sm-5 control-label" for="chkboxCategory"> <input id="chkboxCategory" type="checkbox" value=""> Category</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="category" name="category" type="text" data-rule-minlength="2">
+																	<label for="advCategory" class="sr-only">Category</label>
+																	<input class="form-control" id="advCategory" name="advCategory" type="text" data-rule-minlength="2">
 																</div>
 															</div>
 														</div>
 														<div class="col-6">
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="appReceiptDateFrom"> <input id="chkboxAppReceiptDateFrom" type="checkbox" value=""> Application Receipt Date - From</label>
+																<label class="col-sm-5 control-label" for="chkboxAppReceiptDateFrom"> <input id="chkboxAppReceiptDateFrom" type="checkbox" value=""> Application Receipt Date - From</label>
 																<div class="col-md-7">
+																	<label for="appReceiptDateFrom" class="sr-only">Application Receipt Date - From</label>
 																	<input class="form-control" id="appReceiptDateFrom" name="appReceiptDateFrom" type="date">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxAppReceiptDateTo"> Application Receipt Date - To</label>
+																<label class="col-sm-5 control-label" for="chkboxAppReceiptDateTo"> <input id="chkboxAppReceiptDateTo" type="checkbox" value=""> Application Receipt Date - To</label>
 																<div class="col-md-7">
+																	<label for="appReceiptDateTo" class="sr-only">Application Receipt Date - To</label>
 																	<input class="form-control" id="appReceiptDateTo" name="appReceiptDateTO" type="date">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="appReceiptExpiryFrom"> <input id="chkboxAppReceiptExpiryFrom" type="checkbox" value=""> Application Expiry Date - From</label>
+																<label class="col-sm-5 control-label" for="chkboxAppReceiptExpiryFrom"> <input id="chkboxAppReceiptExpiryFrom" type="checkbox" value=""> Application Expiry Date - From</label>
 																<div class="col-md-7">
+																	<label for="appReceiptExpiryFrom" class="sr-only">Application Expiry Date - From</label>
 																	<input class="form-control" id="appReceiptExpiryFrom" name="appReceiptExpiryFrom" type="date">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="appReceiptExpiryTo"> Application Expiry Date - To</label>
+																<label class="col-sm-5 control-label" for="chcboxAppReceiptExpiryTo"> <input id="chcboxAppReceiptExpiryTo" type="checkbox" value=""> Application Expiry Date - To</label>
 																<div class="col-md-7">
+																	<label for="appReceiptExpiryTo" class="sr-only">Application Expiry Date - To</label>
 																	<input class="form-control" id="appReceiptExpiryTo" name="appReceiptExpiryTo" type="date">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="dOBFrom"> <input id="chkboxDOBFrom" type="checkbox" value=""> Date of Birth - From</label>
+																<label class="col-sm-5 control-label" for="chkboxDOBFrom"> <input id="chkboxDOBFrom" type="checkbox" value=""> Date of Birth - From</label>
 																<div class="col-md-7">
+																	<label for="dOBFrom" class="sr-only">Date of Birth - From</label>
 																	<input class="form-control" id="dOBFrom" name="dOBFrom" type="date">
 																</div>
 															</div>
 															<div class="form-group">
-																<label class="col-sm-5 control-label" for="dOBTo"> Date of Birth - To</label>
+																<label class="col-sm-5 control-label" for="chkboxDOBTo"> <input id="chkboxDOBTo" type="checkbox" value=""> Date of Birth - To</label>
 																<div class="col-md-7">
-																	<input class="form-control" id="dOBFrom" name="dOBFrom" type="date">
+																	<label for="dOBTo" class="sr-only">Date of Birth - To</label>
+																	<input class="form-control" id="dOBTo" name="dOBTo" type="date">
 																</div>
 															</div>
 
