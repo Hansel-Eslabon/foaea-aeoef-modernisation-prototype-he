@@ -295,7 +295,7 @@
 																		<input class="form-control" id="SIN" name="SIN" type="text" data-rule-minlength="2">
 																	</div>
 																	<div class="form-group">
-																		<label for="montherSurname" class=""><span class="field-name">[11] Mother's surname at her birth': (optional)</span></label>
+																		<label for="montherSurname" class=""><span class="field-name">[11] Mother's surname at her birth: (optional)</span></label>
 																		<input class="form-control" id="montherSurname" name="montherSurname" type="text" data-rule-minlength="2">
 																	</div>
 
@@ -312,7 +312,11 @@
 
 																	<div class="form-group">
 																		<label for="address" class="required"><span class="field-name">[13] Address:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-																		<input class="form-control" id="address" name="address" type="text" data-rule-minlength="2" required="required">
+																		<input class="form-control" id="address" name="address" type="text" data-rule-minlength="2" required="required" size="30">
+																	</div>
+																	<div class="form-group">
+																		<label for="address2" class=""><span class="field-name">Address 2:</span> <strong class="" aria-hidden="true">(optional)</strong></label>
+																		<input class="form-control" id="address2" name="address2" type="text" data-rule-minlength="2" required="required" size="30">
 																	</div>
 
 																	<div class="form-group">
@@ -778,8 +782,8 @@
 																	<thead>
 																		<tr>
 																			<th>Percentage</th>
-																			<th>Fixed amount</th>
-																			<th>Amount to garnished per transaction</th>
+																			<th>Fixed amount $</th>
+																			<th>Amount to garnished per transaction $</th>
 																			<th>Source Department</th>
 																			<td></td>
 																		</tr>
@@ -788,9 +792,18 @@
 																		<tr data-id="234234">
 
 																			<td></td>
-																			<td>$ 1,000.00</td>
-																			<td></td>
-																			<td>Revenue Canada</td>
+																			<td><input class="form-control" id="fixedAmountInput0" name="fixedAmountInput0" type="text"  pattern="^\d+(?:\.\d{1,2})?$" value="1,000.00"></td>
+																			<td>	
+																			</td>
+																			<td>
+																				<select class="form-control dropdown">
+																					<option value="1">CPP</option>
+																					<option value="2">Employment Insurance</option>
+																					<option value="3">Old Age Security</option>
+																					<option value="4" selected="selected">Revenue Canada</option>
+																					<option value="5">Training Benefits</option>
+																				</select>
+																			</td>
 																			<td>
 																				<a href="Edit-Tracing-en.html"><i class="bi bi-trash3"></i><span class="sr-only">Delete</span></a>
 																			</td>
@@ -809,8 +822,8 @@
 													</p>
 													<div class="form-group">
 														<div id="helpText" class="helptext well well-md">
-															<p>Maximum document size is 4MB</p>
-															<p>Acceptable document types: pdf, .jpg, .jpeg, .gif, .png, .bmp</p>
+															<p>Maximum document size is 5MB</p>
+															<p>Acceptable document type: pdf</p>
 															<p>Filename cannot obtain special characters such as: [# % &amp; { } &lt; &gt; * ? $ ! ' " + ` | =]</p>
 														</div>
 														<label for="file1" class="required"><span class="field-name">File</span> <strong class="required">(required)</strong></label>
@@ -828,7 +841,7 @@
 																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
 																	</div>
 																	<div class="col ps-0">
-																		<p class="mb-0"><span class="text-danger fw-bold pe-3">MEP</span><span class="text-muted">- 2023-09-23</span></p>
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">MEP</span><span class="text-muted">- 2023-09-23  08:50 AM EST</span></p>
 																		<p>Spoke with the debtor...</p>
 
 																	</div>
@@ -838,7 +851,7 @@
 																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
 																	</div>
 																	<div class="col ps-0">
-																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW104</span><span class="text-muted">- 2022-02-11</span></p>
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW104</span><span class="text-muted">- 2022-02-11 11:35 AM EST</span></p>
 																		<p>Debtor address has changed</p>
 
 																	</div>
@@ -848,7 +861,7 @@
 																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
 																	</div>
 																	<div class="col ps-0">
-																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2021-12-20</span></p>
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2021-12-20 8:53 AM EST</span></p>
 																		<p>Debtor address has changed</p>
 
 																	</div>
@@ -859,7 +872,7 @@
 																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
 																	</div>
 																	<div class="col ps-0">
-																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2020-01-16</span></p>
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2020-01-16 3:50 PM EST</span></p>
 																		<p>Debtor address has changed</p>
 
 																	</div>
@@ -869,7 +882,7 @@
 																		<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
 																	</div>
 																	<div class="col ps-0">
-																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2019-04-21</span></p>
+																		<p class="mb-0"><span class="text-danger fw-bold pe-3">NPW103</span><span class="text-muted">- 2019-04-21 7:50 AM EST</span></p>
 																		<p>Debtor address has changed</p>
 
 																	</div>
