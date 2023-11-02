@@ -1,4 +1,225 @@
 
+/* Wizard Form */
+.steps li a::before {
+	content: "";
+	width: 3px;
+	height: 31px;
+	position: absolute;
+	left: -3px;
+	top: 0;
+}
+
+/*----------step-wizard------------*/
+.d-flex {
+	display: flex;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+/*---------signup-step-------------*/
+.bg-color {
+	background-color: #333;
+}
+
+.signup-step-container {
+	padding: 150px 0px;
+	padding-bottom: 60px;
+}
+
+
+
+
+.wizard .nav-tabs {
+	position: relative;
+	margin-bottom: 0;
+	border-bottom-color: transparent;
+}
+
+.wizard > div.wizard-inner {
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.connecting-line {
+	height: 5px;
+	background: #05196f;
+	position: absolute;
+	width: 85%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 35px;
+	z-index: 0;
+}
+
+.stepBadge {
+	padding: 10px 21px;
+	font-size: 14px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	margin-top: 15px;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+	color: #555555;
+	cursor: default;
+	border: 0;
+	border-bottom-color: transparent;
+}
+
+span.round-tab {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	border-radius: 50%;
+	background: #fff;
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	text-align: center;
+	font-size: 16px;
+	color: #0e214b;
+	font-weight: 500;
+	border: 1px solid #ddd;
+}
+
+	span.round-tab i {
+		color: #555555;
+	}
+
+.wizard li.active span.round-tab {
+	background: #0db02b;
+	color: #fff;
+	border-color: #0db02b;
+}
+
+	.wizard li.active span.round-tab i {
+		color: #5bc0de;
+	}
+
+.wizard .nav-tabs > li.active > a i {
+	color: #fff;
+}
+
+.wizard .nav-tabs > li {
+	width: 14.28%;
+}
+
+.wizard li:after {
+	content: " ";
+	position: absolute;
+	left: 46%;
+	opacity: 0;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 5px solid transparent;
+	border-bottom-color: red;
+	transition: 0.1s ease-in-out;
+}
+
+
+
+.wizard .nav-tabs > li a {
+	width: 30px;
+	height: 30px;
+	margin: 20px auto;
+	border-radius: 100%;
+	padding: 0;
+	background-color: transparent;
+	position: relative;
+	top: 0;
+}
+
+	.wizard .nav-tabs > li a i {
+		position: absolute;
+		top: -15px;
+		font-style: normal;
+		font-weight: 400;
+		white-space: nowrap;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 12px;
+		font-weight: 700;
+		color: #fff;
+	}
+
+	.wizard .nav-tabs > li a:hover {
+		background: transparent;
+	}
+
+.wizard .tab-pane {
+	position: relative;
+}
+
+
+.wizard h3 {
+	margin-top: 0;
+}
+
+/*.prev-step,
+.next-step {
+	font-size: 13px;
+	padding: 8px 24px;
+	border: none;
+	border-radius: 4px;
+	margin-top: 30px;
+}
+
+.next-step {
+	background-color: #0db02b;
+}
+
+.skip-btn {
+	background-color: #cec12d;
+}*/
+
+.step-head {
+	font-size: 20px;
+	text-align: center;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+
+
+
+.steps li a {
+	color:black;
+	/*color:  #fff;*/
+	font-size: 15px;
+	padding-left: 18px;
+}
+
+
+
+@media (max-width: 767px) {
+	.wizard .nav-tabs > li a i {
+		display: none;
+	}
+}
+
+
+/*End Wizard Form*/
+
+.form-border {
+	border-color: #0274A9;
+	border: 10px solid #0274A9;
+	padding: 20px 20px;
+	position: relative;
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+
+
+
 /* Start Banner and Footer*/
 
 #wb-bnr {
@@ -184,7 +405,8 @@ select.minimal:focus {
 
 .navbar {
 	padding: 15px 10px;
-	background: #7386d5;
+	/*background: #7386d5;*/
+	background: #3F33E6;
 	border: none;
 	border-radius: 0;
 	margin-bottom: 40px;
@@ -232,7 +454,8 @@ span {
 #sidebar {
 	min-width: 250px;
 	max-width: 250px;
-	background: #7386D5;
+	/*background: #7386D5;*/
+	background: #3F33E6;
 	color: #fff;
 	transition: all 0.3s;
 }
@@ -300,7 +523,8 @@ span {
 
 	#sidebar .sidebar-header {
 		padding: 15px;
-		background: #6d7fcc;
+		/*background: #6d7fcc;*/
+		background: #0a2dbf;
 	}
 
 		#sidebar .sidebar-header strong {
@@ -333,7 +557,8 @@ span {
 	#sidebar ul li.active > a,
 	a[aria-expanded="true"] {
 		color: #fff;
-		background: #6d7fcc;
+		background: #0a2dbf;
+		/*background: #fff;*/
 	}
 
 a[data-toggle="collapse"] {

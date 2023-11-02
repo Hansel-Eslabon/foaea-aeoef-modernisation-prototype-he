@@ -839,9 +839,8 @@
 		});
 
 		//Bookmark
-		$('#t01Tables td:nth-child(14) > div').on('click', ".bi", function (event) {
-
-			console.log($(this).parents("tr").attr("data-id"));
+		$('#t01Tables td:nth-child(14) > div').on('click', ".bi", function (event)
+		{
 			if ($(event.target).hasClass('bi-star-fill')) {
 				//Ajax Remove Bookmark
 				toastr.success('Remove from Tracking');
