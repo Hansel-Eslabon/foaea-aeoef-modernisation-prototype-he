@@ -10,1132 +10,474 @@
 	<!-- TODO ../wwwroot To be replace with ~/ once we transition to actual front end -->
 	<!-- TODO Probably DL all stylesheet and image that links to web address -->
 
-	<link href="../wwwroot/favicon.ico" rel="icon" type="image/x-icon"
-		  data-filename="my-mobile-favicon.ico"
-		  data-path="../wwwroot/"
-		  data-rel="apple-touch-icon-precomposed"
-		  data-sizes="57x57">
+	<link rel="alternate" hreflang="fr" href="wb-disable-fr.html">
 
+	<link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="../wwwroot/lib/theme-wet-boew/assets/favicon-mobile.png">
 
-	<link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link href="../wwwroot/lib/theme-wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
+
 	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
 
+	<noscript><link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css"></noscript>
 
-	<noscript>
-		<link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css" />
-	</noscript>
-
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-	<link rel="stylesheet" href="../wwwroot/css/site.css" />
+
 </head>
+
+
+
+
+
 <body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
-	<div class="wrapper">
-		<!-- Sidebar  -->
-		<nav id="sidebar" class="sticky-top">
-			<div class="sidebar-header">
-				<h3>FOAEA</h3>
-				<strong>FOAEA</strong>
-			</div>
+	<nav>
+		<ul id="wb-tphp" class="wb-init wb-disable-inited">
+			<li class="wb-slc">
+				<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+			</li>
+			<li class="wb-slc visible-sm visible-md visible-lg">
+				<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+			</li>
+			<li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a></li>
+		</ul>
+	</nav>
 
-			<ul class="list-unstyled components">
-				<li class="active">
-					<a href="Index-en.html">
-						<i class="bi bi-house"></i>
-						<span>Home</span>
-					</a>
-				</li>
-				<li>
-					<a href="../Pages/Tracing/Tracing-en.html">
-						<i class="bi bi-search"></i>
-						<span>Trace and Locate</span>
-					</a>
-				</li>
-				<li>
-					<a href="../Pages/Tracing/New-Tracing-en.html">
-						<i class="bi bi-file-earmark-plus"></i>
-						<span>New Application</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="list-unstyled components">
-				<li>
-					<a href="#">
-						<i class="bi bi-currency-dollar"></i>
-						<span>Garnishment</span>
-					</a>
-				</li>
-				<li>
-					<a href="../Pages/Garnishment/New-Garnishment-en.html">
-						<i class="bi bi-clipboard-plus"></i>
-						<span>New Application</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-pencil-square"></i>
-						<span>Edit</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="list-unstyled components">
-				<li>
-					<a href="#">
-						<i class="bi bi-person-vcard"></i>
-						<span>License Denial</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-person-plus-fill"></i>
-						<span>New Application</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-pencil"></i>
-						<span>Edit</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="bi bi-terminal-x"></i>
-						<span>Termination</span>
-					</a>
-				</li>
-			</ul>
-
-			<ul class="list-unstyled components">
-				<li>
-					<a href="#">
-						<i class="bi bi-question-circle"></i>
-						<span>Help</span>
-					</a>
-				</li>
-			</ul>
-			<div id="version">
-				<span>Version: Prototype</span>
-			</div>
-		</nav>
-
-		<!-- Page Content  -->
-		<div class="w-100">
-			<div id="content-fluid">
-				<header>
-					<div class="container-fluid">
-						<div class="row">
-							<div id="wb-bnr" class="container-fluid">
-								<div class="row">
-									<div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-										<a href="#" property="url">
-											<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
-										</a>
-										<meta property="name" content="Government of Canada">
-										<meta property="areaServed" typeof="Country" content="Canada">
-										<link property="logo" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" rel="logo">
-									</div>
-
-									<section id="wb-lng" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4 pull-right text-center">
-										<h2 class="wb-inv">Language selection</h2>
-										<ul class="list-inline mrgn-bttm-0">
+	<header role="banner">
+		<div id="wb-bnr">
+			<div id="wb-bar">
+				<div class="container">
+					<div class="row">
+						<section id="wb-lng" class="visible-md visible-lg">
+							<h2>Language selection</h2>
+							<ul class="text-right">
+								<li>
+									<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
+								</li>
+								<li class="curr">
+									English <span>(current)</span>
+								</li>
+							</ul>
+						</section>
+						<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
+							<h2>Search and menus</h2>
+							<ul class="pnl-btn list-inline text-right">
+								<li>
+									<a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
+										<span class="glyphicon glyphicon-search">
+											<span class="glyphicon glyphicon-th-list">
+												<span class="wb-inv">Search and menus</span>
+											</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r wb-init" aria-hidden="true">
+								<div class="modal-header">
+									<div class="modal-title">Search and menus</div>
+								</div>
+								<div class="modal-body">
+									<section class="srch-pnl">
+										<h3>Search</h3>
+										<form action="https://google.ca/search" method="get" role="search" class="form-inline">
+											<div class="form-group">
+												<label for="wb-srch-q-imprt">Search website</label>
+												<input id="wb-srch-q-imprt" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+												<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
+											</div>
+											<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
+										</form>
+									</section>
+									<section class="lng-ofr">
+										<h3>Language selection</h3>
+										<ul class="list-inline">
 											<li>
-												<a lang="fr" hreflang="fr" href="https://conception.canada.ca">
-													<span class="hidden-xs" translate="no">Français</span>
-													<abbr title="Français" translate="no" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
-												</a>
+												<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
 											</li>
 										</ul>
 									</section>
-								</div>
-							</div>
-							<nav class="navbar navbar-expand-lg">
-								<div class="container-fluid">
-
-									<button type="button" id="sidebarCollapse" class="btn btn-light">
-										<i class="bi bi-arrow-left-right"></i>
-										<span>Toggle Sidebar</span>
-									</button>
-
-									<button class="btn btn-light d-inline-block d-lg-none ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-											aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-										<i class="bi bi-justify"></i>
-									</button>
-
-
-									<div class="collapse navbar-collapse" id="navbarCollapse">
-										<ul class="navbar-nav ml-auto w-100 justify-content-end">
-											<li class="nav-item">
-
-												<a class="nav-link overlay-lnk" href="#right-panel" aria-controls="right-panel" role="button">
-													<i class="bi bi-bell"></i> Notification
-													<span class="badge rounded-pill bg-danger">4</span>
-
-												</a>
-
+									<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl" class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
+										<h3>Topics menu</h3>
+										<ul class="list-unstyled mb-menu" role="menu">
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="3" aria-posinset="1" aria-haspopup="true" tabindex="0">WET project</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">About the Web Experience Toolkit</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">Benefits</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/ref/accolades-en.html">Awards, articles and videos</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/events-en.html">Events</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="5" tabindex="-1" href="https://github.com/wet-boew/wet-boew/">Main project page</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="6" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/License-en.html">Terms and conditions</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="7" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/rdmp-en.html">Roadmap of past and future releases</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="8" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/index-en.html">Version history</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="9" tabindex="-1" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+														</li>
+													</ul>
+												</details>
 											</li>
-											<li class="nav-item dropdown">
-												<a href="#signOutSubMenu" data-bs-toggle="collapse" data-bs-target="#signOutSubMenu" id="navbarScrollingDropdown" aria-expanded="false" class="nav-link">
-													<span class="bi bi-person-circle"> Santa Claus (MEP)</span>
-													<i class="bi bi-caret-down-fill"></i>
-												</a>
-												<ul class="dropdown-menu collapse" id="signOutSubMenu" aria-labelledby="navbarScrollingDropdown">
-													<li><a class="dropdown-item" href="#">Sign-Out</a></li>
-												</ul>
-
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="3" aria-posinset="2" aria-haspopup="true" tabindex="-1">Implement WET</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Getting started with WET</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Download WET</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/demos/index-en.html">Working examples</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="3" aria-posinset="3" aria-haspopup="true" tabindex="-1">Contribute to WET</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html">Filing a bug or an issue</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Creating a pull request</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Testing your code</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Developing for WET</a>
+														</li>
+													</ul>
+												</details>
 											</li>
 										</ul>
-									</div>
+									</nav>
+									<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu wb-menu-inited wb-init">
+										<h3>About this site</h3>
+										<ul class="list-unstyled mb-menu" role="menu">
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1" aria-haspopup="true" tabindex="0">Contact us</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1" href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2" aria-haspopup="true" tabindex="-1">About</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1" href="../../index-en.html#about">About the Web Experience Toolkit</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1" rel="external" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3" aria-haspopup="true" tabindex="-1">News</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1" href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1" href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4" aria-haspopup="true" tabindex="-1">Stay connected</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1" rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+										</ul>
+									</nav>
 								</div>
-							</nav>
-						</div>
+								<div class="modal-footer">
+									<button title="Close overlay" class="btn btn-sm btn-primary pull-left overlay-close" type="button">
+										Close <span class="wb-inv">Close overlay</span>
+									</button>
+								</div>
+								<button title="Close: Search and menus (escape key)" class="mfp-close overlay-close" type="button">
+									× <span class="wb-inv"> Close: Search and menus (escape key)</span>
+								</button>
+							</div>
+						</section>
 					</div>
-				</header>
-
-				<main>
-					<div class="ps-4">
-						<!-- Page Title -->
-						<div class="container-fluid">
-							<div class="row">
-								<h1 id="wb-cont" property="name">Home</h1>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<h2>Search</h2>
-									<div class="wb-tabs ignore-session">
-										<div class="tabpanels">
-											<details id="details-panel1" open="open">
-												<summary>My Search</summary>
-												<div class="wb-frmvld provisional">
-													<form action="#" method="get" id="searchForm">
-														<fieldset id="serchFieldSet">
-															<legend>Quick Search</legend>
-															<div>
-																<div class="form-group">
-																	<label for="sin" id="sin" class="">SIN # </label>
-																	<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="9" data-mask="999-999-999" placeholder="999-999-999">
-																</div>
-																<div class="form-group">
-																	<label for="ctrlCode" class="">Ctrl Code</label>
-																	<input class="form-control" id="ctrlCode" name="ctrlCode" type="text" data-rule-minlength="2">
-																</div>
-																<div class="form-group">
-																	<label for="justiceNo" class="">Justice #</label>
-																	<input class="form-control" id="justiceNo" name="justiceNo" type="text" data-rule-minlength="2">
-																</div>
-																<div class="form-group">
-																	<label for="endRefSource" class="">End Ref Source #</label>
-																	<input class="form-control" id="endRefSource" name="endRefSource" type="text" data-rule-minlength="2">
-																</div>
-																<div class="form-group">
-																	<label for="status" class="">State</label>
-																	<select name="status" id="status" class="form-control">
-																		<option selected="selected" value="0">Please select an option</option>
-																		<option value="Cancelled">Cancelled</option>
-																		<option value="Orphaned">Orphaned</option>
-																		<option value="Non linked">Non linked</option>
-																		<option value="Linked">Linked</option>
-																		<option value="Transferred">Transferred</option>
-																		<option value="New">New</option>
-																		<option value="Terminated">Terminated</option>
-																	</select>
-
-																</div>
-															</div>
-														</fieldset>
-														<input type="submit" name="submit" value="Search" class="btn btn-primary">
-													</form>
-												</div>
-											</details>
-											<details id="detailsAdvSearch">
-												<summary>Advanced Search</summary>
-												<div id="instructionDiv" class="alert alert-info" role="alert">
-													<h4>
-														<label for="chkboxAdvSearchItems">Select to add to My Search - 5 max</label>
-													<input id="chkboxAdvSearchItems" type="checkbox" checked disabled> </h4>
-												</div>
-
-												<form action="#" method="get" class="form-horizontal">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxLastName"> <input id="chkboxLastName" type="checkbox" value=""> Last Name</label>
-																<div class="col-md-7">
-																	<label for="advLastName" class="sr-only">Last Name</label>
-																	<input class="form-control" id="advLastName" name="advLastName" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxFirstName"> <input id="chkboxFirstName" type="checkbox" value=""> First Name</label>
-																<div class="col-md-7">
-																	<label for="advFirstName" class="sr-only">First Name</label>
-																	<input class="form-control" id="advFirstName" name="advFirstName" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxMiddleName"> <input id="chkboxMiddleName" type="checkbox" value=""> Middle Name</label>
-																<div class="col-md-7">
-																	<label for="advMiddleName" class="sr-only">Middle Name</label>
-																	<input class="form-control" id="advMiddleName" name="advMiddleName" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxEndRefSource"> <input id="chkboxEndRefSource" type="checkbox" value=""> End Ref Source #</label>
-																<div class="col-md-7">
-																	<label for="advEndRefSource" class="sr-only">End Ref Source #</label>
-																	<input class="form-control" id="advEndRefSource" name="advEndRefSource" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxState"> <input id="chkboxState" type="checkbox" value=""> State</label>
-																<div class="col-md-7">
-																	<label for="advState" class="sr-only">State</label>
-																	<input class="form-control" id="advState" name="advState" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxSIN"> <input id="chkboxSIN" type="checkbox" value=""> SIN</label>
-																<div class="col-md-7">
-																	<label for="advSIN" class="sr-only">SIN</label>
-																	<input class="form-control" id="advSIN" name="advSIN" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxCtrlCode"> <input id="chkboxCtrlCode" type="checkbox" value=""> Ctrl Code</label>
-																<div class="col-md-7">
-																	<input class="form-control" id="ctrlCode" name="ctrlCode" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxJusticeNo"> <input id="chkboxJusticeNo" type="checkbox" value=""> Justice #</label>
-																<div class="col-md-7">
-																	<input class="form-control" id="justiceNo" name="justiceNo" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxStatus"> <input id="chkboxStatus" type="checkbox" value=""> Status</label>
-																<div class="col-md-7">
-																	<input class="form-control" id="status" name="status" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxCategory"> <input id="chkboxCategory" type="checkbox" value=""> Category</label>
-																<div class="col-md-7">
-																	<label for="advCategory" class="sr-only">Category</label>
-																	<input class="form-control" id="advCategory" name="advCategory" type="text" data-rule-minlength="2">
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxAppReceiptDateFrom"> <input id="chkboxAppReceiptDateFrom" type="checkbox" value=""> Application Receipt Date - From</label>
-																<div class="col-md-7">
-																	<label for="appReceiptDateFrom" class="sr-only">Application Receipt Date - From</label>
-																	<input class="form-control" id="appReceiptDateFrom" name="appReceiptDateFrom" type="date">
-																	<input type="date" name="date" id="date"
-																		   value="2022-01-01" required
-																		   style="padding: 5px; border-radius: 5px;
-            border: 1px solid #ccc; margin-bottom: 10px;">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxAppReceiptDateTo"> <input id="chkboxAppReceiptDateTo" type="checkbox" value=""> Application Receipt Date - To</label>
-																<div class="col-md-7">
-																	<label for="appReceiptDateTo" class="sr-only">Application Receipt Date - To</label>
-																	<input class="form-control" id="appReceiptDateTo" name="appReceiptDateTO" type="date">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxAppReceiptExpiryFrom"> <input id="chkboxAppReceiptExpiryFrom" type="checkbox" value=""> Application Expiry Date - From</label>
-																<div class="col-md-7">
-																	<label for="appReceiptExpiryFrom" class="sr-only">Application Expiry Date - From</label>
-																	<input class="form-control" id="appReceiptExpiryFrom" name="appReceiptExpiryFrom" type="date">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chcboxAppReceiptExpiryTo"> <input id="chcboxAppReceiptExpiryTo" type="checkbox" value=""> Application Expiry Date - To</label>
-																<div class="col-md-7">
-																	<label for="appReceiptExpiryTo" class="sr-only">Application Expiry Date - To</label>
-																	<input class="form-control" id="appReceiptExpiryTo" name="appReceiptExpiryTo" type="date">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxDOBFrom"> <input id="chkboxDOBFrom" type="checkbox" value=""> Date of Birth - From</label>
-																<div class="col-md-7">
-																	<label for="dOBFrom" class="sr-only">Date of Birth - From</label>
-																	<input class="form-control" id="dOBFrom" name="dOBFrom" type="date">
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="col-sm-5 control-label" for="chkboxDOBTo"> <input id="chkboxDOBTo" type="checkbox" value=""> Date of Birth - To</label>
-																<div class="col-md-7">
-																	<label for="dOBTo" class="sr-only">Date of Birth - To</label>
-																	<input class="form-control" id="dOBTo" name="dOBTo" type="date">
-																</div>
-															</div>
-
-
-														</div>
-
-													</div>
-													<div class="form-group p-4">
-														<label for="searchName">Search Name </label>
-														<input class="form-control" id="searchName" name="searchName" type="text" data-rule-minlength="2">
-														<a href="#" class="btn btn-link" role="button">Save Search</a>
-													</div>
-													<input type="submit" name="submit" value="Advanced Search" class="btn btn-primary">
-
-												</form>
-											</details>
-											<details id="saveSearch">
-												<summary>Save Searches</summary>
-												<div class="card">
-													<div class="card-body">
-														<div class="row py-1 align-items-center">
-															<div class="col-auto">
-																<a href="javascript:void(0);" class="text-body">Save Search 1</a>
-															</div>
-														</div>
-														<div class="row py-1 align-items-center">
-															<div class="col-auto">
-																<a href="javascript:void(0);" class="text-body">Save Search 2</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</details>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<h2>Last 5 recently viewed actioned</h2>
-									<div class="card">
-										<div class="card-body">
-											<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-success fw-bold pe-3">New</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Affidavit #1011</a>
-														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-success fw-bold pe-3">Edit</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">License Denial Application #932</a>
-														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-danger fw-bold pe-3">Cancelled/Terminated</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-warning fw-bold pe-3">Transfer</span>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">License Denial Affidavit #795</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<span class="text-warning fw-bold pe-3">De-linked/Linked</span>
-													</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<h2>My Tracking</h2>
-									<div class="card" id="myTracking">
-										<div class="card-body">
-											<div data-simplebar="" style="max-height:320px;overflow-x:hidden">
-												<div class="row py-1 align-items-center" data-id="1234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="2">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															Tracing Affidavit #1011
-														</a>
-														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="13234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Application #932
-														</a>
-														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="1434">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="1234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Affidavit #795
-														</a>
-														<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="1234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #7877</a>
-														<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="1234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															Tracing Affidavit #1011
-														</a>
-														<p class="mb-0 text-muted"><small>20 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="1234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Application #932
-														</a>
-														<p class="mb-0 text-muted"><small>16 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="1234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-up text-danger font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">Tracing Application #6502</a>
-														<p class="mb-0 text-muted"><small>09 Sep 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-												<div class="row py-1 align-items-center" data-id="1234">
-													<div class="col-auto">
-														<i class="mdi mdi-arrow-collapse-down text-success font-18"></i>
-													</div>
-													<div class="col ps-0">
-														<a href="javascript:void(0);" class="text-body">
-															License Denial Affidavit #795
-														</a>
-														<p class="mb-0 text-muted"><small>28 Aug 2023</small></p>
-													</div>
-													<div class="col-auto">
-														<div class="fav">
-															<i class="bi bi-star hide pe-4"></i>
-															<i class="bi bi-star-fill pe-4"></i>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-
-							</div>
-
-							<div class="row">
-								<div class="line"></div>
-
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<div class="card">
-										<div class="card-header">
-											SIN Not Confirmed
-										</div>
-										<div class="row d-flex justify-content-center text-center">
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
-													<a href="#" class="btn btn-primary">Total</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
-													<a href="#" class="btn btn-primary">New</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
-													<a href="#" class="btn btn-primary">Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-													<a href="#" class="btn btn-primary">Non Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
-													<a href="#" class="btn btn-primary">Last 2 weeks</a>
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<div class="card">
-										<div class="card-header">
-											SIN Pending
-										</div>
-										<div class="row d-flex justify-content-center text-center">
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
-													<a href="#" class="btn btn-primary">Total</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
-													<a href="#" class="btn btn-primary">New</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-													<a href="#" class="btn btn-primary">Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-													<a href="#" class="btn btn-primary">Non Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
-													<a href="#" class="btn btn-primary">Last 2 weeks</a>
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-									<div class="card">
-										<div class="card-header">
-											Cancelled Applications
-										</div>
-										<div class="row d-flex justify-content-center text-center">
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-danger bi bi-arrow-up"></i>6</h2>
-													<a href="#" class="btn btn-primary">Total</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="display-1 card-title nav-pills card-header-pills">0</h2>
-													<a href="#" class="btn btn-primary">New</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-													<a href="#" class="btn btn-primary">Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-													<a href="#" class="btn btn-primary">Non Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">1</h2>
-													<a href="#" class="btn btn-primary">Last 2 week</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="line"></div>
-								<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-									<div class="card">
-										<div class="card-header">
-											TO1 Applications
-										</div>
-										<div class="row d-flex justify-content-center text-center">
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-up"></i>10</h2>
-													<a href="Tracing-en.html?filterBy=Total" class="btn btn-primary">Total</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
-													<a href="Tracing-en.html?filterBy=New" class="btn btn-primary">New</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-													<a href="Tracing-en.html?filterBy=Linked" class="btn btn-primary">Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
-													<a href="Tracing-en.html?filterBy=NonLinked" class="btn btn-primary">Non Linked</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
-													<a href="Tracing-en.html?filterBy=ESDC" class="btn btn-primary">ESDC Only</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">5</h2>
-													<a href="Tracing-en.html?filterBy=CRA" class="btn btn-primary">CRA Only</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
-													<a href="Tracing-en.html?filterBy=Both" class="btn btn-primary">Both</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
-													<a href="Tracing-en.html?filterBy=Last2Weeks" class="btn btn-primary">Last 2 weeks</a>
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-									<div class="card text-center">
-										<div class="card-header">
-											Submitted Today
-										</div>
-
-										<div class="card-body">
-											<h2 class="card-title nav-pills  card-header-pills display-1">10</h2>
-											<a href="#" class="btn btn-primary">Total</a>
-										</div>
-
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-									<div class="card">
-										<div class="card-header">
-											Orphaned T01 Applications
-										</div>
-										<div class="row d-flex justify-content-center text-center">
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1"><i class="text-success bi bi-arrow-down"></i>9</h2>
-													<a href="#" class="btn btn-primary">Total</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="display-1 card-title nav-pills card-header-pills">1</h2>
-													<a href="#" class="btn btn-primary">New</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">2</h2>
-													<a href="#" class="btn btn-primary">Cancelled I01's</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">3</h2>
-													<a href="#" class="btn btn-primary">Expired I01's</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">4</h2>
-													<a href="#" class="btn btn-primary">Rejected I01's</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="display-1 card-title nav-pills card-header-pills">5</h2>
-													<a href="#" class="btn btn-primary">Transferred I01's</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">6</h2>
-													<a href="#" class="btn btn-primary">ESDC Only</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">7</h2>
-													<a href="#" class="btn btn-primary">CRA Only</a>
-												</div>
-											</div>
-
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">9</h2>
-													<a href="#" class="btn btn-primary">Both</a>
-												</div>
-											</div>
-											<div class="col-auto">
-												<div class="card-body">
-													<h2 class="card-title nav-pills  card-header-pills display-1">8</h2>
-													<a href="#" class="btn btn-primary">Last 2 weeks</a>
-												</div>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-
-							</div>
-
-
-							<div class="row">
-								<div class="line"></div>
-
-								<h2>Lorem Ipsum Dolor</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								<div class="wb-frmvld provisional wb-steps">
-									<form action="#" method="get" id="steps-example">
-										<fieldset id="client">
-											<legend>Client Information</legend>
-											<div>
-												<div class="form-group">
-													<label for="firstname" id="firstname" class="required">First Name: <strong class="required" aria-hidden="true">(required)</strong></label>
-													<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required">
-
-												</div>
-												<div class="form-group">
-													<label for="lastname" class="required">Last name: <strong class="required" aria-hidden="true">(required)</strong></label>
-													<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
-												</div>
-												<div class="form-group">
-													<label for="dateOfBirth" class="required">Date of Birth: <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-													<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
-												</div>
-											</div>
-										</fieldset>
-										<fieldset id="contact">
-											<legend>Contact Information</legend>
-											<div>
-												<div class="form-group">
-													<label for="preferredNumber" class="required">Preferred: Phone Number <strong class="required" aria-hidden="true">(required)</strong></label>
-													<input class="form-control" id="preferredNumber" name="preferredNumber" type="tel" data-rule-phoneus="true" required="required">
-												</div>
-												<div class="form-group">
-													<label for="secondaryNumber">Secondary: Phone Number</label>
-													<input class="form-control" id="secondaryNumber" name="secondaryNumber" type="tel" data-rule-phoneus="true">
-												</div>
-												<div class="form-group">
-													<label for="email">Email Address (test@domain):</label>
-													<input class="form-control" id="email" name="email" type="email">
-												</div>
-											</div>
-										</fieldset>
-										<fieldset id="questionaire">
-											<legend>Ethics Questionnaire</legend>
-											<div>
-												<p><small>For each of the following examples, indicate whether or not you feel that there is an ethical issue.</small></p>
-												<fieldset class="subfields">
-													<legend><span class="field-name">Ethics 1</span>: You pay $10.00 bucks for a purchase, but receive change for $20.00 bucks. Would you keep the extra money?</legend>
-													<div class="radio">
-														<label for="defNot-1"><input type="radio" name="ethics1" value="defNot-1" id="defNot-1">Definitely Not</label>
-														<label for="probNot-1"><input type="radio" name="ethics1" value="probNot-1" id="probNot-1">Probably Not</label>
-														<label for="maybe-1"><input type="radio" name="ethics1" value="maybe-1" id="maybe-1">Maybe (Not Sure)</label>
-														<label for="probably-1"><input type="radio" name="ethics1" value="probably-1" id="probably-1">Probably</label>
-														<label for="definitely-1"><input type="radio" name="ethics1" value="definitely-1" id="definitely-1">Definitely</label>
-													</div>
-												</fieldset>
-												<fieldset class="subfields">
-													<legend><span class="field-name">Ethics 2</span>: You need a software, but can't wait for office to make a decision. Against license restrictions would you download it?</legend>
-													<div class="radio">
-														<label for="defNot-2"><input type="radio" name="ethics2" value="defNot-2" id="defNot-2">&#160;Definitely Not</label>&#160;
-														<label for="probNot-2"><input type="radio" name="ethics2" value="probNot-2" id="probNot-2">&#160;Probably Not</label>&#160;
-														<label for="maybe-2"><input type="radio" name="ethics2" value="maybe-2" id="maybe-2">&#160;Maybe (Not Sure)</label>&#160;
-														<label for="probably-2"><input type="radio" name="ethics2" value="probably-2" id="probably-2">&#160;Probably</label>&#160;
-														<label for="definitely-2"><input type="radio" name="ethics2" value="definitely-2" id="definitely-2">&#160;Definitely</label>
-													</div>
-												</fieldset>
-											</div>
-										</fieldset>
-										<input type="submit" name="submit" value="Submit" class="btn btn-primary">
-									</form>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-				</main>
-
-				<footer id="wb-info">
-					<h2 class="wb-inv">About this site</h2>
-					<div class="gc-contextual">
-						<div class="container">
-							<nav>
-								<h3>Department of Justice Canada</h3>
-								<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
-									<li><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782" class="wb-exitscript">Contact us</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-
-					<div class="gc-sub-footer">
-						<div class="container d-flex align-items-center">
-							<nav>
-								<h3 class="wb-inv">Government of Canada Corporate</h3>
-								<ul>
-									<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/" class="wb-exitscript">Terms and conditions</a></li>
-									<li>
-										<a href="https://www.canada.ca/en/transparency/privacy.html" class="wb-exitscript">
-											Privacy
-										</a>
-									</li>
-								</ul>
-							</nav>
-							<div class="wtrmrk align-self-end">
-								<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
-							</div>
-						</div>
-					</div>
-				</footer>
+				</div>
 			</div>
-			
+			<div class="container">
+				<div class="row">
+					<div id="wb-sttl" class="col-md-8">
+						<a href="#">
+							<img src="../wwwroot/FOAEA.svg" alt="FOAEA">
+							<span>
+								FOAEA<span class="wb-inv">, </span>
+								<small>Family Orders and Agreements Enforcement Assistance Act System</small>
+							</span>
+						</a>
+					</div>
+					<section id="wb-srch" class="col-md-4 visible-md visible-lg">
+						<h2>Search</h2>
+						<form action="https://google.ca/search" method="get" role="search" class="form-inline">
+							<div class="form-group">
+								<label for="wb-srch-q">Search website</label>
+								<input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+								<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
+							</div>
+							<button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
+						</form>
+					</section>
+				</div>
+			</div>
 		</div>
-	
-	</div>
-
-		<section id="right-panel" class="wb-overlay modal-content overlay-def wb-panel-r">
-			<header class="modal-header">
-				<h2 class="modal-title">Notifications</h2>
-			</header>
-			<div class="modal-body">
-				<ul class="list-unstyled">
-					<li>
-						<p><a href="#">T01 Applications #4545</a> has been transfer to your office</p>
-						<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-						<hr />
-					</li>
-					<li>
-						<p><a href="#">T01 Applications #1265</a> has been transfer to your office</p>
-						<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-						<hr />
-					</li>
-					<li>
-						<p><a href="#">T01 Applications #1234</a> has been transfer to your office</p>
-						<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-						<hr />
-					</li>
-					<li>
-						<p><a href="#">T01 Applications #9543</a> has been transfer to your office</p>
-						<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-						<hr />
-					</li>
-					<li>
-						<p><a href="#">T01 Applications #324</a> has been transfer to your office</p>
-						<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-						<hr />
-					</li>
-					<li>
-						<p><a href="#">T01 Applications #43434</a> has been cancelled by Santa Claus</p>
-						<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
-					</li>
-				</ul>
+		<nav role="navigation" id="wb-sm" data-ajax-replace="../../ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited" typeof="SiteNavigationElement">
+			<div class="pnl-strt container visible-md visible-lg nvbar">
+				<h2>Topics menu</h2>
+				<div class="row">
+					<ul role="menubar" class="list-inline menu">
+						<li>
+							<a class="item" href="#project" tabindex="0" aria-posinset="1" aria-setsize="3" role="menuitem" aria-haspopup="true">
+								WET project <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="menu" id="project" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+								<li>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about" tabindex="-1" aria-posinset="1" aria-setsize="9" role="menuitem">About the Web Experience Toolkit</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits" tabindex="-1" aria-posinset="2" aria-setsize="9" role="menuitem">Benefits</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/ref/accolades-en.html" tabindex="-1" aria-posinset="3" aria-setsize="9" role="menuitem">Awards, articles and videos</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/events-en.html" tabindex="-1" aria-posinset="4" aria-setsize="9" role="menuitem">Events</a>
+								</li>
+								<li>
+									<a href="https://github.com/wet-boew/wet-boew/" tabindex="-1" aria-posinset="5" aria-setsize="9" role="menuitem">Main project page</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/v4.0-ci/License-en.html" tabindex="-1" aria-posinset="6" aria-setsize="9" role="menuitem">Terms and conditions</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/versions/rdmp-en.html" tabindex="-1" aria-posinset="7" aria-setsize="9" role="menuitem">Roadmap of past and future releases</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/versions/index-en.html" tabindex="-1" aria-posinset="8" aria-setsize="9" role="menuitem">Version history</a>
+								</li>
+								<li>
+									<a href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp" tabindex="-1" aria-posinset="9" aria-setsize="9" role="menuitem">About the Web Standards</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="item" href="#implement" tabindex="-1" aria-posinset="2" aria-setsize="3" role="menuitem" aria-haspopup="true">
+								Implement WET <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="menu" id="implement" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/start-en.html" tabindex="-1" aria-posinset="1" aria-setsize="4" role="menuitem">Getting started with WET</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html" tabindex="-1" aria-posinset="2" aria-setsize="4" role="menuitem">Download WET</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/v4.0-ci/demos/index-en.html" tabindex="-1" aria-posinset="3" aria-setsize="4" role="menuitem">Working examples</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/index-en.html" tabindex="-1" aria-posinset="4" aria-setsize="4" role="menuitem">Documentation</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="item" href="#contribute" tabindex="-1" aria-posinset="3" aria-setsize="3" role="menuitem" aria-haspopup="true">
+								Contribute to WET <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="menu" id="contribute" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="1" aria-setsize="4" role="menuitem">Filing a bug or an issue</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html" tabindex="-1" aria-posinset="2" aria-setsize="4" role="menuitem">Creating a pull request</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test" tabindex="-1" aria-posinset="3" aria-setsize="4" role="menuitem">Testing your code</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop" tabindex="-1" aria-posinset="4" aria-setsize="4" role="menuitem">Developing for WET</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</section>
+		</nav>
+		<nav role="navigation" id="wb-bc" property="breadcrumb">
+			<h2>Breadcrumb Navigation</h2>
+			<div class="container">
+				<div class="row">
+					<ol class="breadcrumb" typeof="BreadcrumbList">
+						<li property="itemListElement" typeof="ListItem">
+							<a property="item" typeof="WebPage" href="../../index-en.html">
+								<span property="name">Home</span>
+							</a>
+							<meta property="position" content="1">
+						</li>
+						<li property="itemListElement" typeof="ListItem">
+							<a property="item" typeof="WebPage" href="../../demos/index-en.html">
+								<span property="name">Working examples</span>
+							</a>
+							<meta property="position" content="2">
+						</li>
+						<li property="itemListElement" typeof="ListItem">
+							<span property="name">Basic HTML</span>
+							<meta property="position" content="3">
+						</li>
+					</ol>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
+		<h1 id="wb-cont" property="name">Basic HTML</h1>
+		<ul class="list-inline">
+			<li>
+				<a class="btn btn-primary" href="../../docs/ref/wb-disable/wb-disable-en.html">Documentation</a>
+			</li>
+			<li>
+				<a class="btn btn-primary" href="https://github.com/wet-boew/wet-boew/issues/new?title=Basic%20HTML:%20">Questions or comments?</a>
+			</li>
+		</ul>
+		<div class="wb-prettify all-pre wb-init wb-prettify-inited" id="wb-auto-1"></div>
+		<h2 id="basicMode">Basic HTML mode</h2>
+		<p>Click on the link below to enable Basic HTML Mode</p>
+		<p>
+			<a href="?wbdisable=true">Switch to Basic HTML Mode</a>
+		</p>
+		<p>
+			<a href="?wbdisable=false">Switch to regular page</a>
+		</p>
+		<h3>Code</h3>
+		<pre class="prettyprint prettyprinted" style="">
+		<code>
+		<span class="tag">&lt;p&gt;</span>
+		<span class="pln">Click on the link below to enable Basic HTML Mode</span>
+		<span class="tag">&lt;/p&gt;</span>
+		<span class="pln"></span>
+		<span class="tag">&lt;p&gt;&lt;a</span>
+		<span class="pln"></span>
+		<span class="atn">href</span>
+		<span class="pun">=</span>
+		<span class="atv">"?wbdisable=true"</span>
+		<span class="tag">&gt;</span>
+		<span class="pln">Switch to Basic HTML Mode</span>
+		<span class="tag">&lt;/a&gt;&lt;/p&gt;</span>
+		<span class="pln"></span>
+		<span class="tag">&lt;p&gt;&lt;a</span>
+		<span class="pln"></span>
+		<span class="atn">href</span>
+		<span class="pun">=</span>
+		<span class="atv">"?wbdisable=false"</span>
+		<span class="tag">&gt;</span>
+		<span class="pln">Switch to regular page</span>
+		<span class="tag">&lt;/a&gt;&lt;/p&gt;</span>
+			</code>
+		</pre>
+		<dl id="wb-dtmd">
+			<dt>Date modified: </dt>
+			<dd>
+				<time property="dateModified">2023-07-11</time>
+			</dd>
+		</dl>
+	</main>
 
 
+	<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr wb-navcurr-inited">
+		<div class="container">
+			<nav role="navigation" class="row">
+				<h2>About this site</h2>
+				<section class="col-sm-3">
+					<h3>Contact us</h3>
+					<ul class="list-unstyled">
+						<li>
+							<a href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a>
+						</li>
+					</ul>
+				</section>
+				<section class="col-sm-3">
+					<h3>About</h3>
+					<ul class="list-unstyled">
+						<li>
+							<a href="../../index-en.html#about">About the Web Experience Toolkit</a>
+						</li>
+						<li>
+							<a rel="external" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+						</li>
+					</ul>
+				</section>
+				<section class="col-sm-3">
+					<h3>News</h3>
+					<ul class="list-unstyled">
+						<li>
+							<a href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a>
+						</li>
+						<li>
+							<a href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a>
+						</li>
+					</ul>
+				</section>
+				<section class="col-sm-3">
+					<h3>Stay connected</h3>
+					<ul class="list-unstyled">
+						<li>
+							<a rel="external" href="https://twitter.com/WebExpToolkit" class="wb-exitscript">Twitter</a>
+						</li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</footer>
 
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
-
-	<script src="../wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
-
 	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
+	<script src="../wwwroot/lib/wet-boew/js/deps/prettify.min.js"></script>
 
+	<!-- TODO -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function () {
-
-			$('#sidebarCollapse').on('click', function () {
-				$('#sidebar').toggleClass('active');
-			});
-		});
-
-		//Bookmark
-		$('#myTracking .row').on('click', ".bi", function (event) {
-			if ($(event.target).hasClass('bi-star-fill')) {
-				//Ajax Remove Bookmark
-				toastr.success('Remove from Tracking');
-				$(this).closest(".row").hide();
-			}
-		});
-
-		toastr.options = {
-			"closeButton": true,
-			"debug": false,
-			"newestOnTop": false,
-			"progressBar": false,
-			"positionClass": "toast-top-right",
-			"preventDuplicates": false,
-			"onclick": null,
-			"showDuration": "300",
-			"hideDuration": "1000",
-			"timeOut": "5000",
-			"extendedTimeOut": "1000",
-			"showEasing": "swing",
-			"hideEasing": "linear",
-			"showMethod": "fadeIn",
-			"hideMethod": "fadeOut"
-		}
-
-	</script>
-
 </body>
 
 
