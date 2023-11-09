@@ -20,7 +20,7 @@
 
 	<noscript><link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css"></noscript>
 
-	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />-->
+	<link rel="stylesheet" href="../wwwroot/css/site.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
 
@@ -101,7 +101,7 @@
 										<ul class="list-unstyled mb-menu" role="menu">
 											<li>
 												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="3" aria-posinset="1" aria-haspopup="true" tabindex="0">WET project</summary>
+													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="1" aria-haspopup="true" tabindex="0">WET project</summary>
 													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
 														<li>
 															<a role="menuitem" aria-setsize="9" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">About the Web Experience Toolkit</a>
@@ -135,7 +135,7 @@
 											</li>
 											<li>
 												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="3" aria-posinset="2" aria-haspopup="true" tabindex="-1">Implement WET</summary>
+													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="2" aria-haspopup="true" tabindex="-1">Implement WET</summary>
 													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
 														<li>
 															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Getting started with WET</a>
@@ -154,7 +154,7 @@
 											</li>
 											<li>
 												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="3" aria-posinset="3" aria-haspopup="true" tabindex="-1">Contribute to WET</summary>
+													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="3" aria-haspopup="true" tabindex="-1">Contribute to WET</summary>
 													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
 														<li>
 															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html">Filing a bug or an issue</a>
@@ -249,7 +249,7 @@
 							</span>
 						</a>
 					</div>
-					<section id="wb-srch" class="col-md-4 visible-md visible-lg">
+					<!--<section id="wb-srch" class="col-md-4 visible-md visible-lg">
 						<h2>Search</h2>
 						<form action="https://google.ca/search" method="get" role="search" class="form-inline">
 							<div class="form-group">
@@ -259,7 +259,7 @@
 							</div>
 							<button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
 						</form>
-					</section>
+					</section>-->
 				</div>
 			</div>
 		</div>
@@ -268,75 +268,77 @@
 				<h2>Topics menu</h2>
 				<div class="row">
 					<ul role="menubar" class="list-inline menu">
+						<li class="active">
+							<a class="item" href="#" tabindex="0" aria-posinset="1" aria-setsize="6" role="menuitem">
+								<span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+							</a>
+						</li>
 						<li>
-							<a class="item" href="#project" tabindex="0" aria-posinset="1" aria-setsize="3" role="menuitem" aria-haspopup="true">
-								WET project <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							<a class="item" href="#project" tabindex="0" aria-posinset="2" aria-setsize="6" role="menuitem" aria-haspopup="true">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								Tracing <span class="expicon glyphicon glyphicon-chevron-down"></span>
 							</a>
 							<ul role="menu" id="project" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about" tabindex="-1" aria-posinset="1" aria-setsize="9" role="menuitem">About the Web Experience Toolkit</a>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-list-alt"></span> View Applications
+									</a>
 								</li>
 								<li>
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits" tabindex="-1" aria-posinset="2" aria-setsize="9" role="menuitem">Benefits</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/ref/accolades-en.html" tabindex="-1" aria-posinset="3" aria-setsize="9" role="menuitem">Awards, articles and videos</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/events-en.html" tabindex="-1" aria-posinset="4" aria-setsize="9" role="menuitem">Events</a>
-								</li>
-								<li>
-									<a href="https://github.com/wet-boew/wet-boew/" tabindex="-1" aria-posinset="5" aria-setsize="9" role="menuitem">Main project page</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/v4.0-ci/License-en.html" tabindex="-1" aria-posinset="6" aria-setsize="9" role="menuitem">Terms and conditions</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/versions/rdmp-en.html" tabindex="-1" aria-posinset="7" aria-setsize="9" role="menuitem">Roadmap of past and future releases</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/versions/index-en.html" tabindex="-1" aria-posinset="8" aria-setsize="9" role="menuitem">Version history</a>
-								</li>
-								<li>
-									<a href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp" tabindex="-1" aria-posinset="9" aria-setsize="9" role="menuitem">About the Web Standards</a>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-plus"></span> New Application
+									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a class="item" href="#implement" tabindex="-1" aria-posinset="2" aria-setsize="3" role="menuitem" aria-haspopup="true">
-								Implement WET <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							<a class="item" href="#implement" tabindex="-1" aria-posinset="3" aria-setsize="6" role="menuitem" aria-haspopup="true">
+								<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>	Interception <span class="expicon glyphicon glyphicon-chevron-down"></span>
 							</a>
 							<ul role="menu" id="implement" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/start-en.html" tabindex="-1" aria-posinset="1" aria-setsize="4" role="menuitem">Getting started with WET</a>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-list-alt"></span> View Applications
+									</a>
 								</li>
 								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html" tabindex="-1" aria-posinset="2" aria-setsize="4" role="menuitem">Download WET</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/v4.0-ci/demos/index-en.html" tabindex="-1" aria-posinset="3" aria-setsize="4" role="menuitem">Working examples</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/index-en.html" tabindex="-1" aria-posinset="4" aria-setsize="4" role="menuitem">Documentation</a>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-plus"></span> New Application
+									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a class="item" href="#contribute" tabindex="-1" aria-posinset="3" aria-setsize="3" role="menuitem" aria-haspopup="true">
-								Contribute to WET <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							<a class="item" href="#contribute" tabindex="-1" aria-posinset="4" aria-setsize="6" role="menuitem" aria-haspopup="true">
+								<span class="glyphicon glyphicon-open" aria-hidden="true"></span>
+								License Denial
+								<span class="expicon glyphicon glyphicon-chevron-down"></span>
 							</a>
 							<ul role="menu" id="contribute" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="1" aria-setsize="4" role="menuitem">Filing a bug or an issue</a>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-list-alt"></span> View Applications
+									</a>
 								</li>
 								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html" tabindex="-1" aria-posinset="2" aria-setsize="4" role="menuitem">Creating a pull request</a>
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-plus"></span> New Application
+									</a>
 								</li>
+							</ul>
+						</li>
+						<li class="border-right">
+							<a href="#notification-panel" class="item overlay-lnk" role="button" tabindex="-1" aria-posinset="5" aria-setsize="6" aria-controls="notification-panel">
+								<span class="glyphicon glyphicon-bell"></span> Notification 	<span class="badge badge-error">4</span>
+							</a>
+						</li>
+						<li class="pull-right">
+							<a class="item" href="#contribute" tabindex="-1" aria-posinset="6" aria-setsize="6" role="menuitem" aria-haspopup="true">
+								<span class="glyphicon glyphicon-user"></span> Santa Claus (MEP) <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="menu" id="contribute" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test" tabindex="-1" aria-posinset="3" aria-setsize="4" role="menuitem">Testing your code</a>
-								</li>
-								<li>
-									<a href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop" tabindex="-1" aria-posinset="4" aria-setsize="4" role="menuitem">Developing for WET</a>
+									<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="1" aria-setsize="1" role="menuitem">Logout</a>
 								</li>
 							</ul>
 						</li>
@@ -344,82 +346,100 @@
 				</div>
 			</div>
 		</nav>
-		<nav role="navigation" id="wb-bc" property="breadcrumb">
-			<h2>Breadcrumb Navigation</h2>
-			<div class="container">
-				<div class="row">
-					<ol class="breadcrumb" typeof="BreadcrumbList">
-						<li property="itemListElement" typeof="ListItem">
-							<a property="item" typeof="WebPage" href="../../index-en.html">
-								<span property="name">Home</span>
-							</a>
-							<meta property="position" content="1">
-						</li>
-						<li property="itemListElement" typeof="ListItem">
-							<a property="item" typeof="WebPage" href="../../demos/index-en.html">
-								<span property="name">Working examples</span>
-							</a>
-							<meta property="position" content="2">
-						</li>
-						<li property="itemListElement" typeof="ListItem">
-							<span property="name">Basic HTML</span>
-							<meta property="position" content="3">
-						</li>
-					</ol>
-				</div>
-			</div>
-		</nav>
+
 	</header>
 
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
-		<h1 id="wb-cont" property="name">Basic HTML</h1>
-		<ul class="list-inline">
-			<li>
-				<a class="btn btn-primary" href="../../docs/ref/wb-disable/wb-disable-en.html">Documentation</a>
-			</li>
-			<li>
-				<a class="btn btn-primary" href="https://github.com/wet-boew/wet-boew/issues/new?title=Basic%20HTML:%20">Questions or comments?</a>
-			</li>
-		</ul>
-		<div class="wb-prettify all-pre wb-init wb-prettify-inited" id="wb-auto-1"></div>
-		<h2 id="basicMode">Basic HTML mode</h2>
-		<p>Click on the link below to enable Basic HTML Mode</p>
-		<p>
-			<a href="?wbdisable=true">Switch to Basic HTML Mode</a>
-		</p>
-		<p>
-			<a href="?wbdisable=false">Switch to regular page</a>
-		</p>
-		<h3>Code</h3>
-		<pre class="prettyprint prettyprinted" style="">
-		<code>
-		<span class="tag">&lt;p&gt;</span>
-		<span class="pln">Click on the link below to enable Basic HTML Mode</span>
-		<span class="tag">&lt;/p&gt;</span>
-		<span class="pln"></span>
-		<span class="tag">&lt;p&gt;&lt;a</span>
-		<span class="pln"></span>
-		<span class="atn">href</span>
-		<span class="pun">=</span>
-		<span class="atv">"?wbdisable=true"</span>
-		<span class="tag">&gt;</span>
-		<span class="pln">Switch to Basic HTML Mode</span>
-		<span class="tag">&lt;/a&gt;&lt;/p&gt;</span>
-		<span class="pln"></span>
-		<span class="tag">&lt;p&gt;&lt;a</span>
-		<span class="pln"></span>
-		<span class="atn">href</span>
-		<span class="pun">=</span>
-		<span class="atv">"?wbdisable=false"</span>
-		<span class="tag">&gt;</span>
-		<span class="pln">Switch to regular page</span>
-		<span class="tag">&lt;/a&gt;&lt;/p&gt;</span>
-			</code>
-		</pre>
-		<dl id="wb-dtmd">
-			<dt>Date modified: </dt>
+		<h1 id="wb-cont" property="name">Home</h1>
+		<div class="well well-lg">
+			<h1>Welcome!</h1>
+			<p>
+				Welcome to the Family Orders and Agreements Enforcement Assistance Act System! We are here to provide you with the necessary support and resources to ensure the enforcement of family orders and agreements.
+				Our system is designed to assist you in navigating the complexities of family law, ensuring that your rights and obligations are upheld.
+				We are committed to helping you find the necessary assistance and guidance to foster a fair and just environment for all parties involved.
+				Thank you for choosing our system, and we look forward to serving youp
+			</p>
+		</div>
+
+		<div class="col-md-6 col-lg-6">
+			<section>
+				<h2>SIN Status in the Past 4 Weeks</h2>
+				<figure class="wb-graph">
+					<figcaption>Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks.</figcaption>
+					<div aria-label="Number of pages by main purpose and audience - Chart. Details in the following table." role="img">
+						<figure>
+							<div id="SIN-Pie-Graph" class="flot-graph"></div>
+						</figure>
+
+					</div>
+					<details>
+						<summary>Total Number of SIN Status for the past 4 weeks - Table</summary>
+						<div class="table-responsive">
+							<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
+								<caption>Number of pages by main purpose and audience</caption>
+								<tbody>
+									<tr>
+										<td></td>
+										<th>Pending</th>
+										<th>Not Confirmed</th>
+										<th>Cancelled</th>
+									</tr>
+									<tr>
+										<th>Number</th>
+										<td>10</td>
+										<td>3</td>
+										<td>5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</details>
+				</figure>
+			</section>
+		</div>
+		<div class="col-md-6 col-lg-6">
+			<section>
+				<h2>SIN Status in the Past 4 Weeks</h2>
+				<figure class="wb-graph">
+					<figcaption>Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks.</figcaption>
+					<div aria-label="Number of pages by main purpose and audience - Chart. Details in the following table." role="img">
+						<figure>
+							<div id="placeholder2" class="flot-graph"></div>
+						</figure>
+
+					</div>
+					<details>
+						<summary>Total Number of SIN Status for the past 4 weeks - Table</summary>
+						<div class="table-responsive">
+							<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
+								<caption>Number of pages by main purpose and audience</caption>
+								<tbody>
+									<tr>
+										<td></td>
+										<th>Pending</th>
+										<th>Not Confirmed</th>
+										<th>Cancelled</th>
+									</tr>
+									<tr>
+										<th>Number</th>
+										<td>10</td>
+										<td>3</td>
+										<td>5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</details>
+				</figure>
+			</section>
+		</div>
+
+
+
+		<dl id="wb-dtmd" class="pull-right">
+			<dt>Version:</dt>
 			<dd>
-				<time property="dateModified">2023-07-11</time>
+				Prototype
 			</dd>
 		</dl>
 	</main>
@@ -429,55 +449,176 @@
 		<div class="container">
 			<nav role="navigation" class="row">
 				<h2>About this site</h2>
-				<section class="col-sm-3">
-					<h3>Contact us</h3>
+				<h3>Department of Justice Canada</h3>
+				<section class="col-sm-4 no-padding-left">
+					<h4><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782" class="wb-exitscript">Contact us</a></h4>
+					<ul class="list-unstyled">
+						<li><a href="https://www.justice.gc.ca/eng/contact/help-aide.html" class="wb-exitscript">Help</a></li>
+						<li><a href="https://www.justice.gc.ca/eng/contact/link-lien.html" title="Helpful links" class="wb-exitscript">Helpful Links</a></li>
+					</ul>
+				</section>
+				<section class="col-sm-4 no-padding-left">
+					<h4>About</h4>
 					<ul class="list-unstyled">
 						<li>
-							<a href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a>
+							<a rel="external" href="https://laws-lois.justice.gc.ca/eng/acts/f-1.4/" class="wb-exitscript">FOAEA</a>
+						</li>
+						<li>
+							<a rel="external" href="https://www.justice.gc.ca/eng/fl-df/" class="wb-exitscript">Family Law</a>
 						</li>
 					</ul>
 				</section>
-				<section class="col-sm-3">
-					<h3>About</h3>
+				<section class="col-sm-4 no-padding-left">
+					<h4>News</h4>
 					<ul class="list-unstyled">
-						<li>
-							<a href="../../index-en.html#about">About the Web Experience Toolkit</a>
-						</li>
-						<li>
-							<a rel="external" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
-						</li>
-					</ul>
-				</section>
-				<section class="col-sm-3">
-					<h3>News</h3>
-					<ul class="list-unstyled">
-						<li>
-							<a href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a>
-						</li>
-						<li>
-							<a href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a>
-						</li>
-					</ul>
-				</section>
-				<section class="col-sm-3">
-					<h3>Stay connected</h3>
-					<ul class="list-unstyled">
-						<li>
-							<a rel="external" href="https://twitter.com/WebExpToolkit" class="wb-exitscript">Twitter</a>
-						</li>
+						<li><a href="https://www.justice.gc.ca/eng/news-nouv/nr-cp.html" class="wb-exitscript">News Releases</a></li>
 					</ul>
 				</section>
 			</nav>
 		</div>
+		<div id="gc-info">
+			<div class="container">
+				<nav role="navigation" class="row">
+					<h2>Government of Canada footer</h2>
+					<ul class="list-inline">
+						<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/" class="wb-exitscript">Terms and conditions</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/privacy.html" class="wb-exitscript"><span>Privacy</span></a></li>
+						<li id="canada-ca"><a href="https://www.canada.ca/en/index.html">Canada.ca</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</footer>
 
+	<!--Sections-->
+	<section id="notification-panel" class="wb-overlay modal-content overlay-def wb-panel-r">
+		<header class="modal-header">
+			<h2 class="modal-title">Notifications</h2>
+		</header>
+		<div class="modal-body">
+			<ul class="list-unstyled">
+				<li>
+					<p><a href="#">T01 Applications #4545</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #1265</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #1234</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #9543</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #324</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+					<hr />
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #43434</a> has been cancelled by Santa Claus</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+
+
 	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+
+
 	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
 	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 	<script src="../wwwroot/lib/wet-boew/js/deps/prettify.min.js"></script>
 
+
+
+	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.min.js"></script>
+	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.pie.min.js"></script>
+	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.canvas.min.js"></script>
+	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.orderBars.min.js"></script>
+	<script src="../wwwroot/lib/wet-boew/js/deps/tableparser.min.js"></script>
+
 	<!-- TODO -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function (event) {
+			//do work
+			//datapie = [
+			//	{ label: "One", data: 50, color: '#e1ab0b' },
+			//	{ label: "Two", data: 65, color: '#fe0000' },
+			//	{ label: "Three", data: 23, color: '#93b40f' }
+			//];
+
+			datapie = [
+				{ label: "Pendings", data: 10 },
+				{ label: "Not Confirmed", data: 3 },
+				{ label: "Cancelled", data: 5 }
+			];
+
+
+
+			$.plot('#SIN-Pie-Graph', datapie, {
+				series:
+				{
+					pie: {
+						show: true,
+						radius: 1,
+						label: {
+							show: true,
+							formatter: function (label, point) {
+								return '<span class="">' + label + '</span>';
+							}
+						}
+					}
+				},
+				grid: {
+					hoverable: true,
+					clickable: true
+				},
+				legend: {
+					show: false
+				}
+			});
+
+			$.plot('#placeholder2', datapie, {
+				series:
+				{
+					pie: {
+						show: true,
+						radius: 1,
+						label: {
+							show: true,
+							formatter: function (label, point) {
+								return '<span class="pieLabelTest">' + label + '</span>';
+								//< a href = "#' + label + '" > ' + label + '</a > ';
+							}
+						}
+					}
+				},
+				grid: {
+					hoverable: true,
+					clickable: true,
+				},
+				legend: {
+					show: false
+				}
+			});
+		});
+
+
+
+
+	</script>
 </body>
 
 
