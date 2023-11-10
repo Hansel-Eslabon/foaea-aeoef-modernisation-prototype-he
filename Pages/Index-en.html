@@ -399,12 +399,12 @@
 		</div>
 		<div class="col-md-6 col-lg-6">
 			<section>
-				<h2>SIN Status in the Past 4 Weeks</h2>
+				<h2>Tracing Overview</h2>
 				<figure class="wb-graph">
-					<figcaption>Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks.</figcaption>
-					<div aria-label="Number of pages by main purpose and audience - Chart. Details in the following table." role="img">
+					<figcaption>Breakdown of Tracing Status for the past 4 weeks.</figcaption>
+					<div aria-label="Breakdown of Tracing Status for the past 4 weeks. Details in the following table." role="img">
 						<figure>
-							<div id="placeholder2" class="flot-graph"></div>
+							<div id="t01-bar-graph" class="flot-graph"></div>
 						</figure>
 
 					</div>
@@ -412,7 +412,7 @@
 						<summary>Total Number of SIN Status for the past 4 weeks - Table</summary>
 						<div class="table-responsive">
 							<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
-								<caption>Number of pages by main purpose and audience</caption>
+								<caption>Breakdown of Tracing Status for the past 4 weeks</caption>
 								<tbody>
 									<tr>
 										<td></td>
@@ -545,6 +545,7 @@
 	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.pie.min.js"></script>
 	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.canvas.min.js"></script>
 	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.orderBars.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.categories.min.js"></script>
 	<script src="../wwwroot/lib/wet-boew/js/deps/tableparser.min.js"></script>
 
 	<!-- TODO -->
@@ -552,17 +553,9 @@
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function (event) {
-			//do work
-			//datapie = [
-			//	{ label: "One", data: 50, color: '#e1ab0b' },
-			//	{ label: "Two", data: 65, color: '#fe0000' },
-			//	{ label: "Three", data: 23, color: '#93b40f' }
-			//];
-
 			datapie = [
-				{ label: "Pendings", data: 10 },
-				{ label: "Not Confirmed", data: 3 },
-				{ label: "Cancelled", data: 5 }
+				{ label: "Pending", data: 10, color: "#176B87" },
+				{ label: "Not Confirmed", data: 3, color: "#ffc107" }
 			];
 
 
@@ -570,7 +563,8 @@
 			$.plot('#SIN-Pie-Graph', datapie, {
 				series:
 				{
-					pie: {
+					pie:
+					{
 						show: true,
 						radius: 1,
 						label: {
@@ -590,34 +584,48 @@
 				}
 			});
 
-			$.plot('#placeholder2', datapie, {
-				series:
-				{
-					pie: {
+
+			let data = [
+				{ label: "Tracing Application", data: [["Linked", 10], ["Non Linked", 8], ["CRA", 4], ["ESDC", 13], ["Orphaned", 17], ["Cancelled", 9]] }
+			];
+			let xAxisLabel = [[0, "Linked"], [1, "Non Linked"], [2, "CRA"], [3, "ESDC"], [4, "Orphaned"], [5, "Cancelled"]];
+			$.plot("#t01-bar-graph", data, {
+				series: {
+					bars: {
 						show: true,
-						radius: 1,
-						label: {
-							show: true,
-							formatter: function (label, point) {
-								return '<span class="pieLabelTest">' + label + '</span>';
-								//< a href = "#' + label + '" > ' + label + '</a > ';
-							}
+						barWidth: 0.2,
+						lineWidth: 0,
+						order: 1,
+						fillColor: {
+							colors: [{
+								opacity: 1
+							}, {
+								opacity: 1
+							}]
 						}
 					}
 				},
+				bars: {
+					align: "center",
+					barWidth: 0.3
+				},
+				xaxis: {
+					mode: "categories",
+					ticks: xAxisLabel,
+					color: "#000",
+					tickColor: "#EEEEEE"
+				},
 				grid: {
 					hoverable: true,
-					clickable: true,
+					borderWidth: 0
 				},
 				legend: {
 					show: false
-				}
+				},
+				colors: ["#64CCC5"]
 			});
+
 		});
-
-
-
-
 	</script>
 </body>
 
