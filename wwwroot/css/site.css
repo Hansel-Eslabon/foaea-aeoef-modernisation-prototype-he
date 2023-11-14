@@ -149,3 +149,15 @@
 	width: 95%;
 	padding: 0px;
 }
+
+
+.modal-body, .modal-footer, #notification-panel {
+	background: #EEEEEE;
+}
+
+	#notification-panel ul > li {
+		border-bottom: 1px dashed #176B87;
+		margin-bottom: 10px;
+	}
+
+
