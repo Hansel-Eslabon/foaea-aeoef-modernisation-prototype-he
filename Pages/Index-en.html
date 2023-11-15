@@ -59,6 +59,7 @@
 								</li>
 							</ul>
 						</section>
+						<!-- Section for Mobile Menu -->
 						<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
 							<h2>Search and menus</h2>
 							<ul class="pnl-btn list-inline text-right">
@@ -249,17 +250,7 @@
 							</span>
 						</a>
 					</div>
-					<!--<section id="wb-srch" class="col-md-4 visible-md visible-lg">
-						<h2>Search</h2>
-						<form action="https://google.ca/search" method="get" role="search" class="form-inline">
-							<div class="form-group">
-								<label for="wb-srch-q">Search website</label>
-								<input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
-								<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
-							</div>
-							<button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
-						</form>
-					</section>-->
+
 				</div>
 			</div>
 		</div>
@@ -278,7 +269,7 @@
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 								Tracing <span class="expicon glyphicon glyphicon-chevron-down"></span>
 							</a>
-							<ul role="menu" id="project" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+							<ul role="menu" id="project" class="sm list-unstyled"  aria-expanded="false" aria-hidden="true">
 								<li>
 									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">
 										<span class="glyphicon glyphicon-list-alt"></span> View Applications
@@ -366,7 +357,7 @@
 					<h2>SIN Status in the Past 4 Weeks</h2>
 					<figure class="wb-graph">
 						<figcaption>Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks.</figcaption>
-						<div aria-label="Number of pages by main purpose and audience - Chart. Details in the following table." role="img">
+						<div aria-label="Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks - Chart. Details in the following table." role="img">
 							<figure>
 								<div id="SIN-Pie-Graph" class="flot-graph"></div>
 							</figure>
@@ -376,19 +367,19 @@
 							<summary>Total Number of SIN Status for the past 4 weeks - Table</summary>
 							<div class="table-responsive">
 								<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
-									<caption>Number of pages by main purpose and audience</caption>
+									<caption>Breakdown of SIN Status for the past 4 weeks</caption>
 									<tbody>
 										<tr>
 											<td></td>
-											<th>Pending</th>
+											<th>Confirmed</th>
 											<th>Not Confirmed</th>
-											<th>Cancelled</th>
+											<th>Pending</th>
 										</tr>
 										<tr>
 											<th>Number</th>
-											<td>10</td>
-											<td>3</td>
+											<td>9</td>
 											<td>5</td>
+											<td>13</td>
 										</tr>
 									</tbody>
 								</table>
@@ -649,8 +640,9 @@
 		document.addEventListener("DOMContentLoaded", function (event) {
 			/*SIN Status*/
 			let sinData = [
-				{ label: "Pending", data: 10, color: "#176B87" },
-				{ label: "Not Confirmed", data: 3, color: "#ffc107" }
+				{ label: "Pending", data: 13, color: "#176B87" },
+				{ label: "Not Confirmed", data: 5, color: "#ffc107" },
+				{ label: "Confirmed", data: 9, color: "#A7D397" }
 			];
 
 			$.plot('#SIN-Pie-Graph', sinData, {
@@ -676,6 +668,8 @@
 					show: false
 				}
 			});
+
+			$("#SIN-Pie-Graph").UseChartClick("Tracing/View-en.html");
 
 			/*Tracing App*/
 			let tracingData = [
@@ -707,11 +701,15 @@
 					mode: "categories",
 					ticks: tracingXAxisLabel,
 					color: "#000",
-					tickColor: "#EEEEEE"
+					tickColor: "#EEEEEE",
+					font: {
+						size: 16
+					}
 				},
 				grid: {
 					hoverable: true,
-					borderWidth: 0
+					borderWidth: 0,
+					clickable: true
 				},
 				legend: {
 					show: false
@@ -720,6 +718,7 @@
 			});
 
 			$("#t01-bar-graph").UseTooltip();
+			$("#t01-bar-graph").UseChartClick("Tracing/View-en.html");
 
 			/*Interception Apps*/
 			let interceptionData = [
@@ -751,11 +750,15 @@
 					mode: "categories",
 					ticks: interceptionXAxisLabel,
 					color: "#000",
-					tickColor: "#EEEEEE"
+					tickColor: "#EEEEEE",
+					font: {
+						size: 16
+					}
 				},
 				grid: {
 					hoverable: true,
-					borderWidth: 0
+					borderWidth: 0,
+					clickable: true
 				},
 				legend: {
 					show: false
@@ -764,7 +767,7 @@
 			});
 
 			$("#i01-bar-graph").UseTooltip();
-
+			$("#i01-bar-graph").UseChartClick("Garnishment/List-en.html");
 
 			/*License Denial Apps*/
 			let licenseData = [
@@ -796,37 +799,42 @@
 					mode: "categories",
 					ticks: licenseXAxisLabel,
 					color: "#000",
-					tickColor: "#EEEEEE"
+					tickColor: "#EEEEEE",
+					font: {
+						size: 16
+					}
 				},
 				grid: {
 					hoverable: true,
-					borderWidth: 0
+					borderWidth: 0,
+					clickable: true
 				},
 				legend: {
 					show: false
 				},
-				colors: ["#4B527E"]
+				colors: ["#4B527E"],
+				
 			});
 
-			$("#i01-bar-graph").UseTooltip();
-
+			$("#l01-bar-graph").UseTooltip();
+			$("#l01-bar-graph").UseChartClick("License/List-en.html");
 		});
 
 
 		var previousPoint = null, previousLabel = null;
 
 		$.fn.UseTooltip = function () {
-			$(this).bind("plothover", function (event, pos, item) {
+			$(this).on("plothover", function (event, pos, item) {
 				if (item) {
 					if ((previousLabel != item.series.label) || (previousPoint != item.dataIndex)) {
 						previousPoint = item.dataIndex;
 						previousLabel = item.series.label;
 						$("#tooltip").remove();
 
-						var x = item.datapoint[0];
-						var y = item.datapoint[1];
+						let x = item.datapoint[0];
+						let y = item.datapoint[1];
 
-						var color = item.series.color;
+						let color = item.series.color;
 
 						showTooltip(item.pageX,
 							item.pageY,
@@ -857,6 +865,36 @@
 			}).appendTo("body").fadeIn(200);
 		}
 
+		$.fn.UseChartClick = function (url) {
+			let isPieChart = false;
+
+
+			let search = null;
+
+			$(this).on("plotclick", function (event, pos, item)
+			{
+				isPieChart = item.series.pie.show;
+
+				if (isPieChart)
+				{
+					search = item.series.label;
+				}
+				else
+				{
+					let x = item.datapoint[0];
+					let y = item.datapoint[1];
+					if (item)
+					{
+						search = item.series.xaxis.ticks[x].label;
+					}
+				}
+
+				$(location).attr('href', url + '?search=' + search);
+			});
+
+
+			
+		};
 	</script>
 </body>
 
