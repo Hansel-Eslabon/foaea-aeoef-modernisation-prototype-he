@@ -164,3 +164,52 @@
 .text-white {
  color: #ffffff;
 }
+
+.badge
+{
+	background-color: transparent;
+}
+
+
+.status-bg-primary {
+	color: #ffffff;
+	background-color: #0d6efd !important;
+}
+
+.status-bg-secondary {
+	color: #ffffff;
+	background-color: #6c757d !important
+}
+.status-bg-success {
+	color: #ffffff;
+	background-color: #198754 !important;
+	;
+}
+.status-bg-danger {
+	color: #ffffff;
+	background-color: #dc3545 !important;
+}
+.status-bg-warning {
+	color: #ffffff;
+	background-color: #ffc107 !important;
+}
+
+.status-bg-info {
+	color: #ffffff;
+	background-color: #0dcaf0 !important;
+}
+.status-bg-light {
+	color: #000000;
+	background-color: #f8f9fa !important;
+}
+
+.status-bg-light:hover {
+	color: #176B87;
+}
+
+.status-bg-dark {
+	color: #ffffff;
+	background-color: #212529 !important;
+}
+
+

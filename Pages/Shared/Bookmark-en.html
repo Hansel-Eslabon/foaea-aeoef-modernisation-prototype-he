@@ -12,15 +12,15 @@
 
 	<link rel="alternate" hreflang="fr" href="wb-disable-fr.html">
 
-	<link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="../wwwroot/lib/theme-wet-boew/assets/favicon-mobile.png">
+	<link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="../../wwwroot/lib/theme-wet-boew/assets/favicon-mobile.png">
 
 	<link href="../../wwwroot/lib/theme-wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
 
-	<link rel="stylesheet" href="../wwwroot/lib/theme-wet-boew/css/theme.min.css">
+	<link rel="stylesheet" href="../../wwwroot/lib/theme-wet-boew/css/theme.min.css">
 
 	<noscript><link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css"></noscript>
 
-	<link rel="stylesheet" href="../wwwroot/css/site.css" />
+	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
 
@@ -260,7 +260,7 @@
 				<div class="row">
 					<ul role="list" class="list-inline menu">
 						<li class="active" role="listitem"  aria-posinset="1" aria-setsize="6" >
-							<a class="item" href="Index-en.html">
+							<a class="item" href="../Index-en.html">
 								<span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
 							</a>
 						</li>
@@ -329,7 +329,7 @@
 							</a>
 							<ul role="menu" id="profileList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="Shared/Bookmark-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">Bookmark</a>
+									<a href="Bookmark-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">Bookmark</a>
 								</li>
 								<li>
 									<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem">Logout</a>
@@ -344,188 +344,267 @@
 	</header>
 
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
-		<h1 id="wb-cont" property="name">Home</h1>
+		<h1 id="wb-cont" property="name">Bookmark</h1>
 		<div class="well well-lg">
-			<h1>Welcome!</h1>
 			<p>
-				Welcome to the Family Orders and Agreements Enforcement Assistance Act System! We are here to provide you with the necessary support and resources to ensure the enforcement of family orders and agreements.
-				Our system is designed to assist you in navigating the complexities of family law, ensuring that your rights and obligations are upheld.
-				We are committed to helping you find the necessary assistance and guidance to foster a fair and just environment for all parties involved.
-				Thank you for choosing our system, and we look forward to serving youp
+				Welcome to the "Bookmark Page" feature! With this handy tool, you can easily save and organize your favorite web pages for quick access later. No more hassle of searching or losing track of important content. Start bookmarking now and enjoy a seamless browsing experience. Happy bookmarking!
 			</p>
 		</div>
-		<div class="row">
-			<div class="col-md-6 col-lg-6">
-				<section>
-					<h2>SIN Status in the Past 4 Weeks</h2>
-					<figure class="wb-graph">
-						<figcaption>Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks.</figcaption>
-						<div aria-label="Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks - Chart. Details in the following table." role="img">
-							<figure>
-								<div id="SIN-Pie-Graph" class="flot-graph"></div>
-							</figure>
 
-						</div>
-						<details>
-							<summary>Total Number of SIN Status for the past 4 weeks - Table</summary>
-							<div class="table-responsive">
-								<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
-									<caption>Breakdown of SIN Status for the past 4 weeks</caption>
-									<tbody>
-										<tr>
-											<td></td>
-											<th>Confirmed</th>
-											<th>Not Confirmed</th>
-											<th>Pending</th>
-										</tr>
-										<tr>
-											<th>Number</th>
-											<td>9</td>
-											<td>5</td>
-											<td>13</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</details>
-					</figure>
-				</section>
+		<div class="container">
+			<div class="row">
+				<div class="table-responsive">
+					<table id="t01Tables" class="wb-tables table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Record No.</th>
+								<th>Date Received</th>
+								<th>Submitter</th>
+								<th>Recipient</th>
+								<th>Ctrl Code</th>
+								<th>Debtor First Name</th>
+								<th>Debtor Surname</th>
+								<th>Expiry Date</th>
+								<th>Justice #</th>
+								<th>State</th>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-id="1234">
+								 
+								<td>
+									<a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a>
+									<a href="View-Tracing-en.html" class="ps-2">1</a>
+								</td>
+
+								<td>2011-04-25</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Solution</td>
+								<td>Architect</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="2345">
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">2</a></td>
+
+								<td>2011-07-25</td>
+								<td>NPW204</td>
+								<td>NPW104</td>
+								<td>Winters</td>
+								<td>Summer</td>
+								<td>REF312</td>
+								<td>2019-04-07</td>
+								<td>ABCD6755</td>
+								<td><span class="badge rounded-pill status-bg-warning">Pending</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">3</a></td>
+
+								<td>2009-01-12</td>
+								<td>NPW304</td>
+								<td>NPW104</td>
+								<td>Cox</td>
+								<td>Winters</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-light text-dark">New</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">4</a></td>
+
+								<td>2012-03-29</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Kelly</td>
+								<td>Williams</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-danger">Cancelled</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">5</a></td>
+
+								<td>2008-11-28</td>
+								<td>NPW101</td>
+								<td>NPW104</td>
+								<td>Winters</td>
+								<td>Satou</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-dark">Terminated</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">6</a></td>
+
+								<td>2012-12-02</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Williamson</td>
+								<td>Bradley</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-warning">Orphaned</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">7</a></td>
+
+								<td>2012-08-06</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Chandler</td>
+								<td>Carter</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-success">Linked</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">8</a></td>
+
+								<td>2010-10-14</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Davidson</td>
+								<td>Duncan</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-info">Transferred</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star hide"></i>
+										<i class="bi bi-star-fill "></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">9</a></td>
+
+								<td>2009-09-15</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Hurst</td>
+								<td>Summer</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-secondary">Non Linked</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								 
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">10</a></td>
+
+								<td>2008-12-13</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Frost</td>
+								<td>Maine</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star"></i>
+										<i class="bi bi-star-fill hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="11">
+								<td><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">11</a></td>
+
+								<td>2011-04-25</td>
+								<td>NPW104</td>
+								<td>NPW104</td>
+								<td>Architect</td>
+								<td>Winters</td>
+								<td>REF123</td>
+								<td>2017-04-07</td>
+								<td>ABCD1234</td>
+								<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
+								<td>
+									<div class="fav">
+										<i class="bi bi-star hide"></i>
+										<i class="bi bi-star-fill "></i>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div class="col-md-6 col-lg-6">
-				<section>
-					<h2>Tracing Overview</h2>
-					<figure class="wb-graph">
-						<figcaption>Breakdown of Tracing Status for the past 4 weeks.</figcaption>
-						<div aria-label="Breakdown of Tracing Status for the past 4 weeks. Details in the following table." role="img">
-							<figure>
-								<div id="t01-bar-graph" class="flot-graph"></div>
-							</figure>
 
-						</div>
-						<details>
-							<summary>Total Number of Tracing Status for the past 4 weeks - Table</summary>
-							<div class="table-responsive">
-								<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
-									<caption>Breakdown of Tracing Status for the past 4 weeks</caption>
-									<tbody>
-										<tr>
-											<td></td>
-											<th>Linked</th>
-											<th>Non Linked</th>
-											<th>CRA</th>
-											<th>ESDC</th>
-											<th>Orphaned</th>
-											<th>Cancelled</th>
-										</tr>
-										<tr>
-											<th>Number</th>
-											<td>10</td>
-											<td>8</td>
-											<td>4</td>
-											<td>13</td>
-											<td>17</td>
-											<td>9</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</details>
-					</figure>
-				</section>
-			</div>
-
+			
 		</div>
 
-		<div class="row">
-			<div class="col-md-6 col-lg-6">
-				<section>
-					<h2>Interception Overview</h2>
-					<figure class="wb-graph">
-						<figcaption>Breakdown of Interception Status for the past 4 weeks.</figcaption>
-						<div aria-label="Breakdown of Interception Status for the past 4 weeks. Details in the following table." role="img">
-							<figure>
-								<div id="i01-bar-graph" class="flot-graph"></div>
-							</figure>
-
-						</div>
-						<details>
-							<summary>Total Number of Interception Status for the past 4 weeks - Table</summary>
-							<div class="table-responsive">
-								<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
-									<caption>Breakdown of Tracing Status for the past 4 weeks</caption>
-									<tbody>
-										<tr>
-											<td></td>
-											<th>Linked</th>
-											<th>Non Linked</th>
-											<th>CRA</th>
-											<th>ESDC</th>
-											<th>Orphaned</th>
-											<th>Cancelled</th>
-										</tr>
-										<tr>
-											<th>Number</th>
-											<td>10</td>
-											<td>8</td>
-											<td>4</td>
-											<td>13</td>
-											<td>17</td>
-											<td>9</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</details>
-					</figure>
-				</section>
-			</div>
-			<div class="col-md-6 col-lg-6">
-				<section>
-					<h2>License Denial Overview</h2>
-					<figure class="wb-graph">
-						<figcaption>Breakdown of License Denial Status for the past 4 weeks.</figcaption>
-						<div aria-label="Breakdown of License Denial Status for the past 4 weeks. Details in the following table." role="img">
-							<figure>
-								<div id="l01-bar-graph" class="flot-graph"></div>
-							</figure>
-
-						</div>
-						<details>
-							<summary>Total Number of License Denial Status for the past 4 weeks - Table</summary>
-							<div class="table-responsive">
-								<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
-									<caption>Breakdown of License Denial Status for the past 4 weeks</caption>
-									<tbody>
-										<tr>
-											<td></td>
-											<th>Linked</th>
-											<th>Non Linked</th>
-											<th>CRA</th>
-											<th>ESDC</th>
-											<th>Orphaned</th>
-											<th>Cancelled</th>
-										</tr>
-										<tr>
-											<th>Number</th>
-											<td>10</td>
-											<td>8</td>
-											<td>4</td>
-											<td>13</td>
-											<td>17</td>
-											<td>9</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</details>
-					</figure>
-				</section>
-			</div>
-
-		</div>
 
 		
 
+		
 
 		<dl id="wb-dtmd" class="pull-right">
 			<dt>Version:</dt>
@@ -618,287 +697,24 @@
 
 
 
-	<script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 
 
-	<script src="../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
-	<script src="../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
-	<script src="../wwwroot/lib/wet-boew/js/deps/prettify.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/prettify.min.js"></script>
 
 
 
-	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.min.js"></script>
-	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.pie.min.js"></script>
-	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.canvas.min.js"></script>
-	<script src="../wwwroot/lib/wet-boew/js/deps/jquery.flot.orderBars.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/jquery.flot.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/jquery.flot.pie.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/jquery.flot.canvas.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/jquery.flot.orderBars.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.categories.min.js"></script>
-	<script src="../wwwroot/lib/wet-boew/js/deps/tableparser.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/tableparser.min.js"></script>
 
 	<!-- TODO -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-	<script>
-	
-
-		document.addEventListener("DOMContentLoaded", function (event) {
-			/*SIN Status*/
-			let sinData = [
-				{ label: "Pending", data: 13, color: "#176B87" },
-				{ label: "Not Confirmed", data: 5, color: "#ffc107" },
-				{ label: "Confirmed", data: 9, color: "#A7D397" }
-			];
-
-			$.plot('#SIN-Pie-Graph', sinData, {
-				series:
-				{
-					pie:
-					{
-						show: true,
-						radius: 1,
-						label: {
-							show: true,
-							formatter: function (label, point) {
-								return '<span class="">' + label + '</span>';
-							}
-						}
-					}
-				},
-				grid: {
-					hoverable: true,
-					clickable: true
-				},
-				legend: {
-					show: false
-				}
-			});
-
-			$("#SIN-Pie-Graph").UseChartClick("Tracing/View-en.html");
-
-			/*Tracing App*/
-			let tracingData = [
-				{ label: "Tracing Application", data: [["Linked", 10], ["Non Linked", 8], ["CRA", 4], ["ESDC", 13], ["Orphaned", 17], ["Cancelled", 9]] }
-			];
-			let tracingXAxisLabel = [[0, "Linked"], [1, "Non Linked"], [2, "CRA"], [3, "ESDC"], [4, "Orphaned"], [5, "Cancelled"]];
-
-			$.plot("#t01-bar-graph", tracingData, {
-				series: {
-					bars: {
-						show: true,
-						barWidth: 0.2,
-						lineWidth: 0,
-						order: 1,
-						fillColor: {
-							colors: [{
-								opacity: 1
-							}, {
-								opacity: 1
-							}]
-						}
-					}
-				},
-				bars: {
-					align: "center",
-					barWidth: 0.3
-				},
-				xaxis: {
-					mode: "categories",
-					ticks: tracingXAxisLabel,
-					color: "#000",
-					tickColor: "#EEEEEE",
-					font: {
-						size: 16
-					}
-				},
-				grid: {
-					hoverable: true,
-					borderWidth: 0,
-					clickable: true
-				},
-				legend: {
-					show: false
-				},
-				colors: ["#64CCC5"]
-			});
-
-			$("#t01-bar-graph").UseTooltip();
-			$("#t01-bar-graph").UseChartClick("Tracing/View-en.html");
-
-			/*Interception Apps*/
-			let interceptionData = [
-				{ label: "Interception Application", data: [["Linked", 10], ["Non Linked", 8], ["CRA", 4], ["ESDC", 13], ["Orphaned", 17], ["Cancelled", 9]] }
-			];
-			let interceptionXAxisLabel = [[0, "Linked"], [1, "Non Linked"], [2, "CRA"], [3, "ESDC"], [4, "Orphaned"], [5, "Cancelled"]];
-
-			$.plot("#i01-bar-graph", interceptionData, {
-				series: {
-					bars: {
-						show: true,
-						barWidth: 0.2,
-						lineWidth: 0,
-						order: 1,
-						fillColor: {
-							colors: [{
-								opacity: 1
-							}, {
-								opacity: 1
-							}]
-						}
-					}
-				},
-				bars: {
-					align: "center",
-					barWidth: 0.3
-				},
-				xaxis: {
-					mode: "categories",
-					ticks: interceptionXAxisLabel,
-					color: "#000",
-					tickColor: "#EEEEEE",
-					font: {
-						size: 16
-					}
-				},
-				grid: {
-					hoverable: true,
-					borderWidth: 0,
-					clickable: true
-				},
-				legend: {
-					show: false
-				},
-				colors: ["#E19898"]
-			});
-
-			$("#i01-bar-graph").UseTooltip();
-			$("#i01-bar-graph").UseChartClick("Garnishment/List-en.html");
-
-			/*License Denial Apps*/
-			let licenseData = [
-				{ label: "License Denial Application", data: [["Linked", 5], ["Non Linked", 18], ["CRA", 6], ["ESDC", 10], ["Orphaned", 5], ["Cancelled", 10]] }
-			];
-			let licenseXAxisLabel = [[0, "Linked"], [1, "Non Linked"], [2, "CRA"], [3, "ESDC"], [4, "Orphaned"], [5, "Cancelled"]];
-
-			$.plot("#l01-bar-graph", licenseData, {
-				series: {
-					bars: {
-						show: true,
-						barWidth: 0.2,
-						lineWidth: 0,
-						order: 1,
-						fillColor: {
-							colors: [{
-								opacity: 1
-							}, {
-								opacity: 1
-							}]
-						}
-					}
-				},
-				bars: {
-					align: "center",
-					barWidth: 0.3
-				},
-				xaxis: {
-					mode: "categories",
-					ticks: licenseXAxisLabel,
-					color: "#000",
-					tickColor: "#EEEEEE",
-					font: {
-						size: 16
-					}
-				},
-				grid: {
-					hoverable: true,
-					borderWidth: 0,
-					clickable: true
-				},
-				legend: {
-					show: false
-				},
-				colors: ["#4B527E"],
-				
-			});
-
-			$("#l01-bar-graph").UseTooltip();
-			$("#l01-bar-graph").UseChartClick("License/List-en.html");
-		});
-
-
-		var previousPoint = null, previousLabel = null;
-
-		$.fn.UseTooltip = function () {
-			$(this).on("plothover", function (event, pos, item) {
-				if (item) {
-					if ((previousLabel != item.series.label) || (previousPoint != item.dataIndex)) {
-						previousPoint = item.dataIndex;
-						previousLabel = item.series.label;
-						$("#tooltip").remove();
-
-						let x = item.datapoint[0];
-						let y = item.datapoint[1];
-
-						let color = item.series.color;
-
-						showTooltip(item.pageX,
-							item.pageY,
-							color,
-							"<strong>" + item.series.xaxis.ticks[x].label + "</strong>" + " : <strong>" + y + "</strong>");
-					}
-				}
-				else {
-					$("#tooltip").remove();
-					previousPoint = null;
-				}
-			});
-		};
-
-		function showTooltip(x, y, color, contents) {
-			$('<div id="tooltip">' + contents + '</div>').css({
-				position: 'absolute',
-				display: 'none',
-				top: y - 40,
-				left: x - 120,
-				border: '2px solid ' + color,
-				padding: '3px',
-				'font-size': '14px',
-				'border-radius': '5px',
-				'background-color': '#fff',
-				'font-family': 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
-				opacity: 0.9
-			}).appendTo("body").fadeIn(200);
-		}
-
-		$.fn.UseChartClick = function (url) {
-			let isPieChart = false;
-
-
-			let search = null;
-
-			$(this).on("plotclick", function (event, pos, item)
-			{
-				isPieChart = item.series.pie.show;
-
-				if (isPieChart)
-				{
-					search = item.series.label;
-				}
-				else
-				{
-					let x = item.datapoint[0];
-					let y = item.datapoint[1];
-					if (item)
-					{
-						search = item.series.xaxis.ticks[x].label;
-					}
-				}
-
-				$(location).attr('href', url + '?search=' + search);
-			});
-
-
-			
-		};
-	</script>
 </body>
 
 
