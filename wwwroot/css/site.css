@@ -190,12 +190,12 @@
 	background-color: #dc3545 !important;
 }
 .status-bg-warning {
-	color: #ffffff;
+	color: #000000;
 	background-color: #ffc107 !important;
 }
 
 .status-bg-info {
-	color: #ffffff;
+	color: #000000;
 	background-color: #0dcaf0 !important;
 }
 .status-bg-light {
@@ -210,6 +210,21 @@
 .status-bg-dark {
 	color: #ffffff;
 	background-color: #212529 !important;
+}
+
+.tracing-bg {
+	color: #fff;
+	background-color: #A72461 !important;
+}
+
+.garnish-bg {
+	color: #000000;
+	background-color: #83A2FF !important;
+}
+
+.license-bg {
+	color: #000000;
+	background-color: #F9E090 !important;
 }
 
 
