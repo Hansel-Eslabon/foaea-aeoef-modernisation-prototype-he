@@ -23,7 +23,6 @@
 	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-
 </head>
 
 
@@ -356,82 +355,148 @@
 			</p>
 		</div>
 
-		<div class="col-md-3 col-lg-3 border-right border border-primary">
-			
-		</div>
-		 
-		<div class="col-md-9 col-lg-9 border-left-wb-steps">
-			<section>
-				<h2>Example</h2>
-				<div class="wb-frmvld provisional wb-steps">
-					<form action="#" method="get" id="steps-example">
-						<fieldset id="client">
-							<legend>Client Information</legend>
-							<div>
-								<div class="form-group">
-									<label for="firstname" class="required"><span class="field-name">First name</span></label>
-									<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required">
-								</div>
-								<div class="form-group">
-									<label for="lastname" class="required"><span class="field-name">Last name</span></label>
-									<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
-								</div>
-								<div class="form-group">
-									<label for="dateOfBirth" class="required"><span class="field-name">Date of Birth</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-									<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
-								</div>
-							</div>
-						</fieldset>
-						<fieldset id="contact">
-							<legend>Contact Information</legend>
-							<div>
-								<div class="form-group">
-									<label for="preferredNumber" class="required">Preferred: <span class="field-name">Phone Number</span></label>
-									<input class="form-control" id="preferredNumber" name="preferredNumber" type="tel" data-rule-phoneus="true" required="required">
-								</div>
-								<div class="form-group">
-									<label for="secondaryNumber">Secondary: <span class="field-name">Phone Number</span></label>
-									<input class="form-control" id="secondaryNumber" name="secondaryNumber" type="tel" data-rule-phoneus="true">
-								</div>
-								<div class="form-group">
-									<label for="email"><span class="field-name">Email Address</span> (test@domain)</label>
-									<input class="form-control" id="email" name="email" type="email">
-								</div>
-							</div>
-						</fieldset>
-						<fieldset id="questionaire">
-							<legend>Ethics Questionnaire</legend>
-							<div>
-								<p><small>For each of the following examples, indicate whether or not you feel that there is an ethical issue.</small></p>
-								<fieldset class="subfields">
-									<legend><span class="field-name">Ethics 1</span>: You pay $10.00 bucks for a purchase, but receive change for $20.00 bucks. Would you keep the extra money?</legend>
-									<div class="radio">
-										<label for="defNot-1"><input type="radio" name="ethics1" value="defNot-1" id="defNot-1">&#160;Definitely Not</label>&#160;
-										<label for="probNot-1"><input type="radio" name="ethics1" value="probNot-1" id="probNot-1">&#160;Probably Not</label>&#160;
-										<label for="maybe-1"><input type="radio" name="ethics1" value="maybe-1" id="maybe-1">&#160;Maybe (Not Sure)</label>&#160;
-										<label for="probably-1"><input type="radio" name="ethics1" value="probably-1" id="probably-1">&#160;Probably</label>&#160;
-										<label for="definitely-1"><input type="radio" name="ethics1" value="definitely-1" id="definitely-1">&#160;Definitely</label>
-									</div>
-								</fieldset>
-								<fieldset class="subfields">
-									<legend><span class="field-name">Ethics 2</span>: You need a software, but can't wait for office to make a decision. Against license restrictions would you download it?</legend>
-									<div class="radio">
-										<label for="defNot-2"><input type="radio" name="ethics2" value="defNot-2" id="defNot-2">&#160;Definitely Not</label>&#160;
-										<label for="probNot-2"><input type="radio" name="ethics2" value="probNot-2" id="probNot-2">&#160;Probably Not</label>&#160;
-										<label for="maybe-2"><input type="radio" name="ethics2" value="maybe-2" id="maybe-2">&#160;Maybe (Not Sure)</label>&#160;
-										<label for="probably-2"><input type="radio" name="ethics2" value="probably-2" id="probably-2">&#160;Probably</label>&#160;
-										<label for="definitely-2"><input type="radio" name="ethics2" value="definitely-2" id="definitely-2">&#160;Definitely</label>
-									</div>
-								</fieldset>
-							</div>
-						</fieldset>
-						<input type="submit" name="submit" value="Submit" class="btn btn-primary">
-					</form>
+
+
+
+
+
+
+
+		<div class="row h-100">
+			<div class="col-md-3 col-lg-3 border-right border border-primary hidden-xs my-auto align-self-center">
+				<div id="stepper" class="bs-stepper">
+					
+					<div class="bs-stepper-header">
+
+						<div class="step" data-target="applicantDetails">
+
+				
+								<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true" ></span></span>
+								<br/>
+								<span class="bs-stepper-label">Application Details</span>
+
+
+						</div>
+
+						<div class="line" style="height: 100px;"></div>
+
+						<div class="step" data-target="debtorDetails">
+
+		
+								<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
+								<br />
+								<span class="bs-stepper-label">Debtor's Details</span>
+
+				
+
+						</div>
+
+						
+					</div>
 				</div>
-			</section>
+			</div>
+
+			<div class="col-md-9 col-lg-9 border-left-wb-steps">
+				<section>
+					<div class="wb-frmvld provisional wb-steps">
+						<form action="#" method="get" id="steps-example">
+							<fieldset id="applicantDetails">
+								<legend>Application Details</legend>
+								<div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
+										<label for="referenceCode">Reference Code: (optional)</label>
+										<input class="form-control" id="referenceCode" name="referenceCode" type="text" data-rule-minlength="2">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[3] Court, peace officer or provincial enforcement service reference no.:">
+										<label for="serviceRefNo">Provincial Enforcement Service Reference No.: (optional)</label>
+										<input class="form-control" id="serviceRefNo" name="serviceRefNo" type="text">
+									</div>
+								</div>
+							</fieldset>
+							<fieldset id="debtorDetails">
+								<legend>Debtor's Details</legend>
+								<div>
+									<div style="margin-bottom:5px;">
+										<span class="label label-info">Information concerning the person in respect of whom information is requested</span>
+									</div>
+
+
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[4] Surname">
+										<label for="lastnameDetail" class="required"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+										<input class="form-control" id="lastnameDetail" name="lastnameDetail" type="text" data-rule-minlength="2" required="required">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[5] Given Name:">
+										<label for="firstnameDetail" class="required"><span class="field-name">Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+										<input class="form-control" id="firstnameDetail" name="firstnameDetail" type="text" data-rule-minlength="2" required="required">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[6] Other given name">
+										<label for="othername"><span class="field-name">Other Given Name: (optional)</span> </label>
+										<input class="form-control" id="othername" name="othername" type="text" data-rule-minlength="2">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[7] Date of Birth">
+										<label for="dateOfBirth" class="required"><span class="field-name">Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+										<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
+									</div>
+									<fieldset class="form-inline chkbxrdio-grp" data-toggle="tooltip" data-placement="bottom" title="[8] Gender">
+										<legend class="required"><span class="field-name">Gender</span><strong class="required">(required)</strong></legend>
+										<label for="genderMale" class="radio-inline"><input type="radio" name="gender" value="1" id="genderMale" required="required" />Male</label>
+										<label for="genderFemale" class="radio-inline"><input type="radio" name="gender" value="2" id="genderFemale" />Female</label>
+										<label for="genderAnother" class="radio-inline"><input type="radio" name="gender" value="3" id="genderAnother" />Another Gender</label>
+										<label for="genderNotAvail" class="radio-inline"><input type="radio" name="gender" value="4" id="genderNotAvail" />Information not available</label>
+									</fieldset>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[9] Social Insurance Number">
+										<label for="sin">Social Insurance Number: (optional)</label>
+										<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2">
+									</div>
+
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[10] Surname at Birth of a Parent">
+										<label for="surnameBirthParent">Surname at Birth of their Parent: (optional)</label>
+										<input class="form-control" id="surnameBirthParent" name="surnameBirthParent" type="text" data-rule-minlength="2">
+									</div>
+
+									<fieldset class="chkbxrdio-grp" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
+										<legend class="required"><span class="field-name">Reason for application</span> <strong class="required">(required)</strong></legend>
+										<ul class="form-group list-unstyled">
+											<li class="radio">
+												<label for="reason1"><input type="radio" name="reason" value="1" id="reason1" required="required" />Person in default of the support provision</label>
+											</li>
+											<li class="radio">
+												<label for="reason2"><input type="radio" name="reason" value="2" id="reason2" />Person believed to have possession of the child or children in contravention of the custody provision</label>
+											</li>
+											<li class="radio">
+												<label for="reason3"><input type="radio" name="reason" value="3" id="reason3" />Person charged with an offence under 282 or 283 of the Criminal Code</label>
+											</li>
+											<li class="radio">
+												<label for="reason4"><input type="radio" name="reason" value="4" id="reason4" />Missing child</label>
+											</li>
+										</ul>
+									</fieldset>
+
+									<div class="form-group">
+										<div id="helpText" class="helptext well well-md">
+											<p>Maximum document size is 5MB</p>
+											<p>Acceptable document type: pdf</p>
+											<p>Filename cannot obtain special characters such as: [# % &amp; { } &lt; &gt; * ? $ ! ' " + ` | =]</p>
+										</div>
+										<label for="affidavitFileUpload" class="">
+											<span class="field-name">Affidavit (optional)</span>
+										</label>
+										<input id="affidavitFileUpload" name="affidavitFileUpload" type="file"/>
+
+									</div>
+								</div>
+							</fieldset>
+						
+							<input type="submit" name="submit" value="Submit" class="btn btn-primary">
+						</form>
+					</div>
+				</section>
+
+			</div>
+
 
 		</div>
-		
+
 
 		<dl id="wb-dtmd" class="pull-right">
 			<dt>Version:</dt>
@@ -541,8 +606,59 @@
 	<!-- TODO -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+	<!--<link rel="stylesheet" href="https://unpkg.com/bs-stepper/dist/css/bs-stepper.min.css">
+	
+	<script src="https://unpkg.com/bs-stepper/dist/js/bs-stepper.min.js"></script>-->
 
 	<script type="text/javascript">
+
+		document.addEventListener("DOMContentLoaded", function (event) {
+
+			wb.doc.on("wb-ready.wb", function () {
+
+				$('input[type=radio][name=reason]').on('change', function () {
+					
+					if (this.value === '4') {
+						$('label[for="affidavitFileUpload"]').addClass("required")
+						$('label[for="affidavitFileUpload"] > span').text('Affidavit');
+						$('label[for="affidavitFileUpload"]').append('<strong class="required" aria-hidden="true">(required)</strong>')
+						$('#affidavitFileUpload').attr('required', 'required');
+					}
+					else {
+						if ($('label[for="affidavitFileUpload"] > span:contains("optional")').length === 0) {
+							$('label[for="affidavitFileUpload"]').removeClass("required")
+							$('label[for="affidavitFileUpload"] > span').append(' (optional)');
+							$('label[for="affidavitFileUpload"] > strong').remove()
+							$('#affidavitFileUpload').removeAttr('required');
+						}
+
+					}
+				});
+
+				setActiveStepper();
+				$('.steps-wrapper').find('button').on('click', function () {
+					setActiveStepper();
+				});
+
+
+
+
+
+			});
+		});
+
+
+		function setActiveStepper() {
+			let activeStep = $('.wb-steps-active').parent().attr('id');
+
+
+			$('#stepper > .bs-stepper-header > .step > span.step-active').removeClass("step-active");
+
+
+			$('#stepper > .bs-stepper-header').find('[data-target=' + activeStep + ']')
+				.children('.bs-stepper-circle').addClass("step-active")
+
+		}
 
 
 

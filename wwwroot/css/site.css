@@ -183,7 +183,6 @@
 .status-bg-success {
 	color: #ffffff;
 	background-color: #198754 !important;
-	;
 }
 .status-bg-danger {
 	color: #ffffff;
@@ -232,3 +231,61 @@
 }
 
 
+/*Step Start*/
+.step {
+	text-align: center;
+}
+
+.bs-stepper-circle {
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 4em;
+	height: 4em;
+	padding: .5em 0;
+	margin: .25rem;
+	line-height: 1em;
+	color: #0061A8;
+	background-color: #8AB6D6;
+	border-radius: 2em;
+}
+
+	.bs-stepper-circle:hover {
+		background-color: #1CC5DC;
+		color: #ffffff;
+	}
+
+.step-active {
+	color: #fff;
+	background-color: #0061A8;
+}
+
+.bs-stepper-label {
+	color: #1c578a;
+	font-size: 1.5em;
+}
+
+.step > a {
+text-decoration:none;
+}
+
+.bs-stepper-circle-icon {
+	font-size: 35px;
+}
+.bs-stepper .line, .bs-stepper-line {
+	background-color: rgba(0,0,0,.12);
+	display: inline-block;
+	margin-left: 50%;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	width: 2px;
+	height: 50px;
+}
+/*Step end*/
+
+.label {
+	font-size: 100%;
+}
