@@ -329,7 +329,7 @@
 							</a>
 							<ul role="menu" id="profileList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="Shared/Bookmark-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">Bookmark</a>
+									<a href="Shared/Tracking-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">Tracking</a>
 								</li>
 								<li>
 									<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem">Logout</a>
@@ -359,8 +359,8 @@
 				<section>
 					<h2>SIN Status in the Past 4 Weeks</h2>
 					<figure class="wb-graph">
-						<figcaption>Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks.</figcaption>
-						<div aria-label="Breakdown of SIN Status submitted in Tracing Application for the past 4 weeks - Chart. Details in the following table." role="img">
+						<figcaption>Breakdown of SIN Status submitted to SIN Registry for the past 4 weeks.</figcaption>
+						<div aria-label="Breakdown of SIN Status submitted to SIN Registry  for the past 4 weeks - Chart. Details in the following table." role="img">
 							<figure>
 								<div id="SIN-Pie-Graph" class="flot-graph"></div>
 							</figure>
@@ -410,21 +410,17 @@
 									<tbody>
 										<tr>
 											<td></td>
-											<th>Linked</th>
-											<th>Non Linked</th>
-											<th>CRA</th>
-											<th>ESDC</th>
-											<th>Orphaned</th>
+											<th>Invalid</th>
+											<th>Pending Affidavit</th>
 											<th>Cancelled</th>
+											<th>Completed</th>
 										</tr>
 										<tr>
 											<th>Number</th>
-											<td>10</td>
-											<td>8</td>
 											<td>4</td>
-											<td>13</td>
 											<td>17</td>
 											<td>9</td>
+											<td>15</td>
 										</tr>
 									</tbody>
 								</table>
@@ -441,7 +437,7 @@
 				<section>
 					<h2>Interception Overview</h2>
 					<figure class="wb-graph">
-						<figcaption>Breakdown of Interception Status for the past 4 weeks.</figcaption>
+						<figcaption>Breakdown of Garnishment Status for the past 4 weeks.</figcaption>
 						<div aria-label="Breakdown of Interception Status for the past 4 weeks. Details in the following table." role="img">
 							<figure>
 								<div id="i01-bar-graph" class="flot-graph"></div>
@@ -449,18 +445,18 @@
 
 						</div>
 						<details>
-							<summary>Total Number of Interception Status for the past 4 weeks - Table</summary>
+							<summary>Total Number of Garnishment Status for the past 4 weeks - Table</summary>
 							<div class="table-responsive">
 								<table class="wb-charts wb-charts-slicelegend wb-init wb-charts-inited table" id="wb-auto-6">
-									<caption>Breakdown of Tracing Status for the past 4 weeks</caption>
+									<caption>Breakdown of Garnishment Status for the past 4 weeks</caption>
 									<tbody>
 										<tr>
 											<td></td>
-											<th>Linked</th>
-											<th>Non Linked</th>
-											<th>CRA</th>
-											<th>ESDC</th>
-											<th>Orphaned</th>
+											<th>Requested</th>
+											<th>Accepted</th>
+											<th>Pending</th>
+											<th>Active</th>
+											<th>Completed</th>
 											<th>Cancelled</th>
 										</tr>
 										<tr>
@@ -498,11 +494,10 @@
 									<tbody>
 										<tr>
 											<td></td>
-											<th>Linked</th>
-											<th>Non Linked</th>
-											<th>CRA</th>
-											<th>ESDC</th>
-											<th>Orphaned</th>
+											<th>Requested</th>
+											<th>Accepted</th>
+											<th>Terminated</th>
+											<th>Completed</th>
 											<th>Cancelled</th>
 										</tr>
 										<tr>
@@ -511,7 +506,6 @@
 											<td>8</td>
 											<td>4</td>
 											<td>13</td>
-											<td>17</td>
 											<td>9</td>
 										</tr>
 									</tbody>
@@ -589,7 +583,7 @@
 		<div class="modal-body">
 			<ul class="list-unstyled">
 				<li>
-					<p><a href="#">T01 Applications #4545</a> has been transfer to your office</p>
+					<p><a href="#">T01 Applications #4545</a> SIN has been confirmed</p>
 					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
 				</li>
 				<li>
@@ -597,7 +591,7 @@
 					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
 				</li>
 				<li>
-					<p><a href="#">T01 Applications #1234</a> has been transfer to your office</p>
+					<p><a href="#">T01 Applications #1234</a> SIN has not been confirmed</p>
 					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
 				</li>
 				<li>
@@ -658,7 +652,7 @@
 						label: {
 							show: true,
 							formatter: function (label, point) {
-								return '<span class="">' + label + '</span>';
+								return '<span class="">' + label + ' (' + point.data[0][1] + ')</span>';
 							}
 						}
 					}
@@ -676,9 +670,9 @@
 
 			/*Tracing App*/
 			let tracingData = [
-				{ label: "Tracing Application", data: [["Linked", 10], ["Non Linked", 8], ["CRA", 4], ["ESDC", 13], ["Orphaned", 17], ["Cancelled", 9]] }
+				{ label: "Tracing Application", data: [["ESDC", 4], ["CRA", 17], ["Cancelled", 9], ["Inactive", 15]] }
 			];
-			let tracingXAxisLabel = [[0, "Linked"], [1, "Non Linked"], [2, "CRA"], [3, "ESDC"], [4, "Orphaned"], [5, "Cancelled"]];
+			let tracingXAxisLabel = [[0, "ESDC"], [1, "CRA"], [2, "Cancelled"], [3,"Inactive"]];
 
 			$.plot("#t01-bar-graph", tracingData, {
 				series: {
@@ -725,9 +719,9 @@
 
 			/*Interception Apps*/
 			let interceptionData = [
-				{ label: "Interception Application", data: [["Linked", 10], ["Non Linked", 8], ["CRA", 4], ["ESDC", 13], ["Orphaned", 17], ["Cancelled", 9]] }
+				{ label: "Interception Application", data: [["Requested", 10], ["Accepted", 8], ["Pending", 14], ["Active", 13], ["Completed", 17], ["Cancelled", 9]] }
 			];
-			let interceptionXAxisLabel = [[0, "Linked"], [1, "Non Linked"], [2, "CRA"], [3, "ESDC"], [4, "Orphaned"], [5, "Cancelled"]];
+			let interceptionXAxisLabel = [[0, "Requested"], [1, "Accepted"], [2, "Pending"], [3, "Active"], [4, "Completed"], [5, "Cancelled"]];
 
 			$.plot("#i01-bar-graph", interceptionData, {
 				series: {
@@ -774,9 +768,9 @@
 
 			/*License Denial Apps*/
 			let licenseData = [
-				{ label: "License Denial Application", data: [["Linked", 5], ["Non Linked", 18], ["CRA", 6], ["ESDC", 10], ["Orphaned", 5], ["Cancelled", 10]] }
+				{ label: "License Denial Application", data: [["Application Requested", 11], ["Application Accepted", 8], ["Terminated", 3], ["Completed", 10], ["Cancelled", 10]] }
 			];
-			let licenseXAxisLabel = [[0, "Linked"], [1, "Non Linked"], [2, "CRA"], [3, "ESDC"], [4, "Orphaned"], [5, "Cancelled"]];
+			let licenseXAxisLabel = [[0, "Requested"], [1, "Accepted"], [2, "Terminated"], [3, "Completed"], [4, "Cancelled"]];
 
 			$.plot("#l01-bar-graph", licenseData, {
 				series: {
