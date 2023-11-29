@@ -353,11 +353,90 @@
 				Welcome to the "Tracking Page" feature! With this handy tool, you can easily save and organize your favorite web pages for quick access later. No more hassle of searching or losing track of important content. Start tracking now and enjoy a seamless browsing experience. Happy bookmarking!
 			</p>
 		</div>
+		<div class="row">
+			<div class="col-md-12" id="adv-filter">
+				<h4 class="wb-inv">Filtering Options</h4>
+				<details >
+					<summary><h4 class="h4">Filter Options</h4></summary>
+				
+					<form class="wb-tables-filter" data-bind-to="trackingTables">
+						<div class="col-lg-3">
+							<div class="form-group">
+								<label for="dt_type">Type</label>
+								<select class="form-control" id="dt_type" name="dt_type" data-column="1">
+									<option value="">Any Type</option>
+									<option value="Tracing">Tracing</option>
+									<option value="Garnishment">Garnishment</option>
+									<option value="License">License</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<label for="dt_state">State</label>
+								<select class="form-control" id="dt_state" name="dt_state" data-column="8">
+									<option value="">Any State</option>
+									<option value="Accepted">Accepted</option>
+									<option value="Cancelled">Cancelled</option>
+									<option value="Completed">Completed</option>
+									<option value="Linked">Linked</option>
+
+									<option value="New">New</option>
+									<option value="Non-Linked">Non-Linked</option>
+
+									<option value="Orphaned">Orphaned</option>
+									<option value="Pending">Pending</option>
+									<option value="Terminated">Terminated</option>
+									<option value="Transferred">Transferred</option>
+
+
+
+
+
+
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<div class="form-group">
+									<label for="dt_mindate">Start Date Received</label>
+									<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="2">
+								</div>
+								<div class="form-group">
+									<label for="dt_maxdate">End Date Received</label>
+									<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="2">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<div class="form-group">
+									<label for="dt_minExpiraryDate">Start Expiry Date </label>
+									<input type="date" class="form-control" id="dt_minExpiraryDate" name="dt_minExpiraryDate" data-column="7">
+								</div>
+								<div class="form-group">
+									<label for="dt_maxExpiraryDate" >End Expiry Date</label>
+									<input type="date" class="form-control" id="dt_maxExpiraryDate" name="dt_maxExpiraryDate" data-column="7">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary" aria-controls="trackingTables">Filter</button>
+						</div>
+						<div class="form-group">
+							<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+						</div>
+					</form>
+				</details>
+			</div>
+		</div>
 
 
 
 		<div class="table-responsive">
-			<table id="trackingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}'>
+			<table id="trackingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
 				<thead>
 					<tr>
 						<th>Record No.</th>
@@ -406,7 +485,7 @@
 						<td>E1001</td>
 						<td><span class="badge rounded-pill status-bg-warning">Pending</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -424,7 +503,7 @@
 						<td>E3</td>
 						<td><span class="badge rounded-pill status-bg-light text-dark">New</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -460,7 +539,7 @@
 						<td>E1019</td>
 						<td><span class="badge rounded-pill status-bg-dark">Terminated</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -477,7 +556,7 @@
 						<td>E37</td>
 						<td><span class="badge rounded-pill status-bg-warning">Orphaned</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -496,7 +575,7 @@
 						<td>E79</td>
 						<td><span class="badge rounded-pill status-bg-success">Linked</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -514,7 +593,7 @@
 						<td>E123</td>
 						<td><span class="badge rounded-pill status-bg-info">Transferred</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -532,7 +611,7 @@
 						<td>E989</td>
 						<td><span class="badge rounded-pill status-bg-secondary">Non Linked</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -550,7 +629,7 @@
 						<td>E635</td>
 						<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>
@@ -567,7 +646,7 @@
 						<td>E232</td>
 						<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
 						<td>
-							<div class="fav"  data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="glyphicon glyphicon-star"></i>
 								<i class="glyphicon glyphicon-star-empty hide"></i>
 							</div>

@@ -165,10 +165,7 @@
  color: #ffffff;
 }
 
-.badge
-{
-	background-color: transparent;
-}
+
 
 
 .status-bg-primary {
@@ -288,4 +285,25 @@ text-decoration:none;
 
 .label {
 	font-size: 100%;
+}
+
+
+#adv-filter > details summary:focus, #adv-filter > details summary:hover {
+	background-color: #0061A8;
+	color: #ffffff;
+}
+
+#adv-filter > summary:focus, #adv-filter > summary:hover {
+	background-color: #0061A8;
+	color: #ffffff;
+}
+
+
+#adv-filter > details[open] > summary, #adv-filter >  details > summary {
+	background-color: #0061A8;
+	color: #ffffff;
+}
+
+#adv-filter >  details {
+	margin-bottom: 3em;
 }
