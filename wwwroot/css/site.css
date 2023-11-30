@@ -98,7 +98,11 @@
 }
 
 
-.badge:hover {
+table .badge {
+	max-width: 150px;
+	white-space: pre-line;
+}
+	.badge:hover {
 	color: #ffffff;
 	text-decoration: none;
 	cursor: pointer;
@@ -306,4 +310,9 @@ text-decoration:none;
 
 #adv-filter >  details {
 	margin-bottom: 3em;
+}
+
+#adv-filter > details[open]
+{
+		min-height : 250px;
 }
