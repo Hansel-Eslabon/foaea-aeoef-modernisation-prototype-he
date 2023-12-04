@@ -740,11 +740,19 @@
 			wb.doc.on("wb-ready.wb", function () {
 
 				//Bookmark
-				$('#trackingTables .fav').on('click', ".glyphicon", function (event) {
+				$('#tracingTables .fav').on('click', ".glyphicon", function (event) {
 					if ($(event.target).hasClass('glyphicon-star')) {
 						//Ajax Remove Bookmark
-						toastr.success('trackingTables remove');
-						$(this).closest("tr").hide();
+						toastr.success('Tracking  remove');
+						$(this).closest(".glyphicon-star").addClass("hide")
+						$(this).siblings(".glyphicon-star-empty").removeClass("hide")
+					}
+
+					if ($(event.target).hasClass('glyphicon-star-empty')) {
+						//Ajax Remove Bookmark
+						toastr.success('Tracking added');
+						$(this).closest(".glyphicon-star-empty").addClass("hide")
+						$(this).siblings(".glyphicon-star").removeClass("hide")
 					}
 				});
 

@@ -316,3 +316,29 @@ text-decoration:none;
 {
 		min-height : 250px;
 }
+
+.form-control-plaintext {
+	display: block;
+	width: 100%;
+	padding-top: .375rem;
+	padding-bottom: .375rem;
+	margin-bottom: 0;
+	line-height: 1.5;
+	background-color: transparent;
+	border: solid transparent;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-width: 1px 0;
+	display: inline-block;
+}
+
+
+.label-caption {
+	color: #164863;
+}
+
+.label-value {
+	padding-left: 10px;
+}
