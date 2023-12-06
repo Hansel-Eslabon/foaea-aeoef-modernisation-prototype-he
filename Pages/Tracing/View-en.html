@@ -369,180 +369,182 @@
 					<div class="bs-stepper-header">
 
 						<div class="step" data-target="applicantDetails">
-
-
-							<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true"></span></span>
-							<br />
-							<span class="bs-stepper-label">Application Details</span>
-
-
+							<a href="#applicant-grid">
+								<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true"></span></span>
+								<br />
+								<span class="bs-stepper-label">Application Details</span>
+							</a>
 						</div>
 
-						<div class="line" style="height: 100px;"></div>
+						<div class="line" style="height: 50px;"></div>
+						<div class="step" data-target="debtorDetails" href="#debtor-grid">
+							<a href="#debtor-grid">
+								<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
+								<br />
+								<span class="bs-stepper-label">Debtor's Details</span>
+							</a>
+						</div>
+						<div class="line" style="height: 50px;"></div>
 
-						<div class="step" data-target="debtorDetails">
-							<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
-							<br />
-							<span class="bs-stepper-label">Debtor's Details</span>
+						<div class="step" data-target="eventsDetails" href="#events-grid">
+							<a href="#events-grid">
+								<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-calendar bs-stepper-circle-icon" aria-hidden="true"></span></span>
+								<br />
+								<span class="bs-stepper-label">Events Details</span>
+							</a>
+
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="col-md-10 col-lg-10 border-left-wb-steps">
-				<section>
-					<button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
-					<button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-transfer"></span> Transfer</button>
-					<button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</button>
-					<button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-tent"></span> Linked</button>
+
+				<section id="menu-bar" class="sticky-top">
+					<a id="edit" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#transfer-application-popup-modal" role="button" aria-controls="transfer-application-popup-modal"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+					<a id="transfer" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#transfer-application-popup-modal" role="button" aria-controls="transfer-application-popup-modal">
+						<span class="glyphicon glyphicon-transfer"></span> Transfer
+					</a>
+					<a id="cancel" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#cancel-application-popup-modal" role="button" aria-controls="cancel-application-popup-modal">
+						<span class="glyphicon glyphicon-ban-circle"></span> Cancel
+					</a>
+					<a id="delink" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#delink-application-popup-modal" role="button" aria-controls="delink-application-popup-modal">
+						<span class="glyphicon glyphicon-minus"></span> De-Link
+					</a>
+
+					<a id="link" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#link-application-popup-modal" role="button" aria-controls="link-application-popup-modal">
+						<span class="glyphicon glyphicon-plus"></span> Link
+					</a>
 				</section>
 
-				<section class="wb-inview" data-inview="fade-effect">
-					<h3 class="no-gutter">Application Details</h3>
-					<div class="form-group">
-						<label for="ctrlCode" class="label-caption">Control Code:</label>
-						<span id="ctrlCode" class="label-value">EX78921</span>
-					</div>
+				<details open="open" class="grid-section-red" id="applicant-grid">
+					<summary>Application Details</summary>
+					<section class="wb-inview" data-inview="fade-effect">
+						<div class="form-group">
+							<label for="ctrlCode" class="label-caption">Control Code:</label>
+							<span id="ctrlCode" class="label-value">EX78921</span>
+						</div>
 
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
-						<label for="referenceCode" class="label-caption">Reference Code:</label>
-						<span id="referenceCode" class="label-value"></span>
-					</div>
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[3] Court, peace officer or provincial enforcement service reference no.:">
-						<label for="serviceRefNo" class="label-caption">Provincial Enforcement Service Reference No.:</label>
-						<span id="serviceRefNo" class="label-value"></span>
-					</div>
-				</section>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
+							<label for="referenceCode" class="label-caption">Reference Code:</label>
+							<span id="referenceCode" class="label-value"></span>
+						</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[3] Court, peace officer or provincial enforcement service reference no.:">
+							<label for="serviceRefNo" class="label-caption">Provincial Enforcement Service Reference No.:</label>
+							<span id="serviceRefNo" class="label-value"></span>
+						</div>
+					</section>
+				</details>
 
-				<section class="wb-inview" data-inview="fade-effect">
-					<h3 class="no-gutter">Debtor's Details</h3>
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[4] Surname">
-						<label for="lastnameDetail" class="label-caption">Surname:</label>
-						<span id="lastnameDetail" class="label-value">Doe</span>
-					</div>
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[5] Given Name:">
-						<label for="firstnameDetail" class="label-caption">Given Name:</label>
-						<span id="firstnameDetail" class="label-value">John</span>
-					</div>
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[6] Other given name">
-						<label for="othername" class="label-caption">Other Given Name: </label>
-						<span id="othername" class="label-value">JD</span>
-					</div>
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[7] Date of Birth">
-						<label for="dateOfBirth" class="label-caption">Date of Birth:</label>
-						<span id="dateOfBirth" class="label-value">1983-09-30</span>
-					</div>
+				<details open="open" class="grid-section" id="debtor-grid">
+					<summary>Debtor's Details</summary>
+					<section class="wb-inview" data-inview="fade-effect">
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[4] Surname">
+							<label for="lastnameDetail" class="label-caption">Surname:</label>
+							<span id="lastnameDetail" class="label-value">Doe</span>
+						</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[5] Given Name:">
+							<label for="firstnameDetail" class="label-caption">Given Name:</label>
+							<span id="firstnameDetail" class="label-value">John</span>
+						</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[6] Other given name">
+							<label for="othername" class="label-caption">Other Given Name: </label>
+							<span id="othername" class="label-value">JD</span>
+						</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[7] Date of Birth">
+							<label for="dateOfBirth" class="label-caption">Date of Birth:</label>
+							<span id="dateOfBirth" class="label-value">1983-09-30</span>
+						</div>
 
 
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[8] Gender">
-						<label for="gender" class="label-caption">Gender:</label>
-						<span id="gender" class="label-value">Information not available</span>
-					</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[8] Gender">
+							<label for="gender" class="label-caption">Gender:</label>
+							<span id="gender" class="label-value">Information not available</span>
+						</div>
 
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[9] Social Insurance Number">
-						<label for="sin" class="label-caption">Social Insurance Number:</label>
-						<span id="sin" class="label-value">XXXXXX758</span>
-					</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[9] Social Insurance Number">
+							<label for="sin" class="label-caption">Social Insurance Number:</label>
+							<span id="sin" class="label-value">XXXXXX758</span>
+						</div>
 
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[10] Surname at Birth of a Parent">
-						<label for="surnameBirthParent" class="label-caption">Surname at Birth of their Parent: </label>
-						<span id="surnameBirthParent" class="label-value"></span>
-					</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[10] Surname at Birth of a Parent">
+							<label for="surnameBirthParent" class="label-caption">Surname at Birth of their Parent: </label>
+							<span id="surnameBirthParent" class="label-value"></span>
+						</div>
 
-					<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[11] Social Insurance Number">
-						<label for="reason" class="label-caption">Reason for application:</label>
-						<span id="reason" class="label-value">Missing child</span>
-					</div>
+						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[11] Social Insurance Number">
+							<label for="reason" class="label-caption">Reason for application:</label>
+							<span id="reason" class="label-value">Missing child</span>
+						</div>
 
-					<div class="form-group">
-						<label for="affidavitFileUpload" class="label-caption">Affidavit</label>
-						<span id="affidavitFileUpload" class="label-value">Affidavit-John Doe.pdf</span>
+						<div class="form-group">
+							<label for="affidavitFileUpload" class="label-caption">Affidavit</label>
+							<span id="affidavitFileUpload" class="label-value">Affidavit-John Doe.pdf</span>
 
-					</div>
-				</section>
+						</div>
+					</section>
+				</details>
 
-				<section class="wb-inview" data-inview="fade-effect">
-					<h3 class="no-gutter">Event Details</h3>
-					<div class="table-responsive">
-						<table id="trackingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
-							<thead>
-								<tr>
-									<th>Record No.</th>
-									<th>Type</th>
-									<th>Date Received</th>
-									<th>Submitter</th>
-									<th>Debtor First Name</th>
-									<th>Debtor Surname</th>
-									<th>Expiry Date</th>
-									<th>Ctrl Code</th>
-									<th>State</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-id="1234">
-									<td data-sort="1">1</td>
-									<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
-									<td>2011-04-25</td>
-									<td>NPW104</td>
-									<td>Solution</td>
-									<td>Architect</td>
-									<td>2017-04-07</td>
-									<td>E24</td>
-									<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
-									
-								</tr>
-								<tr data-id="2345">
-									<td data-sort="2">2</td>
-									<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
-									<td>2011-07-25</td>
-									<td>NPW204</td>
-									<td>Winters</td>
-									<td>Summer</td>
-									<td>2019-04-07</td>
-									<td>E1001</td>
-									<td><span class="badge rounded-pill status-bg-warning">Pending</span></td>
-								</tr>
-								<tr>
+				<details open="open" class="grid-section-yellow  grid-section-padding-bottom-5" id="events-grid">
+					<summary>Event Details</summary>
+					<section class="wb-inview" data-inview="fade-effect">
+						<div class="table-responsive">
+							<table id="trackingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [2, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
+								<thead>
+									<tr>
+										<th>Ctrl Code</th>
+										<th>Category</th>
+										<th>Date Received</th>
+										<th>Reason</th>
+										<th>State</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-id="1234">
+										<td data-sort="1">S12135</td>
+										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td>2011-04-25</td>
+										<td>SIN sent to HRD for validation</td>
+										<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
 
-									<td data-sort="3">3</td>
-									<td><span class="badge rounded-pill license-bg">License</span></td>
-									<td>2009-01-12</td>
-									<td>NPW304</td>
-									<td>Cox</td>
-									<td>Winters</td>
-									<td>2017-04-07</td>
-									<td>E3</td>
-									<td><span class="badge rounded-pill status-bg-light text-dark">New</span></td>
-								</tr>
-								<tr>
+									</tr>
+									<tr data-id="2345">
+										<td data-sort="2">D10954</td>
+										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td>2011-07-25</td>
+										<td>File rejected - Invalid or missing trailer</td>
+										<td><span class="badge rounded-pill status-bg-brown">Duplicate/Invalid</span></td>
+									</tr>
+									<tr>
 
-									<td data-sort="4">4</td>
-									<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
-									<td>2012-03-29</td>
-									<td>NPW104</td>
-									<td>Kelly</td>
-									<td>Williams</td>
-									<td>2017-04-07</td>
-									<td>E99</td>
-									<td><span class="badge rounded-pill status-bg-danger">Cancelled</span></td>
-								</tr>
-								<tr>
+										<td data-sort="3">A43133</td>
+										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td>2015-01-12</td>
+										<td>SIN Confirmed (by the SIN Registry)</td>
+										<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
+									</tr>
+									<tr>
 
-									<td data-sort="5">5</td>
-									<td><span class="badge rounded-pill license-bg">License</span></td>
-									<td>2008-11-28</td>
-									<td>NPW101</td>
-									<td>Winters</td>
-									<td>Satou</td>
-									<td>2017-04-07</td>
-									<td>E1019</td>
-									<td><span class="badge rounded-pill status-bg-dark">Terminated</span></td>
-								</tr>
-						
-							</tbody>
-						</table>
-					</div>
-				</section>
+										<td data-sort="4">C90903</td>
+										<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
+										<td>2015-03-29</td>
+										<td>Application has been transfered</td>
+										<td><span class="badge rounded-pill status-bg-purple">Accepted</span></td>
+									</tr>
+									<tr>
+
+										<td data-sort="5">V14164</td>
+										<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
+										<td>2016-11-28</td>
+										<td>Variation accepted</td>
+										<td><span class="badge rounded-pill status-bg-pink">Fully serviced</span></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</details>
 			</div>
 
 
@@ -645,6 +647,264 @@
 		</div>
 	</section>
 
+	<section id="transfer-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
+		<header class="modal-header">
+			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Transfer Application - 01</h2>
+		</header>
+
+		<div class="modal-body">
+			<div class="wb-frmvld">
+				<form action="#" method="post" id="transferApplicationForm">
+					<fieldset id="transferApplicationFormFieldset">
+						<div>
+							<div class="form-group">
+								<label for="office" class="required"><span class="field-name">Select Office:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="office" id="office" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="AB01">AB01</option>
+									<option value="BC01">BC01</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="recipient" class="required"><span class="field-name">Select Recipient:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="recipient" id="recipient" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="NPW102">NPW102</option>
+									<option value="NPW202">NPW202</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<div class="checkbox checkbox-standalone required">
+									<label for="isTransferLinkApplication">
+										<input id="isTransferLinkApplication" name="isTransferLinkApplication" type="checkbox">
+										<span class="field-name">Transfer Link Application</span> <strong class="required">(required)</strong>
+									</label>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary overlay-close  pull-left" type="button" id="btnModalSubmit">Confirm</button>
+		</div>
+
+	</section>
+
+	<section id="cancel-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
+		<header class="modal-header status-bg-danger">
+			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Cancel Application - EX78921</h2>
+		</header>
+
+		<div class="modal-body">
+			<div class="wb-frmvld">
+				<form action="#" method="post" id="cancelApplicationForm">
+					<fieldset id="cancelApplicationFormFieldset">
+						<div>
+							<div class="form-group">
+								<label for="cancelReason" class="required"><span class="field-name">Select Cancellation Reason:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="cancelReason" id="cancelReason" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="1">Creditor info. inconsistent</option>
+									<option value="2">Inconsistent financial terms between application and summons (in lump sum amount, periodic payment or period)</option>
+									<option value="3">Summons not provided in appropriate format</option>
+									<option value="4">At the request of the MEP</option>
+									<option value="5">Due to conflict with previous application</option>
+									<option value="6">Other</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="other" class=""><span class="field-name">Other:</span> <strong class="" aria-hidden="true">(optional)</strong></label>
+								<textarea id="other" class="form-control" rows="5" cols="100" placeholder="Start typing..."></textarea>
+							</div>
+
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-danger overlay-close  pull-left" type="button" id="btnCancelSubmit">Confirm</button>
+		</div>
+
+	</section>
+
+	<section id="delink-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def  modal-lg">
+		<header class="modal-header">
+			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>De-Link Application - EX78921</h2>
+		</header>
+
+		<div class="modal-body">
+			<div class="wb-frmvld">
+				<form action="#" method="post" id="delinkApplicationForm">
+					<fieldset id="delinkApplicationFormFieldset">
+						<div class="table-responsive">
+							<table id="delinkedAppsTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
+								<thead>
+									<tr>
+										<th>Ctrl Code</th>
+										<th>Type</th>
+										<th>Debtor First Name</th>
+										<th>Debtor Surname</th>
+										<th>Expiry Date</th>
+										<th>State</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-id="1234">
+										<td data-sort="1">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="inputCheck1">
+												<label class="custom-control-label" for="inputCheck1"><a href="View-en.html" class="ps-2">E24</a></label>
+											</div>
+										</td>
+										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td>Solution</td>
+										<td>Architect</td>
+										<td>2017-04-07</td>
+										<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
+
+									</tr>
+									<tr data-id="2345">
+										<td data-sort="2">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="inputCheck2">
+												<label class="custom-control-label" for="inputCheck2"><a href="View-en.html" class="ps-2">E1001</a></label>
+											</div>
+										</td>
+
+										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td>Winter</td>
+										<td>Summer</td>
+										<td>2019-04-07</td>
+										<td><span class="badge rounded-pill status-bg-warning">Pending</span></td>
+									</tr>
+									<tr>
+
+										<td data-sort="3">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="inputCheck3">
+												<label class="custom-control-label" for="inputCheck3"><a href="View-en.html" class="ps-2">E3</a></label>
+											</div>
+										</td>
+										<td><span class="badge rounded-pill license-bg">License</span></td>
+										<td>Cox</td>
+										<td>Fallon</td>
+										<td>2017-04-07</td>
+										<td><span class="badge rounded-pill status-bg-light text-dark">New</span></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary overlay-close pull-left" type="button" id="btnDeLinkSubmit">De-Link Application</button>
+		</div>
+
+	</section>
+
+	<section id="link-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def  modal-lg">
+		<header class="modal-header">
+			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Link Application - EX78921</h2>
+		</header>
+
+		<div class="modal-body">
+			<div class="wb-frmvld">
+				<form action="#" method="post" id="linkApplicationForm">
+					<fieldset id="linkApplicationFormFieldset">
+						<div>
+							<div class="form-inline">
+								<div class="form-group">
+									<label for="ctrlCodeSearch" class=""><span class="field-name">Control Code:</span></label>
+									<input type="text" class="form-control" id="ctrlCodeSearch">
+								</div>
+								<button type="submit" class="btn btn-primary" id="btnSearchLinkApp">
+									<span class="glyphicon glyphicon-search"></span>
+									Search
+								</button>
+							</div>
+						</div>
+
+						<div id="linkAppSearchResultTables" class="table-responsive">
+							<h3>Results</h3>
+							<hr style="border-color:black;" />
+							<table id="linkedAppsTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
+								<thead>
+									<tr>
+										<th>Ctrl Code</th>
+										<th>Type</th>
+										<th>Debtor First Name</th>
+										<th>Debtor Surname</th>
+										<th>Expiry Date</th>
+										<th>State</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-id="1234">
+										<td data-sort="1">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="inputLinkCheck1">
+												<label class="custom-control-label" for="inputLinkCheck1"><a href="View-en.html" class="ps-2">E24</a></label>
+											</div>
+										</td>
+										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td>Solution</td>
+										<td>Architect</td>
+										<td>2017-04-07</td>
+										<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
+
+									</tr>
+									<tr data-id="2345">
+										<td data-sort="2">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="inputLinkCheck2">
+												<label class="custom-control-label" for="inputLinkCheck2"><a href="View-en.html" class="ps-2">E1001</a></label>
+											</div>
+										</td>
+
+										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td>Winter</td>
+										<td>Summer</td>
+										<td>2019-04-07</td>
+										<td><span class="badge rounded-pill status-bg-warning">Pending</span></td>
+									</tr>
+									<tr>
+
+										<td data-sort="3">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="inputLinkCheck3">
+												<label class="custom-control-label" for="inputLinkCheck3"><a href="View-en.html" class="ps-2">E3</a></label>
+											</div>
+										</td>
+										<td><span class="badge rounded-pill license-bg">License</span></td>
+										<td>Cox</td>
+										<td>Fallon</td>
+										<td>2017-04-07</td>
+										<td><span class="badge rounded-pill status-bg-light text-dark">New</span></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary overlay-close pull-left" type="button" id="btnLinkSubmit">Link Application</button>
+		</div>
+
+	</section>
+
+
 	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 	<script src="../../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
 
@@ -711,6 +971,96 @@
 
 		}
 
+		//Transfer Modal
+		const transferForm = $("#transferApplicationForm");
+		$(transferForm).on('submit', function (event) {
+			if ($(this).valid()) {
+				toastr.success('Your application has been transfer', 'Thank you!');
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$(".popup-modal-dismiss").trigger("click");
+				return false;
+			}
+			return false;
+		});
+
+		$("#btnModalSubmit").on('click', function () {
+			transferForm.trigger("submit");
+		});
+
+		//Cancellation Modal
+		const cancelForm = $("#cancelApplicationForm");
+		$(cancelForm).on('submit', function (event) {
+			if ($(this).valid()) {
+				toastr.error('Your application has been cancelled', 'Thank you!');
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$(".popup-modal-dismiss").trigger("click");
+				return false;
+			}
+			return false;
+		});
+
+		$("#btnCancelSubmit").on('click', function () {
+			cancelForm.trigger("submit");
+		});
+
+		//Delink Modal
+		const delinkForm = $("#delinkApplicationForm");
+		$(delinkForm).on('submit', function (event) {
+			if ($(this).valid()) {
+				toastr.warning('The applications has been de-linked', 'Thank you!');
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$(".popup-modal-dismiss").trigger("click");
+				return false;
+			}
+			return false;
+		});
+
+		$("#btnDeLinkSubmit").on('click', function () {
+			delinkForm.trigger("submit");
+		});
+
+		//Link Modal
+
+		$("#link").on('click', function (event) {
+			event.stopPropagation();
+			event.preventDefault();
+
+			$("#linkAppSearchResultTables").hide();
+		});
+
+		$("#btnSearchLinkApp").on('click', function (event) {
+
+			event.stopPropagation();
+			event.preventDefault();
+			$("#linkAppSearchResultTables").show();
+		});
+
+		const linkForm = $("#linkApplicationForm");
+		$(linkForm).on('submit', function (event) {
+			if ($(this).valid()) {
+				toastr.success('The applications selected has been linked', 'Thank you!');
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$(".popup-modal-dismiss").trigger("click");
+				return false;
+			}
+			return false;
+		});
+
+		$("#btnLinkSubmit").on('click', function () {
+			linkForm.trigger("submit");
+		});
 
 
 		toastr.options = {

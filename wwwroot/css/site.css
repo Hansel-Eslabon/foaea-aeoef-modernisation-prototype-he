@@ -212,6 +212,22 @@ table .badge {
 	background-color: #212529 !important;
 }
 
+.status-bg-brown {
+	color: #ffffff;
+	background-color: #815B5B !important;
+}
+
+.status-bg-pink {
+	color: #000000;
+	background-color: #F1B4BB !important;
+}
+
+.status-bg-purple {
+	color: #ffffff;
+	background-color: #77037B !important;
+}
+
+
 .tracing-bg {
 	color: #fff;
 	background-color: #A72461 !important;
@@ -250,7 +266,7 @@ table .badge {
 	margin: .25rem;
 	line-height: 1em;
 	color: #0061A8;
-	background-color: #8AB6D6;
+	background-color: #DDF2FD;
 	border-radius: 2em;
 }
 
@@ -335,10 +351,115 @@ text-decoration:none;
 }
 
 
-.label-caption {
-	color: #164863;
+.grid-section summary:focus, .grid-section summary:hover {
+	background-color: #427D9D;
+	color: #ffffff;
+}
+
+.grid-section summary:focus, .grid-section summary:hover {
+	background-color: #427D9D;
+	color: #ffffff;
+}
+
+
+.grid-section [open] > summary, .grid-section > summary {
+	background-color: #427D9D;
+	color: #ffffff;
+	font-size: 1.3em;
+}
+
+.grid-section[open] {
+	border-color: #427D9D;
+	padding-bottom: 0px;
+	border-width: 3px;
+	border-radius: 5px;
+}
+
+.grid-section {
+	margin-top: 2em;
+	
+}
+
+.grid-section-red summary:focus, .grid-section-red summary:hover {
+	background-color: firebrick;
+	color: #ffffff;
+}
+
+		.grid-section-red summary:focus .red, .grid-section-red summary:hover  {
+			background-color: firebrick;
+			color: #ffffff;
+		}
+
+
+.grid-section-red [open] > summary, .grid-section-red > summary {
+	background-color: firebrick;
+	color: #ffffff;
+	font-size: 1.3em;
+}
+
+.grid-section-red[open] {
+	border-color: firebrick;
+	padding-bottom: 0px;
+	border-width: 3px;
+	border-radius: 5px;
+}
+.grid-section-red {
+	margin-top: 2em;
+}
+
+
+.grid-section-yellow summary:focus, .grid-section-yellow summary:hover {
+	background-color: #FFC436;
+	color: #000000;
+}
+
+.grid-section-yellow summary:focus, .grid-section-yellow summary:hover {
+	background-color: #FFC436;
+	color: #000000;
+}
+
+
+.grid-section-yellow [open] > summary, .grid-section-yellow > summary {
+	background-color: #FFC436;
+	color: #000000;
+	font-size: 1.3em;
+}
+
+.grid-section-yellow[open] {
+	border-color: #FFC436;
+	padding-bottom: 0px;
+	border-width: 3px;
+	border-radius: 5px;
+}
+
+.grid-section-yellow {
+	margin-top: 2em;
+}
+
+
+.grid-section-padding-bottom-5[open] {
+	padding-bottom: 20px;
+}
+
+.grid-section-red > summary, .grid-section > summary, .grid-section-yellow > summary {
+	margin-top: -1.1em;
 }
 
 .label-value {
 	padding-left: 10px;
+}
+
+
+#menu-bar > button {
+	margin-right: .5em;
+}
+
+.margin-top-2 {
+	margin-top: 2em;
+}
+
+.sticky-top {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
