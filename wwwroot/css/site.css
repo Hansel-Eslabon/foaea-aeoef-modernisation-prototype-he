@@ -437,11 +437,42 @@ text-decoration:none;
 }
 
 
+
+.grid-section-green summary:focus, .grid-section-green summary:hover {
+	background-color: #557C55;
+	color: #ffffff;
+}
+
+.grid-section-green summary:focus, .grid-section-greensummary:hover {
+	background-color: #557C55;
+	color: #ffffff;
+}
+
+
+.grid-section-green[open] > summary, .grid-section-green > summary {
+	background-color: #557C55;
+	color: #ffffff;
+	font-size: 1.3em;
+}
+
+.grid-section-green[open] {
+	border-color: #557C55;
+	padding-bottom: 0px;
+	border-width: 3px;
+	border-radius: 5px;
+}
+
+.grid-section-green {
+	margin-top: 2em;
+}
+
+
+
 .grid-section-padding-bottom-5[open] {
 	padding-bottom: 20px;
 }
 
-.grid-section-red > summary, .grid-section > summary, .grid-section-yellow > summary {
+.grid-section-red > summary, .grid-section > summary, .grid-section-yellow > summary, .grid-section-green > summary {
 	margin-top: -1.1em;
 }
 
