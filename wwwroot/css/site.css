@@ -108,6 +108,10 @@ table .badge {
 	cursor: pointer;
 }
 
+.table a:visited {
+	color: #295376;
+}
+
 .badge-error {
 	background-color: #bc3331;
 }
@@ -169,17 +173,28 @@ table .badge {
  color: #ffffff;
 }
 
+.btn-primary {
+	color: #fff;
+	background-color: #002d42;
+	border-color: #002d42;
+	box-shadow: none;
+}
 
-
+.btn-secondary {
+	color: #002d42;
+	background-color: transparent;
+	background-image: none;
+	border-color: #002d42;
+}
 
 .status-bg-primary {
 	color: #ffffff;
-	background-color: #0d6efd !important;
+	background-color: #137991 !important;
 }
 
 .status-bg-secondary {
 	color: #ffffff;
-	background-color: #6c757d !important
+	background-color: #4d5d6c !important;
 }
 .status-bg-success {
 	color: #ffffff;
@@ -187,20 +202,22 @@ table .badge {
 }
 .status-bg-danger {
 	color: #ffffff;
-	background-color: #dc3545 !important;
+	background-color: #d3080c !important;
 }
 .status-bg-warning {
-	color: #000000;
-	background-color: #ffc107 !important;
+	color: #212529;
+	background-color: #f90 !important;
 }
 
 .status-bg-info {
 	color: #000000;
-	background-color: #0dcaf0 !important;
+	background-color: #6DD2DA !important;
+	border-color: #6DD2DA;
+	box-shadow: none;
 }
 .status-bg-light {
-	color: #000000;
-	background-color: #f8f9fa !important;
+	color: #212529;
+	background-color: #fff !important;
 }
 
 .status-bg-light:hover {
@@ -352,24 +369,24 @@ text-decoration:none;
 
 
 .grid-section summary:focus, .grid-section summary:hover {
-	background-color: #427D9D;
+	background-color: #245269;
 	color: #ffffff;
 }
 
 .grid-section summary:focus, .grid-section summary:hover {
-	background-color: #427D9D;
+	background-color: #245269;
 	color: #ffffff;
 }
 
 
 .grid-section [open] > summary, .grid-section > summary {
-	background-color: #427D9D;
+	background-color: #245269;
 	color: #ffffff;
 	font-size: 1.3em;
 }
 
 .grid-section[open] {
-	border-color: #427D9D;
+	border-color: #245269;
 	padding-bottom: 0px;
 	border-width: 3px;
 	border-radius: 5px;
@@ -439,24 +456,24 @@ text-decoration:none;
 
 
 .grid-section-green summary:focus, .grid-section-green summary:hover {
-	background-color: #557C55;
+	background-color: #278400;
 	color: #ffffff;
 }
 
 .grid-section-green summary:focus, .grid-section-greensummary:hover {
-	background-color: #557C55;
+	background-color: #278400;
 	color: #ffffff;
 }
 
 
 .grid-section-green[open] > summary, .grid-section-green > summary {
-	background-color: #557C55;
+	background-color: #278400;
 	color: #ffffff;
 	font-size: 1.3em;
 }
 
 .grid-section-green[open] {
-	border-color: #557C55;
+	border-color: #278400;
 	padding-bottom: 0px;
 	border-width: 3px;
 	border-radius: 5px;
@@ -493,4 +510,17 @@ text-decoration:none;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	z-index:100;
 }
+
+.bi-flag-fill {
+	color: #D3080C;
+}
+
+.status-bar {
+	display: flow-root;
+}
+.status-font-size {
+	font-size:16px;
+}
+

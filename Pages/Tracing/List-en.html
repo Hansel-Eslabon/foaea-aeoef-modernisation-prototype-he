@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 
 
@@ -398,12 +398,21 @@
 
 						<div class="col-lg-3">
 							<div class="form-group">
-								<label for="dt_type">Type</label>
-								<select class="form-control" id="dt_type" name="dt_type" data-column="1">
-									<option value="">Any Type</option>
-									<option value="Tracing">Tracing</option>
-									<option value="Garnishment">Garnishment</option>
-									<option value="License">License</option>
+								<label for="dt_state">State</label>
+								<select class="form-control" id="dt_state" name="dt_state" data-column="6">
+									<option value="">Any State</option>
+									<option value="Accepted">Accepted</option>
+									<option value="Cancelled">Cancelled</option>
+									<option value="Completed">Completed</option>
+									<option value="Linked">Linked</option>
+
+									<option value="New">New</option>
+									<option value="Non-Linked">Non-Linked</option>
+
+									<option value="Orphaned">Orphaned</option>
+									<option value="SIN Pending">SIN Pending</option>
+									<option value="Terminated">Terminated</option>
+									<option value="Transferred">Transferred</option>
 								</select>
 							</div>
 						</div>
@@ -434,6 +443,7 @@
 						<th>Debtor First Name</th>
 						<th>Debtor Surname</th>
 						<th>Expiry Date</th>
+						<th>Source Ref</th>
 						<th>State</th>
 						<td></td>
 					</tr>
@@ -450,11 +460,12 @@
 						<td>Solution</td>
 						<td>Architect</td>
 						<td>2017-04-07</td>
-						<td><span class="badge rounded-pill status-bg-primary">SIN Pending  </span></td>
+						<td>0451625</td>
+						<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star hide"></i>
-								<i class="glyphicon glyphicon-star-empty "></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag hide"></i>
 							</div>
 						</td>
 					</tr>
@@ -465,11 +476,12 @@
 						<td>Winters</td>
 						<td>Summer</td>
 						<td>2019-04-07</td>
+						<td>0753621</td>
 						<td><span class="badge rounded-pill status-bg-brown">Duplicate/Invalid</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star hide"></i>
-								<i class="glyphicon glyphicon-star-empty "></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag hide"></i>
 							</div>
 						</td>
 					</tr>
@@ -481,11 +493,12 @@
 						<td>Cox</td>
 						<td>Winters</td>
 						<td>2017-04-07</td>
+						<td>1584685</td>
 						<td><span class="badge rounded-pill status-bg-dark">Terminated</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star hide"></i>
-								<i class="glyphicon glyphicon-star-empty"></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag "></i>
 							</div>
 						</td>
 					</tr>
@@ -497,11 +510,12 @@
 						<td>Kelly</td>
 						<td>Williams</td>
 						<td>2017-04-07</td>
+						<td>3524789</td>
 						<td><span class="badge rounded-pill status-bg-danger">Rejected</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star hide"></i>
-								<i class="glyphicon glyphicon-star-empty "></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
@@ -513,11 +527,12 @@
 						<td>Winters</td>
 						<td>Satou</td>
 						<td>2017-04-07</td>
+						<td>34187</td>
 						<td><span class="badge rounded-pill status-bg-pink">Valid Affidavit Not Received</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
@@ -528,11 +543,12 @@
 						<td>Williamson</td>
 						<td>Bradley</td>
 						<td>2017-04-07</td>
+						<td>153485</td>
 						<td><span class="badge rounded-pill status-bg-warning">SIN Not Confirmed</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
@@ -545,28 +561,30 @@
 						<td>Chandler</td>
 						<td>Carter</td>
 						<td>2023-04-07</td>
+						<td>653</td>
 						<td><span class="badge rounded-pill status-bg-purple">Accepted</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star hide"></i>
-								<i class="glyphicon glyphicon-star-empty "></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="C43324"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2">C43324</a></td>
+						<td data-sort="C43324"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> C43324</a></td>
 						<td>2010-10-14</td>
 						<td>NPW104</td>
 						<td>Davidson</td>
 						<td>Duncan</td>
 						<td>2017-04-07</td>
+						<td>97623</td>
 						<td><span class="badge rounded-pill status-bg-info">Partially Serviced</span></td>
 
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star hide"></i>
-								<i class="glyphicon glyphicon-star-empty "></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
@@ -578,11 +596,12 @@
 						<td>Hurst</td>
 						<td>Summer</td>
 						<td>2017-04-07</td>
+						<td>198725</td>
 						<td><span class="badge rounded-pill status-bg-secondary">Pending Acceptance / Swearing</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star hide"></i>
-								<i class="glyphicon glyphicon-star-empty "></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
@@ -594,11 +613,12 @@
 						<td>Frost</td>
 						<td>Maine</td>
 						<td>2025-04-07</td>
+						<td>1584685</td>
 						<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
@@ -609,11 +629,12 @@
 						<td>Architect</td>
 						<td>Winters</td>
 						<td>2017-04-07</td>
+						<td>94523</td>
 						<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
@@ -740,19 +761,19 @@
 			wb.doc.on("wb-ready.wb", function () {
 
 				//Bookmark
-				$('#tracingTables .fav').on('click', ".glyphicon", function (event) {
-					if ($(event.target).hasClass('glyphicon-star')) {
+				$('#tracingTables .fav').on('click', ".bi", function (event) {
+					if ($(event.target).hasClass('bi-flag-fill')) {
 						//Ajax Remove Bookmark
 						toastr.success('Tracking  remove');
-						$(this).closest(".glyphicon-star").addClass("hide")
-						$(this).siblings(".glyphicon-star-empty").removeClass("hide")
+						$(this).closest(".bi-flag-fill").addClass("hide")
+						$(this).siblings(".bi-flag").removeClass("hide")
 					}
 
-					if ($(event.target).hasClass('glyphicon-star-empty')) {
+					if ($(event.target).hasClass('bi-flag')) {
 						//Ajax Remove Bookmark
 						toastr.success('Tracking added');
-						$(this).closest(".glyphicon-star-empty").addClass("hide")
-						$(this).siblings(".glyphicon-star").removeClass("hide")
+						$(this).closest(".bi-flag").addClass("hide")
+						$(this).siblings(".bi-flag-fill").removeClass("hide")
 					}
 				});
 

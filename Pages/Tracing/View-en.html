@@ -418,6 +418,17 @@
 					</a>
 				</section>
 
+				<section id="status-bar" class="status-bar">
+					<div  data-toggle="tooltip" data-placement="bottom" title="Status">
+						<div class="pull-right">
+							<label for="statusDetail" class="label-caption status-font-size">Status:</label>
+							<span class="badge rounded-pill status-bg-primary status-font-size">SIN Pending</span>
+						</div>
+						
+					</div>
+				</section>
+				
+
 				<details open="open" class="grid-section-red" id="applicant-grid">
 					<summary>Application Details</summary>
 					<section class="wb-inview" data-inview="fade-effect">
@@ -425,7 +436,10 @@
 							<label for="ctrlCode" class="label-caption">Control Code:</label>
 							<span id="ctrlCode" class="label-value">EX78921</span>
 						</div>
-
+						<div class="form-group">
+							<label for="sourceRef" class="label-caption">Source Ref:</label>
+							<span id="sourceRef" class="label-value">457623</span>
+						</div>
 						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
 							<label for="referenceCode" class="label-caption">Reference Code:</label>
 							<span id="referenceCode" class="label-value"></span>
@@ -440,6 +454,7 @@
 				<details open="open" class="grid-section" id="debtor-grid">
 					<summary>Debtor's Details</summary>
 					<section class="wb-inview" data-inview="fade-effect">
+
 						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[4] Surname">
 							<label for="lastnameDetail" class="label-caption">Surname:</label>
 							<span id="lastnameDetail" class="label-value">Doe</span>
@@ -464,8 +479,8 @@
 						</div>
 
 						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[9] Social Insurance Number">
-							<label for="sin" class="label-caption">Social Insurance Number:</label>
-							<span id="sin" class="label-value">XXXXXX758</span>
+							<label for="sin" class="label-caption">Entered Social Insurance Number:</label>
+							<span id="sin" class="label-value">3243758</span>
 						</div>
 
 						<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[10] Surname at Birth of a Parent">
@@ -503,7 +518,7 @@
 								<tbody>
 									<tr data-id="1234">
 										<td data-sort="1">S12135</td>
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>2011-04-25</td>
 										<td>SIN sent to HRD for validation</td>
 										<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
@@ -511,7 +526,7 @@
 									</tr>
 									<tr data-id="2345">
 										<td data-sort="2">D10954</td>
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>2011-07-25</td>
 										<td>File rejected - Invalid or missing trailer</td>
 										<td><span class="badge rounded-pill status-bg-brown">Duplicate/Invalid</span></td>
@@ -519,7 +534,7 @@
 									<tr>
 
 										<td data-sort="3">A43133</td>
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>2015-01-12</td>
 										<td>SIN Confirmed (by the SIN Registry)</td>
 										<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
@@ -527,7 +542,7 @@
 									<tr>
 
 										<td data-sort="4">C90903</td>
-										<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
+										<td><span>Garnishment</span></td>
 										<td>2015-03-29</td>
 										<td>Application has been transfered</td>
 										<td><span class="badge rounded-pill status-bg-purple">Accepted</span></td>
@@ -535,7 +550,7 @@
 									<tr>
 
 										<td data-sort="5">V14164</td>
-										<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
+										<td><span>Garnishment</span></td>
 										<td>2016-11-28</td>
 										<td>Variation accepted</td>
 										<td><span class="badge rounded-pill status-bg-pink">Fully serviced</span></td>
@@ -565,11 +580,10 @@
 								<tbody>
 									<tr data-id="1234">
 										<td data-sort="1">
-											<div class="custom-control custom-checkbox">
-												<label class="custom-control-label"><a href="View-en.html" class="ps-2">E24</a></label>
-											</div>
+											<a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">E24</span></a>
+											<a href="View-en.html" class="ps-2"> E24</a>
 										</td>
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>Solution</td>
 										<td>Architect</td>
 										<td>2017-04-07</td>
@@ -578,12 +592,11 @@
 									</tr>
 									<tr data-id="2345">
 										<td data-sort="2">
-											<div class="custom-control custom-checkbox">
-												<label class="custom-control-label"><a href="View-en.html" class="ps-2">E1001</a></label>
-											</div>
+											<a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">E1001</span></a>
+											<a href="View-en.html" class="ps-2"> E1001</a>
 										</td>
 
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>Winter</td>
 										<td>Summer</td>
 										<td>2019-04-07</td>
@@ -592,11 +605,10 @@
 									<tr>
 
 										<td data-sort="3">
-											<div class="custom-control custom-checkbox">
-												<label class="custom-control-label"><a href="View-en.html" class="ps-2">E3</a></label>
-											</div>
+											<a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">E3</span></a>
+											<a href="View-en.html" class="ps-2"> E3</a>
 										</td>
-										<td><span class="badge rounded-pill license-bg">License</span></td>
+										<td><span>License</span></td>
 										<td>Cox</td>
 										<td>Fallon</td>
 										<td>2017-04-07</td>
@@ -824,7 +836,7 @@
 												<label class="custom-control-label" for="inputCheck1"><a href="View-en.html" class="ps-2">E24</a></label>
 											</div>
 										</td>
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>Solution</td>
 										<td>Architect</td>
 										<td>2017-04-07</td>
@@ -839,7 +851,7 @@
 											</div>
 										</td>
 
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>Winter</td>
 										<td>Summer</td>
 										<td>2019-04-07</td>
@@ -917,7 +929,7 @@
 												<label class="custom-control-label" for="inputLinkCheck1"><a href="View-en.html" class="ps-2">E24</a></label>
 											</div>
 										</td>
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>Solution</td>
 										<td>Architect</td>
 										<td>2017-04-07</td>
@@ -932,7 +944,7 @@
 											</div>
 										</td>
 
-										<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+										<td><span>Tracing</span></td>
 										<td>Winter</td>
 										<td>Summer</td>
 										<td>2019-04-07</td>
