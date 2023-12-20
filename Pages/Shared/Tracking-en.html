@@ -359,7 +359,7 @@
 				<details >
 					<summary><h4 class="h4">Filter Options</h4></summary>
 				
-					<form class="wb-tables-filter" data-bind-to="trackingTables">
+					<form class="wb-tables-filter" data-bind-to="trackingTables" id="adv-filter-form">
 
 						<div class="col-lg-3">
 							<div class="form-group">
@@ -389,11 +389,11 @@
 							<div class="form-group">
 								<div class="form-group">
 									<label for="dt_minExpiraryDate">Start Expiry Date </label>
-									<input type="date" class="form-control" id="dt_minExpiraryDate" name="dt_minExpiraryDate" data-column="7">
+									<input type="date" class="form-control" id="dt_minExpiraryDate" name="dt_minExpiraryDate" data-column="6">
 								</div>
 								<div class="form-group">
 									<label for="dt_maxExpiraryDate">End Expiry Date</label>
-									<input type="date" class="form-control" id="dt_maxExpiraryDate" name="dt_maxExpiraryDate" data-column="7">
+									<input type="date" class="form-control" id="dt_maxExpiraryDate" name="dt_maxExpiraryDate" data-column="6">
 								</div>
 							</div>
 						</div>
@@ -401,20 +401,25 @@
 						<div class="col-lg-3">
 							<div class="form-group">
 								<label for="dt_state">State</label>
-								<select class="form-control" id="dt_state" name="dt_state" data-column="8">
+								<select class="form-control" id="dt_state" name="dt_state" data-column="7">
 									<option value="">Any State</option>
 									<option value="Accepted">Accepted</option>
 									<option value="Cancelled">Cancelled</option>
 									<option value="Completed">Completed</option>
-									<option value="Linked">Linked</option>
+
 
 									<option value="New">New</option>
 									<option value="Non-Linked">Non-Linked</option>
 
 									<option value="Orphaned">Orphaned</option>
-									<option value="Pending">Pending</option>
-									<option value="Terminated">Terminated</option>
+
+
+									<option value="SIN Confirmed">SIN Confirmed</option>
+									<option value="SIN Pending">SIN Pending</option>
+									<option value="SIN Not Confirmed">SIN Not Confirmed</option>
+
 									<option value="Transferred">Transferred</option>
+
 								</select>
 							</div>
 						</div>
@@ -479,7 +484,7 @@
 						<td>Winters</td>
 						<td>Summer</td>
 						<td>2019-04-07</td>
-						<td><span class="badge rounded-pill status-bg-warning">Pending</span></td>
+						<td><span class="badge rounded-pill status-bg-warning">SIN Pending</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="bi bi-flag-fill"></i>
@@ -546,7 +551,7 @@
 						<td>Williamson</td>
 						<td>Bradley</td>
 						<td>2017-04-07</td>
-						<td><span class="badge rounded-pill status-bg-warning">Orphaned</span></td>
+						<td><span class="badge rounded-pill status-bg-pink">Orphaned</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="bi bi-flag-fill"></i>
@@ -598,7 +603,7 @@
 						<td>Hurst</td>
 						<td>Summer</td>
 						<td>2017-04-07</td>
-						<td><span class="badge rounded-pill status-bg-secondary">Non Linked</span></td>
+						<td><span class="badge rounded-pill status-bg-secondary">SIN Not Confirmed</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="bi bi-flag-fill"></i>
@@ -615,7 +620,7 @@
 						<td>Frost</td>
 						<td>Maine</td>
 						<td>2017-04-07</td>
-						<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
+						<td><span class="badge rounded-pill status-bg-success">SIN Confirmed</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="bi bi-flag-fill"></i>
@@ -774,7 +779,26 @@
 		});
 
 
-		
+		function getQueryParams(qs) {
+			qs = qs.split('+').join(' ');
+			var params = {},
+				tokens,
+				re = /[?&]?([^=]+)=([^&]*)/g;
+
+			while (tokens = re.exec(qs)) {
+				params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+			}
+
+			return params;
+		}
+
+		var query = getQueryParams(document.location.search);
+		if (query) {
+			if (query.search) {
+				$("#dt_state").val(query.search);
+			}
+			setTimeout(function () { $("#adv-filter-form").submit(); }, 300);
+		}
 
 
 		toastr.options = {

@@ -637,9 +637,9 @@
 		document.addEventListener("DOMContentLoaded", function (event) {
 			/*SIN Status*/
 			let sinData = [
-				{ label: "Pending", data: 13, color: "#176B87" },
-				{ label: "Not Confirmed", data: 5, color: "#ffc107" },
-				{ label: "Confirmed", data: 9, color: "#A7D397" }
+				{ label: "SIN Pending", data: 13, color: "#176B87" },
+				{ label: "SIN Not Confirmed", data: 5, color: "#ffc107" },
+				{ label: "SIN Confirmed", data: 9, color: "#A7D397" }
 			];
 
 			$.plot('#SIN-Pie-Graph', sinData, {
@@ -666,7 +666,7 @@
 				}
 			});
 
-			$("#SIN-Pie-Graph").UseChartClick("Tracing/View-en.html");
+			$("#SIN-Pie-Graph").UseChartClick("Shared/Tracking-en.html");
 
 			/*Tracing App*/
 			let tracingData = [

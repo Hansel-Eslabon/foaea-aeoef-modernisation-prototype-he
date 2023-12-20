@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title>List T01 - FOAEA - Justice Canada</title>
+	<title>List I01 Page - FOAEA - Justice Canada</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 
 
@@ -271,7 +271,7 @@
 							</a>
 							<ul role="list" id="tracingList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li aria-posinset="1" aria-setsize="2" role="listitem">
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">
+									<a href="../Tracing/List-en.html">
 										<span class="glyphicon glyphicon-list-alt"></span> View Applications
 									</a>
 								</li>
@@ -329,7 +329,7 @@
 							</a>
 							<ul role="menu" id="profileList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="Tracking-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">Tracking</a>
+									<a href="../Shared/Tracking-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">Tracking</a>
 								</li>
 								<li>
 									<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem">Logout</a>
@@ -345,12 +345,13 @@
 
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
 
-		<h1 id="wb-cont" property="name">Tracking List</h1>
+		<h1 id="wb-cont" property="name">Garnishment Application List</h1>
 
 
 		<div class="well well-lg">
 			<p>
-				Welcome to the "Tracking Page" feature! With this handy tool, you can easily save and organize your favorite web pages for quick access later. No more hassle of searching or losing track of important content. Start tracking now and enjoy a seamless browsing experience. Happy bookmarking!
+				Welcome to the Garnishment Application List! Here, you can explore and discover a comprehensive collection of tracing applications that will aid you in various tasks. Whether you need to track packages, locate missing devices, or trace phone calls, our extensive list has got you covered. Get ready to streamline your tracing needs with our reliable and user-friendly applications.
+				Start exploring now and make the most out of our Garnishment Application List!
 			</p>
 		</div>
 		<div class="row">
@@ -359,22 +360,46 @@
 				<details>
 					<summary><h4 class="h4">Filter Options</h4></summary>
 
-					<form class="wb-tables-filter" data-bind-to="trackingTables">
+					<form class="wb-tables-filter" data-bind-to="tracingTables">
+
 						<div class="col-lg-3">
 							<div class="form-group">
-								<label for="dt_type">Type</label>
-								<select class="form-control" id="dt_type" name="dt_type" data-column="1">
-									<option value="">Any Type</option>
-									<option value="Tracing">Tracing</option>
-									<option value="Garnishment">Garnishment</option>
-									<option value="License">License</option>
-								</select>
+								<label for="dt_fname">First Name</label>
+								<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="3">
+
+								<label for="dt_lname">Last Name</label>
+								<input type="text" class="form-control" id="dt_lname" name="dt_lname" data-column="4">
 							</div>
 						</div>
 						<div class="col-lg-3">
 							<div class="form-group">
+								<div class="form-group">
+									<label for="dt_mindate">Start Date Received</label>
+									<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="1">
+								</div>
+								<div class="form-group">
+									<label for="dt_maxdate">End Date Received</label>
+									<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="1">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<div class="form-group">
+									<label for="dt_minExpiraryDate">Start Expiry Date </label>
+									<input type="date" class="form-control" id="dt_minExpiraryDate" name="dt_minExpiraryDate" data-column="5">
+								</div>
+								<div class="form-group">
+									<label for="dt_maxExpiraryDate">End Expiry Date</label>
+									<input type="date" class="form-control" id="dt_maxExpiraryDate" name="dt_maxExpiraryDate" data-column="5">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+							<div class="form-group">
 								<label for="dt_state">State</label>
-								<select class="form-control" id="dt_state" name="dt_state" data-column="8">
+								<select class="form-control" id="dt_state" name="dt_state" data-column="7">
 									<option value="">Any State</option>
 									<option value="Accepted">Accepted</option>
 									<option value="Cancelled">Cancelled</option>
@@ -385,49 +410,22 @@
 									<option value="Non-Linked">Non-Linked</option>
 
 									<option value="Orphaned">Orphaned</option>
-									<option value="Pending">Pending</option>
+									<option value="SIN Pending">SIN Pending</option>
 									<option value="Terminated">Terminated</option>
 									<option value="Transferred">Transferred</option>
-
-
-
-
-
-
 								</select>
 							</div>
 						</div>
 						<div class="col-lg-3">
 							<div class="form-group">
-								<div class="form-group">
-									<label for="dt_mindate">Start Date Received</label>
-									<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="2">
-								</div>
-								<div class="form-group">
-									<label for="dt_maxdate">End Date Received</label>
-									<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="2">
-								</div>
+								<button type="submit" class="btn btn-primary " aria-controls="tracingTables">Filter</button>
 							</div>
-						</div>
-						<div class="col-lg-3">
 							<div class="form-group">
-								<div class="form-group">
-									<label for="dt_minExpiraryDate">Start Expiry Date </label>
-									<input type="date" class="form-control" id="dt_minExpiraryDate" name="dt_minExpiraryDate" data-column="7">
-								</div>
-								<div class="form-group">
-									<label for="dt_maxExpiraryDate">End Expiry Date</label>
-									<input type="date" class="form-control" id="dt_maxExpiraryDate" name="dt_maxExpiraryDate" data-column="7">
-								</div>
+								<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary" aria-controls="trackingTables">Filter</button>
-						</div>
-						<div class="form-group">
-							<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
-						</div>
+
 					</form>
 				</details>
 			</div>
@@ -436,219 +434,207 @@
 
 
 		<div class="table-responsive">
-			<table id="trackingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
+			<table id="tracingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
 				<thead>
 					<tr>
-						<th>Record No.</th>
-						<th>Type</th>
+						<th>Ctrl Code</th>
 						<th>Date Received</th>
 						<th>Submitter</th>
 						<th>Debtor First Name</th>
 						<th>Debtor Surname</th>
 						<th>Expiry Date</th>
-						<th>Ctrl Code</th>
+						<th>Source Ref</th>
 						<th>State</th>
 						<td></td>
 					</tr>
 				</thead>
 				<tbody>
-					<tr data-id="1234">
+					<tr data-id="ZYX1ZM">
 
-						<td data-sort="1">
-							<a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a>
-							<a href="View-Tracing-en.html" class="ps-2">1</a>
+						<td data-sort="ZYX1ZM">
+							<a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a>
+							<a href="View-en.html" class="ps-2"> ZYX1ZM</a>
 						</td>
-						<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
 						<td>2011-04-25</td>
 						<td>NPW104</td>
 						<td>Solution</td>
 						<td>Architect</td>
 						<td>2017-04-07</td>
-						<td>E24</td>
-						<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
+						<td>0451625</td>
+						<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag hide"></i>
 							</div>
 						</td>
 					</tr>
-					<tr data-id="2345">
-
-						<td data-sort="2"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">2</a></td>
-						<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+					<tr data-id="S62612">
+						<td data-sort="S62612"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> S62612</a></td>
 						<td>2011-07-25</td>
 						<td>NPW204</td>
 						<td>Winters</td>
 						<td>Summer</td>
 						<td>2019-04-07</td>
-						<td>E1001</td>
-						<td><span class="badge rounded-pill status-bg-warning">Pending</span></td>
+						<td>0753621</td>
+						<td><span class="badge rounded-pill status-bg-brown">Duplicate/Invalid</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag hide"></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="3"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">3</a></td>
-						<td><span class="badge rounded-pill license-bg">License</span></td>
+						<td data-sort="99353"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> 99353</a></td>
 						<td>2009-01-12</td>
 						<td>NPW304</td>
 						<td>Cox</td>
 						<td>Winters</td>
 						<td>2017-04-07</td>
-						<td>E3</td>
-						<td><span class="badge rounded-pill status-bg-light text-dark">New</span></td>
+						<td>1584685</td>
+						<td><span class="badge rounded-pill status-bg-dark">Terminated</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag "></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="4"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">4</a></td>
-						<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
+						<td data-sort="S4921"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> S4921</a></td>
 						<td>2012-03-29</td>
 						<td>NPW104</td>
 						<td>Kelly</td>
 						<td>Williams</td>
 						<td>2017-04-07</td>
-						<td>E99</td>
-						<td><span class="badge rounded-pill status-bg-danger">Cancelled</span></td>
+						<td>3524789</td>
+						<td><span class="badge rounded-pill status-bg-danger">Rejected</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="5"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">5</a></td>
-						<td><span class="badge rounded-pill license-bg">License</span></td>
+						<td data-sort="Q16061"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> Q16061</a></td>
 						<td>2008-11-28</td>
 						<td>NPW101</td>
 						<td>Winters</td>
 						<td>Satou</td>
 						<td>2017-04-07</td>
-						<td>E1019</td>
-						<td><span class="badge rounded-pill status-bg-dark">Terminated</span></td>
+						<td>34187</td>
+						<td><span class="badge rounded-pill status-bg-pink">Valid Affidavit Not Received</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<td data-sort="6"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">6</a></td>
-						<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
+						<td data-sort="F8751"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> F8751</a></td>
 						<td>2012-12-02</td>
 						<td>NPW104</td>
 						<td>Williamson</td>
 						<td>Bradley</td>
 						<td>2017-04-07</td>
-						<td>E37</td>
-						<td><span class="badge rounded-pill status-bg-warning">Orphaned</span></td>
+						<td>153485</td>
+						<td><span class="badge rounded-pill status-bg-warning">SIN Not Confirmed</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="7"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">7</a></td>
-						<td><span class="badge rounded-pill garnish-bg">Garnishment</span></td>
+						<td data-sort="D67400"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> D67400</a></td>
 
-						<td>2012-08-06</td>
+						<td>2022-08-06</td>
 						<td>NPW104</td>
 						<td>Chandler</td>
 						<td>Carter</td>
-						<td>2017-04-07</td>
-						<td>E79</td>
-						<td><span class="badge rounded-pill status-bg-success">Linked</span></td>
+						<td>2023-04-07</td>
+						<td>653</td>
+						<td><span class="badge rounded-pill status-bg-purple">Accepted</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="8"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">8</a></td>
-						<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+						<td data-sort="C43324"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> C43324</a></td>
 						<td>2010-10-14</td>
 						<td>NPW104</td>
 						<td>Davidson</td>
 						<td>Duncan</td>
 						<td>2017-04-07</td>
-						<td>E123</td>
-						<td><span class="badge rounded-pill status-bg-info">Transferred</span></td>
+						<td>97623</td>
+						<td><span class="badge rounded-pill status-bg-info">Partially Serviced</span></td>
+
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="9"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">9</a></td>
-						<td><span class="badge rounded-pill license-bg">License</span></td>
-						<td>2009-09-15</td>
+						<td data-sort="H2142"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> H2142</a></td>
+						<td>20019-09-15</td>
 						<td>NPW104</td>
 						<td>Hurst</td>
 						<td>Summer</td>
 						<td>2017-04-07</td>
-						<td>E989</td>
-						<td><span class="badge rounded-pill status-bg-secondary">Non Linked</span></td>
+						<td>198725</td>
+						<td><span class="badge rounded-pill status-bg-secondary">Pending Acceptance / Swearing</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill hide"></i>
+								<i class="bi bi-flag  "></i>
 							</div>
 						</td>
 					</tr>
 					<tr>
 
-						<td data-sort="10"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">10</a></td>
-						<td><span class="badge rounded-pill license-bg">License</span></td>
-						<td>2008-12-13</td>
+						<td data-sort="J29895"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> J29895</a></td>
+						<td>2023-06-13</td>
 						<td>NPW104</td>
 						<td>Frost</td>
 						<td>Maine</td>
-						<td>2017-04-07</td>
-						<td>E635</td>
+						<td>2025-04-07</td>
+						<td>1584685</td>
 						<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
 					<tr data-id="11">
-						<td data-sort="11"><a href="Edit-Tracing-en.html"><i class="bi bi-pencil"></i><span class="sr-only">Edit</span></a><a href="View-Tracing-en.html" class="ps-2">11</a></td>
-						<td><span class="badge rounded-pill tracing-bg">Tracing</span></td>
+						<td data-sort="U5723"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> U5723</a></td>
 						<td>2011-04-25</td>
 						<td>NPW104</td>
 						<td>Architect</td>
 						<td>Winters</td>
 						<td>2017-04-07</td>
-						<td>E232</td>
-						<td><span class="badge rounded-pill status-bg-primary">Accepted</span></td>
+						<td>94523</td>
+						<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="glyphicon glyphicon-star"></i>
-								<i class="glyphicon glyphicon-star-empty hide"></i>
+								<i class="bi bi-flag-fill"></i>
+								<i class="bi bi-flag  hide"></i>
 							</div>
 						</td>
 					</tr>
@@ -775,11 +761,19 @@
 			wb.doc.on("wb-ready.wb", function () {
 
 				//Bookmark
-				$('#trackingTables .fav').on('click', ".glyphicon", function (event) {
-					if ($(event.target).hasClass('glyphicon-star')) {
+				$('#tracingTables .fav').on('click', ".bi", function (event) {
+					if ($(event.target).hasClass('bi-flag-fill')) {
 						//Ajax Remove Bookmark
-						toastr.success('trackingTables remove');
-						$(this).closest("tr").hide();
+						toastr.success('Tracking  remove');
+						$(this).closest(".bi-flag-fill").addClass("hide")
+						$(this).siblings(".bi-flag").removeClass("hide")
+					}
+
+					if ($(event.target).hasClass('bi-flag')) {
+						//Ajax Remove Bookmark
+						toastr.success('Tracking added');
+						$(this).closest(".bi-flag").addClass("hide")
+						$(this).siblings(".bi-flag-fill").removeClass("hide")
 					}
 				});
 
