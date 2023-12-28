@@ -259,24 +259,24 @@
 				<h2>Topics menu</h2>
 				<div class="row">
 					<ul role="list" class="list-inline menu">
-						<li class="active" role="listitem"  aria-posinset="1" aria-setsize="6" >
+						<li class="active" role="listitem" aria-posinset="1" aria-setsize="6">
 							<a class="item" href="Index-en.html">
 								<span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
 							</a>
 						</li>
-						<li  aria-posinset="2" aria-setsize="6" role="listitem">
-							<a class="item" href="#tracingList"  aria-haspopup="true">
+						<li aria-posinset="2" aria-setsize="6" role="listitem">
+							<a class="item" href="#tracingList" aria-haspopup="true">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 								Tracing <span class="expicon glyphicon glyphicon-chevron-down"></span>
 							</a>
-							<ul role="list" id="tracingList" class="sm list-unstyled"  aria-expanded="false" aria-hidden="true">
+							<ul role="list" id="tracingList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li aria-posinset="1" aria-setsize="2" role="listitem">
 									<a href="Tracing/List-en.html">
 										<span class="glyphicon glyphicon-list-alt"></span> View Applications
 									</a>
 								</li>
 								<li aria-posinset="2" aria-setsize="2" role="listitem">
-									<a href="Tracing/Create-en.html" >
+									<a href="Tracing/Create-en.html">
 										<span class="glyphicon glyphicon-plus"></span> New Application
 									</a>
 								</li>
@@ -288,7 +288,7 @@
 							</a>
 							<ul role="menu" id="interceptionList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li>
-									<a href="Garnishment/List-en.html"  aria-posinset="1" aria-setsize="2" role="menuitem">
+									<a href="Garnishment/List-en.html" aria-posinset="1" aria-setsize="2" role="menuitem">
 										<span class="glyphicon glyphicon-list-alt"></span> View Applications
 									</a>
 								</li>
@@ -300,14 +300,14 @@
 							</ul>
 						</li>
 						<li aria-posinset="4" aria-setsize="6" role="listitem">
-							<a class="item" href="#licenseDenialList"  aria-haspopup="true">
+							<a class="item" href="#licenseDenialList" aria-haspopup="true">
 								<span class="glyphicon glyphicon-open" aria-hidden="true"></span>
 								License Denial
 								<span class="expicon glyphicon glyphicon-chevron-down"></span>
 							</a>
 							<ul role="list" id="licenseDenialList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li aria-posinset="1" aria-setsize="2" role="listitem">
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about" >
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">
 										<span class="glyphicon glyphicon-list-alt"></span> View Applications
 									</a>
 								</li>
@@ -323,7 +323,7 @@
 								<span class="glyphicon glyphicon-bell"></span> Notification 	<span class="badge badge-error">4</span>
 							</a>
 						</li>
-						<li class="pull-right"  aria-posinset="6" aria-setsize="6" role="listitem" >
+						<li class="pull-right" aria-posinset="6" aria-setsize="6" role="listitem">
 							<a class="item" href="#profileList" aria-haspopup="true">
 								<span class="glyphicon glyphicon-user"></span> Santa Claus (MEP) <span class="expicon glyphicon glyphicon-chevron-down"></span>
 							</a>
@@ -342,6 +342,8 @@
 		</nav>
 
 	</header>
+
+
 
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
 		<h1 id="wb-cont" property="name">Home</h1>
@@ -518,7 +520,7 @@
 
 		</div>
 
-		
+
 
 
 		<dl id="wb-dtmd" class="pull-right">
@@ -632,8 +634,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 	<script>
-	
-
 		document.addEventListener("DOMContentLoaded", function (event) {
 			/*SIN Status*/
 			let sinData = [
@@ -672,7 +672,7 @@
 			let tracingData = [
 				{ label: "Tracing Application", data: [["ESDC", 4], ["CRA", 17], ["Cancelled", 9], ["Inactive", 15]] }
 			];
-			let tracingXAxisLabel = [[0, "ESDC"], [1, "CRA"], [2, "Cancelled"], [3,"Inactive"]];
+			let tracingXAxisLabel = [[0, "ESDC"], [1, "CRA"], [2, "Cancelled"], [3, "Inactive"]];
 
 			$.plot("#t01-bar-graph", tracingData, {
 				series: {
@@ -810,7 +810,7 @@
 					show: false
 				},
 				colors: ["#4B527E"],
-				
+
 			});
 
 			$("#l01-bar-graph").UseTooltip();
@@ -868,20 +868,16 @@
 
 			let search = null;
 
-			$(this).on("plotclick", function (event, pos, item)
-			{
+			$(this).on("plotclick", function (event, pos, item) {
 				isPieChart = item.series.pie.show;
 
-				if (isPieChart)
-				{
+				if (isPieChart) {
 					search = item.series.label;
 				}
-				else
-				{
+				else {
 					let x = item.datapoint[0];
 					let y = item.datapoint[1];
-					if (item)
-					{
+					if (item) {
 						search = item.series.xaxis.ticks[x].label;
 					}
 				}
@@ -890,7 +886,7 @@
 			});
 
 
-			
+
 		};
 	</script>
 </body>
