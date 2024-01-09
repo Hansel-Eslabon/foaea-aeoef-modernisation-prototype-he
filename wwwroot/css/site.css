@@ -527,3 +527,7 @@ text-decoration:none;
 .margin-botton-5 {
 	margin-bottom: 5px;
 }
+
+.text-red {
+	color: firebrick;
+}
