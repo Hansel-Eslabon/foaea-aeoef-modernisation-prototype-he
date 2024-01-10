@@ -958,7 +958,7 @@
 											<input class="form-control numeric" id="garnishedAmountInput" name="garnishedAmountInput" type="text" placeholder="$">
 										</div>
 									</fieldset>
-									<button class="btn btn-primary" id="btnAddSource">Add Another Source</button>
+									<button class="btn btn-primary" id="btnAddSource" type="button">Add Another Source</button>
 
 									<table id="garnishmentOption2Tables" class="table table-striped table-hover">
 										<thead>
@@ -1175,9 +1175,6 @@
 		let doneTypingInterval = 500;  //time in ms (0.5 seconds)
 		let numericInput = document.querySelectorAll('.numeric');
 
-
-
-
 		$('.numeric').each(function (index) {
 			$(this).on("change", function () {
 				clearTimeout(typingTimer);
@@ -1209,6 +1206,24 @@
 
 		//}
 
+
+		$("#btnAddSource").click(function () {
+			var test = '<tr><td>a</td></tr>';
+			var rowCount = $('#garnishmentOption2Tables tr').length;
+			$("#garnishmentOption2Tables tr:last").after(function () {
+				return "<tr data-id='" + rowCount + "'><td>" + "<input class='form-control' id='percentageAmtInput" + rowCount + "' name='percentageAmtInput" + rowCount + "' type='text'  placeholder='%'>" + "</td>"
+					+ "<td" + "<input class='form-control numeric' id='fixedAmountInput" + rowCount + "' name='fixedAmountInput" + rowCount + "' type='text'  placeholder='%'>" + "/td>"
+					+ "<td" + "<input class='form-control numeric' id='garnishedAmountInput" + rowCount + "' name='garnishedAmountInput" + rowCount + "' type='text'  placeholder='%'>" + "/td>"
+					+ "<td" + "<select class='form - control dropdown' id='department" + rowCount+ "'>"
+						+ "<option value = '1' > CPP</option >"
+					+ "						<option value='2'>Employment Insurance</option>"
+					+ "					<option value='3'>Old Age Security</option>"
+					+ "					<option value='4' selected='selected'>Revenue Canada</option>"
+					+ "				<option value='5'>Training Benefits</option>"
+											+ "</select > " + "/td>"
+				+"</tr > ";
+			});
+		});
 
 
 		toastr.options = {
