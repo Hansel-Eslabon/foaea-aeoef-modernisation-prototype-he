@@ -527,7 +527,20 @@ text-decoration:none;
 .margin-botton-5 {
 	margin-bottom: 5px;
 }
+.margin-top-5 {
+	margin-top: 5px;
+}
 
 .text-red {
 	color: firebrick;
+}
+
+.form-control-inline {
+	min-width: 0;
+	width: auto;
+	display: inline;
+}
+
+.form-control-8-size {
+	width: 8em;
 }
