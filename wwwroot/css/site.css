@@ -483,13 +483,41 @@ text-decoration:none;
 	margin-top: 2em;
 }
 
+	.grid-section-black summary:focus, .grid-section-black summary:hover {
+		background-color: #000000;
+		color: #ffffff;
+	}
+
+.grid-section-black summary:focus, .grid-section-blacksummary:hover {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+
+.grid-section-black[open] > summary, .grid-section-black > summary {
+	background-color: #000000;
+	color: #ffffff;
+	font-size: 1.3em;
+}
+
+.grid-section-black[open] {
+	border-color: #000000;
+	padding-bottom: 0px;
+	border-width: 3px;
+	border-radius: 5px;
+}
+
+.grid-section-black {
+	margin-top: 2em;
+}
+
 
 
 .grid-section-padding-bottom-5[open] {
 	padding-bottom: 20px;
 }
 
-.grid-section-red > summary, .grid-section > summary, .grid-section-yellow > summary, .grid-section-green > summary {
+.grid-section-red > summary, .grid-section > summary, .grid-section-yellow > summary, .grid-section-green > summary, .grid-section-black > summary {
 	margin-top: -1.1em;
 }
 
