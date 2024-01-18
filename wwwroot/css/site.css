@@ -572,3 +572,11 @@ text-decoration:none;
 .form-control-8-size {
 	width: 8em;
 }
+
+.bs-stepper-top-icon-5 {
+	top: 5px;
+}
+
+.bs-stepper-left-icon-2 {
+	left: -2px;
+}

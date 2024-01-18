@@ -371,7 +371,7 @@
 						<div class="step" data-target="applicantDetails">
 
 
-							<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true"></span></span>
+							<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon bs-stepper-top-icon-5" aria-hidden="true"></span></span>
 							<br />
 							<span class="bs-stepper-label">Application Details</span>
 
@@ -380,8 +380,8 @@
 
 						<div class="line" style="height: 50px;"></div>
 
-						<div class="step" data-target="debtorDetails">
-							<span class="bs-stepper-circle step-active">
+						<div class="step" data-target="supportPayerInformation">
+							<span class="bs-stepper-circle">
 								<span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span>
 							</span>
 							<br />
@@ -390,9 +390,9 @@
 
 						<div class="line" style="height: 50px;"></div>
 
-						<div class="step" data-target="debtorDetails">
-							<span class="bs-stepper-circle step-active">
-								<span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span>
+						<div class="step" data-target="supportRecipientInformation">
+							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
+								<span class="glyphicon glyphicon-sunglasses bs-stepper-circle-icon" aria-hidden="true"></span>
 							</span>
 							<br />
 							<span class="bs-stepper-label">Support Recipient Information</span>
@@ -400,9 +400,9 @@
 
 						<div class="line" style="height: 50px;"></div>
 
-						<div class="step" data-target="debtorDetails">
-							<span class="bs-stepper-circle step-active">
-								<span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span>
+						<div class="step" data-target="garnisheeSummonsFinancialTermsDetails">
+							<span class="bs-stepper-circle ">
+								<span class="glyphicon glyphicon-usd bs-stepper-circle-icon bs-stepper-top-icon-5 bs-stepper-left-icon-2" aria-hidden="true"></span>
 							</span>
 							<br />
 							<span class="bs-stepper-label">Garnishee Summons Financial Terms</span>
@@ -410,9 +410,9 @@
 
 						<div class="line" style="height: 50px;"></div>
 
-						<div class="step" data-target="debtorDetails">
-							<span class="bs-stepper-circle step-active">
-								<span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span>
+						<div class="step" data-target="garnishmentOptionsDetails">
+							<span class="bs-stepper-circle">
+								<span class="glyphicon glyphicon-equalizer bs-stepper-circle-icon" aria-hidden="true"></span>
 							</span>
 							<br />
 							<span class="bs-stepper-label">Garnishment Options</span>
@@ -428,8 +428,8 @@
 						<form action="#" method="get" id="interception-form" >
 							<section id="menu-bar" class="sticky-top">
 								<a id="btnDraft" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-level-up"></span> Draft</a>
-								<a id="btnSave" class="btn btn-primary btn-lg" href="#" role="button" aria-controls="Save">
-									<span class="glyphicon glyphicon-floppy-disk"></span> Save
+								<a id="btnSubmit" class="btn btn-primary btn-lg" href="#" role="button" aria-controls="Submit">
+									<span class="glyphicon glyphicon-floppy-disk"></span> Submit
 								</a>
 							</section>
 							<details id="applicantDetails" open="open" class="grid-section-red">
@@ -999,33 +999,7 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr data-id="234234">
-													<td>
-														<label for="percentageAmtInput0" class="sr-only">Percentage</label>
-														<input class="form-control form-control-8-size" id="percentageAmtInput0" name="percentageAmtInput0" type="text" data-rule-minlength="2" placeholder="%">
-
-													</td>
-													<td>
-														<label for="garnishedAmountInput0" class="sr-only">Amount to garnish per transaction</label>
-														<input class="form-control numeric form-control-8-size" id="garnishedAmountInput0" name="garnishedAmountInput0" type="text" placeholder="$">
-													</td>
-													<td>
-														<label for="fixedAmountInput0" class="sr-only">Fixed amount (Per payment method)</label>
-														<input class="form-control numeric" id="fixedAmountInput0" name="fixedAmountInput0" type="text" placeholder="$">
-													</td>
-													<td>
-														<select class="form-control dropdown" id="department0">
-															<option value="1">CPP</option>
-															<option value="2">Employment Insurance</option>
-															<option value="3">Old Age Security</option>
-															<option value="4" selected="selected">Revenue Canada</option>
-															<option value="5">Training Benefits</option>
-														</select>
-													</td>
-													<td>
-														<a href="#" class="text-red"><i class="glyphicon glyphicon-remove"></i><span class="sr-only">Delete</span></a>
-													</td>
-												</tr>
+												
 											</tbody>
 										</table>
 									</div>
@@ -1039,8 +1013,6 @@
 									</div>
 								</div>
 							</details>
-
-							<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg">
 						</form>
 					</div>
 				</section>
@@ -1165,30 +1137,26 @@
 
 		document.addEventListener("DOMContentLoaded", function (event) {
 
-			wb.doc.on("wb-ready.wb", function () {
+			wb.doc.on("wb-ready.wb", function ()
+			{
+				//initial load of the page
+				let selectedDetailsId = $('#interception-form details[open="open"]').attr('id');
+				scrollToAnchor(selectedDetailsId, false, true);
 
-				$('input[type=radio][name=reason]').on('change', function () {
-
-					if (this.value === '4') {
-						$('label[for="affidavitFileUpload"]').addClass("required")
-						$('label[for="affidavitFileUpload"] > span').text('Affidavit');
-						$('label[for="affidavitFileUpload"]').append('<strong class="required" aria-hidden="true">(required)</strong>')
-						$('#affidavitFileUpload').attr('required', 'required');
-					}
-					else {
-						if ($('label[for="affidavitFileUpload"] > span:contains("optional")').length === 0) {
-							$('label[for="affidavitFileUpload"]').removeClass("required")
-							$('label[for="affidavitFileUpload"] > span').append('');
-							$('label[for="affidavitFileUpload"] > strong').remove()
-							$('#affidavitFileUpload').removeAttr('required');
-						}
-
-					}
-				});
-
-
-				
+				//bind details click
+				$('#interception-form details > summary').on('click',
+					function () {
+						let clickDetailsId = $(this).attr('id');
+						scrollToAnchor(clickDetailsId, false, false);
+					});
 			});
+
+			//bind stepper icon
+			$('#stepper > .bs-stepper-header > .step').on('click',
+				function () {	
+					let selectedDetailsId = $(this).attr('data-target');
+					scrollToAnchor(selectedDetailsId, true, true);
+				});
 		});
 
 
@@ -1215,26 +1183,42 @@
 		}
 
 
-		//function setActiveStepper() {
-		//	let activeStep = $('.wb-steps-active').parent().attr('id');
+		function setActiveStepper(id) {
+			$('#stepper > .bs-stepper-header > .step > span.step-active').removeClass("step-active");
+			$('#stepper > .bs-stepper-header').find('[data-target=' + id + ']')
+				.children('.bs-stepper-circle').addClass("step-active")
+
+		};
+
+		function scrollToAnchor(aid, isAnimate, isPageLoad) {
+			let aTag = $("#" + aid);
+			$('details').removeAttr("open");
+			setActiveStepper(aid);
+
+			if (isAnimate === true)
+			{
+				$('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
+			}
+			if (isPageLoad === true)
+			{
+				aTag.attr("open", "open");
+			}
+		}
 
 
-		//	$('#stepper > .bs-stepper-header > .step > span.step-active').removeClass("step-active");
 
 
-		//	$('#stepper > .bs-stepper-header').find('[data-target=' + activeStep + ']')
-		//		.children('.bs-stepper-circle').addClass("step-active")
+		$("#btnAddSource").on('click',function () {
+			let rowCount = $('#garnishmentOption2Tables tr').length - 1;
+			let percentage = $('#percentageAmtInput').val();
+			let fixedAmount = $('#fixedAmountInput').val();
+			let garnishAmount = $('#garnishedAmountInput').val();
+			let department = $('input[name="sourceDepartment"]:checked').val();
 
-		//}
-
-
-		$("#btnAddSource").click(function () {
-			var test = '<tr><td>a</td></tr>';
-			var rowCount = $('#garnishmentOption2Tables tr').length -1;
 			$("#garnishmentOption2Tables tr:last").after(function () {
-				return "<tr data-id='" + rowCount + "'><td>" + "<input class='form-control form-control-8-size' id='percentageAmtInput" + rowCount + "' name='percentageAmtInput" + rowCount + "' type='text'  placeholder='%'>" + "</td>"
-					+ "<td>" + "<input class='form-control numeric form-control-8-size' id='fixedAmountInput" + rowCount + "' name='fixedAmountInput" + rowCount + "' type='text'  placeholder='%'>" + "</td>"
-					+ "<td>" + "<input class='form-control numeric' id='garnishedAmountInput" + rowCount + "' name='garnishedAmountInput" + rowCount + "' type='text'  placeholder='%'>" + "</td>"
+				return "<tr data-id='" + rowCount + "'><td>" + "<input class='form-control form-control-8-size' id='percentageAmtInput" + rowCount + "' name='percentageAmtInput" + rowCount + "' type='text'  placeholder='%' value='" + percentage + "'>" + "</td>"
+					+ "<td>" + "<input class='form-control numeric form-control-8-size' id='fixedAmountInput" + rowCount + "' name='fixedAmountInput" + rowCount + "' type='text'  placeholder='%' value='" + fixedAmount  +"'>" + "</td>"
+					+ "<td>" + "<input class='form-control numeric' id='garnishedAmountInput" + rowCount + "' name='garnishedAmountInput" + rowCount + "' type='text'  placeholder='%' value='" + garnishAmount + "'>" + "</td>"
 					+ "<td>" + "<select class='form-control dropdown' id='department" + rowCount+ "'>"
 					+ "<option value='1'>CPP</option>"
 					+ "<option value='2'>Employment Insurance</option>"
@@ -1245,6 +1229,14 @@
 					+ "<td><a href='#' class='text-red'><i class='glyphicon glyphicon-remove'></i><span class='sr-only'>Delete</span></a></td>"
 					+ "</tr>";
 			});
+
+			//set dropdown value
+			$("#department" + rowCount).val(department);
+
+			//clear value
+			$('#percentageAmtInput').val('');
+			$('#fixedAmountInput').val('');
+			$('#garnishedAmountInput').val('');
 		});
 
 
