@@ -425,13 +425,8 @@
 			<div class="col-md-9 col-lg-9 border-left-wb-steps">
 				<section>
 					<div class="wb-frmvld">
-						<form action="#" method="get" id="interception-form" >
-							<section id="menu-bar" class="sticky-top">
-								<a id="btnDraft" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-level-up"></span> Draft</a>
-								<a id="btnSubmit" class="btn btn-primary btn-lg" href="#" role="button" aria-controls="Submit">
-									<span class="glyphicon glyphicon-floppy-disk"></span> Submit
-								</a>
-							</section>
+						<form action="#" method="get" id="interception-form">
+
 							<details id="applicantDetails" open="open" class="grid-section-red">
 								<summary>Application Details</summary>
 								<div>
@@ -449,14 +444,11 @@
 									</div>
 									<div class="form-group">
 										<label for="summonFileUpload" class="required">
-											<span class="field-name">File</span>
+											<span class="field-name">Affidavit</span>
 											<strong class="required" aria-hidden="true">(required)</strong>
 										</label>
 										<input id="summonFileUpload" name="summonFileUpload" type="file" required="required" accept="application/pdf" />
 									</div>
-								</div>
-								<div id="applicantDetails-menu-bar">
-									<div class="buttons"><button class="btn btn-md btn-primary mrgn-bttm-md" type="button">Next</button></div>
 								</div>
 							</details>
 							<details id="supportPayerInformation" class="grid-section">
@@ -518,14 +510,14 @@
 										<input class="form-control" id="address" name="address" type="text" data-rule-minlength="2" size="30">
 									</div>
 									<div class="form-group">
-										<label for="address2" class=""><span class="field-name">Address 2:</span> <strong class="" aria-hidden="true">(optional)</strong></label>
+										<label for="address2" class=""><span class="field-name">Address 2:</span></label>
 										<input class="form-control" id="address2" name="address2" type="text" data-rule-minlength="2" size="30">
 									</div>
 
 									<div class="form-group">
 										<label for="province" class=""><span class="field-name">Province:</span></label>
 										<select name="province" id="province" class="form-control">
-											<option value="">Please select an option</option>
+											<option value="---">Please select</option>
 											<option value="Alberta">Alberta</option>
 											<option value="British Columbia">British Columbia</option>
 											<option value="Manitoba">Manitoba</option>
@@ -535,7 +527,7 @@
 											<option value="Nova Scotia">Nova Scotia</option>
 
 											<option value="Nunavut">Nunavut</option>
-											<option value="Ontario">Ontario</option>
+											<option value="Ontario" selected="selected">Ontario</option>
 											<option value="Prince Edward Island">Prince Edward Island</option>
 											<option value="Quebec">Quebec</option>
 											<option value="Saskatchewan">Saskatchewan</option>
@@ -553,8 +545,8 @@
 									<div class="form-group">
 										<label for="country" class=""><span class="field-name">Country:</span></label>
 										<select name="country" id="country" class="form-control">
-											<option value="">Please select an option</option>
-											<option value="Canada">Canada</option>
+											<option value="---">Please select</option>
+											<option value="Canada" selected="selected">Canada</option>
 											<option value="Afghanistan">Afghanistan</option>
 											<option value="Åland Islands">Åland Islands</option>
 											<option value="Albania">Albania</option>
@@ -803,50 +795,40 @@
 										</select>
 									</div>
 								</div>
-								<div id="supportPayerInformation-menu-bar" class=" margin-botton-5 margin-top-5">
-									<div class="buttons">
-										<button class="btn btn-md btn-default mrgn-rght-sm mrgn-bttm-md" type="button">Previous</button>
-										<button class="btn btn-md btn-primary mrgn-bttm-md" type="button">Next</button>
-									</div>
-								</div>
+
 							</details>
 							<details id="supportRecipientInformation" class="grid-section-yellow">
 								<summary>Support Recipient Information</summary>
 								<div class="form-group">
-									<label for="lastnameRecipient" class="required"><span class="field-name">[17] Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+									<label for="lastnameRecipient" class="required"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
 									<input class="form-control" id="lastnameRecipient" name="lastnameRecipient" type="text" data-rule-minlength="2" required="required">
 								</div>
 								<div class="form-group">
-									<label for="firstnameRecipient" class="required"><span class="field-name">[18] Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+									<label for="firstnameRecipient" class="required"><span class="field-name">Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
 									<input class="form-control" id="firstnameRecipient" name="firstnameRecipient" type="text" data-rule-minlength="2" required="required">
 								</div>
 								<div class="form-group">
-									<label for="othernameRecipient"><span class="field-name">[19] Other given name:</span></label>
+									<label for="othernameRecipient"><span class="field-name">Other given name:</span></label>
 									<input class="form-control" id="othernameRecipient" name="othernameRecipient" type="text" data-rule-minlength="2">
 								</div>
 								<div class="form-group">
-									<label for="dateOfBirthRecipient" class="required"><span class="field-name">[20] Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+									<label for="dateOfBirthRecipient" class="required"><span class="field-name">Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
 									<input class="form-control" id="dateOfBirthRecipient" name="dateOfBirthRecipient" type="date" required="required">
 								</div>
-								<div id="supportRecipientInformation-menu-bar" class=" margin-botton-5 margin-top-5">
-									<div class="buttons">
-										<button class="btn btn-md btn-default mrgn-rght-sm mrgn-bttm-md" type="button">Previous</button>
-										<button class="btn btn-md btn-primary mrgn-bttm-md" type="button">Next</button>
-									</div>
-								</div>
+
 							</details>
 							<details id="garnisheeSummonsFinancialTermsDetails" class="grid-section-green">
 								<summary>Garnishee Summons Financial Terms</summary>
 								<div class="form-group">
-									<label for="lumpSumAmount" class=""><span class="field-name">[21] Lump sum amount $:</span> </label>
-									<input class="form-control" id="lumpSumAmount" name="lumpSumAmount" type="text" data-rule-minlength="2">
+									<label for="lumpSumAmount" class=""><span class="field-name">Lump sum amount $:</span> </label>
+									<input class="form-control numeric" id="lumpSumAmount" name="lumpSumAmount" type="text" data-rule-minlength="2">
 								</div>
 								<div class="form-group">
-									<label for="periodicPayment"><span class="field-name">[22] Periodic payment $:</span>  </label>
-									<input class="form-control" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2">
+									<label for="periodicPayment"><span class="field-name">Periodic payment $:</span>  </label>
+									<input class="form-control numeric" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2">
 								</div>
 								<fieldset class="chkbxrdio-grp">
-									<legend class=""><span class="field-name">[23] Payment period code:</span> </legend>
+									<legend class=""><span class="field-name">Payment period code:</span> </legend>
 									<div class="radio">
 										<label for="weekly"><input type="radio" name="payperiodcode" value="1" id="weekly" data-rule-required="false" /> Weekly</label>
 									</div>
@@ -871,7 +853,7 @@
 								</fieldset>
 
 								<fieldset class="chkbxrdio-grp">
-									<legend class=""><span class="field-name">[24] Are periodic payment cumulative?</span> </legend>
+									<legend class=""><span class="field-name">Are periodic payment cumulative?</span> </legend>
 									<div class="radio">
 										<label for="periodicPayCumulativeNo"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="false" /> No</label>
 									</div>
@@ -880,7 +862,7 @@
 									</div>
 								</fieldset>
 								<fieldset class="chkbxrdio-grp">
-									<legend class=""><span class="field-name">[25] Default Holdbacks</span> </legend>
+									<legend class=""><span class="field-name">Default Holdbacks</span> </legend>
 									<div class="radio">
 										<label for="holdbackNoHoldback"><input type="radio" name="holdback" value="1" id="holdbackNoHoldback" data-rule-required="false" /> No holdback</label>
 									</div>
@@ -917,12 +899,7 @@
 										<label for="fixWeekly"><input type="radio" name="fixPayperiodcode" value="1" id="fixWeekly" data-rule-required="true" /> Weekly</label>
 									</div>
 								</fieldset>
-								<div id="garnisheeSummonsFinancialTermsDetails-menu-bar" class="margin-botton-5 margin-top-5">
-									<div class="buttons">
-										<button class="btn btn-md btn-default mrgn-rght-sm mrgn-bttm-md" type="button">Previous</button>
-										<button class="btn btn-md btn-primary mrgn-bttm-md" type="button">Next</button>
-									</div>
-								</div>
+
 							</details>
 							<details id="garnishmentOptionsDetails" class="grid-section-black">
 								<summary>Garnishment Options</summary>
@@ -999,20 +976,21 @@
 												</tr>
 											</thead>
 											<tbody>
-												
 											</tbody>
 										</table>
 									</div>
 
 
 								</div>
-								<div id="garnishmentOptionsDetails-menu-bar" class=" margin-botton-5 margin-top-5">
-									<div class="buttons">
-										<button class="btn btn-md btn-default mrgn-rght-sm mrgn-bttm-md" type="button">Previous</button>
-										<button class="btn btn-md btn-primary mrgn-bttm-md" type="button">Next</button>
-									</div>
-								</div>
+
 							</details>
+							<section id="menu-bar" class="sticky-top">
+								<a id="btnDraft" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-level-up"></span> Draft</a>
+								<a id="btnSubmit" class="btn btn-primary btn-lg" href="#" role="button" aria-controls="Submit">
+									<span class="glyphicon glyphicon-floppy-disk"></span> Submit
+								</a>
+							</section>
+
 						</form>
 					</div>
 				</section>
@@ -1146,7 +1124,7 @@
 				//bind details click
 				$('#interception-form details > summary').on('click',
 					function () {
-						let clickDetailsId = $(this).attr('id');
+						let clickDetailsId = $(this).parent().attr('id');
 						scrollToAnchor(clickDetailsId, false, false);
 					});
 			});
