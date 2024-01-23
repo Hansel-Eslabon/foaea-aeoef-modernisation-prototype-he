@@ -490,7 +490,7 @@
 										<input class="form-control" id="SIN" name="SIN" type="text" data-rule-minlength="2">
 									</div>
 									<div class="form-group">
-										<label for="montherSurname" class=""><span class="field-name">Mother's surname at her birth:</span></label>
+										<label for="montherSurname" class=""><span class="field-name">Mother's Surname at her birth:</span></label>
 										<input class="form-control" id="montherSurname" name="montherSurname" type="text" data-rule-minlength="2">
 									</div>
 
@@ -820,15 +820,15 @@
 							<details id="garnisheeSummonsFinancialTermsDetails" class="grid-section-green">
 								<summary>Garnishee Summons Financial Terms</summary>
 								<div class="form-group">
-									<label for="lumpSumAmount" class=""><span class="field-name">Lump sum amount $:</span> </label>
+									<label for="lumpSumAmount" class=""><span class="field-name">Lump sum Amount $:</span> </label>
 									<input class="form-control numeric" id="lumpSumAmount" name="lumpSumAmount" type="text" data-rule-minlength="2">
 								</div>
 								<div class="form-group">
-									<label for="periodicPayment"><span class="field-name">Periodic payment $:</span>  </label>
+									<label for="periodicPayment"><span class="field-name">Periodic Payment $:</span>  </label>
 									<input class="form-control numeric" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2">
 								</div>
 								<fieldset class="chkbxrdio-grp">
-									<legend class=""><span class="field-name">Payment period code:</span> </legend>
+									<legend class=""><span class="field-name">Payment Period Code:</span> </legend>
 									<div class="radio">
 										<label for="weekly"><input type="radio" name="payperiodcode" value="1" id="weekly" data-rule-required="false" /> Weekly</label>
 									</div>
@@ -873,13 +873,13 @@
 
 									</div>
 									<div class="radio">
-										<label for="holdbackFixed"><input type="radio" name="holdback" value="2" id="holdbackFixed" />  Fixed Amount</label>
+										<label for="holdbackFixed"><input type="radio" name="holdback" value="3" id="holdbackFixed" />  Fixed Amount</label>
 										<label for="holdbackFixedAmountInput" class="sr-only">Percentage input</label>
 										<input class="form-control" id="holdbackFixedAmountInput" name="holdback3" type="text" data-rule-minlength="2" placeholder="$">
 									</div>
 								</fieldset>
 								<fieldset class="form-inline chkbxrdio-grp">
-									<legend class=""><span class="field-name">Fixed amount Period Code:</span></legend>
+									<legend class=""><span class="field-name">Fixed Amount Period Code:</span></legend>
 									<div class="radio">
 										<label for="fixAnnually"><input type="radio" name="fixPayperiodcode" value="6" id="fixAnnually" /> Annually</label>
 									</div>
@@ -941,14 +941,14 @@
 										<legend class=""><span class="field-name"></span> </legend>
 										<div class="radio">
 											<label for="percentageAmount">
-												<input type="radio" name="garnishedOption" value="1" id="percentageAmount" data-rule-required="false" /> Percentage (Per transaction)
+												<input type="radio" name="garnishedOption" value="1" id="percentageAmount" data-rule-required="false" />A) Percentage (Per transaction)
 											</label>
 											<label for="percentageAmtInput" class="sr-only">Percentage</label>
 											<input class="form-control" id="percentageAmtInput" name="percentageAmtInput" type="text" data-rule-minlength="2" placeholder="%">
 										</div>
 										<div class="radio">
 											<label for="fixedAmount">
-												<input type="radio" name="garnishedOption" value="2" id="fixedAmount" />  Fixed amount (Per payment method)
+												<input type="radio" name="garnishedOption" value="2" id="fixedAmount" />B)  Fixed Amount (Per payment method)
 											</label>
 											<label for="fixedAmountInput" class="sr-only">Fixed amount (Per payment method)</label>
 											<input class="form-control numeric" id="fixedAmountInput" name="fixedAmountInput" type="text" placeholder="$">
@@ -956,7 +956,7 @@
 										</div>
 										<div class="radio">
 											<label for="garnishedAmount">
-												<input type="radio" name="garnishedOption" value="2" id="garnishedAmount" />  Amount to garnish per transaction
+												<input type="radio" name="garnishedOption" value="3" id="garnishedAmount" />C)  Amount to Garnish per Transaction
 											</label>
 											<label for="garnishedAmountInput" class="sr-only">Amount to garnish per transaction</label>
 											<input class="form-control numeric" id="garnishedAmountInput" name="garnishedAmountInput" type="text" placeholder="$">
@@ -1113,6 +1113,7 @@
 
 	<script type="text/javascript">
 
+		//TODO Make CONST and Lookup
 		document.addEventListener("DOMContentLoaded", function (event) {
 
 			wb.doc.on("wb-ready.wb", function ()
@@ -1127,6 +1128,42 @@
 						let clickDetailsId = $(this).parent().attr('id');
 						scrollToAnchor(clickDetailsId, false, false);
 					});
+
+			    //Default Garnishment
+				hideAndClear(false);
+
+				$('input[type=radio][name="holdback"]').on('change', function () {
+					let seletectedValue = $(this).val();
+					hideAndClear(false);
+					switch (seletectedValue) {
+						case '1':
+							break;
+						case '2':
+							show($("#holdbackPercentageInput"));
+							break;
+						case '3':
+							show($("#holdbackFixedAmountInput"));
+							break;
+					}
+				});
+
+				//Override Garnishment
+				hideAndClear(true);
+				$('input[type=radio][name="garnishedOption"]').on('change', function () {
+					let seletectedValue = $(this).val();
+					hideAndClear(true);
+					switch (seletectedValue) {
+						case '1':
+							show($("#percentageAmtInput"));
+							break;
+						case '2':
+							show($("#fixedAmountInput"));
+							break;
+						case '3':
+							show($("#garnishedAmountInput"));
+							break;
+					}
+				});
 			});
 
 			//bind stepper icon
@@ -1135,6 +1172,9 @@
 					let selectedDetailsId = $(this).attr('data-target');
 					scrollToAnchor(selectedDetailsId, true, true);
 				});
+
+
+
 		});
 
 
@@ -1152,7 +1192,39 @@
 				}
 			});
 		});
-			
+
+		$("#btnAddSource").on('click', function () {
+			let rowCount = $('#garnishmentOption2Tables tr').length - 1;
+			let percentage = $('#percentageAmtInput').val();
+			let fixedAmount = $('#fixedAmountInput').val();
+			let garnishAmount = $('#garnishedAmountInput').val();
+			let department = $('input[name="sourceDepartment"]:checked').val();
+
+			$("#garnishmentOption2Tables tr:last").after(function () {
+				return "<tr data-id='" + rowCount + "'><td>" + "<input class='form-control form-control-8-size' id='percentageAmtInput" + rowCount + "' name='percentageAmtInput" + rowCount + "' type='text'  placeholder='%' value='" + percentage + "'>" + "</td>"
+					+ "<td>" + "<input class='form-control numeric form-control-8-size' id='fixedAmountInput" + rowCount + "' name='fixedAmountInput" + rowCount + "' type='text'  placeholder='%' value='" + fixedAmount + "'>" + "</td>"
+					+ "<td>" + "<input class='form-control numeric' id='garnishedAmountInput" + rowCount + "' name='garnishedAmountInput" + rowCount + "' type='text'  placeholder='%' value='" + garnishAmount + "'>" + "</td>"
+					+ "<td>" + "<select class='form-control dropdown' id='department" + rowCount + "'>"
+					+ "<option value='1'>CPP</option>"
+					+ "<option value='2'>Employment Insurance</option>"
+					+ "<option value='3'>Old Age Security</option>"
+					+ "<option value='4' selected='selected'>Revenue Canada</option>"
+					+ "<option value='5'>Training Benefits</option>"
+					+ "</select>" + "</td>"
+					+ "<td><a href='#' class='text-red'><i class='glyphicon glyphicon-remove'></i><span class='sr-only'>Delete</span></a></td>"
+					+ "</tr>";
+			});
+
+			//set dropdown value
+			$("#department" + rowCount).val(department);
+
+			//clear value
+			$('#percentageAmtInput').val('');
+			$('#fixedAmountInput').val('');
+			$('#garnishedAmountInput').val('');
+		});
+
+
 		function doneTyping(e) {
 			// switch between locales
 			//numeral.locale('fr');
@@ -1184,39 +1256,42 @@
 		}
 
 
+		function hideAndClear(isGarnishOptions) {
+			if (isGarnishOptions)
+			{
+				hide($("#percentageAmtInput"));
+				clear($("#percentageAmtInput"));
 
+				clear($("#fixedAmountInput"));
+				hide($("#fixedAmountInput"));
 
-		$("#btnAddSource").on('click',function () {
-			let rowCount = $('#garnishmentOption2Tables tr').length - 1;
-			let percentage = $('#percentageAmtInput').val();
-			let fixedAmount = $('#fixedAmountInput').val();
-			let garnishAmount = $('#garnishedAmountInput').val();
-			let department = $('input[name="sourceDepartment"]:checked').val();
+				clear($("#garnishedAmountInput"));
+				hide($("#garnishedAmountInput"));
+			}
+			else
+			{
+				hide($("#holdbackPercentageInput"));
+				clear($("#holdbackPercentageInput"));
 
-			$("#garnishmentOption2Tables tr:last").after(function () {
-				return "<tr data-id='" + rowCount + "'><td>" + "<input class='form-control form-control-8-size' id='percentageAmtInput" + rowCount + "' name='percentageAmtInput" + rowCount + "' type='text'  placeholder='%' value='" + percentage + "'>" + "</td>"
-					+ "<td>" + "<input class='form-control numeric form-control-8-size' id='fixedAmountInput" + rowCount + "' name='fixedAmountInput" + rowCount + "' type='text'  placeholder='%' value='" + fixedAmount  +"'>" + "</td>"
-					+ "<td>" + "<input class='form-control numeric' id='garnishedAmountInput" + rowCount + "' name='garnishedAmountInput" + rowCount + "' type='text'  placeholder='%' value='" + garnishAmount + "'>" + "</td>"
-					+ "<td>" + "<select class='form-control dropdown' id='department" + rowCount+ "'>"
-					+ "<option value='1'>CPP</option>"
-					+ "<option value='2'>Employment Insurance</option>"
-					+ "<option value='3'>Old Age Security</option>"
-					+ "<option value='4' selected='selected'>Revenue Canada</option>"
-					+ "<option value='5'>Training Benefits</option>"
-					+ "</select>" + "</td>"
-					+ "<td><a href='#' class='text-red'><i class='glyphicon glyphicon-remove'></i><span class='sr-only'>Delete</span></a></td>"
-					+ "</tr>";
-			});
+				clear($("#holdbackFixedAmountInput"));
+				hide($("#holdbackFixedAmountInput"));
+			}
+			
+		}
 
-			//set dropdown value
-			$("#department" + rowCount).val(department);
+		function clear(e)
+		{
+			e.val('');
+		}
+		
 
-			//clear value
-			$('#percentageAmtInput').val('');
-			$('#fixedAmountInput').val('');
-			$('#garnishedAmountInput').val('');
-		});
+		function hide(e) {
+			e.hide();
+		}
 
+		function show(e) {
+			e.show();
+		}
 
 		toastr.options = {
 			"closeButton": true,
