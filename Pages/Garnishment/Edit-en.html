@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title>Create I01 - FOAEA - Justice Canada</title>
+	<title>Edit I01 - FOAEA - Justice Canada</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
@@ -344,7 +344,7 @@
 
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
 
-		<h1 id="wb-cont" property="name">New Garnishment Application</h1>
+		<h1 id="wb-cont" property="name">Edit Garnishment #J29895</h1>
 
 
 		<div class="well well-lg">
@@ -426,7 +426,15 @@
 				<section>
 					<div class="wb-frmvld">
 						<form action="#" method="get" id="interception-form">
+							<section id="status-bar" class="status-bar">
+								<div data-toggle="tooltip" data-placement="bottom" title="Status">
+									<div class="pull-right">
+										<label for="statusDetail" class="label-caption status-font-size">Status:</label>
+										<span class="badge rounded-pill status-bg-primary status-font-size">Awaiting documents for variation</span>
+									</div>
 
+								</div>
+							</section>
 							<details id="applicantDetails" open="open" class="grid-section-red">
 								<summary>Application Details</summary>
 								<div>
@@ -440,7 +448,7 @@
 									</div>
 									<div class="form-group">
 										<label for="summonDate" class="required"><span class="field-name">Garnishee summons issue date:(YYYY-MM-DD)</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-										<input class="form-control" id="summonDate" name="summonDate" type="date" required="required">
+										<input class="form-control" id="summonDate" name="summonDate" type="date" required="required" value="2023-10-10">
 									</div>
 									<div class="form-group">
 										<label for="summonFileUpload" class="required">
@@ -456,11 +464,11 @@
 								<div>
 									<div class="form-group">
 										<label for="lastname" class="required"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-										<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required">
+										<input class="form-control" id="lastname" name="lastname" type="text" data-rule-minlength="2" required="required" value="Brown">
 									</div>
 									<div class="form-group">
 										<label for="firstname" class="required"><span class="field-name">Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
-										<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required">
+										<input class="form-control" id="firstname" name="firstname" type="text" data-rule-minlength="2" required="required" value="Kyle">
 									</div>
 									<div class="form-group">
 										<label for="othername"><span class="field-name">Other Given Name(s):</span></label>
@@ -468,12 +476,12 @@
 									</div>
 									<div class="form-group">
 										<label for="dateOfBirth" class="required"><span class="field-name">Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-										<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
+										<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required" value="1985-12-30">
 									</div>
 									<fieldset class="chkbxrdio-grp">
 										<legend class="required"><span class="field-name">Gender</span> <strong class="required">(required)</strong></legend>
 										<div class="radio">
-											<label for="gender1"><input type="radio" name="gender" value="1" id="gender1" data-rule-required="true" /> Male</label>
+											<label for="gender1"><input type="radio" name="gender" value="1" id="gender1" data-rule-required="true" checked="checked" /> Male</label>
 										</div>
 										<div class="radio">
 											<label for="gender2"><input type="radio" name="gender" value="2" id="gender2" /> Female</label>
@@ -487,7 +495,7 @@
 									</fieldset>
 									<div class="form-group">
 										<label for="SIN" class=""><span class="field-name">Social Insurance Number:</span></label>
-										<input class="form-control" id="SIN" name="SIN" type="text" data-rule-minlength="2">
+										<input class="form-control" id="SIN" name="SIN" type="text" data-rule-minlength="2" value="123456789">
 									</div>
 									<div class="form-group">
 										<label for="montherSurname" class=""><span class="field-name">Surname at Birth of a Parent:</span></label>
@@ -497,7 +505,7 @@
 									<fieldset class="chkbxrdio-grp">
 										<legend class="required"><span class="field-name">Language of choice:</span> <strong class="required">(required)</strong></legend>
 										<div class="radio">
-											<label for="language1"><input type="radio" name="language" value="1" id="language1" data-rule-required="true" /> English</label>
+											<label for="language1"><input type="radio" name="language" value="1" id="language1" data-rule-required="true" checked="checked" /> English</label>
 										</div>
 										<div class="radio">
 											<label for="language2"><input type="radio" name="language" value="2" id="language2" />  Français</label>
@@ -507,7 +515,7 @@
 
 									<div class="form-group">
 										<label for="address" class=""><span class="field-name">Address:</span></label>
-										<input class="form-control" id="address" name="address" type="text" data-rule-minlength="2" size="30">
+										<input class="form-control" id="address" name="address" type="text" data-rule-minlength="2" size="30" value="2680 Hyde Park Road">
 									</div>
 									<div class="form-group">
 										<label for="address2" class=""><span class="field-name">Address 2:</span></label>
@@ -539,7 +547,7 @@
 
 									<div class="form-group">
 										<label for="postalCode" class=""><span class="field-name">Postal Code:</span></label>
-										<input class="form-control" id="postalCode" name="postalCode" type="text" data-rule-minlength="6">
+										<input class="form-control" id="postalCode" name="postalCode" type="text" data-rule-minlength="6" value="N6A 3M9">
 									</div>
 
 									<div class="form-group">
@@ -801,11 +809,11 @@
 								<summary>Support Recipient Information</summary>
 								<div class="form-group">
 									<label for="lastnameRecipient" class="required"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
-									<input class="form-control" id="lastnameRecipient" name="lastnameRecipient" type="text" data-rule-minlength="2" required="required">
+									<input class="form-control" id="lastnameRecipient" name="lastnameRecipient" type="text" data-rule-minlength="2" required="required" value="Fernandez">
 								</div>
 								<div class="form-group">
 									<label for="firstnameRecipient" class="required"><span class="field-name">Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
-									<input class="form-control" id="firstnameRecipient" name="firstnameRecipient" type="text" data-rule-minlength="2" required="required">
+									<input class="form-control" id="firstnameRecipient" name="firstnameRecipient" type="text" data-rule-minlength="2" required="required" value="Darcie">
 								</div>
 								<div class="form-group">
 									<label for="othernameRecipient"><span class="field-name">Other Given Name(s):</span></label>
@@ -813,7 +821,7 @@
 								</div>
 								<div class="form-group">
 									<label for="dateOfBirthRecipient" class="required"><span class="field-name">Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
-									<input class="form-control" id="dateOfBirthRecipient" name="dateOfBirthRecipient" type="date" required="required">
+									<input class="form-control" id="dateOfBirthRecipient" name="dateOfBirthRecipient" type="date" required="required" value="1990-03-17">
 								</div>
 
 							</details>
@@ -825,7 +833,7 @@
 								</div>
 								<div class="form-group">
 									<label for="periodicPayment"><span class="field-name">Periodic Payment $:</span>  </label>
-									<input class="form-control numeric" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2">
+									<input class="form-control numeric" id="periodicPayment" name="periodicPayment" type="text" data-rule-minlength="2" value="646.01">
 								</div>
 								<fieldset class="chkbxrdio-grp">
 									<legend class=""><span class="field-name">Payment Period Code:</span> </legend>
@@ -836,7 +844,7 @@
 										<label for="biweekly"><input type="radio" name="payperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
 									</div>
 									<div class="radio">
-										<label for="monthly"><input type="radio" name="payperiodcode" value="3" id="monthly" /> Monthly</label>
+										<label for="monthly"><input type="radio" name="payperiodcode" value="3" id="monthly" checked="checked" /> Monthly</label>
 									</div>
 									<div class="radio">
 										<label for="quarterly"><input type="radio" name="payperiodcode" value="4" id="quarterly" /> Quarterly</label>
@@ -855,7 +863,7 @@
 								<fieldset class="chkbxrdio-grp">
 									<legend class=""><span class="field-name">Are periodic payment cumulative?</span> </legend>
 									<div class="radio">
-										<label for="periodicPayCumulativeNo"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="false" /> No</label>
+										<label for="periodicPayCumulativeNo"><input type="radio" name="periodicPayCumulative" value="1" id="periodicPayCumulativeNo" data-rule-required="false" checked="checked" /> No</label>
 									</div>
 									<div class="radio">
 										<label for="periodicPayCumulativeYes"><input type="radio" name="periodicPayCumulative" value="2" id="periodicPayCumulativeYes" />  Yes</label>
@@ -864,7 +872,7 @@
 								<fieldset class="chkbxrdio-grp">
 									<legend class=""><span class="field-name">Default Holdbacks</span> </legend>
 									<div class="radio">
-										<label for="holdbackNoHoldback"><input type="radio" name="holdback" value="1" id="holdbackNoHoldback" data-rule-required="false" />A) No holdback</label>
+										<label for="holdbackNoHoldback"><input type="radio" name="holdback" value="1" id="holdbackNoHoldback" data-rule-required="false" checked="checked" />A) No holdback</label>
 									</div>
 									<div class="radio">
 										<label for="holdbackpercentage"><input type="radio" name="holdback" value="2" id="holdbackpercentage" />B) Percentage</label>
@@ -985,9 +993,21 @@
 
 							</details>
 							<section id="menu-bar" class="sticky-top">
-								<a id="btnDraft" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-level-up"></span> Draft</a>
-								<a id="btnSubmit" class="btn btn-primary btn-lg" href="#" role="button" aria-controls="Submit">
-									<span class="glyphicon glyphicon-floppy-disk"></span> Submit
+								<a id="btnSave" class="btn btn-primary btn-lg" href="#" role="button" aria-controls="Save">
+									<span class="glyphicon glyphicon-floppy-disk"></span> Save
+								</a>
+								<a id="transfer" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#transfer-application-popup-modal" role="button" aria-controls="transfer-application-popup-modal">
+									<span class="glyphicon glyphicon-transfer"></span> Transfer
+								</a>
+								<a id="cancel" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#cancel-application-popup-modal" role="button" aria-controls="cancel-application-popup-modal">
+									<span class="glyphicon glyphicon-ban-circle"></span> Cancel
+								</a>
+								<a id="delink" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#delink-application-popup-modal" role="button" aria-controls="delink-application-popup-modal">
+									<span class="glyphicon glyphicon-minus"></span> De-Link
+								</a>
+
+								<a id="link" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#link-application-popup-modal" role="button" aria-controls="link-application-popup-modal">
+									<span class="glyphicon glyphicon-plus"></span> Link
 								</a>
 							</section>
 
