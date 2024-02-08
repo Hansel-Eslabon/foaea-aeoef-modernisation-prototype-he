@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Create L01 - FOAEA - Justice Canada</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
+
+	<!-- TODO ../wwwroot To be replace with ~/ once we transition to actual front end -->
+	<!-- TODO Probably DL all stylesheet and image that links to web address -->
+
+	<link rel="alternate" hreflang="fr" href="wb-disable-fr.html">
+
+	<link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="../../wwwroot/lib/theme-wet-boew/assets/favicon-mobile.png">
+
+	<link href="../../wwwroot/lib/theme-wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
+
+	<link rel="stylesheet" href="../../wwwroot/lib/theme-wet-boew/css/theme.min.css">
+
+	<noscript><link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css"></noscript>
+
+	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+</head>
+
+
+
+
+
+<body vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+	<nav>
+		<ul id="wb-tphp" class="wb-init wb-disable-inited">
+			<li class="wb-slc">
+				<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+			</li>
+			<li class="wb-slc visible-sm visible-md visible-lg">
+				<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+			</li>
+			<li class="wb-slc"><a class="wb-sl" href="?wbdisable=true" rel="alternate">Switch to basic HTML version</a></li>
+		</ul>
+	</nav>
+
+	<header role="banner">
+		<div id="wb-bnr">
+			<div id="wb-bar">
+				<div class="container">
+					<div class="row">
+						<section id="wb-lng" class="visible-md visible-lg">
+							<h2>Language selection</h2>
+							<ul class="text-right">
+								<li>
+									<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
+								</li>
+								<li class="curr">
+									English <span>(current)</span>
+								</li>
+							</ul>
+						</section>
+						<!-- Section for Mobile Menu -->
+						<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
+							<h2>Search and menus</h2>
+							<ul class="pnl-btn list-inline text-right">
+								<li>
+									<a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
+										<span class="glyphicon glyphicon-search">
+											<span class="glyphicon glyphicon-th-list">
+												<span class="wb-inv">Search and menus</span>
+											</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r wb-init" aria-hidden="true">
+								<div class="modal-header">
+									<div class="modal-title">Search and menus</div>
+								</div>
+								<div class="modal-body">
+									<section class="srch-pnl">
+										<h3>Search</h3>
+										<form action="https://google.ca/search" method="get" role="search" class="form-inline">
+											<div class="form-group">
+												<label for="wb-srch-q-imprt">Search website</label>
+												<input id="wb-srch-q-imprt" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+												<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
+											</div>
+											<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
+										</form>
+									</section>
+									<section class="lng-ofr">
+										<h3>Language selection</h3>
+										<ul class="list-inline">
+											<li>
+												<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
+											</li>
+										</ul>
+									</section>
+									<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl" class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
+										<h3>Topics menu</h3>
+										<ul class="list-unstyled mb-menu" role="menu">
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="1" aria-haspopup="true" tabindex="0">WET project</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">About the Web Experience Toolkit</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">Benefits</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/ref/accolades-en.html">Awards, articles and videos</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/events-en.html">Events</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="5" tabindex="-1" href="https://github.com/wet-boew/wet-boew/">Main project page</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="6" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/License-en.html">Terms and conditions</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="7" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/rdmp-en.html">Roadmap of past and future releases</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="8" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/index-en.html">Version history</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="9" aria-posinset="9" tabindex="-1" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="2" aria-haspopup="true" tabindex="-1">Implement WET</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Getting started with WET</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Download WET</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/demos/index-en.html">Working examples</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="3" aria-haspopup="true" tabindex="-1">Contribute to WET</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html">Filing a bug or an issue</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Creating a pull request</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Testing your code</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Developing for WET</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+										</ul>
+									</nav>
+									<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu wb-menu-inited wb-init">
+										<h3>About this site</h3>
+										<ul class="list-unstyled mb-menu" role="menu">
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1" aria-haspopup="true" tabindex="0">Contact us</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1" href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2" aria-haspopup="true" tabindex="-1">About</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1" href="../../index-en.html#about">About the Web Experience Toolkit</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1" rel="external" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3" aria-haspopup="true" tabindex="-1">News</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1" href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a>
+														</li>
+														<li>
+															<a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1" href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+											<li>
+												<details>
+													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4" aria-haspopup="true" tabindex="-1">Stay connected</summary>
+													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
+														<li>
+															<a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1" rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a>
+														</li>
+													</ul>
+												</details>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<div class="modal-footer">
+									<button title="Close overlay" class="btn btn-sm btn-primary pull-left overlay-close" type="button">
+										Close <span class="wb-inv">Close overlay</span>
+									</button>
+								</div>
+								<button title="Close: Search and menus (escape key)" class="mfp-close overlay-close" type="button">
+									× <span class="wb-inv"> Close: Search and menus (escape key)</span>
+								</button>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div id="wb-sttl" class="col-md-8">
+						<a href="#">
+							<img src="../../wwwroot/FOAEA.svg" alt="FOAEA">
+							<span>
+								FOAEA<span class="wb-inv">, </span>
+								<small>Family Orders and Agreements Enforcement Assistance Act System</small>
+							</span>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<nav role="navigation" id="wb-sm" data-ajax-replace="../../ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited" typeof="SiteNavigationElement">
+			<div class="pnl-strt container visible-md visible-lg nvbar">
+				<h2>Topics menu</h2>
+				<div class="row">
+					<ul role="list" class="list-inline menu">
+						<li class="active" role="listitem" aria-posinset="1" aria-setsize="6">
+							<a class="item" href="../Index-en.html">
+								<span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+							</a>
+						</li>
+						<li aria-posinset="2" aria-setsize="6" role="listitem">
+							<a class="item" href="#tracingList" aria-haspopup="true">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								Tracing <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="list" id="tracingList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+								<li aria-posinset="1" aria-setsize="2" role="listitem">
+									<a href="../Tracing/List-en.html">
+										<span class="glyphicon glyphicon-list-alt"></span> View Applications
+									</a>
+								</li>
+								<li aria-posinset="2" aria-setsize="2" role="listitem">
+									<a href="../Tracing/Create-en.html">
+										<span class="glyphicon glyphicon-plus"></span> New Application
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li aria-posinset="3" aria-setsize="6" role="listitem" aria-haspopup="true">
+							<a class="item" href="#interceptionList" aria-haspopup="true">
+								<span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Garnishment <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="menu" id="interceptionList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+								<li>
+									<a href="../Garnishment/List-en.html" aria-posinset="1" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-list-alt"></span> View Applications
+									</a>
+								</li>
+								<li>
+									<a href="../Garnishment/Create-en.html" aria-posinset="2" aria-setsize="2" role="menuitem">
+										<span class="glyphicon glyphicon-plus"></span> New Application
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li aria-posinset="4" aria-setsize="6" role="listitem">
+							<a class="item" href="#licenseDenialList" aria-haspopup="true">
+								<span class="glyphicon glyphicon-open" aria-hidden="true"></span>
+								License Denial
+								<span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="list" id="licenseDenialList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+								<li aria-posinset="1" aria-setsize="2" role="listitem">
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">
+										<span class="glyphicon glyphicon-list-alt"></span> View Applications
+									</a>
+								</li>
+								<li aria-posinset="2" aria-setsize="2" role="listitem">
+									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">
+										<span class="glyphicon glyphicon-plus"></span> New Application
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="border-right" aria-posinset="5" aria-setsize="6" role="listitem">
+							<a href="#notification-panel" class="item overlay-lnk" role="button" aria-controls="notification-panel">
+								<span class="glyphicon glyphicon-bell"></span> Notification 	<span class="badge badge-error">4</span>
+							</a>
+						</li>
+						<li class="pull-right" aria-posinset="6" aria-setsize="6" role="listitem">
+							<a class="item" href="#profileList" aria-haspopup="true">
+								<span class="glyphicon glyphicon-user"></span> Santa Claus (MEP) <span class="expicon glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul role="menu" id="profileList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
+								<li>
+									<a href="../Shared/Tracking-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem">Tracking</a>
+								</li>
+								<li>
+									<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
+
+		<h1 id="wb-cont" property="name">New License Denial Application</h1>
+
+
+		<div class="well well-lg">
+			<p>
+				Welcome to the New License Application! 
+				Get started today and experience the future of license denial at your fingertips. Welcome aboard!
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="row h-100">
+			<div class="col-md-3 col-lg-3 border-right border border-primary hidden-xs my-auto align-self-center">
+				<div id="stepper" class="bs-stepper">
+					
+					<div class="bs-stepper-header">
+
+						<div class="step" data-target="applicantDetails">
+
+				
+								<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true" ></span></span>
+								<br/>
+								<span class="bs-stepper-label">Application Details</span>
+
+
+						</div>
+
+						<div class="line" style="height: 100px;"></div>
+
+						<div class="step" data-target="debtorDetails">
+
+		
+								<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
+								<br />
+								<span class="bs-stepper-label">Debtor's Details</span>
+
+				
+
+						</div>
+
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-9 border-left-wb-steps">
+				<section>
+					<div class="wb-frmvld">
+						<form action="#" method="get" id="licensedenial-form">
+							<details id="applicantDetails" open="open" class="grid-section-red">
+								<summary>Application Details</summary>
+								<div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
+										<label for="referenceCode">Reference Code: (optional)</label>
+										<input class="form-control" id="referenceCode" name="referenceCode" type="text" data-rule-minlength="2">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[3] Court, peace officer or provincial enforcement service reference no.:">
+										<label for="serviceRefNo">Provincial Enforcement Service Reference No.: (optional)</label>
+										<input class="form-control" id="serviceRefNo" name="serviceRefNo" type="text">
+									</div>
+									<div class="form-group">
+										<label for="noticeDate" class="required"><span class="field-name">Date Notice Sent to Support Payor:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+										<input class="form-control" id="noticeDate" name="noticeDate" type="date" required="required">
+									</div>
+									<div class="form-group">
+										<label for="summonFileUpload" class="required">
+											<span class="field-name">Summon</span>
+											<strong class="required" aria-hidden="true">(required)</strong>
+										</label>
+										<input id="summonFileUpload" name="summonFileUpload" type="file" required="required" accept="application/pdf" />
+									</div>
+								</div>
+							</details>
+							<details id="debtorDetails" class="grid-section">
+								<summary>Debtor's Details</summary>
+								<div>
+									<div style="margin-bottom:5px;">
+										<span class="label label-info">Information concerning the person in respect of whom information is requested</span>
+									</div>
+
+
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[4] Surname">
+										<label for="lastnameDetail" class="required"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+										<input class="form-control" id="lastnameDetail" name="lastnameDetail" type="text" data-rule-minlength="2" required="required">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[5] Given Name:">
+										<label for="firstnameDetail" class="required"><span class="field-name">Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+										<input class="form-control" id="firstnameDetail" name="firstnameDetail" type="text" data-rule-minlength="2" required="required">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[6] Other given name">
+										<label for="othername"><span class="field-name">Other Given Name: (optional)</span> </label>
+										<input class="form-control" id="othername" name="othername" type="text" data-rule-minlength="2">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[7] Date of Birth">
+										<label for="dateOfBirth" class="required"><span class="field-name">Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+										<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required">
+									</div>
+									<fieldset class="form-inline chkbxrdio-grp" data-toggle="tooltip" data-placement="bottom" title="[8] Gender">
+										<legend class="required"><span class="field-name">Gender</span><strong class="required">(required)</strong></legend>
+										<label for="genderMale" class="radio-inline"><input type="radio" name="gender" value="1" id="genderMale" required="required" />Male</label>
+										<label for="genderFemale" class="radio-inline"><input type="radio" name="gender" value="2" id="genderFemale" />Female</label>
+										<label for="genderAnother" class="radio-inline"><input type="radio" name="gender" value="3" id="genderAnother" />Another Gender</label>
+										<label for="genderNotAvail" class="radio-inline"><input type="radio" name="gender" value="4" id="genderNotAvail" />Information not available</label>
+									</fieldset>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[9] Social Insurance Number">
+										<label for="sin">Entered Social Insurance Number:  (optional)</label>
+										<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2">
+									</div>
+
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[10] Surname at Birth of a Parent">
+										<label for="surnameBirthParent">Surname at Birth of their Parent: (optional)</label>
+										<input class="form-control" id="surnameBirthParent" name="surnameBirthParent" type="text" data-rule-minlength="2">
+									</div>
+
+									<fieldset class="chkbxrdio-grp" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
+										<legend class="required"><span class="field-name">Reason for application</span> <strong class="required">(required)</strong></legend>
+										<ul class="form-group list-unstyled">
+											<li class="radio">
+												<label for="reason1"><input type="radio" name="reason" value="1" id="reason1" required="required" />Person in default of the support provision</label>
+											</li>
+											<li class="radio">
+												<label for="reason2"><input type="radio" name="reason" value="2" id="reason2" />Person believed to have possession of the child or children in contravention of the custody provision</label>
+											</li>
+											<li class="radio">
+												<label for="reason3"><input type="radio" name="reason" value="3" id="reason3" />Person charged with an offence under 282 or 283 of the Criminal Code</label>
+											</li>
+											<li class="radio">
+												<label for="reason4"><input type="radio" name="reason" value="4" id="reason4" />Missing child</label>
+											</li>
+										</ul>
+									</fieldset>
+
+									<div class="form-group">
+										<label for="affidavitFileUpload" class="">
+											<span class="field-name">Affidavit (optional)</span>
+										</label>
+										<input id="affidavitFileUpload" name="affidavitFileUpload" type="file" accept="application/pdf" />
+									</div>
+								</div>
+							</details>
+						
+							<input type="submit" name="submit" value="Submit" class="btn btn-primary">
+						</form>
+					</div>
+				</section>
+
+			</div>
+
+
+		</div>
+
+
+		<dl id="wb-dtmd" class="pull-right">
+			<dt>Version:</dt>
+			<dd>
+				Prototype
+			</dd>
+		</dl>
+
+
+
+
+
+
+
+	</main>
+
+
+	<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr wb-navcurr-inited">
+		<div class="container">
+			<nav role="navigation" class="row">
+				<h2>About this site</h2>
+				<h3>Department of Justice Canada</h3>
+				<section class="col-sm-4 no-padding-left">
+					<h4><a href="https://jusnet/eng/about-apropos/portfolio/poli/fcy/fla-sadf.html?Subsession_ID=373226782" class="wb-exitscript">Contact us</a></h4>
+					<ul class="list-unstyled">
+						<li><a href="https://www.justice.gc.ca/eng/contact/help-aide.html" class="wb-exitscript">Help</a></li>
+						<li><a href="https://www.justice.gc.ca/eng/contact/link-lien.html" title="Helpful links" class="wb-exitscript">Helpful Links</a></li>
+					</ul>
+				</section>
+				<section class="col-sm-4 no-padding-left">
+					<h4>About</h4>
+					<ul class="list-unstyled">
+						<li>
+							<a rel="external" href="https://laws-lois.justice.gc.ca/eng/acts/f-1.4/" class="wb-exitscript">FOAEA</a>
+						</li>
+						<li>
+							<a rel="external" href="https://www.justice.gc.ca/eng/fl-df/" class="wb-exitscript">Family Law</a>
+						</li>
+					</ul>
+				</section>
+				<section class="col-sm-4 no-padding-left">
+					<h4>News</h4>
+					<ul class="list-unstyled">
+						<li><a href="https://www.justice.gc.ca/eng/news-nouv/nr-cp.html" class="wb-exitscript">News Releases</a></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+		<div id="gc-info">
+			<div class="container">
+				<nav role="navigation" class="row">
+					<h2>Government of Canada footer</h2>
+					<ul class="list-inline">
+						<li><a href="https://juvfoaea1.justice.gc.ca:442/FoaeaServiceWeb/" class="wb-exitscript">Terms and conditions</a></li>
+						<li><a href="https://www.canada.ca/en/transparency/privacy.html" class="wb-exitscript"><span>Privacy</span></a></li>
+						<li id="canada-ca"><a href="https://www.canada.ca/en/index.html">Canada.ca</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</footer>
+
+	<!--Sections-->
+	<section id="notification-panel" class="wb-overlay modal-content overlay-def wb-panel-r">
+		<header class="modal-header">
+			<h2 class="modal-title">Notifications</h2>
+		</header>
+		<div class="modal-body">
+			<ul class="list-unstyled">
+				<li>
+					<p><a href="#">T01 Applications #4545</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #1265</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #1234</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #9543</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #324</a> has been transfer to your office</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+				<li>
+					<p><a href="#">T01 Applications #43434</a> has been cancelled by Santa Claus</p>
+					<p class="mb-0 text-muted"><small>21 Sep 2023</small></p>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
+
+	<script src="../../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
+	<script src="../../wwwroot/lib/wet-boew/js/deps/prettify.min.js"></script>
+
+
+
+
+	<!-- TODO -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+	<!--<link rel="stylesheet" href="https://unpkg.com/bs-stepper/dist/css/bs-stepper.min.css">
+	
+	<script src="https://unpkg.com/bs-stepper/dist/js/bs-stepper.min.js"></script>-->
+
+	<script type="text/javascript">
+
+		document.addEventListener("DOMContentLoaded", function (event) {
+
+			wb.doc.on("wb-ready.wb", function () {
+
+				$('input[type=radio][name=reason]').on('change', function () {
+					
+					if (this.value === '4') {
+						$('label[for="affidavitFileUpload"]').addClass("required")
+						$('label[for="affidavitFileUpload"] > span').text('Affidavit');
+						$('label[for="affidavitFileUpload"]').append('<strong class="required" aria-hidden="true">(required)</strong>')
+						$('#affidavitFileUpload').attr('required', 'required');
+					}
+					else {
+						if ($('label[for="affidavitFileUpload"] > span:contains("optional")').length === 0) {
+							$('label[for="affidavitFileUpload"]').removeClass("required")
+							$('label[for="affidavitFileUpload"] > span').append(' (optional)');
+							$('label[for="affidavitFileUpload"] > strong').remove()
+							$('#affidavitFileUpload').removeAttr('required');
+						}
+
+					}
+				});
+
+				setActiveStepper();
+				$('.steps-wrapper').find('button').on('click', function () {
+					setActiveStepper();
+				});
+
+
+
+
+
+			});
+		});
+
+
+		function setActiveStepper() {
+			let activeStep = $('.wb-steps-active').parent().attr('id');
+
+
+			$('#stepper > .bs-stepper-header > .step > span.step-active').removeClass("step-active");
+
+
+			$('#stepper > .bs-stepper-header').find('[data-target=' + activeStep + ']')
+				.children('.bs-stepper-circle').addClass("step-active")
+
+		}
+
+
+
+		toastr.options = {
+			"closeButton": true,
+			"debug": false,
+			"newestOnTop": false,
+			"progressBar": false,
+			"positionClass": "toast-top-right",
+			"preventDuplicates": false,
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "5000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		}
+	</script>
+</body>
+
+
+</html>
