@@ -306,12 +306,12 @@
 							</a>
 							<ul role="list" id="licenseDenialList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li aria-posinset="1" aria-setsize="2" role="listitem">
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">
+									<a href="../LicenseDenial/List-en.html">
 										<span class="glyphicon glyphicon-list-alt"></span> View Applications
 									</a>
 								</li>
 								<li aria-posinset="2" aria-setsize="2" role="listitem">
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">
+									<a href="../LicenseDenial/Create-en.html">
 										<span class="glyphicon glyphicon-plus"></span> New Application
 									</a>
 								</li>
@@ -349,7 +349,7 @@
 
 		<div class="well well-lg">
 			<p>
-				Welcome to the New License Application! 
+				Welcome to the New License Application!
 				Get started today and experience the future of license denial at your fingertips. Welcome aboard!
 			</p>
 		</div>
@@ -364,15 +364,15 @@
 		<div class="row h-100">
 			<div class="col-md-3 col-lg-3 border-right border border-primary hidden-xs my-auto align-self-center">
 				<div id="stepper" class="bs-stepper">
-					
+
 					<div class="bs-stepper-header">
 
 						<div class="step" data-target="applicantDetails">
 
-				
-								<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true" ></span></span>
-								<br/>
-								<span class="bs-stepper-label">Application Details</span>
+
+							<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true"></span></span>
+							<br />
+							<span class="bs-stepper-label">Application Details</span>
 
 
 						</div>
@@ -381,16 +381,24 @@
 
 						<div class="step" data-target="debtorDetails">
 
-		
-								<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
-								<br />
-								<span class="bs-stepper-label">Debtor's Details</span>
 
-				
+							<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
+							<br />
+							<span class="bs-stepper-label">Debtor's Details</span>
+
+
 
 						</div>
 
-						
+						<div class="line" style="height: 100px;"></div>
+
+						<div class="step" data-target="supportOrderDetails">
+							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
+								<span class="glyphicon glyphicon-sunglasses bs-stepper-circle-icon" aria-hidden="true"></span>
+							</span>
+							<br />
+							<span class="bs-stepper-label">Support Order Details</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1105,7 +1113,59 @@
 									</div>
 								</div>
 							</details>
-						
+							<details id="supportOrderDetails" class="grid-section-yellow">
+								<summary>Support Order in Default</summary>
+								<div>
+									<div class="form-group">
+										<label for="supportOrderDate" class="required"><span class="field-name">Date of Support Order:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+										<input class="form-control" id="supportOrderDate" name="supportOrderDate" type="date" required="required">
+									</div>
+
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[31] Name of Court">
+										<label for="courtName" class="required"><span class="field-name">Name of Court:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+										<input class="form-control" id="courtName" name="courtName" type="text" data-rule-minlength="2" required="required">
+									</div>
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[32] Creditor Surname">
+										<label for="creditorSurname" class="required"><span class="field-name">Creditor Surname:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+										<input class="form-control" id="creditorSurname" name="creditorSurname" type="text" required="required">
+									</div>
+
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[36] Amount of Arrears">
+										<label for="arrearsAmount" class="required"><span class="field-name">Amount of Arrears:</span><strong class="required" aria-hidden="true">(required)</strong></label>
+										<input class="form-control numeric" id="arrearsAmount" name="arrearsAmount" type="text" required="required">
+									</div>
+
+									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[34] Number of payments in default">
+										<label for="numberDefaultPayment">Number of payments in default</label>
+										<input class="form-control" id="numberDefaultPayment" name="numberDefaultPayment" type="number">
+									</div>
+									<fieldset class="chkbxrdio-grp">
+										<legend class=""><span class="field-name">Payment Period Code:</span> </legend>
+										<div class="radio">
+											<label for="weekly"><input type="radio" name="payperiodcode" value="1" id="weekly" data-rule-required="false" /> Weekly</label>
+										</div>
+										<div class="radio">
+											<label for="biweekly"><input type="radio" name="payperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
+										</div>
+										<div class="radio">
+											<label for="monthly"><input type="radio" name="payperiodcode" value="3" id="monthly" /> Monthly</label>
+										</div>
+										<div class="radio">
+											<label for="quarterly"><input type="radio" name="payperiodcode" value="4" id="quarterly" /> Quarterly</label>
+										</div>
+										<div class="radio">
+											<label for="biAnnually"><input type="radio" name="payperiodcode" value="5" id="biAnnually" /> Semi-annually</label>
+										</div>
+										<div class="radio">
+											<label for="annually"><input type="radio" name="payperiodcode" value="6" id="annually" /> Annually</label>
+										</div>
+										<div class="radio">
+											<label for="semiMonthly"><input type="radio" name="payperiodcode" value="7" id="semiMonthly" /> Semi-monthly</label>
+										</div>
+									</fieldset>
+
+								</div>
+							</details>
 							<input type="submit" name="submit" value="Submit" class="btn btn-primary">
 						</form>
 					</div>
@@ -1224,9 +1284,10 @@
 
 	<!-- TODO -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/locales.min.js"></script>
 	<!--<link rel="stylesheet" href="https://unpkg.com/bs-stepper/dist/css/bs-stepper.min.css">
-	
+
 	<script src="https://unpkg.com/bs-stepper/dist/js/bs-stepper.min.js"></script>-->
 
 	<script type="text/javascript">
@@ -1236,7 +1297,7 @@
 			wb.doc.on("wb-ready.wb", function () {
 
 				$('input[type=radio][name=reason]').on('change', function () {
-					
+
 					if (this.value === '4') {
 						$('label[for="affidavitFileUpload"]').addClass("required")
 						$('label[for="affidavitFileUpload"] > span').text('Affidavit');
@@ -1279,7 +1340,26 @@
 
 		}
 
+		let typingTimer;
+		let doneTypingInterval = 500;  //time in ms (0.5 seconds)
+		let numericInput = document.querySelectorAll('.numeric');
 
+		$('.numeric').each(function (index) {
+			$(this).on("change", function () {
+				clearTimeout(typingTimer);
+
+				if ($(this).val()) {
+					typingTimer = setTimeout(doneTyping($(this)), doneTypingInterval);
+				}
+			});
+		});
+
+		function doneTyping(e) {
+			// switch between locales
+			//numeral.locale('fr');
+			let input = e.val();
+			e.val(numeral(input).format('0,0.00'));
+		}
 
 		toastr.options = {
 			"closeButton": true,

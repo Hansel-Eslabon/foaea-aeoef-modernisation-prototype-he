@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title>List T01 Page - FOAEA - Justice Canada</title>
+	<title>List L01 Page - FOAEA - Justice Canada</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="description" content="Aviser l'utilisateur d'une redirection vers un autre site.">
@@ -345,13 +345,13 @@
 
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
 
-		<h1 id="wb-cont" property="name">Tracing Application List</h1>
+		<h1 id="wb-cont" property="name">License Denial Application List</h1>
 
 
 		<div class="well well-lg">
 			<p>
-				Welcome to the Tracing Application List! Here, you can explore and discover a comprehensive collection of tracing applications that will aid you in various tasks. Whether you need to track packages, locate missing devices, or trace phone calls, our extensive list has got you covered. Get ready to streamline your tracing needs with our reliable and user-friendly applications.
-				Start exploring now and make the most out of our Tracing Application List!
+				Welcome to the New License Application!
+				Get started today and experience the future of license denial at your fingertips. Welcome aboard!
 			</p>
 		</div>
 		<div class="row">
@@ -360,7 +360,7 @@
 				<details>
 					<summary><h4 class="h4">Filter Options</h4></summary>
 
-					<form class="wb-tables-filter" data-bind-to="tracingTables">
+					<form class="wb-tables-filter" data-bind-to="licenseDenialTables">
 
 						<div class="col-lg-3">
 							<div class="form-group">
@@ -434,7 +434,7 @@
 
 
 		<div class="table-responsive">
-			<table id="tracingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
+			<table id="licenseDenialTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
 				<thead>
 					<tr>
 						<th>Ctrl Code</th>
@@ -761,7 +761,7 @@
 			wb.doc.on("wb-ready.wb", function () {
 
 				//Bookmark
-				$('#tracingTables .fav').on('click', ".bi", function (event) {
+				$('#licenseDenialTables .fav').on('click', ".bi", function (event) {
 					if ($(event.target).hasClass('bi-flag-fill')) {
 						//Ajax Remove Bookmark
 						toastr.success('Tracking  remove');

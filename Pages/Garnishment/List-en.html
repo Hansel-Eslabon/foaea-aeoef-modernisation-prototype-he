@@ -307,12 +307,12 @@
 							</a>
 							<ul role="list" id="licenseDenialList" class="sm list-unstyled" aria-expanded="false" aria-hidden="true">
 								<li aria-posinset="1" aria-setsize="2" role="listitem">
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">
+									<a href="../LicenseDenial/List-en.html">
 										<span class="glyphicon glyphicon-list-alt"></span> View Applications
 									</a>
 								</li>
 								<li aria-posinset="2" aria-setsize="2" role="listitem">
-									<a href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">
+									<a href="../LicenseDenial/Create-en.html">
 										<span class="glyphicon glyphicon-plus"></span> New Application
 									</a>
 								</li>
@@ -360,7 +360,7 @@
 				<details>
 					<summary><h4 class="h4">Filter Options</h4></summary>
 
-					<form class="wb-tables-filter" data-bind-to="tracingTables">
+					<form class="wb-tables-filter" data-bind-to="garnishmentTables">
 
 						<div class="col-lg-3">
 							<div class="form-group">
@@ -434,7 +434,7 @@
 
 
 		<div class="table-responsive">
-			<table id="tracingTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
+			<table id="garnishmentTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
 				<thead>
 					<tr>
 						<th>Ctrl Code</th>
@@ -761,7 +761,7 @@
 			wb.doc.on("wb-ready.wb", function () {
 
 				//Bookmark
-				$('#tracingTables .fav').on('click', ".bi", function (event) {
+				$('#garnishmentTables .fav').on('click', ".bi", function (event) {
 					if ($(event.target).hasClass('bi-flag-fill')) {
 						//Ajax Remove Bookmark
 						toastr.success('Tracking  remove');
