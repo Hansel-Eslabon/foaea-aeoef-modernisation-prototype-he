@@ -370,7 +370,7 @@
 						<div class="step" data-target="applicantDetails">
 
 
-							<span class="bs-stepper-circle"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true"></span></span>
+							<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true"></span></span>
 							<br />
 							<span class="bs-stepper-label">Application Details</span>
 
@@ -382,7 +382,7 @@
 						<div class="step" data-target="debtorDetails">
 
 
-							<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
+							<span class="bs-stepper-circle"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
 							<br />
 							<span class="bs-stepper-label">Debtor's Details</span>
 
@@ -411,11 +411,11 @@
 								<summary>Application Details</summary>
 								<div>
 									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
-										<label for="referenceCode">Reference Code: (optional)</label>
+										<label for="referenceCode">Reference Code:</label>
 										<input class="form-control" id="referenceCode" name="referenceCode" type="text" data-rule-minlength="2">
 									</div>
 									<div class="form-group" data-toggle="tooltip" data-placement="bottom" title="[3] Court, peace officer or provincial enforcement service reference no.:">
-										<label for="serviceRefNo">Provincial Enforcement Service Reference No.: (optional)</label>
+										<label for="serviceRefNo">Provincial Enforcement Service Reference No.:</label>
 										<input class="form-control" id="serviceRefNo" name="serviceRefNo" type="text">
 									</div>
 									<div class="form-group">
@@ -1113,7 +1113,7 @@
 									</div>
 								</div>
 							</details>
-							<details id="supportOrderDetails" class="grid-section-yellow">
+							<details id="supportOrderDetails" class="grid-section-green">
 								<summary>Support Order in Default</summary>
 								<div>
 									<div class="form-group">
@@ -1315,10 +1315,11 @@
 					}
 				});
 
-				setActiveStepper();
-				$('.steps-wrapper').find('button').on('click', function () {
-					setActiveStepper();
-				});
+				$('#stepper > .bs-stepper-header > .step').on('click',
+					function () {
+						let selectedDetailsId = $(this).attr('data-target');
+						scrollToAnchor(selectedDetailsId, true, true);
+					});
 
 
 
@@ -1327,18 +1328,26 @@
 			});
 		});
 
-
-		function setActiveStepper() {
-			let activeStep = $('.wb-steps-active').parent().attr('id');
-
-
+		function setActiveStepper(id) {
 			$('#stepper > .bs-stepper-header > .step > span.step-active').removeClass("step-active");
-
-
-			$('#stepper > .bs-stepper-header').find('[data-target=' + activeStep + ']')
+			$('#stepper > .bs-stepper-header').find('[data-target=' + id + ']')
 				.children('.bs-stepper-circle').addClass("step-active")
 
+		};
+
+		function scrollToAnchor(aid, isAnimate, isPageLoad) {
+			let aTag = $("#" + aid);
+			$('details').removeAttr("open");
+			setActiveStepper(aid);
+
+			if (isAnimate === true) {
+				$('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
+			}
+			if (isPageLoad === true) {
+				aTag.attr("open", "open");
+			}
 		}
+
 
 		let typingTimer;
 		let doneTypingInterval = 500;  //time in ms (0.5 seconds)
