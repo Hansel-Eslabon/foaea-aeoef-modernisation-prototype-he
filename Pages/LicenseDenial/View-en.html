@@ -344,7 +344,7 @@
 
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container">
 
-		<h1 id="wb-cont" property="name">View License Denial Application - 	F16695</h1>
+		<h1 id="wb-cont" property="name">View License Denial Application - F16695</h1>
 
 
 		<div class="well well-lg">
@@ -377,7 +377,7 @@
 
 						</div>
 
-						<div class="line" style="height: 100px;"></div>
+						<div class="line" style="height: 40px;"></div>
 
 						<div class="step" data-target="debtorDetails">
 
@@ -390,7 +390,27 @@
 
 						</div>
 
-						<div class="line" style="height: 100px;"></div>
+						<div class="line" style="height: 40px;"></div>
+
+						<div class="step" data-target="employerDetails">
+							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
+								<span class="glyphicon glyphicon-equalizer bs-stepper-circle-icon" aria-hidden="true"></span>
+							</span>
+							<br />
+							<span class="bs-stepper-label">Employer Details</span>
+						</div>
+
+						<div class="line" style="height: 40px;"></div>
+
+						<div class="step" data-target="supportRecipientDetails">
+							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
+								<span class="glyphicon glyphicon-leaf bs-stepper-circle-icon" aria-hidden="true"></span>
+							</span>
+							<br />
+							<span class="bs-stepper-label">Suport Recipient Details</span>
+						</div>
+
+						<div class="line" style="height: 40px;"></div>
 
 						<div class="step" data-target="supportOrderDetails">
 							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
@@ -526,63 +546,81 @@
 
 
 
+
+
+
+
+								</div>
+							</details>
+
+							<details id="employerDetails" class="grid-section-green">
+								<summary>Employers Details</summary>
+								<div>
 									<div class="form-group">
-										<label for="employerAddress" class="label-caption">Employer Address:</label>
+										<label for="employerAddress" class="label-caption">Address:</label>
 										<span id="employerAddress" class="label-value"></span>
 									</div>
 									<div class="form-group">
-										<label for="employerAddress2" class="label-caption">Employer Address 2</label>
+										<label for="employerAddress2" class="label-caption">Address 2</label>
 										<span id="employerAddress2" class="label-value" />
 									</div>
 									<div class="form-group">
-										<label for="employerProvince" class="label-caption">Employer Province:</label>
+										<label for="employerProvince" class="label-caption">Province:</label>
 										<span id="employerProvince" class="label-value"></span>
 									</div>
 									<div class="form-group">
-										<label for="employerPostalCode" class="label-caption">Employer Postal Code:</label>
+										<label for="employerPostalCode" class="label-caption">Postal Code:</label>
 										<span id="employerPostalCode" class="label-value"></span>
 									</div>
 
 									<div class="form-group">
-										<label for="employerCountry" class="label-caption">Employer Country:</label>
+										<label for="employerCountry" class="label-caption">Country:</label>
 										<span id="employerCountry" class="label-value"></span>
 									</div>
-
-
+								</div>
+							</details>
+							<details id="supportRecipientDetails" class="grid-section-black">
+								<summary>Suport Recipient Details</summary>
+								<div>
 									<div class="form-group">
-										<label for="supportRecipientLastnameDetail" class="label-caption">Support Recipient Surname:</label>
+										<label for="supportRecipientLastnameDetail" class="label-caption">Surname:</label>
 										<span class="label-value" id="supportRecipientLastnameDetail">GABRIEL</span>
 									</div>
 									<div class="form-group">
-										<label for="supportRecipientFirstnameDetail" class="label-caption">Support Recipient Given Name:</label>
+										<label for="supportRecipientFirstnameDetail" class="label-caption">Given Name:</label>
 										<span class="label-value" id="supportRecipientFirstnameDetail">ALYSON</span>
 									</div>
 									<div class="form-group">
-										<label for="supportRecipientOthername">Support Recipient Other Given Name:</label>
+										<label for="supportRecipientOthername">Other Given Name:</label>
 										<span class="label-value" id="supportRecipientOthername"></span>
 									</div>
 								</div>
 							</details>
-							<details id="supportOrderDetails" class="grid-section-green">
+							<details id="supportOrderDetails" class="grid-section-pink">
 								<summary>Support Order in Default</summary>
 								<div>
 									<div class="form-group">
-										<label for="supportOrderDate">Date of Support Order</label>
-										<span class="form-control" id="supportOrderDate">2017-09-29</span>
+										<label for="supportOrderDate" class="label-caption">Date of Support Order</label>
+										<span class="label-value" id="supportOrderDate">2017-09-29</span>
 									</div>
 
 									<div class="form-group">
-										<label for="courtName">Name of Court:</label>
-										<span class="form-control" id="courtName" name="courtName">EDMONTON</span>
+										<label for="courtName" class="label-caption">Name of Court:</label>
+										<span class="label-value" id="courtName" name="courtName">EDMONTON</span>
 									</div>
 									<div class="form-group">
-										<label for="creditorSurname">Creditor Surname:</label>
-										<span class="form-control" id="creditorSurname">WIEBE</span>
+										<label for="creditorSurname" lass="label-caption">Creditor Surname:</label>
+										<span class="label-value" id="creditorSurname">WIEBE</span>
 									</div>
 
 									<div class="form-group">
-										<label for="arrearsAmount">Amount of Arrears:</label>
-										<span class="form-control numeric" id="arrearsAmount">56358.00</span>
+										<label for="numberDefaultPayment" class="label-caption">Number of payments in default</label>
+										<span class="label-value" id="numberDefaultPayment">65</span>
+									</div>
+
+									<div class="form-group">
+										<label for="arrearsAmount" lass="label-caption">Amount of Arrears:</label>
+										<span class="label-value numeric" id="arrearsAmount">56,358.00</span>
 									</div>
 
 									<div class="form-group">
@@ -750,16 +788,15 @@
 	<script src="../../wwwroot/lib/wet-boew/js/i18n/en.min.js"></script>
 	<script src="../../wwwroot/lib/wet-boew/js/deps/prettify.min.js"></script>
 
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/locales.min.js"></script>
 
 
 	<!-- TODO -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/locales.min.js"></script>
-	<!--<link rel="stylesheet" href="https://unpkg.com/bs-stepper/dist/css/bs-stepper.min.css">
 
-	<script src="https://unpkg.com/bs-stepper/dist/js/bs-stepper.min.js"></script>-->
 
 	<script type="text/javascript">
 
