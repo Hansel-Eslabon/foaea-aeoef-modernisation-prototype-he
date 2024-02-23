@@ -361,7 +361,16 @@
 					<summary><h4 class="h4">Filter Options</h4></summary>
 
 					<form class="wb-tables-filter" data-bind-to="licenseDenialTables">
-
+						<div class="col-lg-3">
+							<div class="form-group">
+								<div class="form-group">
+									<label for="dt_controlcode">Control Code</label>
+									<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="0">
+									<label for="dt_sourceRef">Source Reference</label>
+									<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="6">
+								</div>
+							</div>
+						</div>
 						<div class="col-lg-3">
 							<div class="form-group">
 								<label for="dt_fname">First Name</label>
@@ -383,36 +392,20 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-3">
-							<div class="form-group">
-								<div class="form-group">
-									<label for="dt_minExpiraryDate">Start Expiry Date </label>
-									<input type="date" class="form-control" id="dt_minExpiraryDate" name="dt_minExpiraryDate" data-column="5">
-								</div>
-								<div class="form-group">
-									<label for="dt_maxExpiraryDate">End Expiry Date</label>
-									<input type="date" class="form-control" id="dt_maxExpiraryDate" name="dt_maxExpiraryDate" data-column="5">
-								</div>
-							</div>
-						</div>
+
 
 						<div class="col-lg-3">
 							<div class="form-group">
 								<label for="dt_state">State</label>
 								<select class="form-control" id="dt_state" name="dt_state" data-column="7">
 									<option value="">Any State</option>
-									<option value="Accepted">Accepted</option>
-									<option value="Cancelled">Cancelled</option>
+									<option value="Application accepted">Application accepted</option>
+									<option value="Application Cancelled">Application Cancelled</option>
 									<option value="Completed">Completed</option>
-									<option value="Linked">Linked</option>
-
-									<option value="New">New</option>
-									<option value="Non-Linked">Non-Linked</option>
-
-									<option value="Orphaned">Orphaned</option>
+									<option value="SIN Verified<">SIN Verified</option>
 									<option value="SIN Pending">SIN Pending</option>
-									<option value="Terminated">Terminated</option>
-									<option value="Transferred">Transferred</option>
+									<option value="Manually Terminated">Manually Terminated</option>
+									<option value="Awaiting affidavit">Awaiting affidavit</option>
 								</select>
 							</div>
 						</div>
@@ -456,28 +449,12 @@
 							<a href="View-en.html" class="ps-2"> ZYX1ZM</a>
 						</td>
 						<td>2011-04-25</td>
-						<td>NPW104</td>
+						<td>ABW104</td>
 						<td>Solution</td>
 						<td>Architect</td>
 						<td>2017-04-07</td>
 						<td>0451625</td>
-						<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="bi bi-flag-fill"></i>
-								<i class="bi bi-flag hide"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="S62612">
-						<td data-sort="S62612"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> S62612</a></td>
-						<td>2011-07-25</td>
-						<td>NPW204</td>
-						<td>Winters</td>
-						<td>Summer</td>
-						<td>2019-04-07</td>
-						<td>0753621</td>
-						<td><span class="badge rounded-pill status-bg-brown">Duplicate/Invalid</span></td>
+						<td><span class="badge rounded-pill status-bg-primary">Application accepted</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="bi bi-flag-fill"></i>
@@ -489,12 +466,12 @@
 
 						<td data-sort="99353"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> 99353</a></td>
 						<td>2009-01-12</td>
-						<td>NPW304</td>
+						<td>ABW104</td>
 						<td>Cox</td>
 						<td>Winters</td>
 						<td>2017-04-07</td>
 						<td>1584685</td>
-						<td><span class="badge rounded-pill status-bg-dark">Terminated</span></td>
+						<td><span class="badge rounded-pill status-bg-dark">Application Cancelled</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="bi bi-flag-fill hide"></i>
@@ -506,63 +483,12 @@
 
 						<td data-sort="S4921"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> S4921</a></td>
 						<td>2012-03-29</td>
-						<td>NPW104</td>
+						<td>ABW104</td>
 						<td>Kelly</td>
 						<td>Williams</td>
 						<td>2017-04-07</td>
 						<td>3524789</td>
-						<td><span class="badge rounded-pill status-bg-danger">Rejected</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="bi bi-flag-fill hide"></i>
-								<i class="bi bi-flag  "></i>
-							</div>
-						</td>
-					</tr>
-					<tr>
-
-						<td data-sort="Q16061"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> Q16061</a></td>
-						<td>2008-11-28</td>
-						<td>NPW101</td>
-						<td>Winters</td>
-						<td>Satou</td>
-						<td>2017-04-07</td>
-						<td>34187</td>
-						<td><span class="badge rounded-pill status-bg-pink">Valid Affidavit Not Received</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="bi bi-flag-fill"></i>
-								<i class="bi bi-flag  hide"></i>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td data-sort="F8751"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> F8751</a></td>
-						<td>2012-12-02</td>
-						<td>NPW104</td>
-						<td>Williamson</td>
-						<td>Bradley</td>
-						<td>2017-04-07</td>
-						<td>153485</td>
-						<td><span class="badge rounded-pill status-bg-warning">SIN Not Confirmed</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="bi bi-flag-fill"></i>
-								<i class="bi bi-flag  hide"></i>
-							</div>
-						</td>
-					</tr>
-					<tr>
-
-						<td data-sort="D67400"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> D67400</a></td>
-
-						<td>2022-08-06</td>
-						<td>NPW104</td>
-						<td>Chandler</td>
-						<td>Carter</td>
-						<td>2023-04-07</td>
-						<td>653</td>
-						<td><span class="badge rounded-pill status-bg-purple">Accepted</span></td>
+						<td><span class="badge rounded-pill status-bg-danger">Awaiting affidavit</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="bi bi-flag-fill hide"></i>
@@ -574,12 +500,12 @@
 
 						<td data-sort="C43324"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> C43324</a></td>
 						<td>2010-10-14</td>
-						<td>NPW104</td>
+						<td>ABW104</td>
 						<td>Davidson</td>
 						<td>Duncan</td>
 						<td>2017-04-07</td>
 						<td>97623</td>
-						<td><span class="badge rounded-pill status-bg-info">Partially Serviced</span></td>
+						<td><span class="badge rounded-pill status-bg-warning">Manually Terminated</span></td>
 
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
@@ -588,56 +514,7 @@
 							</div>
 						</td>
 					</tr>
-					<tr>
-
-						<td data-sort="H2142"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> H2142</a></td>
-						<td>20019-09-15</td>
-						<td>NPW104</td>
-						<td>Hurst</td>
-						<td>Summer</td>
-						<td>2017-04-07</td>
-						<td>198725</td>
-						<td><span class="badge rounded-pill status-bg-secondary">Pending Acceptance / Swearing</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="bi bi-flag-fill hide"></i>
-								<i class="bi bi-flag  "></i>
-							</div>
-						</td>
-					</tr>
-					<tr>
-
-						<td data-sort="J29895"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> J29895</a></td>
-						<td>2023-06-13</td>
-						<td>NPW104</td>
-						<td>Frost</td>
-						<td>Maine</td>
-						<td>2025-04-07</td>
-						<td>1584685</td>
-						<td><span class="badge rounded-pill status-bg-success">Completed</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="bi bi-flag-fill"></i>
-								<i class="bi bi-flag  hide"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="11">
-						<td data-sort="U5723"><a href="Edit-en.html"><i class="glyphicon glyphicon-pencil"></i><span class="sr-only">Edit</span></a><a href="View-en.html" class="ps-2"> U5723</a></td>
-						<td>2011-04-25</td>
-						<td>NPW104</td>
-						<td>Architect</td>
-						<td>Winters</td>
-						<td>2017-04-07</td>
-						<td>94523</td>
-						<td><span class="badge rounded-pill status-bg-primary">SIN Pending</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="bi bi-flag-fill"></i>
-								<i class="bi bi-flag  hide"></i>
-							</div>
-						</td>
-					</tr>
+					
 				</tbody>
 			</table>
 		</div>
