@@ -849,23 +849,23 @@
 								<summary>Debtor's Lastest Known Address</summary>
 								<div>
 									<div class="form-group">
-										<label for="employerAddress" class=""><span class="field-name">Address:</span></label>
-										<input class="form-control" id="employerAddress" name="employerAddress" type="text" data-rule-minlength="2" size="30">
+										<label for="debtLastAddress" class=""><span class="field-name">Address:</span></label>
+										<input class="form-control" id="debtLastAddress" name="debtLastAddress" type="text" data-rule-minlength="2" size="30">
 									</div>
 									<div class="form-group">
-										<label for="employerAddress2" class=""><span class="field-name">Address 2:</span></label>
-										<input class="form-control" id="employerAddress2" name="employerAddress2" type="text" data-rule-minlength="2" size="30">
+										<label for="debtLastAddress2" class=""><span class="field-name">Address 2:</span></label>
+										<input class="form-control" id="debtLastAddress2" name="debtLastAddress2" type="text" data-rule-minlength="2" size="30">
 									</div>
 
 
 
 									<div class="form-group">
-										<label for="employerPostalCode" class=""><span class="field-name">Postal Code:</span></label>
-										<input class="form-control" id="employerPostalCode" name="employerPostalCode" type="text" data-rule-minlength="6">
+										<label for="debtLastPostalCode" class=""><span class="field-name">Postal Code:</span></label>
+										<input class="form-control" id="debtLastPostalCode" name="debtLastPostalCode" type="text" data-rule-minlength="6">
 									</div>
 									<div class="form-group">
-										<label for="employerProvince" class=""><span class="field-name">Province:</span></label>
-										<select name="employerProvince" id="employerProvince" class="form-control">
+										<label for="debtLastProvince" class=""><span class="field-name">Province:</span></label>
+										<select name="debtLastProvince" id="debtLastProvince" class="form-control">
 											<option value="---">Please select</option>
 											<option value="Alberta">Alberta</option>
 											<option value="British Columbia">British Columbia</option>
@@ -887,8 +887,8 @@
 									</div>
 
 									<div class="form-group">
-										<label for="employerCountry" class=""><span class="field-name">Country:</span></label>
-										<select name="employerCountry" id="employerCountry" class="form-control">
+										<label for="debtLastCountry" class=""><span class="field-name">Country:</span></label>
+										<select name="debtLastCountry" id="debtLastCountry" class="form-control">
 											<option value="---">Please select</option>
 											<option value="Canada" selected="selected">Canada</option>
 											<option value="Afghanistan">Afghanistan</option>
@@ -1144,7 +1144,7 @@
 								<summary>Reason for Termination</summary>
 								<div class="form-group">
 									<fieldset class="chkbxrdio-grp">
-										<legend class="">	<label for="cancelReasonText" class="required"><span class="field-name">Select Cancellation Reason:</span> <strong class="required" aria-hidden="true">(required)</strong></label></legend>
+										<legend class="required"><span class="field-name">Select Cancellation Reason:</span> <strong class="required">(required)</strong></legend>
 										<div class="radio">
 											<label for="1">
 												<input type="radio" name="cancelReason" value="1" id="1" data-rule-required="true">
@@ -1170,7 +1170,7 @@
 
 								</div>
 								<div class="form-group" id="otherReasonFormGroup">
-									<label for="other" class=""><span class="field-name">Other:</span> </label>
+									<label for="otherReasonTxtArea" class=""><span class="field-name">Other:</span> </label>
 									<textarea id="otherReasonTxtArea" class="form-control" rows="3" cols="100" placeholder="Start typing..."></textarea>
 								</div>
 								</details>
