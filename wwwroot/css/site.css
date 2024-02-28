@@ -187,56 +187,87 @@ table .badge {
 	border-color: #002d42;
 }
 
-.status-bg-primary {
-	color: #ffffff;
-	background-color: #137991 !important;
+.tableHeader {
+	background: #cfcece  !important;
+	font-size: .95em!important;
 }
 
-.status-bg-secondary {
-	color: #ffffff;
-	background-color: #4d5d6c !important;
+.nowrap {
+	white-space: nowrap !important;
 }
-.status-bg-success {
-	color: #ffffff;
-	background-color: #198754 !important;
+
+
+
+.table-bordered-custom > tbody > tr > td {
+	border-left: 1px solid #d5d1d1 !important;
+	/*font-family: Roboto;*/
+	/*font-size: 1.1em;*/
 }
-.status-bg-danger {
-	color: #ffffff;
-	background-color: #d3080c !important;
+
+	.table-bordered-custom > tbody > tr > td:first-child {
+		border-left: none !important;
+	}
+
+.status-badge {
+	display: inline-block;
+	min-width: 10px;
+	border-style: solid;
+	border-radius: 10px;
+	padding: 3px 7px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
 }
-.status-bg-warning {
+
+.status-badge-primary {
+	color: #137991;
+	border-color: #137991;
+}
+
+.status-badge-secondary {
+	color: #4d5d6c;
+	border-color: #4d5d6c !important;
+}
+.status-badge-success {
+	color: #198754;
+	border-color: #198754 !important;
+}
+.status-badge-danger {
+	color: #d3080c;
+	border-color: #d3080c !important;
+}
+.status-badge-warning {
+	color: #7a733d;
+	border-color: #f90 !important;
+}
+
+.status-badge-info {
+	color: #0061A8;
+	border-color: #0061A8 !important;
+}
+.status-badge-light {
+	color: #fff;
+	border-color: #fff !important;
+}
+
+.status-badge-light:hover {
+		color: #176B87;
+	}
+
+.status-badge-dark {
 	color: #212529;
-	background-color: #f90 !important;
-}
-
-.status-bg-info {
-	color: #000000;
-	background-color: #6DD2DA !important;
-	border-color: #6DD2DA;
-	box-shadow: none;
-}
-.status-bg-light {
-	color: #212529;
-	background-color: #fff !important;
-}
-
-.status-bg-light:hover {
-	color: #176B87;
-}
-
-.status-bg-dark {
-	color: #ffffff;
-	background-color: #212529 !important;
+	border-color: #212529 !important;
 }
 
 .status-bg-brown {
-	color: #ffffff;
-	background-color: #815B5B !important;
+	color: #815B5B;
+	border-color: #815B5B !important;
 }
 
 .status-bg-pink {
-	color: #000000;
-	background-color: #F1B4BB !important;
+	color: #F1B4BB;
+	border-color: #F1B4BB !important;
 }
 
 .status-bg-purple {
