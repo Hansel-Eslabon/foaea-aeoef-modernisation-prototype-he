@@ -187,9 +187,12 @@ table .badge {
 	border-color: #002d42;
 }
 
+
+
 .tableHeader {
-	background: #cfcece  !important;
+	background: #ffffff  !important;
 	font-size: .95em!important;
+	color:#000000;
 }
 
 .nowrap {
@@ -197,16 +200,86 @@ table .badge {
 }
 
 
-
 .table-bordered-custom > tbody > tr > td {
 	border-left: 1px solid #d5d1d1 !important;
-	/*font-family: Roboto;*/
-	/*font-size: 1.1em;*/
 }
 
 	.table-bordered-custom > tbody > tr > td:first-child {
 		border-left: none !important;
 	}
+
+/*Descending*/
+table.dataTable thead .sorting-icons::after {
+	content:none;
+	padding: 0 .04em 0 .06em;
+}
+
+/*Ascending*/
+table.dataTable thead .sorting-icons::before {
+	content: none;
+	padding: 0 .1em 0 0;
+}
+
+table.dataTable thead .sorting_asc .sorting-icons::before, table.dataTable thead .sorting_desc .sorting-icons::after {
+	background: unset !important;
+	border: none !important;
+	color: #000;
+}
+
+table.dataTable thead .sorting .sorting-icons::after, table.dataTable thead .sorting .sorting-icons::before, table.dataTable thead .sorting_asc .sorting-icons::after, table.dataTable thead .sorting_desc .sorting-icons::before {
+	background: unset !important;
+	border: none !important;
+	color: #000;
+}
+
+/*Show Icon on Desc*/
+table.dataTable thead .sorting_desc .sorting-icons::after {
+	/*Chevron Down*/
+	content: "\e114";
+}
+
+/*Show Icon on Asc*/
+table.dataTable thead .sorting_asc .sorting-icons::after {
+	/*Chevron Up*/
+	content: "\e113";
+	
+}
+.table-text-center-state td:nth-child(7), .table-text-center-state td:last-child {
+	text-align: center;
+}
+
+/*Add margin to the table filter and table*/
+.table-responsive > div > div {
+	margin-bottom: 20px;
+}
+.no-background-color {
+background:none;
+}
+
+@media (min-width: 1800px) {
+	.container
+
+{
+	width: 1770px;
+}
+
+}
+
+
+.sticky-top {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.fa-solid.fa-flag {
+	color: #D3080C;
+}
+
+.fa-pen-to-square {
+	margin-right:5px;
+}
 
 .status-badge {
 	display: inline-block;
@@ -593,16 +666,7 @@ text-decoration:none;
 	margin-top: 2em;
 }
 
-.sticky-top {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	z-index:100;
-}
 
-.bi-flag-fill {
-	color: #D3080C;
-}
 
 .status-bar {
 	display: flow-root;
