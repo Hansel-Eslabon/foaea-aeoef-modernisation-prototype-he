@@ -55,6 +55,12 @@
 							<h2>Language selection</h2>
 							<ul class="text-right">
 								<li>
+									<!--<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>-->
+									<a href="#notification-panel" class="item overlay-lnk" role="button" aria-controls="notification-panel">
+										<i class="fa-solid fa-bell" aria-hidden="true"></i> Notification 	<span class="badge badge-error">4</span>
+									</a>
+								</li>
+								<li>
 									<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
 								</li>
 								<li class="curr">
@@ -243,7 +249,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<nav class="navbar navbar-default wb-menu wb-init wb-menu-inited wb-navcurr-inited">
+				<nav class="navbar navbar-default  wb-menu  wb-init wb-menu-inited wb-navcurr-inited">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
@@ -255,12 +261,12 @@
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" role="navigation">
+						<div class=" visible-md visible-lg" role="navigation">
 							<ul class="nav navbar-nav list-inline menu" role="list">
 								<li class="active" role="listitem" aria-posinset="1" aria-setsize="6">
 									<a class="item" href="../Index-en.html">
-											<i class="fa-solid fa-house" aria-hidden="true"></i> Home
-											<span class="sr-only">(current)</span>
+										<i class="fa-solid fa-house" aria-hidden="true"></i> Home
+										<span class="sr-only">(current)</span>
 									</a>
 								</li>
 								<li aria-posinset="2" aria-setsize="6" role="listitem">
@@ -268,7 +274,7 @@
 										<i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
 										Tracing <span class="expicon glyphicon glyphicon-chevron-down"></span>
 									</a>
-									<ul role="list" id="tracingList" class="sm list-unstyled dropdown-menu" aria-expanded="false" >
+									<ul role="list" id="tracingList" class="sm list-unstyled dropdown-menu" aria-expanded="false">
 										<li aria-posinset="1" aria-setsize="2" role="listitem">
 											<a href="../Tracing/List-en.html">
 												<i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> View Applications
@@ -285,7 +291,7 @@
 									<a class="item" href="#interceptionList" aria-haspopup="true">
 										<i class="fa-solid fa-money-bill" aria-hidden="true"></i> Garnishment <span class="expicon glyphicon glyphicon-chevron-down"></span>
 									</a>
-									<ul role="menu" id="interceptionList" class="sm list-unstyled dropdown-menu" aria-expanded="false" >
+									<ul role="menu" id="interceptionList" class="sm list-unstyled dropdown-menu" aria-expanded="false">
 										<li>
 											<a href="../Garnishment/List-en.html" aria-posinset="1" aria-setsize="2" role="menuitem">
 												<i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> View Applications
@@ -304,7 +310,7 @@
 										License Denial
 										<span class="expicon glyphicon glyphicon-chevron-down"></span>
 									</a>
-									<ul role="list" id="licenseDenialList" class="sm list-unstyled dropdown-menu" aria-expanded="false" >
+									<ul role="list" id="licenseDenialList" class="sm list-unstyled dropdown-menu" aria-expanded="false">
 										<li aria-posinset="1" aria-setsize="2" role="listitem">
 											<a href="../LicenseDenial/List-en.html">
 												<i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> View Applications
@@ -317,25 +323,32 @@
 										</li>
 									</ul>
 								</li>
+								<li class="dropdown hidden-lg">
+									<a class="item" href="#profileList1" aria-haspopup="true">
+										<span class="glyphicon glyphicon-user"></span> Santa Claus (MEP) <span class="expicon glyphicon glyphicon-chevron-down"></span>
+									</a>
+									<ul role="list" id="profileList1" class="sm list-unstyled dropdown-menu" aria-expanded="false">
+										<li class="navbar-dropdown-list-divider" role="listitem">
+											<a href="../Shared/Tracking-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem"><i class="fa-solid fa-list"></i> Tracking</a>
+										</li>
+										<li role="listitem">
+											<a href="../Index-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 
-							<ul class="nav navbar-nav navbar-right">
-								<li  aria-posinset="5" aria-setsize="6" role="listitem">
-									<a href="#notification-panel" class="item overlay-lnk" role="button" aria-controls="notification-panel">
-										<i class="fa-solid fa-bell" aria-hidden="true"></i> Notification 	<span class="badge badge-error">4</span>
-									</a>
-								</li>
+							<ul class="nav navbar-nav navbar-right visible-lg">
 								<li class="dropdown">
 									<a class="item" href="#profileList" aria-haspopup="true">
 										<span class="glyphicon glyphicon-user"></span> Santa Claus (MEP) <span class="expicon glyphicon glyphicon-chevron-down"></span>
 									</a>
-									<ul role="list" id="profileList" class="sm list-unstyled dropdown-menu" aria-expanded="false" >
+									<ul role="list" id="profileList" class="sm list-unstyled dropdown-menu" aria-expanded="false">
 										<li class="navbar-dropdown-list-divider" role="listitem">
 											<a href="../Shared/Tracking-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem"><i class="fa-solid fa-list"></i> Tracking</a>
 										</li>
-										
 										<li role="listitem">
-											<a href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+											<a href="../Index-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 										</li>
 									</ul>
 								</li>
@@ -343,7 +356,7 @@
 						</div>
 					</div>
 				</nav>
-				
+
 			</div>
 		</div>
 
