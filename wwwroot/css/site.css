@@ -6,6 +6,7 @@
 	--footer-content-info-color: #002d42;
 	--white: #ffffff;
 	--divider-color: #666666;
+	--text-pale: #595050;
 }
 
 
@@ -88,7 +89,7 @@
 }
 
 .container-main {
-	margin-top: 2em;
+	/* margin-top: 2em; */
 	margin-bottom: 2em;
 }
 
@@ -113,6 +114,38 @@
 
 .navbar-default .navbar-nav > li > a {
 	color: var(--navbar-font-color);
+}
+
+.widget-container {
+	padding:unset !important;
+}
+
+.widget {
+	padding: 1em;
+}
+
+.widget .well
+{
+	border-radius: 10px;
+	background-color: var(--white);
+}
+
+.widget-value {
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.widget-caption {
+   color: var(--text-pale);
+}
+
+.float-right {
+	float:right;
+}
+
+.padding-right-15 {
+	padding-right:15px;
+	padding-bottom:5px;
 }
 
 #wb-info, #wb-info a {
@@ -283,6 +316,11 @@ table {
 	}
 
 
+/*Collapsible*/
+#mb-pnl .modal-header {
+	background: var(--footer-content-info-bg-color);
+}
+
 .text-white {
  color: #ffffff;
 }
@@ -323,8 +361,8 @@ table {
 	border-color: #4d5d6c !important;
 }
 .status-badge-success {
-	color: #198754;
-	border-color: #198754 !important;
+	color: #4F7942;
+	border-color: #4F7942 !important;
 }
 .status-badge-danger {
 	color: #d3080c;

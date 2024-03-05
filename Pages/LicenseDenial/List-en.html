@@ -54,129 +54,93 @@
 						<section id="wb-lng" class="visible-md visible-lg">
 							<h2>Language selection</h2>
 							<ul class="text-right">
-								<li>
-									<!--<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>-->
-									<a href="#notification-panel" class="item overlay-lnk" role="button" aria-controls="notification-panel">
-										<i class="fa-solid fa-bell" aria-hidden="true"></i> Notification 	<span class="badge badge-error">4</span>
-									</a>
-								</li>
+
 								<li>
 									<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
 								</li>
 								<li class="curr">
 									English <span>(current)</span>
 								</li>
+								<li>
+									<a href="#notification-panel" class="item overlay-lnk" role="button" aria-controls="notification-panel">
+										<i class="fa-solid fa-bell" aria-hidden="true"></i> Notification 	<span class="badge badge-error">4</span>
+									</a>
+								</li>
 							</ul>
 						</section>
 						<!-- Section for Mobile Menu -->
 						<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
-							<h2>Search and menus</h2>
+							<h2>Header and menus</h2>
 							<ul class="pnl-btn list-inline text-right">
 								<li>
-									<a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
-										<span class="glyphicon glyphicon-search">
+									<a href="#mb-pnl" title="Header and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
 											<span class="glyphicon glyphicon-th-list">
-												<span class="wb-inv">Search and menus</span>
+												<span class="wb-inv">Header and menus</span>
 											</span>
-										</span>
 									</a>
 								</li>
 							</ul>
 							<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r wb-init" aria-hidden="true">
 								<div class="modal-header">
-									<div class="modal-title">Search and menus</div>
+									<div class="modal-title">Header and menus</div>
 								</div>
 								<div class="modal-body">
-									<section class="srch-pnl">
-										<h3>Search</h3>
-										<form action="https://google.ca/search" method="get" role="search" class="form-inline">
-											<div class="form-group">
-												<label for="wb-srch-q-imprt">Search website</label>
-												<input id="wb-srch-q-imprt" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
-												<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/">
-											</div>
-											<button type="submit" id="wb-srch-sub-imprt" class="btn btn-default">Search</button>
-										</form>
-									</section>
-									<section class="lng-ofr">
-										<h3>Language selection</h3>
-										<ul class="list-inline">
-											<li>
-												<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
-											</li>
-										</ul>
-									</section>
 									<nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl" class="sm-pnl wb-menu wb-menu-inited wb-init wb-navcurr-inited">
-										<h3>Topics menu</h3>
 										<ul class="list-unstyled mb-menu" role="menu">
-											<li>
+											<li aria-posinset="1" aria-setsize="4" tabindex="-1" role="menuitem">
+												<a class="item" href="../Index-en.html">
+													<i class="fa-solid fa-house" aria-hidden="true"></i> Home
+												</a>
+											</li>
+											<li aria-posinset="2" aria-setsize="4" tabindex="-1" role="menuitem">
 												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="1" aria-haspopup="true" tabindex="0">WET project</summary>
+													<summary class="mb-item" aria-haspopup="true">Tracing</summary>
 													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/index-en.html#about">About the Web Experience Toolkit</a>
+														<li role="menuitem" aria-setsize="3" aria-posinset="1" tabindex="-1">
+															<a href="../Tracing/List-en.html">
+																<i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> View Applications
+															</a>
 														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/index-en.html#benefits">Benefits</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/ref/accolades-en.html">Awards, articles and videos</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/events-en.html">Events</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="5" tabindex="-1" href="https://github.com/wet-boew/wet-boew/">Main project page</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="6" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/License-en.html">Terms and conditions</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="7" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/rdmp-en.html">Roadmap of past and future releases</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="8" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/index-en.html">Version history</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="9" aria-posinset="9" tabindex="-1" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+														<li role="menuitem" aria-setsize="3" aria-posinset="2" tabindex="-1">
+															<a href="../Tracing/Create-en.html">
+																<i class="fa-solid fa-plus" aria-hidden="true"></i>  New Application
+															</a>
 														</li>
 													</ul>
 												</details>
 											</li>
-											<li>
+											<li aria-posinset="3" aria-setsize="4" tabindex="-1" role="menuitem">
 												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="2" aria-haspopup="true" tabindex="-1">Implement WET</summary>
+													<summary class="mb-item" aria-haspopup="true">Garnishment</summary>
 													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/start-en.html">Getting started with WET</a>
+														<li role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1">
+															<a href="../Garnishment/List-en.html">
+																<i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> View Applications
+															</a>
 														</li>
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html">Download WET</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/v4.0-ci/demos/index-en.html">Working examples</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
+														<li role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1">
+															<a href="../Garnishment/Create-en.html">
+																<i class="fa-solid fa-plus" aria-hidden="true"></i>  New Application
+															</a>
 														</li>
 													</ul>
 												</details>
 											</li>
-											<li>
+											<li aria-posinset="4" aria-setsize="4" tabindex="-1" role="menuitem">
 												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="7" aria-posinset="3" aria-haspopup="true" tabindex="-1">Contribute to WET</summary>
+													<summary class="mb-item" aria-haspopup="true">License Denial</summary>
 													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/bugs-en.html">Filing a bug or an issue</a>
+
+														<li role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1">
+															<a href="../LicenseDenial/List-en.html">
+																<i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> View Applications
+																<span class="sr-only">(current)</span>
+															</a>
 														</li>
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/pull-en.html">Creating a pull request</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/pull-en.html#test">Testing your code</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="4" aria-posinset="4" tabindex="-1" href="https://wet-boew.github.io/wet-boew/docs/start-en.html#develop">Developing for WET</a>
+														<li role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1">
+															<a href="../LicenseDenial/Create-en.html">
+																<i class="fa-solid fa-plus" aria-hidden="true"></i> New Application
+															</a>
 														</li>
 													</ul>
 												</details>
@@ -184,53 +148,20 @@
 										</ul>
 									</nav>
 									<nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu wb-menu-inited wb-init">
-										<h3>About this site</h3>
 										<ul class="list-unstyled mb-menu" role="menu">
-											<li>
-												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="1" aria-haspopup="true" tabindex="0">Contact us</summary>
-													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-														<li>
-															<a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1" href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a>
-														</li>
-													</ul>
-												</details>
+											<li role="menuitem" aria-setsize="4" aria-posinset="1" tabindex="-1">
+												<a lang="fr" hreflang="fr" href="wb-disable-fr.html">Français</a>
 											</li>
-											<li>
-												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="2" aria-haspopup="true" tabindex="-1">About</summary>
-													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-														<li>
-															<a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1" href="../../index-en.html#about">About the Web Experience Toolkit</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1" rel="external" href="https://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
-														</li>
-													</ul>
-												</details>
+											<li role="menuitem" aria-setsize="4" aria-posinset="2" tabindex="-1">
+												<a href="#notification-panel" class="item overlay-lnk" role="button" aria-controls="notification-panel">
+													<i class="fa-solid fa-bell" aria-hidden="true"></i>  Notification <span class="badge badge-error">4</span>
+												</a>
 											</li>
-											<li>
-												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="3" aria-haspopup="true" tabindex="-1">News</summary>
-													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-														<li>
-															<a role="menuitem" aria-setsize="2" aria-posinset="1" tabindex="-1" href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a>
-														</li>
-														<li>
-															<a role="menuitem" aria-setsize="2" aria-posinset="2" tabindex="-1" href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a>
-														</li>
-													</ul>
-												</details>
+											<li role="menuitem" aria-setsize="4" aria-posinset="3" tabindex="-1">
+												<a href="../Shared/Tracking-en.html"><i class="fa-solid fa-list"></i> Tracking</a>
 											</li>
-											<li>
-												<details>
-													<summary class="mb-item" role="menuitem" aria-setsize="4" aria-posinset="4" aria-haspopup="true" tabindex="-1">Stay connected</summary>
-													<ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true">
-														<li>
-															<a role="menuitem" aria-setsize="1" aria-posinset="1" tabindex="-1" rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a>
-														</li>
-													</ul>
-												</details>
+											<li tabindex="-1" aria-posinset="4" aria-setsize="4" role="menuitem">
+												<a href="../Index-en.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 											</li>
 										</ul>
 									</nav>
@@ -254,7 +185,6 @@
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
 							<a class="navbar-brand" href="#">
-								<!--<img src="../../wwwroot/Capture-test-1.svg" alt="FOAEA" class="">-->
 								<i class="fa-solid fa-scale-balanced"> </i>
 								<span style="padding-left:10px;">FOAEA</span>
 							</a>
@@ -291,14 +221,14 @@
 									<a class="item" href="#interceptionList" aria-haspopup="true">
 										<i class="fa-solid fa-money-bill" aria-hidden="true"></i> Garnishment <span class="expicon glyphicon glyphicon-chevron-down"></span>
 									</a>
-									<ul role="menu" id="interceptionList" class="sm list-unstyled dropdown-menu" aria-expanded="false">
-										<li>
-											<a href="../Garnishment/List-en.html" aria-posinset="1" aria-setsize="2" role="menuitem">
+									<ul role="list" id="interceptionList" class="sm list-unstyled dropdown-menu" aria-expanded="false">
+										<li aria-posinset="1" aria-setsize="2" role="listitem">
+											<a href="../Garnishment/List-en.html" >
 												<i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> View Applications
 											</a>
 										</li>
-										<li>
-											<a href="../Garnishment/Create-en.html" aria-posinset="2" aria-setsize="2" role="menuitem">
+										<li  aria-posinset="2" aria-setsize="2" role="listitem">
+											<a href="../Garnishment/Create-en.html">
 												<i class="fa-solid fa-plus" aria-hidden="true"></i>  New Application
 											</a>
 										</li>
@@ -344,11 +274,11 @@
 										<span class="glyphicon glyphicon-user"></span> Santa Claus (MEP) <span class="expicon glyphicon glyphicon-chevron-down"></span>
 									</a>
 									<ul role="list" id="profileList" class="sm list-unstyled dropdown-menu" aria-expanded="false">
-										<li class="navbar-dropdown-list-divider" role="listitem">
-											<a href="../Shared/Tracking-en.html" tabindex="-1" aria-posinset="1" aria-setsize="2" role="menuitem"><i class="fa-solid fa-list"></i> Tracking</a>
+										<li class="navbar-dropdown-list-divider" aria-posinset="1" aria-setsize="2" role="listitem">
+											<a href="../Shared/Tracking-en.html"><i class="fa-solid fa-list"></i> Tracking</a>
 										</li>
-										<li role="listitem">
-											<a href="../Index-en.html" tabindex="-1" aria-posinset="2" aria-setsize="2" role="menuitem"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+										<li  aria-posinset="2" aria-setsize="2" role="listitem">
+											<a href="../Index-en.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 										</li>
 									</ul>
 								</li>
@@ -362,6 +292,43 @@
 
 	</header>
 
+	<section id="widget-section" class="visible-lg">
+		<div class="container widget-container">
+			<div class="col-lg-3 widget">
+				<div class="well">
+					<div data-id="wdiget" class="">
+						<div class="widget-value">4</div>
+						<div class="widget-caption">SIN not confirmed this month</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 widget">
+				<div class="well">
+					<div data-id="wdiget" class="">
+						<div class="widget-value">8</div>
+						<div class="widget-caption">SIN Pending this month</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 widget">
+				<div class="well">
+					<div data-id="wdiget" class="">
+						<div class="widget-value">10</div>
+						<div class="widget-caption">Application Accepted this month</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 widget">
+				<div class="well">
+					<div data-id="wdiget" class="">
+						<div class="widget-value">4</div>
+						<div class="widget-caption">Expired this month</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container container-main container-round">
 
 		<h1 id="wb-cont" property="name">License Denial Application List</h1>
@@ -374,6 +341,11 @@
 			</p>
 		</div>
 		<div class="row">
+
+			<div id="menu" class="visible-lg visible-md visible-sm float-right padding-right-15">
+				<button class="btn btn-large btn-primary"><i class="fa-solid fa-plus"></i> Add</button>
+			</div>
+		
 			<div class="col-md-12" id="adv-filter">
 				<h4 class="wb-inv">Filtering Options</h4>
 				<details>
@@ -383,32 +355,35 @@
 						<div class="col-lg-3">
 							<div class="form-group">
 								<div class="form-group">
+									<label for="dt_category">Category</label>
+									<select class="form-control" id="dt_category" name="dt_category" data-column="0">
+										<option value="">Any Category</option>
+										<option value="L01">L01</option>
+										<option value="L03">L03</option>
+									</select>
 									<label for="dt_controlcode">Control Code</label>
-									<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="0">
+									<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="1">
 									<label for="dt_sourceRef">Source Reference</label>
-									<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="6">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3">
-							<div class="form-group">
-								<label for="dt_fname">First Name</label>
-								<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="3">
+									<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="3">
 
-								<label for="dt_lname">Last Name</label>
-								<input type="text" class="form-control" id="dt_lname" name="dt_lname" data-column="4">
+								</div>
 							</div>
 						</div>
 						<div class="col-lg-3">
 							<div class="form-group">
-								<div class="form-group">
+								<label for="dt_fname">Debtor's First Name</label>
+								<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="5">
+
+								<label for="dt_lname">Debtor's Last Name</label>
+								<input type="text" class="form-control" id="dt_lname" name="dt_lname" data-column="5">
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
 									<label for="dt_mindate">Start Date Received</label>
-									<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="1">
-								</div>
-								<div class="form-group">
+									<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="4">
 									<label for="dt_maxdate">End Date Received</label>
-									<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="1">
-								</div>
+									<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="4">
 							</div>
 						</div>
 
@@ -416,21 +391,27 @@
 						<div class="col-lg-3">
 							<div class="form-group">
 								<label for="dt_state">State</label>
-								<select class="form-control" id="dt_state" name="dt_state" data-column="7">
+								<select class="form-control" id="dt_state" name="dt_state" data-column="6">
 									<option value="">Any State</option>
 									<option value="Application accepted">Application accepted</option>
 									<option value="Application Cancelled">Application Cancelled</option>
-									<option value="Completed">Completed</option>
-									<option value="SIN Verified<">SIN Verified</option>
-									<option value="SIN Pending">SIN Confirmation Pending</option>
-									<option value="Manually Terminated">Manually Terminated</option>
 									<option value="Awaiting affidavit">Awaiting affidavit</option>
+									<option value="Completed">Completed</option>
+									<option value="Expired">Expired</option>
+									<option value="Manually Terminated">Manually Terminated</option>
+									<option value="Partially serviced">Partially serviced</option>
+									<option value="SIN Verified<">SIN Verified</option>
+									<option value="SIN Confirmation Pending">SIN Confirmation Pending</option>
+									<option value="SIN not confirmed"> SIN Not Confirmed</option>
+
+
+
 								</select>
 							</div>
 						</div>
 						<div class="col-lg-3">
 							<div class="form-group">
-								<button type="submit" class="btn btn-primary " aria-controls="tracingTables">Filter</button>
+								<button type="submit" class="btn btn-primary " aria-controls="licenseDenialTables">Filter</button>
 							</div>
 							<div class="form-group">
 								<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
@@ -470,7 +451,7 @@
 						<td>2344471</td>
 						<td>2023-09-25</td>
 						<td>Chan, Harvey</td>
-						<td><span class="status-badge status-badge-warning">SIN confirmation pending</span></td>
+						<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="fa-regular fa-flag hide"></i>
@@ -488,7 +469,7 @@
 						<td>6345471</td>
 						<td>2023-09-25</td>
 						<td>Chua, Aang</td>
-						<td><span class="status-badge status-badge-warning">SIN confirmation pending</span></td>
+						<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
 						<td>
 							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 								<i class="fa-regular fa-flag hide"></i>
