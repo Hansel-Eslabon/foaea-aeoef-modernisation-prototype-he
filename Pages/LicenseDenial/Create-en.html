@@ -20,6 +20,8 @@
 
 	<noscript><link rel="stylesheet" href="../wwwroot/lib/wet-boew/css/noscript.min.css"></noscript>
 
+	<link rel="stylesheet" href="../../wwwroot/lib/font-awesome/css/all.min.css">
+
 	<link rel="stylesheet" href="../../wwwroot/css/site.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
@@ -42,7 +44,7 @@
 		</ul>
 	</nav>
 
-	<header role="banner">
+	<header role="banner" class="sticky-top">
 		<div id="wb-bnr">
 			<div id="wb-bar">
 				<div class="container">
@@ -189,7 +191,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class=" visible-md visible-lg" role="navigation">
 							<ul class="nav navbar-nav list-inline menu" role="list">
-								<li class="active" role="listitem" aria-posinset="1" aria-setsize="6">
+								<li role="listitem" aria-posinset="1" aria-setsize="6">
 									<a class="item" href="../Index-en.html">
 										<i class="fa-solid fa-house" aria-hidden="true"></i> Home
 										<span class="sr-only">(current)</span>
@@ -240,7 +242,7 @@
 										</li>
 									</ul>
 								</li>
-								<li aria-posinset="4" aria-setsize="6" role="listitem">
+								<li class="active"  aria-posinset="4" aria-setsize="6" role="listitem">
 									<a class="item" href="#licenseDenialList" aria-haspopup="true">
 										<i class="fa-solid fa-id-card" aria-hidden="true"></i>
 										License Denial
@@ -336,7 +338,7 @@
 						<div class="step" data-target="applicantDetails">
 
 
-							<span class="bs-stepper-circle step-active"><span class="glyphicon glyphicon-king bs-stepper-circle-icon" aria-hidden="true"></span></span>
+							<span class="bs-stepper-circle step-active"><i class="fa-solid fa-list-check bs-stepper-circle-icon" aria-hidden="true"></i></span>
 							<br />
 							<span class="bs-stepper-label">Application Details</span>
 
@@ -348,7 +350,7 @@
 						<div class="step" data-target="debtorDetails">
 
 
-							<span class="bs-stepper-circle"><span class="glyphicon glyphicon-user bs-stepper-circle-icon" aria-hidden="true"></span></span>
+							<span class="bs-stepper-circle"><i class="fa-solid fa-user bs-stepper-circle-icon"></i></span>
 							<br />
 							<span class="bs-stepper-label">Debtor's Details</span>
 
@@ -360,7 +362,7 @@
 
 						<div class="step" data-target="employerDetails">
 							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
-								<span class="glyphicon glyphicon-equalizer bs-stepper-circle-icon" aria-hidden="true"></span>
+								<i class="fa-regular fa-address-card bs-stepper-circle-icon" aria-hidden="true"></i>
 							</span>
 							<br />
 							<span class="bs-stepper-label">Employer Details</span>
@@ -370,7 +372,7 @@
 
 						<div class="step" data-target="supportRecipientDetails">
 							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
-								<span class="glyphicon glyphicon-leaf bs-stepper-circle-icon" aria-hidden="true"></span>
+								<i class="fa-solid fa-user-shield bs-stepper-circle-icon" aria-hidden="true"></i>
 							</span>
 							<br />
 							<span class="bs-stepper-label">Suport Recipient Details</span>
@@ -380,7 +382,7 @@
 
 						<div class="step" data-target="supportOrderDetails">
 							<span class="bs-stepper-circle  bs-stepper-top-icon-5">
-								<span class="glyphicon glyphicon-sunglasses bs-stepper-circle-icon" aria-hidden="true"></span>
+								<i class="fa-solid fa-money-check-dollar bs-stepper-circle-icon" aria-hidden="true"></i>
 							</span>
 							<br />
 							<span class="bs-stepper-label">Support Order Details</span>

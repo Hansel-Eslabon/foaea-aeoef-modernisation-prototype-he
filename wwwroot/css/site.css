@@ -564,6 +564,7 @@ text-decoration:none;
 
 .bs-stepper-circle-icon {
 	font-size: 38px;
+	padding: 3px;
 }
 .bs-stepper .line, .bs-stepper-line {
 	background-color: rgba(0,0,0,.12);
