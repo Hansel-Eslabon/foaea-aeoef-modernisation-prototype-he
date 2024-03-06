@@ -7,6 +7,8 @@
 	--white: #ffffff;
 	--divider-color: #666666;
 	--text-pale: #595050;
+	--body-bg-gray: #f9f9f9;
+	--black: #000000;
 }
 
 
@@ -630,12 +632,6 @@ text-decoration:none;
 	color: #ffffff;
 }
 
-.grid-section summary:focus, .grid-section summary:hover {
-	background-color: #245269;
-	color: #ffffff;
-}
-
-
 .grid-section [open] > summary, .grid-section > summary {
 	background-color: #245269;
 	color: #ffffff;
@@ -643,7 +639,6 @@ text-decoration:none;
 }
 
 .grid-section[open] {
-	border-color: #245269;
 	padding-bottom: 0px;
 	border-width: 3px;
 	border-radius: 5px;
@@ -659,11 +654,7 @@ text-decoration:none;
 	color: #ffffff;
 }
 
-		.grid-section-red summary:focus .red, .grid-section-red summary:hover  {
-			background-color: firebrick;
-			color: #ffffff;
-		}
-
+		
 
 .grid-section-red [open] > summary, .grid-section-red > summary {
 	background-color: firebrick;
@@ -686,12 +677,6 @@ text-decoration:none;
 	background-color: #FFC436;
 	color: #000000;
 }
-
-.grid-section-yellow summary:focus, .grid-section-yellow summary:hover {
-	background-color: #FFC436;
-	color: #000000;
-}
-
 
 .grid-section-yellow [open] > summary, .grid-section-yellow > summary {
 	background-color: #FFC436;
@@ -717,12 +702,6 @@ text-decoration:none;
 	color: #ffffff;
 }
 
-.grid-section-green summary:focus, .grid-section-green summary:hover {
-	background-color: #278400;
-	color: #ffffff;
-}
-
-
 .grid-section-green[open] > summary, .grid-section-green > summary {
 	background-color: #278400;
 	color: #ffffff;
@@ -745,11 +724,6 @@ text-decoration:none;
 		color: #ffffff;
 	}
 
-.grid-section-black summary:focus, .grid-section-black summary:hover {
-	background-color: #000000;
-	color: #ffffff;
-}
-
 
 .grid-section-black[open] > summary, .grid-section-black > summary {
 	background-color: #000000;
@@ -768,17 +742,10 @@ text-decoration:none;
 	margin-top: 2em;
 }
 
-/*sdasd*/
 .grid-section-pink summary:focus, .grid-section-pink summary:hover {
 	background-color: #e91e63;
 	color: #ffffff;
 }
-
-.grid-section-pink summary:focus, .grid-section-pink summary:hover {
-	background-color: #e91e63;
-	color: #ffffff;
-}
-
 
 .grid-section-pink[open] > summary, .grid-section-pink > summary {
 	background-color: #e91e63;
@@ -796,13 +763,35 @@ text-decoration:none;
 .grid-section-pink {
 	margin-top: 2em;
 }
-/*sdasd*/
+
+.grid-section-light summary:focus, .grid-section-light summary:hover {
+	background-color: var(--body-bg-gray);
+	color: var(--black);
+}
+
+
+.grid-section-light[open] > summary, .grid-section-light > summary {
+	background-color: var(--body-bg-gray);
+	color: var(--black);
+	font-size: 1.3em;
+}
+
+.grid-section-light[open] {
+	border-color: var(--body-bg-gray);
+	padding-bottom: 0px;
+	border-width: 3px;
+	border-radius: 5px;
+}
+
+.grid-section-light {
+	margin-top: 2em;
+}
 
 .grid-section-padding-bottom-5[open] {
 	padding-bottom: 20px;
 }
 
-.grid-section-red > summary, .grid-section > summary, .grid-section-yellow > summary, .grid-section-green > summary, .grid-section-black > summary, .grid-section-pink > summary {
+.grid-section-red > summary, .grid-section > summary, .grid-section-yellow > summary, .grid-section-green > summary, .grid-section-black > summary, .grid-section-pink > summary, .grid-section-light > summary {
 	margin-top: -1.1em;
 }
 
