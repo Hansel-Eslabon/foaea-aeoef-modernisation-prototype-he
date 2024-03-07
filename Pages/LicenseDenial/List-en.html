@@ -49,7 +49,7 @@
 	<header role="banner" class="sticky-top">
 		<div id="wb-bnr">
 			<div id="wb-bar">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<section id="wb-lng" class="visible-md visible-lg">
 							<h2>Language selection</h2>
@@ -179,7 +179,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container">
+			<div class="container-fluid">
 				<nav class="navbar navbar-default  wb-menu  wb-init wb-menu-inited wb-navcurr-inited">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
@@ -312,319 +312,330 @@
 
 	</header>
 
-	<section id="widget-section" class="visible-lg">
-		<div class="container widget-container">
-			<div class="col-lg-3 widget">
-				<div class="well">
-					<div data-id="wdiget" class="">
-						<div class="widget-value">4</div>
-						<div class="widget-caption">SIN not confirmed this month</div>
+	<section id="content" title="content" class="container-fluid container-main-padding-top">
+		<section id="sidepanel" title="sidepanel" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+			<section id="widget-section" class="visible-lg visible-md visible-sm">
+				<div class="row">
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+						<div class="well">
+							<div data-id="wdiget" class="">
+								<div class="widget-value">4</div>
+								<div class="widget-caption">SIN not confirmed this month</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+						<div class="well">
+							<div data-id="wdiget" class="">
+								<div class="widget-value">8</div>
+								<div class="widget-caption">SIN Pending this month</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+						<div class="well">
+							<div data-id="wdiget" class="">
+								<div class="widget-value">10</div>
+								<div class="widget-caption">Application Accepted this month</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+						<div class="well">
+							<div data-id="wdiget" class="">
+								<div class="widget-value">4</div>
+								<div class="widget-caption">Expired this month</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 widget">
-				<div class="well">
-					<div data-id="wdiget" class="">
-						<div class="widget-value">8</div>
-						<div class="widget-caption">SIN Pending this month</div>
+				
+			</section>
+		</section>
+		<div id="mainpanel" class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+			<main role="main" property="mainContentOfPage" resource="#wb-main" class="container-round container-main-padding">
+
+				<h1 id="wb-cont" property="name">License Denial Application List</h1>
+
+
+				<div class="well well-lg">
+					<p>
+						Welcome to the New License Application!
+						Get started today and experience the future of license denial at your fingertips. Welcome aboard!
+					</p>
+				</div>
+				<div class="row">
+
+					<div id="menu" class="visible-lg visible-md visible-sm float-right padding-right-15">
+						<button class="btn btn-large btn-primary"><i class="fa-solid fa-plus"></i> Add</button>
+					</div>
+
+					<div class="col-md-12" id="adv-filter">
+						<h4 class="wb-inv">Filtering Options</h4>
+						<details>
+							<summary><h4 class="h4">Filter Options</h4></summary>
+
+							<form class="wb-tables-filter" data-bind-to="licenseDenialTables">
+								<div class="col-lg-3">
+									<div class="form-group">
+										<div class="form-group">
+											<label for="dt_category">Category</label>
+											<select class="form-control" id="dt_category" name="dt_category" data-column="0">
+												<option value="">Any Category</option>
+												<option value="L01">L01</option>
+												<option value="L03">L03</option>
+											</select>
+											<label for="dt_controlcode">Control Code</label>
+											<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="1">
+											<label for="dt_sourceRef">Source Reference</label>
+											<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="3">
+
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label for="dt_fname">Debtor's First Name</label>
+										<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="5">
+
+										<label for="dt_lname">Debtor's Last Name</label>
+										<input type="text" class="form-control" id="dt_lname" name="dt_lname" data-column="5">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label for="dt_mindate">Start Date Received</label>
+										<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="4">
+										<label for="dt_maxdate">End Date Received</label>
+										<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="4">
+									</div>
+								</div>
+
+
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label for="dt_state">State</label>
+										<select class="form-control" id="dt_state" name="dt_state" data-column="6">
+											<option value="">Any State</option>
+											<option value="Application accepted">Application accepted</option>
+											<option value="Application Cancelled">Application Cancelled</option>
+											<option value="Awaiting affidavit">Awaiting affidavit</option>
+											<option value="Completed">Completed</option>
+											<option value="Expired">Expired</option>
+											<option value="Manually Terminated">Manually Terminated</option>
+											<option value="Partially serviced">Partially serviced</option>
+											<option value="SIN Verified<">SIN Verified</option>
+											<option value="SIN Confirmation Pending">SIN Confirmation Pending</option>
+											<option value="SIN not confirmed"> SIN Not Confirmed</option>
+
+
+
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary " aria-controls="licenseDenialTables">Filter</button>
+									</div>
+									<div class="form-group">
+										<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+									</div>
+								</div>
+
+
+							</form>
+						</details>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 widget">
-				<div class="well">
-					<div data-id="wdiget" class="">
-						<div class="widget-value">10</div>
-						<div class="widget-caption">Application Accepted this month</div>
-					</div>
+
+
+
+				<div class="table-responsive">
+					<table id="licenseDenialTables" class="wb-tables table table-bordered-custom table-striped table-hover table-text-center-state" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
+						<thead>
+							<tr class="tableHeader">
+								<th class="nowrap">Category</th>
+								<th class="nowrap">Ctrl Code</th>
+								<th class="nowrap">Submitter</th>
+								<th class="nowrap">Source Ref</th>
+								<th class="nowrap">Date Received</th>
+								<th class="nowrap">Debtor Name</th>
+								<th class="nowrap" style=" text-align:center;">State</th>
+								<td> </td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-id="AB01-AB2E51-F16695">
+								<td data-sort="1" class="table-test">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L01</a>
+								</td>
+								<td>F16695</td>
+								<td>AB2E51</td>
+								<td>2344471</td>
+								<td>2023-09-25</td>
+								<td>Chan, Harvey</td>
+								<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag hide"></i>
+										<i class="fa-solid fa-flag"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="AB01-AB2E51-F16695">
+								<td data-sort="8">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L01</a>
+								</td>
+								<td>R16485</td>
+								<td>AB2E51</td>
+								<td>6345471</td>
+								<td>2023-09-25</td>
+								<td>Chua, Aang</td>
+								<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag hide"></i>
+										<i class="fa-solid fa-flag"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="AB01-AB2E51-F16649">
+								<td data-sort="2">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L01</a>
+								</td>
+								<td>F16649</td>
+								<td>AB2E51</td>
+								<td>651435</td>
+								<td>2023-09-22</td>
+								<td>Wick, John</td>
+								<td><span class="status-badge status-badge-warning">Partially serviced</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag hide"></i>
+										<i class="fa-solid fa-flag"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="MB01-MB2W43-122689">
+								<td data-sort="3">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L01</a>
+								</td>
+								<td>122689</td>
+								<td>MB2W43</td>
+								<td>8454193</td>
+								<td>2023-09-22</td>
+								<td>Mohhamed, Ashwin</td>
+								<td><span class="status-badge status-badge-success">Application accepted</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag hide"></i>
+										<i class="fa-solid fa-flag"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="ON01-Q17359-ON2DM3">
+								<td data-sort="4">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L01</a>
+								</td>
+								<td>Q17359</td>
+								<td>ON2DM3</td>
+								<td>2344471</td>
+								<td>2023-09-21</td>
+								<td>Riley, Iqra</td>
+								<td><span class="status-badge status-badge-danger">SIN not confirmed</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag hide"></i>
+										<i class="fa-solid fa-flag"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="MB01-MB2W43-122624">
+								<td data-sort="5">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L01</a>
+								</td>
+								<td>122624</td>
+								<td>MB2W43</td>
+								<td>5132378</td>
+								<td>2023-09-18</td>
+								<td>Solution, Architect</td>
+								<td><span class="status-badge status-badge-success">Manually terminated</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag hide"></i>
+										<i class="fa-solid fa-flag"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="AB01-AB2E51-F16691">
+								<td data-sort="6">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L03</a>
+								</td>
+								<td>F16691</td>
+								<td>AB2E51</td>
+								<td>1918374</td>
+								<td>2023-09-25</td>
+								<td>Maxwell, Raheem</td>
+								<td><span class="status-badge status-badge-success">Manually terminated</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag"></i>
+										<i class="fa-solid fa-flag hide"></i>
+									</div>
+								</td>
+							</tr>
+							<tr data-id="PE01-PE2C20-S8452">
+								<td data-sort="7">
+									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+									<a href="View-en.html" class="ps-2"> L03</a>
+								</td>
+								<td>S8452</td>
+								<td>PE2C20</td>
+								<td>ME-14716</td>
+								<td>2023-09-12</td>
+								<td>Wade, Cassandra</td>
+								<td><span class="status-badge status-badge-success">Expired</span></td>
+								<td>
+									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
+										<i class="fa-regular fa-flag"></i>
+										<i class="fa-solid fa-flag hide"></i>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-			</div>
-			<div class="col-lg-3 widget">
-				<div class="well">
-					<div data-id="wdiget" class="">
-						<div class="widget-value">4</div>
-						<div class="widget-caption">Expired this month</div>
-					</div>
-				</div>
-			</div>
+
+
+				<dl id="wb-dtmd" class="pull-right">
+					<dt>Version:</dt>
+					<dd>
+						Prototype
+					</dd>
+				</dl>
+
+
+
+
+
+
+
+			</main>
+
 		</div>
 	</section>
 
-	<main role="main" property="mainContentOfPage" resource="#wb-main" class="container container-main container-round">
 
-		<h1 id="wb-cont" property="name">License Denial Application List</h1>
+	
 
-
-		<div class="well well-lg">
-			<p>
-				Welcome to the New License Application!
-				Get started today and experience the future of license denial at your fingertips. Welcome aboard!
-			</p>
-		</div>
-		<div class="row">
-
-			<div id="menu" class="visible-lg visible-md visible-sm float-right padding-right-15">
-				<button class="btn btn-large btn-primary"><i class="fa-solid fa-plus"></i> Add</button>
-			</div>
-		
-			<div class="col-md-12" id="adv-filter">
-				<h4 class="wb-inv">Filtering Options</h4>
-				<details>
-					<summary><h4 class="h4">Filter Options</h4></summary>
-
-					<form class="wb-tables-filter" data-bind-to="licenseDenialTables">
-						<div class="col-lg-3">
-							<div class="form-group">
-								<div class="form-group">
-									<label for="dt_category">Category</label>
-									<select class="form-control" id="dt_category" name="dt_category" data-column="0">
-										<option value="">Any Category</option>
-										<option value="L01">L01</option>
-										<option value="L03">L03</option>
-									</select>
-									<label for="dt_controlcode">Control Code</label>
-									<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="1">
-									<label for="dt_sourceRef">Source Reference</label>
-									<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="3">
-
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3">
-							<div class="form-group">
-								<label for="dt_fname">Debtor's First Name</label>
-								<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="5">
-
-								<label for="dt_lname">Debtor's Last Name</label>
-								<input type="text" class="form-control" id="dt_lname" name="dt_lname" data-column="5">
-							</div>
-						</div>
-						<div class="col-lg-3">
-							<div class="form-group">
-									<label for="dt_mindate">Start Date Received</label>
-									<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="4">
-									<label for="dt_maxdate">End Date Received</label>
-									<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="4">
-							</div>
-						</div>
-
-
-						<div class="col-lg-3">
-							<div class="form-group">
-								<label for="dt_state">State</label>
-								<select class="form-control" id="dt_state" name="dt_state" data-column="6">
-									<option value="">Any State</option>
-									<option value="Application accepted">Application accepted</option>
-									<option value="Application Cancelled">Application Cancelled</option>
-									<option value="Awaiting affidavit">Awaiting affidavit</option>
-									<option value="Completed">Completed</option>
-									<option value="Expired">Expired</option>
-									<option value="Manually Terminated">Manually Terminated</option>
-									<option value="Partially serviced">Partially serviced</option>
-									<option value="SIN Verified<">SIN Verified</option>
-									<option value="SIN Confirmation Pending">SIN Confirmation Pending</option>
-									<option value="SIN not confirmed"> SIN Not Confirmed</option>
-
-
-
-								</select>
-							</div>
-						</div>
-						<div class="col-lg-3">
-							<div class="form-group">
-								<button type="submit" class="btn btn-primary " aria-controls="licenseDenialTables">Filter</button>
-							</div>
-							<div class="form-group">
-								<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
-							</div>
-						</div>
-
-
-					</form>
-				</details>
-			</div>
-		</div>
-
-
-
-		<div class="table-responsive">
-			<table id="licenseDenialTables" class="wb-tables table table-bordered-custom table-striped table-hover table-text-center-state" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
-				<thead>
-					<tr class="tableHeader">
-						<th class="nowrap">Category</th>
-						<th class="nowrap">Ctrl Code</th>
-						<th class="nowrap">Submitter</th>
-						<th class="nowrap">Source Ref</th>
-						<th class="nowrap">Date Received</th>
-						<th class="nowrap">Debtor Name</th>
-						<th class="nowrap" style=" text-align:center;">State</th>
-						<td> </td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr data-id="AB01-AB2E51-F16695">
-						<td data-sort="1" class="table-test">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L01</a>
-						</td>
-						<td>F16695</td>
-						<td>AB2E51</td>
-						<td>2344471</td>
-						<td>2023-09-25</td>
-						<td>Chan, Harvey</td>
-						<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag hide"></i>
-								<i class="fa-solid fa-flag"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="AB01-AB2E51-F16695">
-						<td data-sort="8">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L01</a>
-						</td>
-						<td>R16485</td>
-						<td>AB2E51</td>
-						<td>6345471</td>
-						<td>2023-09-25</td>
-						<td>Chua, Aang</td>
-						<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag hide"></i>
-								<i class="fa-solid fa-flag"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="AB01-AB2E51-F16649">
-						<td data-sort="2">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L01</a>
-						</td>
-						<td>F16649</td>
-						<td>AB2E51</td>
-						<td>651435</td>
-						<td>2023-09-22</td>
-						<td>Wick, John</td>
-						<td><span class="status-badge status-badge-warning">Partially serviced</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag hide"></i>
-								<i class="fa-solid fa-flag"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="MB01-MB2W43-122689">
-						<td data-sort="3">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L01</a>
-						</td>
-						<td>122689</td>
-						<td>MB2W43</td>
-						<td>8454193</td>
-						<td>2023-09-22</td>
-						<td>Mohhamed, Ashwin</td>
-						<td><span class="status-badge status-badge-success">Application accepted</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag hide"></i>
-								<i class="fa-solid fa-flag"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="ON01-Q17359-ON2DM3">
-						<td data-sort="4">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L01</a>
-						</td>
-						<td>Q17359</td>
-						<td>ON2DM3</td>
-						<td>2344471</td>
-						<td>2023-09-21</td>
-						<td>Riley, Iqra</td>
-						<td><span class="status-badge status-badge-danger">SIN not confirmed</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag hide"></i>
-								<i class="fa-solid fa-flag"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="MB01-MB2W43-122624">
-						<td data-sort="5">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L01</a>
-						</td>
-						<td>122624</td>
-						<td>MB2W43</td>
-						<td>5132378</td>
-						<td>2023-09-18</td>
-						<td>Solution, Architect</td>
-						<td><span class="status-badge status-badge-success">Manually terminated</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag hide"></i>
-								<i class="fa-solid fa-flag"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="AB01-AB2E51-F16691">
-						<td data-sort="6">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L03</a>
-						</td>
-						<td>F16691</td>
-						<td>AB2E51</td>
-						<td>1918374</td>
-						<td>2023-09-25</td>
-						<td>Maxwell, Raheem</td>
-						<td><span class="status-badge status-badge-success">Manually terminated</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag"></i>
-								<i class="fa-solid fa-flag hide"></i>
-							</div>
-						</td>
-					</tr>
-					<tr data-id="PE01-PE2C20-S8452">
-						<td data-sort="7">
-							<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-							<a href="View-en.html" class="ps-2"> L03</a>
-						</td>
-						<td>S8452</td>
-						<td>PE2C20</td>
-						<td>ME-14716</td>
-						<td>2023-09-12</td>
-						<td>Wade, Cassandra</td>
-						<td><span class="status-badge status-badge-success">Expired</span></td>
-						<td>
-							<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
-								<i class="fa-regular fa-flag"></i>
-								<i class="fa-solid fa-flag hide"></i>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-
-		<dl id="wb-dtmd" class="pull-right">
-			<dt>Version:</dt>
-			<dd>
-				Prototype
-			</dd>
-		</dl>
-
-
-
-
-
-
-
-	</main>
-
+	
 
 	<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr wb-navcurr-inited">
 		<div class="container">

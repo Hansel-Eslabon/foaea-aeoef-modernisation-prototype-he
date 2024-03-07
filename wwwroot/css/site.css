@@ -90,13 +90,12 @@
 	font-size: 1.10em;
 }
 
-.container-main {
-	/* margin-top: 2em; */
-	margin-bottom: 2em;
+.container-main-padding {
+	padding:1em;
 }
 
 .container-main-padding-top {
-	margin-top: 2em; 
+	margin-top: 2em;
 }
 
 .container-round {
@@ -154,12 +153,18 @@
 	padding-bottom:5px;
 }
 
+
+
+#wb-dtmd {
+	margin: unset;
+	margin-bottom: 2em;
+}
+
 #wb-info, #wb-info a {
 	background-color: var(--footer-content-info-bg-color);
 	color: var(--white);
 	text-decoration: none;
 }
-
 
 #wb-sm {
 	background: #427D9D;
@@ -639,6 +644,7 @@ text-decoration:none;
 }
 
 .grid-section[open] {
+	border-color:#245269;
 	padding-bottom: 0px;
 	border-width: 3px;
 	border-radius: 5px;
