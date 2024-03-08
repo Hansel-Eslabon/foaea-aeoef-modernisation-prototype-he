@@ -519,6 +519,12 @@ table.dataTable thead .sorting_asc .sorting-icons::after {
 	z-index: 100;
 }
 
+.widget-frequency {
+	float:right;
+
+}
+
+
 table .fa-solid.fa-flag {
 	color: #D3080C;
 }

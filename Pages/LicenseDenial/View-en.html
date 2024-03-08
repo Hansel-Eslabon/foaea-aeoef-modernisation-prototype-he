@@ -317,33 +317,37 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
 						<div class="well">
-							<div data-id="wdiget" class="">
+							<div data-id="widget" class="">
+								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
 								<div class="widget-value">4</div>
-								<div class="widget-caption">SIN not confirmed this month</div>
+								<div class="widget-caption">SIN not confirmed</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
 						<div class="well">
-							<div data-id="wdiget" class="">
+							<div data-id="widget" class="">
+								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
 								<div class="widget-value">8</div>
-								<div class="widget-caption">SIN Pending this month</div>
+								<div class="widget-caption">SIN Pending</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
 						<div class="well">
-							<div data-id="wdiget" class="">
+							<div data-id="widget" class="">
+								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
 								<div class="widget-value">10</div>
-								<div class="widget-caption">Application Accepted this month</div>
+								<div class="widget-caption">Application Accepted</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
 						<div class="well">
-							<div data-id="wdiget" class="">
+							<div data-id="widget" class="">
+								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
 								<div class="widget-value">4</div>
-								<div class="widget-caption">Expired this month</div>
+								<div class="widget-caption">Expired</div>
 							</div>
 						</div>
 					</div>
@@ -436,19 +440,22 @@
 						<section>
 							<div class="wb-frmvld">
 								<form action="#" method="get" id="licensedenial-form">
-									<section id="menu-bar" class="sticky-top">
+									<section id="menu-bar" class="">
 										<a id="edit" class="btn btn-primary btn-lg" href="Edit-en.html" role="button"><i class="fa-solid fa-pen"></i> Edit</a>
 
 										<a id="cancel" href="#cancel-application-popup-modal" aria-controls="cancel-application-popup-modal" class="wb-lbx lbx-modal btn btn-primary btn-lg" role="button">
 											<i class="fa-solid fa-ban"></i> Terminate
 										</a>
 
+										<a id="transfer" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#transfer-application-popup-modal" role="button" aria-controls="transfer-application-popup-modal">
+											<i class="fa-solid fa-arrow-right-arrow-left"></i> Transfer
+										</a>
 									</section>
 									<section id="status-bar" class="status-bar">
 										<div data-toggle="tooltip" data-placement="bottom" title="Status">
 											<div class="pull-right">
 												<label for="statusDetail" class="label-caption status-font-size">Status:</label>
-												<span class="badge rounded-pill status-bg-warning status-font-size">Manually terminated (14)</span>
+												<span class="status-badge status-badge-success status-font-size">Manually terminated</span>
 											</div>
 										</div>
 									</section>
@@ -685,7 +692,40 @@
 											</div>
 										</section>
 									</details>
-									<details class="grid-section grid-section-padding-bottom-5" id="history-grid">
+									<details id="linked-grid" class="grid-section"  open="" >
+										<summary>Linked Application Details</summary>
+										<section class="wb-inview" data-inview="fade-effect">
+											<div class="table-responsive">
+												<table id="linkedAppsTable" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
+													<thead>
+														<tr>
+															<th>Category</th>
+															<th>Ctrl Code</th>
+															<th>Debtor First Name</th>
+															<th>Debtor Surname</th>
+															<th>Date Received</th>
+															<th>State</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr data-id="1234">
+															<td data-sort="7">
+																<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
+																<a href="View-en.html" class="ps-2"> T01</a>
+															</td>
+															<td data-sort="1"> E24
+															</td>
+															<td>Jeffrey</td>
+															<td>Chu</td>
+															<td>2023-01-20</td>
+															<td><span class="status-badge status-badge-warning">Partially serviced</span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</section>
+									</details>
+									<details id="history-grid" class="grid-section-black">
 										<summary>Suspension History</summary>
 										<section class="wb-inview" data-inview="fade-effect">
 											<div class="table-responsive">
@@ -756,7 +796,7 @@
 		</div>
 	</section>
 
-	
+
 
 	<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr wb-navcurr-inited">
 		<div class="container">
@@ -842,7 +882,50 @@
 			</ul>
 		</div>
 	</section>
+	<section id="transfer-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
+		<header class="modal-header">
+			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Transfer Application - 01</h2>
+		</header>
 
+		<div class="modal-body">
+			<div class="wb-frmvld">
+				<form action="#" method="post" id="transferApplicationForm">
+					<fieldset id="transferApplicationFormFieldset">
+						<div>
+							<div class="form-group">
+								<label for="office" class="required"><span class="field-name">Select Office:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="office" id="office" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="AB01">AB01</option>
+									<option value="BC01">BC01</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="recipient" class="required"><span class="field-name">Select Recipient:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="recipient" id="recipient" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="NPW102">NPW102</option>
+									<option value="NPW202">NPW202</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<div class="checkbox checkbox-standalone">
+									<label for="isTransferLinkApplication">
+										<input id="isTransferLinkApplication" name="isTransferLinkApplication" type="checkbox">
+										<span class="field-name">Do you want to transfer all linked applications for this application?</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary overlay-close  pull-left" type="button" id="btnTransferModalSubmit">Confirm</button>
+		</div>
+
+	</section>
 
 	<section id="cancel-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
 		<header class="modal-header status-bg-danger">
@@ -1324,6 +1407,24 @@
 		});
 
 
+		//Transfer Modal
+		const transferForm = $("#transferApplicationForm");
+		$(transferForm).on('submit', function (event) {
+			if ($(this).valid()) {
+				toastr.success('Your application has been transfer', 'Thank you!');
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$(".popup-modal-dismiss").trigger("click");
+				return false;
+			}
+			return false;
+		});
+
+		$("#btnTransferModalSubmit").on('click', function () {
+			transferForm.trigger("submit");
+		});
 
 
 
