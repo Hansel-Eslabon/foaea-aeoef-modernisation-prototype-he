@@ -74,9 +74,9 @@
 							<ul class="pnl-btn list-inline text-right">
 								<li>
 									<a href="#mb-pnl" title="Header and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
-											<span class="glyphicon glyphicon-th-list">
-												<span class="wb-inv">Header and menus</span>
-											</span>
+										<span class="glyphicon glyphicon-th-list">
+											<span class="wb-inv">Header and menus</span>
+										</span>
 									</a>
 								</li>
 							</ul>
@@ -297,7 +297,7 @@
 										<li class="navbar-dropdown-list-divider" aria-posinset="1" aria-setsize="2" role="listitem">
 											<a href="../Shared/Tracking-en.html"><i class="fa-solid fa-list"></i> Tracking</a>
 										</li>
-										<li  aria-posinset="2" aria-setsize="2" role="listitem">
+										<li aria-posinset="2" aria-setsize="2" role="listitem">
 											<a href="../Index-en.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 										</li>
 									</ul>
@@ -316,44 +316,62 @@
 		<section id="sidepanel" title="sidepanel" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 			<section id="widget-section" class="visible-lg visible-md visible-sm">
 				<div class="row">
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
 						<div class="well">
 							<div data-id="widget" class="">
-								<div class="widget-frequency"  title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
+								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
+									<small>Frequency: Monthly</small> <i class="fa-solid fa-gear"></i><span class="sr-only">
+										SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)
+									</span>
+								</div>
 								<div class="widget-value">4</div>
-								<div class="widget-caption">SIN not confirmed</div>
+								<div class="widget-caption">
+									SIN not confirmed
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
 						<div class="well">
 							<div data-id="widget" class="">
-								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
+								<div class="widget-frequency" title="Frequency: None">
+									<small>Frequency: None</small>
+									<i class="fa-solid fa-gear"></i><span class="sr-only">
+										Duplicate / invalid application
+									</span>
+								</div>
 								<div class="widget-value">8</div>
-								<div class="widget-caption">SIN Pending</div>
+								<div class="widget-caption">
+									Duplicate / invalid application
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
 						<div class="well">
 							<div data-id="widget" class="">
-								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
+								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><small>Frequency: Monthly</small>
+								<i class="fa-solid fa-gear"></i><span class="sr-only">Application rejected Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
 								<div class="widget-value">10</div>
-								<div class="widget-caption">Application Accepted</div>
+								<div class="widget-caption">
+									Application rejected
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
 						<div class="well">
 							<div data-id="widget" class="">
-								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)"><i class="fa-solid fa-chart-simple"></i><span class="sr-only">SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)</span></div>
+								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
+									<small>Frequency: Monthly</small> <i class="fa-solid fa-gear"></i><span class="sr-only">Frequency: Monthly  (2024-02-08 to 2024-03-08)</span>
+								</div>
 								<div class="widget-value">4</div>
 								<div class="widget-caption">Expired</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 			</section>
 		</section>
 		<div id="mainpanel" class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
@@ -386,6 +404,8 @@
 											<label for="dt_category">Category</label>
 											<select class="form-control" id="dt_category" name="dt_category" data-column="0">
 												<option value="">Any Category</option>
+												<option value="T01">T01</option>
+												<option value="I01">I01</option>
 												<option value="L01">L01</option>
 												<option value="L03">L03</option>
 											</select>
@@ -393,12 +413,17 @@
 											<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="1">
 											<label for="dt_sourceRef">Source Reference</label>
 											<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="3">
-
+											<label for="dt_justiceRef">Justice Reference</label>
+											<input type="text" class="form-control" id="dt_justiceRef" name="dt_justiceRef">
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-3">
 									<div class="form-group">
+										<label for="dt_sin">SIN</label>
+										<input type="text" class="form-control" id="dt_sin" name="dt_sin">
+										<label for="dt_enfserv">Enforcement Service Code</label>
+										<input type="text" class="form-control" id="dt_enfserv" name="dt_enfserv">
 										<label for="dt_fname">Debtor's First Name</label>
 										<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="5">
 
@@ -408,6 +433,10 @@
 								</div>
 								<div class="col-lg-3">
 									<div class="form-group">
+										<label for="dt_minbirthdate">Birthdate From</label>
+										<input type="date" class="form-control" id="dt_minbirthdate" name="dt_minbirthdate">
+										<label for="dt_maxbirthdate">Birthdate To</label>
+										<input type="date" class="form-control" id="dt_maxbirthdate" name="dt_maxbirthdate">
 										<label for="dt_mindate">Start Date Received</label>
 										<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="4">
 										<label for="dt_maxdate">End Date Received</label>
@@ -421,20 +450,64 @@
 										<label for="dt_state">State</label>
 										<select class="form-control" id="dt_state" name="dt_state" data-column="6">
 											<option value="">Any State</option>
-											<option value="Application accepted">Application accepted</option>
-											<option value="Application Cancelled">Application Cancelled</option>
-											<option value="Awaiting affidavit">Awaiting affidavit</option>
-											<option value="Completed">Completed</option>
-											<option value="Expired">Expired</option>
-											<option value="Manually Terminated">Manually Terminated</option>
-											<option value="Partially serviced">Partially serviced</option>
-											<option value="SIN Verified<">SIN Verified</option>
+											<option value="Duplicate / Invalid Application">
+												Duplicate / Invalid Application
+											</option>
+											<option value="Awaiting validation">
+												Awaiting validation
+											</option>
 											<option value="SIN Confirmation Pending">SIN Confirmation Pending</option>
-											<option value="SIN not confirmed"> SIN Not Confirmed</option>
+											<option value="SIN Confirmed">SIN Confirmed</option>
+
+											<option value="SIN Not Confirmed">
+												SIN Not Confirmed
+											</option>
+
+											<option value="Pending acceptance / swearing">
+												Pending acceptance / swearing
+											</option>
+											<option value="Valid affidavit not received">
+												Valid affidavit not received
+											</option>
+											<option value="Application rejected">
+												Application rejected
+											</option>
+											<option value="Application accepted">
+												Application accepted
+											</option>
 
 
+											<option value="Partially serviced">
+												Partially serviced
+											</option>
+											<option value="Fully serviced">
+												Fully serviced
+											</option>
+											<option value="Manually terminated">
+												Manually terminated
+											</option>
+											<option value="Expired">
+												Expired
+											</option>
+											<option value="Awaiting documents for variation">
+												Awaiting documents for variation
+											</option>
+											<option value="Application suspended">
+												Application suspended
+											</option>
 
 										</select>
+										<label for="dt_status">Status</label>
+										<select class="form-control" id="dt_status" name="dt_status" data-column="7">
+											<option value="">Any Status</option>
+											<option value="Active">Active</option>
+											<option value="Complete">Complete</option>
+											<option value="Inactive">Inactive</option>
+											<option value="Rejected">Rejected</option>
+											<option value="Processing">Processing</option>
+											<option value="Cancelled">Cancelled</option>
+										</select>
+
 									</div>
 								</div>
 								<div class="col-lg-3">
@@ -465,6 +538,7 @@
 								<th class="nowrap">Date Received</th>
 								<th class="nowrap">Debtor Name</th>
 								<th class="nowrap" style=" text-align:center;">State</th>
+								<th class="nowrap" style=" text-align:center;">Status</th>
 								<td> </td>
 							</tr>
 						</thead>
@@ -480,6 +554,7 @@
 								<td>2023-09-25</td>
 								<td>Chan, Harvey</td>
 								<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag hide"></i>
@@ -498,6 +573,7 @@
 								<td>2023-09-25</td>
 								<td>Chua, Aang</td>
 								<td><span class="status-badge status-badge-warning">SIN Confirmation Pending</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag hide"></i>
@@ -516,6 +592,7 @@
 								<td>2023-09-22</td>
 								<td>Wick, John</td>
 								<td><span class="status-badge status-badge-warning">Partially serviced</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag hide"></i>
@@ -534,6 +611,7 @@
 								<td>2023-09-22</td>
 								<td>Mohhamed, Ashwin</td>
 								<td><span class="status-badge status-badge-success">Application accepted</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag hide"></i>
@@ -552,6 +630,7 @@
 								<td>2023-09-21</td>
 								<td>Riley, Iqra</td>
 								<td><span class="status-badge status-badge-danger">SIN not confirmed</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag hide"></i>
@@ -570,6 +649,7 @@
 								<td>2023-09-18</td>
 								<td>Solution, Architect</td>
 								<td><span class="status-badge status-badge-success">Manually terminated</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag hide"></i>
@@ -588,12 +668,14 @@
 								<td>2023-09-25</td>
 								<td>Maxwell, Raheem</td>
 								<td><span class="status-badge status-badge-success">Manually terminated</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag"></i>
 										<i class="fa-solid fa-flag hide"></i>
 									</div>
 								</td>
+
 							</tr>
 							<tr data-id="PE01-PE2C20-S8452">
 								<td data-sort="7">
@@ -606,12 +688,14 @@
 								<td>2023-09-12</td>
 								<td>Wade, Cassandra</td>
 								<td><span class="status-badge status-badge-success">Expired</span></td>
+								<td><p class="text-success">Active</p></td>
 								<td>
 									<div class="fav" data-toggle="tooltip" data-placement="bottom" title="Toggle Tracking">
 										<i class="fa-regular fa-flag"></i>
 										<i class="fa-solid fa-flag hide"></i>
 									</div>
 								</td>
+
 							</tr>
 						</tbody>
 					</table>
@@ -635,11 +719,6 @@
 
 		</div>
 	</section>
-
-
-	
-
-	
 
 	<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr wb-navcurr-inited">
 		<div class="container">
@@ -692,7 +771,6 @@
 			<h2 class="modal-title">Notifications</h2>
 		</header>
 		<div class="modal-body">
-			2023-03-02
 			<ul class="list-unstyled">
 				<li>
 					<p><a href="#">T01 Applications #E12135</a> has been terminated</p>
@@ -700,11 +778,33 @@
 				</li>
 				<li>
 					<p><a href="#">L01 Applications #E12135</a> Passport has been suspended</p>
+					<p class="mb-0 text-muted"><small>2023-01-23</small></p>
+				</li>
+				<li>
+					<p><a href="#">L01 Applications #E12135</a> Transport still investigating</p>
+					<p class="mb-0 text-muted"><small>2023-01-23</small></p>
+				</li>
+				<li>
+					<p>
+						<a href="#">L01 Applications #E12135</a> state has changed to
+						Application accepted
+					</p>
+					<p class="mb-0 text-muted"><small>2023-01-20</small></p>
+				</li>
+				<li>
+					<p>
+						<a href="#">L01 Applications #E12135</a> state has changed to
+						Pending acceptance / swearing
+					</p>
+					<p class="mb-0 text-muted"><small>2023-01-20</small></p>
+				</li>
+				<li>
+					<p><a href="#">L01 Applications #E12135</a> SIN has been confirmed</p>
 					<p class="mb-0 text-muted"><small>2023-01-20</small></p>
 				</li>
 				<li>
 					<p><a href="#">T01 Applications #T821321</a> SIN has been confirmed</p>
-					<p class="mb-0 text-muted"><small>2023-03-02</small></p>
+					<p class="mb-0 text-muted"><small>2023-01-05</small></p>
 				</li>
 				<li>
 					<p><a href="#">T01 Applications #1234</a> has been transfer to your office</p>
@@ -722,10 +822,13 @@
 					<p><a href="#">T01 Applications #43434</a> has been cancelled by Santa Claus</p>
 					<p class="mb-0 text-muted"><small>2021-01-12</small></p>
 				</li>
+				<li>
+					<p><a href="#">T01 Applications #T379421</a> SIN not confirmed</p>
+					<p class="mb-0 text-muted"><small>2021-01-10</small></p>
+				</li>
 			</ul>
 		</div>
 	</section>
-
 
 
 	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>

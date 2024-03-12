@@ -492,7 +492,7 @@ table.dataTable thead .sorting_asc .sorting-icons::after {
 	content: "\e113";
 }
 
-.table-text-center-state td:nth-child(7), .table-text-center-state td:last-child {
+.table-text-center-state td:nth-child(7), .table-text-center-state td:nth-child(8), .table-text-center-state td:last-child {
 	text-align: center;
 }
 
@@ -617,7 +617,7 @@ text-decoration:none;
 
 #adv-filter > details[open]
 {
-		min-height : 250px;
+		min-height : 375px;
 }
 
 .form-control-plaintext {
