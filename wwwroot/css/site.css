@@ -511,6 +511,10 @@ table.dataTable thead .sorting_asc .sorting-icons::after {
 	}
 }
 
+#filter-caption {
+	font-style:italic;
+	padding-left:15px;
+}
 
 .sticky-top {
 	position: -webkit-sticky;

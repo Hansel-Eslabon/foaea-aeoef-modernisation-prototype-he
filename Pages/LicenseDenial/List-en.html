@@ -387,8 +387,10 @@
 					</p>
 				</div>
 				<div class="row">
-
-					<div id="menu" class="visible-lg visible-md visible-sm float-right padding-right-15">
+					<div id="filter-caption">
+						<span>Filter Options: Category: L01, L03</span>
+					</div>
+					<div id="filter-menu" class="visible-lg visible-md visible-sm float-right padding-right-15">
 						<button class="btn btn-large btn-primary"><i class="fa-solid fa-plus"></i> Add</button>
 					</div>
 
@@ -402,7 +404,7 @@
 									<div class="form-group">
 										<div class="form-group">
 											<label for="dt_category">Category</label>
-											<select class="form-control" id="dt_category" name="dt_category" data-column="0">
+											<select class="form-control" id="dt_category" name="dt_category" data-column="1">
 												<option value="">Any Category</option>
 												<option value="T01">T01</option>
 												<option value="I01">I01</option>
@@ -410,7 +412,7 @@
 												<option value="L03">L03</option>
 											</select>
 											<label for="dt_controlcode">Control Code</label>
-											<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="1">
+											<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="0">
 											<label for="dt_sourceRef">Source Reference</label>
 											<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="3">
 											<label for="dt_justiceRef">Justice Reference</label>
@@ -507,15 +509,18 @@
 											<option value="Processing">Processing</option>
 											<option value="Cancelled">Cancelled</option>
 										</select>
+										<label for="dt_submitter">Submitter</label>
+										<input type="text" class="form-control" id="dt_submitter" name="dt_submitter">
+										<div class="form-group" style="margin-top:10px;">
+											<div class="form-group">
+												<button id="filter-btn-submit" type="submit" class="btn btn-primary " aria-controls="licenseDenialTables">Filter</button>
+											</div>
+											<div class="form-group">
+												<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+											</div>
+										</div>
 
-									</div>
-								</div>
-								<div class="col-lg-3">
-									<div class="form-group">
-										<button type="submit" class="btn btn-primary " aria-controls="licenseDenialTables">Filter</button>
-									</div>
-									<div class="form-group">
-										<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+
 									</div>
 								</div>
 
@@ -523,6 +528,7 @@
 							</form>
 						</details>
 					</div>
+
 				</div>
 
 
@@ -531,8 +537,8 @@
 					<table id="licenseDenialTables" class="wb-tables table table-bordered-custom table-striped table-hover table-text-center-state" data-wb-tables='{"order": [1, "desc"]}' aria-describedby="adv-filter_info" aria-label="Description">
 						<thead>
 							<tr class="tableHeader">
-								<th class="nowrap">Category</th>
 								<th class="nowrap">Ctrl Code</th>
+								<th class="nowrap">Category</th>
 								<th class="nowrap">Submitter</th>
 								<th class="nowrap">Source Ref</th>
 								<th class="nowrap">Date Received</th>
@@ -546,9 +552,9 @@
 							<tr data-id="AB01-AB2E51-F16695">
 								<td data-sort="1" class="table-test">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L01</a>
+									<a href="View-en.html" class="ps-2"> F16695</a>
 								</td>
-								<td>F16695</td>
+								<td>L01</td>
 								<td>AB2E51</td>
 								<td>2344471</td>
 								<td>2023-09-25</td>
@@ -565,9 +571,9 @@
 							<tr data-id="AB01-AB2E51-F16695">
 								<td data-sort="8">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L01</a>
+									<a href="View-en.html" class="ps-2"> R16485</a>
 								</td>
-								<td>R16485</td>
+								<td>L01</td>
 								<td>AB2E51</td>
 								<td>6345471</td>
 								<td>2023-09-25</td>
@@ -584,9 +590,9 @@
 							<tr data-id="AB01-AB2E51-F16649">
 								<td data-sort="2">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L01</a>
+									<a href="View-en.html" class="ps-2"> F16649</a>
 								</td>
-								<td>F16649</td>
+								<td>L01</td>
 								<td>AB2E51</td>
 								<td>651435</td>
 								<td>2023-09-22</td>
@@ -603,9 +609,9 @@
 							<tr data-id="MB01-MB2W43-122689">
 								<td data-sort="3">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L01</a>
+									<a href="View-en.html" class="ps-2"> 122689</a>
 								</td>
-								<td>122689</td>
+								<td>L01</td>
 								<td>MB2W43</td>
 								<td>8454193</td>
 								<td>2023-09-22</td>
@@ -622,9 +628,9 @@
 							<tr data-id="ON01-Q17359-ON2DM3">
 								<td data-sort="4">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L01</a>
+									<a href="View-en.html" class="ps-2"> Q17359</a>
 								</td>
-								<td>Q17359</td>
+								<td>L01</td>
 								<td>ON2DM3</td>
 								<td>2344471</td>
 								<td>2023-09-21</td>
@@ -641,9 +647,9 @@
 							<tr data-id="MB01-MB2W43-122624">
 								<td data-sort="5">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L01</a>
+									<a href="View-en.html" class="ps-2"> 122624</a>
 								</td>
-								<td>122624</td>
+								<td>L01</td>
 								<td>MB2W43</td>
 								<td>5132378</td>
 								<td>2023-09-18</td>
@@ -660,9 +666,9 @@
 							<tr data-id="AB01-AB2E51-F16691">
 								<td data-sort="6">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L03</a>
+									<a href="View-en.html" class="ps-2"> F16691</a>
 								</td>
-								<td>F16691</td>
+								<td>L03</td>
 								<td>AB2E51</td>
 								<td>1918374</td>
 								<td>2023-09-25</td>
@@ -680,9 +686,9 @@
 							<tr data-id="PE01-PE2C20-S8452">
 								<td data-sort="7">
 									<a href="Edit-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">Edit</span></a>
-									<a href="View-en.html" class="ps-2"> L03</a>
+									<a href="View-en.html" class="ps-2"> S8452</a>
 								</td>
-								<td>S8452</td>
+								<td>L03</td>
 								<td>PE2C20</td>
 								<td>ME-14716</td>
 								<td>2023-09-12</td>
@@ -855,6 +861,11 @@
 				$('.dataTables_filter > label:nth-child(1) > input:nth-child(1)').addClass("form-control").attr("placeholder", "Type here to search");
 				$('.dataTables_wrapper >div > div:nth-child(3) > label:nth-child(1) > select:nth-child(1)').addClass("no-background-color")
 
+				$('#filter-caption').hide();
+
+				$('#filter-btn-submit').on('click', function (event) {
+					$('#filter-caption').show();
+				})
 
 				//Bookmark
 				$('#licenseDenialTables .fav').on('click', ".fa-flag", function (event) {
