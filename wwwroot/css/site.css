@@ -38,7 +38,10 @@
 }
 
 .widget-caption {
-   color: var(--text-pale);
+	padding-left: 5px;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
 }
 
 .float-right {
