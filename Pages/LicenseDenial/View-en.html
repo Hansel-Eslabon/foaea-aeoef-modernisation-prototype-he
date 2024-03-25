@@ -353,69 +353,247 @@
 		<section id="sidepanel" title="sidepanel" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 			<section id="widget-section" class="visible-lg visible-md visible-sm">
 				<div class="row">
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
-						<div class="well">
-							<div data-id="widget" class="">
-								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
-									<small>Frequency: Monthly</small> <i class="fa-solid fa-gear"></i><span class="sr-only">
-										SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)
-									</span>
-								</div>
-								<div class="widget-value">4</div>
-								<div class="widget-caption">
-									SIN not confirmed
-								</div>
-							</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Click here to see the list">
+						<div id="filter-caption" class="hide">
+							<span>Filter Options: Category: L01, L03</span>
+						</div>
+						<div id="adv-filter" class="bg-white">
+							<h4 class="wb-inv">Filtering Options</h4>
+							<details open="open">
+								<summary><h4 class="h4">Filter Options - License Denial</h4></summary>
+
+								<form class="wb-tables-filter" data-bind-to="licenseDenialTables">
+									<div class="row">
+										<div class="col-xs-6 form-group">
+											<div class="input-group">
+												<label for="dt_category">Category</label>
+												<select class="form-control" id="dt_category" name="dt_category" data-column="1">
+													<option value="">Any Category</option>
+													<option value="L01">L01</option>
+													<option value="L03">L03</option>
+												</select>
+											</div>
+
+										</div>
+										<div class="col-xs-6 form-group">
+											<label for="dt_controlcode">Control Code</label>
+											<input type="text" class="form-control" id="dt_controlcode" name="dt_controlcode" data-column="0">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-6 form-group">
+											<label for="dt_sourceRef">Source Reference</label>
+											<input type="text" class="form-control" id="dt_sourceRef" name="dt_sourceRef" data-column="3">
+										</div>
+										<div class="col-xs-6 form-group">
+											<label for="dt_justiceRef">Justice Reference</label>
+											<input type="text" class="form-control" id="dt_justiceRef" name="dt_justiceRef">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-6 form-group">
+											<label for="dt_sin">SIN</label>
+											<input type="text" class="form-control" id="dt_sin" name="dt_sin">
+
+										</div>
+										<div class="col-xs-6 form-group">
+											<label for="dt_enfserv">Enforcement Code</label>
+											<input type="text" class="form-control" id="dt_enfserv" name="dt_enfserv">
+										</div>
+									</div>
+									<div class="row">
+										<label class="col-xs-12">Debtor's</label>
+										<div class="col-xs-6 form-group">
+											<label for="dt_fname">Given Name</label>
+											<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="5">
+										</div>
+										<div class="col-xs-6 form-group">
+											<label for="dt_lname">Surname</label>
+											<input type="text" class="form-control" id="dt_lname" name="dt_lname" data-column="5">
+										</div>
+									</div>
+
+									<div class="row">
+										<label class="col-xs-12">Birthday</label>
+										<div class="col-xs-6 form-group">
+											<label for="dt_minbirthdate">From</label>
+											<input type="date" class="form-control" id="dt_minbirthdate" name="dt_minbirthdate">
+										</div>
+										<div class="col-xs-6 form-group">
+											<label for="dt_maxbirthdate">To</label>
+											<input type="date" class="form-control" id="dt_maxbirthdate" name="dt_maxbirthdate">
+										</div>
+									</div>
+
+									<div class="row">
+										<label class="col-xs-12">Date Received</label>
+										<div class="col-xs-6 form-group">
+											<label for="dt_mindate">From</label>
+											<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="4">
+										</div>
+										<div class="col-xs-6 form-group">
+											<label for="dt_maxdate">To</label>
+											<input type="date" class="form-control" id="dt_maxdate" name="dt_maxdate" data-column="4">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-6">
+											<div class="input-group">
+												<label for="dt_status">Status</label>
+												<select class="form-control" id="dt_status" name="dt_status" data-column="7">
+													<option value="">Any Status</option>
+													<option value="Active">Active</option>
+													<option value="Complete">Complete</option>
+													<option value="Inactive">Inactive</option>
+													<option value="Rejected">Rejected</option>
+													<option value="Processing">Processing</option>
+													<option value="Cancelled">Cancelled</option>
+												</select>
+
+											</div>
+
+										</div>
+										<div class="col-xs-6 form-group">
+											<label for="dt_submitter">Submitter</label>
+											<input type="text" class="form-control" id="dt_submitter" name="dt_submitter">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="input-group input-group-lg">
+												<label for="dt_state">State</label>
+												<select class="form-control" id="dt_state" name="dt_state" data-column="6">
+													<option value="">Any State</option>
+													<option value="Duplicate / Invalid Application">
+														Duplicate / Invalid Application
+													</option>
+													<option value="Awaiting validation">
+														Awaiting validation
+													</option>
+													<option value="SIN Confirmation Pending">SIN Confirmation Pending</option>
+													<option value="SIN Confirmed">SIN Confirmed</option>
+
+													<option value="SIN Not Confirmed">
+														SIN Not Confirmed
+													</option>
+
+													<option value="Pending acceptance / swearing">
+														Pending acceptance / swearing
+													</option>
+													<option value="Valid affidavit not received">
+														Valid affidavit not received
+													</option>
+													<option value="Application rejected">
+														Application rejected
+													</option>
+													<option value="Application accepted">
+														Application accepted
+													</option>
+													<option value="Partially serviced">
+														Partially serviced
+													</option>
+													<option value="Fully serviced">
+														Fully serviced
+													</option>
+													<option value="Manually terminated">
+														Manually terminated
+													</option>
+													<option value="Expired">
+														Expired
+													</option>
+													<option value="Awaiting documents for variation">
+														Awaiting documents for variation
+													</option>
+													<option value="Application suspended">
+														Application suspended
+													</option>
+
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row" style="margin-top:10px;">
+										<div class="col-xs-6">
+											<div class="checkbox checkbox-standalone">
+												<label for="dt_viewall"><input id="dt_viewall" name="dt_viewall" type="checkbox"><span>View All</span> <i class="fa-solid fa-circle-info" title="View All Jurisdiction"></i> </label>
+											</div>
+										</div>
+										<div class="col-xs-6 text-right">
+											<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+										</div>
+										<div class="col-xs-12 form-group">
+											<button id="filter-btn-submit" type="submit" class="btn btn-primary btn-block" aria-controls="licenseDenialTables">Filter</button>
+										</div>
+									</div>
+
+								</form>
+							</details>
 						</div>
 					</div>
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
-						<div class="well">
-							<div data-id="widget" class="">
-								<div class="widget-frequency" title="Frequency: None">
-									<small>Frequency: None</small>
-									<i class="fa-solid fa-gear"></i><span class="sr-only">
-										Duplicate / invalid application
-									</span>
-								</div>
-								<div class="widget-value">8</div>
-								<div class="widget-caption">
-									Duplicate / invalid application
-								</div>
+				</div>
+			</section>
+		</section>
+		<div id="mainpanel" class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+			<div class="row">
+				<div class="col-lg-1 col-md-2 col-sm-2  col-xs-2 indicators" title="Click here to see the list">
+					<div class="indicators-summary">
+						<div data-id="widget" class="">
+							<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
+								<i class="fa-solid fa-gear"></i><span class="sr-only">
+									SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)
+								</span>
 							</div>
-						</div>
-					</div>
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
-						<div class="well">
-							<div data-id="widget" class="">
-								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
-									<small>Frequency: Monthly</small>
-									<i class="fa-solid fa-gear"></i><span class="sr-only">Application rejected Frequency: Monthly  (2024-02-08 to 2024-03-08)</span>
-								</div>
-								<div class="widget-value">10</div>
-								<div class="widget-caption">
-									Application rejected
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12 col-md-6 col-sm-6 col-xs-6" title="Click here to see the list">
-						<div class="well">
-							<div data-id="widget" class="">
-								<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
-									<small>Frequency: Monthly</small> <i class="fa-solid fa-gear"></i><span class="sr-only">Frequency: Monthly  (2024-02-08 to 2024-03-08)</span>
-								</div>
-								<div class="widget-value">4</div>
-								<div class="widget-caption">Expired</div>
+							<div style="display: flex;">
+								<div class="widget-value"><span>1</span></div><div class="widget-caption"><small>SIN Not Confirmed</small></div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-			</section>
-		</section>
-		<div id="mainpanel" class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 indicators" title="Click here to see the list">
+					<div class="indicators-summary">
+						<div data-id="widget" class="">
+							<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
+								<i class="fa-solid fa-gear"></i><span class="sr-only">
+									SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)
+								</span>
+							</div>
+							<div style="display: flex;">
+								<div class="widget-value"><span>0</span></div><div class="widget-caption"><small>Invalid Application</small></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 indicators" title="Click here to see the list">
+					<div class="indicators-summary">
+						<div data-id="widget" class="">
+							<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
+								<i class="fa-solid fa-gear"></i><span class="sr-only">
+									SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)
+								</span>
+							</div>
+							<div style="display: flex;">
+								<div class="widget-value"><span>0</span></div><div class="widget-caption"><small>Rejected</small></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 indicators" title="Click here to see the list">
+					<div class="indicators-summary">
+						<div data-id="widget" class="">
+							<div class="widget-frequency" title="Frequency: Monthly  (2024-02-08 to 2024-03-08)">
+								<i class="fa-solid fa-gear"></i><span class="sr-only">
+									SIN not confirmed Frequency: Monthly  (2024-02-08 to 2024-03-08)
+								</span>
+							</div>
+							<div style="display: flex;">
+								<div class="widget-value"><span>1</span></div><div class="widget-caption"><small>Expired</small></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<main role="main" property="mainContentOfPage" resource="#wb-main" class="container-round container-main-padding">
-				<h1 id="wb-cont" property="name">View License Denial Application - F16695</h1>
+				<h1 id="wb-cont" property="name">License Denial Application - F16695</h1>
 
 
 				<div class="well well-lg">
@@ -425,287 +603,813 @@
 					</p>
 				</div>
 
+			
+				<div class="row">
 
+					<div class="wb-frmvld">
+						<form action="#" method="get" id="licensedenial-form">
+							<div class="container-fluid">
+								<section id="menu-bar-top">
+									<a id="edit" class="btn btn-primary btn-lg" href="#" role="button"><i class="fa-solid fa-floppy-disk"></i> Save</a>
+									<a id="cancel" href="#terminate-application-popup-modal" aria-controls="terminate-application-popup-modal" class="wb-lbx lbx-modal btn btn-primary btn-lg" role="button">
+										<i class="fa-solid fa-ban"></i> Terminate (L03)
+									</a>
 
+									<a id="transfer" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#transfer-application-popup-modal" role="button" aria-controls="transfer-application-popup-modal">
+										<i class="fa-solid fa-arrow-right-arrow-left"></i> Transfer
+									</a>
+									<a id="cancelApps" href="#cancel-application-popup-modal" aria-controls="cancel-application-popup-modal" class="wb-lbx lbx-modal btn btn-primary btn-lg" role="button">
+										<i class="fa-solid fa-xmark"></i> Cancel App
+									</a>
+									<div class="pull-right">
+										<label for="statusDetail" class="label-caption status-font-size">Status:</label>
+										<span class="status-badge status-badge-success status-font-size">Manually terminated</span>
+									</div>
+								</section>
 
-
-
-
-
-				<div class="row h-100">
-					<div class="col-md-3 col-lg-3 border-right border border-primary hidden-xs my-auto align-self-center">
-						<div id="stepper" class="bs-stepper">
-
-							<div class="bs-stepper-header">
-
-								<div class="step" data-target="applicantDetails">
-
-
-									<span class="bs-stepper-circle step-active"><i class="fa-solid fa-list-check bs-stepper-circle-icon" aria-hidden="true"></i></span>
-									<br />
-									<span class="bs-stepper-label">Application Details</span>
-
-
-								</div>
-
-								<div class="line" style="height: 40px;"></div>
-
-								<div class="step" data-target="debtorDetails">
-
-
-									<span class="bs-stepper-circle"><i class="fa-solid fa-user bs-stepper-circle-icon"></i></span>
-									<br />
-									<span class="bs-stepper-label">Debtor's Details</span>
-
-
-
-								</div>
-
-								<div class="line" style="height: 40px;"></div>
-
-								<div class="step" data-target="employerDetails">
-									<span class="bs-stepper-circle  bs-stepper-top-icon-5">
-										<i class="fa-regular fa-address-card bs-stepper-circle-icon" aria-hidden="true"></i>
-									</span>
-									<br />
-									<span class="bs-stepper-label">Employer Details</span>
-								</div>
-
-								<div class="line" style="height: 40px;"></div>
-
-								<div class="step" data-target="supportRecipientDetails">
-									<span class="bs-stepper-circle  bs-stepper-top-icon-5">
-										<i class="fa-solid fa-user-shield bs-stepper-circle-icon" aria-hidden="true"></i>
-									</span>
-									<br />
-									<span class="bs-stepper-label">Suport Recipient Details</span>
-								</div>
-
-								<div class="line" style="height: 40px;"></div>
-
-								<div class="step" data-target="supportOrderDetails">
-									<span class="bs-stepper-circle  bs-stepper-top-icon-5">
-										<i class="fa-solid fa-money-check-dollar bs-stepper-circle-icon" aria-hidden="true"></i>
-									</span>
-									<br />
-									<span class="bs-stepper-label">Support Order Details</span>
-								</div>
 							</div>
-						</div>
-					</div>
+							<div class="col-md-6 col-lg-6">
+								<details id="applicantDetails" open="open" class="grid-section">
+									<summary>Application Details <span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
+									<div>
+										<div class="form-inline">
+											<label for="ctrlCode" class="label-caption label-sm">Control Code:</label>
+											<input class="form-control" id="ctrlCode" name="ctrlCode" type="text" data-rule-minlength="2" value="F16695" disabled="disabled">
+										</div>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[2] Application reference code no">
+											<label for="referenceCode" class="label-sm">Reference Code:</label>
+											<input class="form-control" id="referenceCode" name="referenceCode" type="text" data-rule-minlength="2" value="2344471">
+										</div>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[3] Court, peace officer or provincial enforcement service reference no.:">
+											<label for="serviceRefNo" class="label-xl">Provincial Enforcement Service Reference No. :</label>
+											<input class="form-control" id="serviceRefNo" name="serviceRefNo" type="text">
+										</div>
+										<div class="form-inline">
+											<label for="noticeDate" class="required label-xl"><span class="field-name">Date Notice Sent to Support Payor:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+											<input class="form-control" id="noticeDate" name="noticeDate" type="date" required="required" value="2023-05-19">
+										</div>
+										<div class="form-inline">
+											<label for="summonFileUpload" class="required label-sm">
+												<span class="field-name">Summon</span>
+												<strong class="required" aria-hidden="true">(required)</strong>
+											</label>
+											<input id="summonFileUpload" name="summonFileUpload" type="file" required="required" accept="application/pdf" class="form-control" />
+											<span id="summonDate" class="label-value text-underline">AB01-F16695-Quintero.pdf</span>
+										</div>
+									</div>
+								</details>
+								<details id="debtorDetails" class="grid-section-light" open="open">
+									<summary>Debtor's  & Suport Recipient Details<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
+									<div>
+										<div style="margin-bottom:5px;">
+											<span class="label label-info">Information concerning the person in respect of whom information is requested</span>
+										</div>
 
-					<div class="col-md-9 col-lg-9 border-left-wb-steps">
-						<section>
-							<div class="wb-frmvld">
-								<form action="#" method="get" id="licensedenial-form">
-									<section id="menu-bar" class="">
-										<a id="edit" class="btn btn-primary btn-lg" href="Edit-en.html" role="button"><i class="fa-solid fa-pen"></i> Edit</a>
 
-										<a id="cancel" href="#cancel-application-popup-modal" aria-controls="cancel-application-popup-modal" class="wb-lbx lbx-modal btn btn-primary btn-lg" role="button">
-											<i class="fa-solid fa-ban"></i> Terminate (L03)
-										</a>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[5] Surname">
+											<label for="lastnameDetail" class="required label-md"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+											<input class="form-control" id="lastnameDetail" name="lastnameDetail" type="text" data-rule-minlength="2" required="required" value="Chu">
+										</div>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[6] Given Name:">
+											<label for="firstnameDetail" class="required label-md"><span class="field-name">Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+											<input class="form-control" id="firstnameDetail" name="firstnameDetail" type="text" data-rule-minlength="2" required="required" value="Jeffery">
+										</div>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[7] Other given name">
+											<label for="othername" class="label-md"><span class="field-name">Other Given Name:</span> </label>
+											<input class="form-control" id="othername" name="othername" type="text" data-rule-minlength="2">
+										</div>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[8] Date of Birth">
+											<label for="dateOfBirth" class="required label-md"><span class="field-name">Date of Birth:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+											<input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" required="required" value="1979-08-23">
+										</div>
+										<fieldset class="form-inline chkbxrdio-grp" data-toggle="tooltip" data-placement="bottom" title="[9] Gender">
+											<legend class="required"><span class="field-name">Gender</span><strong class="required">(required)</strong></legend>
+											<label for="genderMale" class="radio-inline"><input type="radio" name="gender" value="1" id="genderMale" required="required" checked="checked" />Male</label>
+											<label for="genderFemale" class="radio-inline"><input type="radio" name="gender" value="2" id="genderFemale" />Female</label>
+											<label for="genderAnother" class="radio-inline"><input type="radio" name="gender" value="3" id="genderAnother" />Another Gender</label>
+											<label for="genderNotAvail" class="radio-inline"><input type="radio" name="gender" value="4" id="genderNotAvail" />Information not available</label>
+										</fieldset>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[10] Social Insurance Number">
+											<label for="sin">Social Insurance Number:</label>
+											<input class="form-control" id="sin" name="sin" type="text" data-rule-minlength="2" value="123456789">
+										</div>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[11] Phone Number">
+											<label for="phone" class="label-sm">Phone Number:</label>
+											<input class="form-control" id="phone" name="phone" type="text" data-rule-minlength="11" placeholder="XXX-XXX-XXXX">
+										</div>
 
-										<a id="transfer" class="btn btn-primary btn-lg wb-lbx lbx-modal" href="#transfer-application-popup-modal" role="button" aria-controls="transfer-application-popup-modal">
-											<i class="fa-solid fa-arrow-right-arrow-left"></i> Transfer
-										</a>
-									</section>
-									<section id="status-bar" class="status-bar">
-										<div data-toggle="tooltip" data-placement="bottom" title="Status">
-											<div class="pull-right">
-												<label for="statusDetail" class="label-caption status-font-size">Status:</label>
-												<span class="status-badge status-badge-success status-font-size">Manually terminated</span>
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[12] Email Address">
+											<label for="emailaddress" class="label-sm">Email Address:</label>
+											<input class="form-control" id="emailaddress" name="emailaddress" type="email" data-rule-minlength="2">
+										</div>
+
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[10] Surname at Birth of a Parent">
+											<label for="surnameBirthParent">Surname at Birth of their Parent:</label>
+											<input class="form-control" id="surnameBirthParent" name="surnameBirthParent" type="text" data-rule-minlength="2">
+										</div>
+
+										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[10] Surname at Birth of a Parent">
+											<label for="height">Height:</label>
+											<input type="text" id="height" name="height" class="form-control numeric" aria-label="Text input with dropdown button" value="175">
+											<select name="eyecolour" id="eyecolour" class="form-control">
+												<option value="---">Please select</option>
+												<option value="M" selected="">Metric(cm)</option>
+												<option value="I">Imperial(ft)</option>
+											</select>
+										</div>
+										<div class="form-inline">
+											<label for="eyecolour" class=""><span class="field-name">Colour of eyes:</span></label>
+											<select name="eyecolour" id="eyecolour" class="form-control">
+												<option value="---">Please select</option>
+												<option value="BLA">Black</option>
+												<option value="BRO" selected="">Brown</option>
+												<option value="GRE">Green</option>
+												<option value="HAZ">Hazel</option>
+												<option value="BLU">Blue</option>
+												<option value="GRY">Gray</option>
+												<option value="NA">Unknown</option>
+											</select>
+										</div>
+
+										<fieldset class="chkbxrdio-grp">
+											<legend class="required"><span class="field-name">Language of choice:</span> <strong class="required">(required)</strong></legend>
+											<div class="radio">
+												<label for="language1"><input type="radio" name="language" value="1" id="language1" data-rule-required="true" checked="checked" /> English</label>
+											</div>
+											<div class="radio">
+												<label for="language2"><input type="radio" name="language" value="2" id="language2" />  Français</label>
+											</div>
+										</fieldset>
+
+										<div class="form-inline">
+											<label for="address" class="label-xs"><span class="field-name">Address:</span></label>
+											<input class="form-control" id="address" name="address" type="text" data-rule-minlength="2" size="30" value="15 Gilmore Ave">
+										</div>
+										<div class="form-inline">
+											<label for="address2" class="label-xs"><span class="field-name">Address 2:</span></label>
+											<input class="form-control" id="address2" name="address2" type="text" data-rule-minlength="2" size="30">
+										</div>
+
+
+
+										<div class="form-inline">
+											<label for="postalCode" class="label-xs"><span class="field-name">Postal Code:</span></label>
+											<input class="form-control" id="postalCode" name="postalCode" type="text" data-rule-minlength="6" value="T8A 3A7">
+										</div>
+										<div class="form-inline">
+											<label for="province" class="label-xs"><span class="field-name">Province:</span></label>
+											<select name="province" id="province" class="form-control">
+												<option value="---">Please select</option>
+												<option value="Alberta" selected="">Alberta</option>
+												<option value="British Columbia">British Columbia</option>
+												<option value="Manitoba">Manitoba</option>
+												<option value="New Brunswick">New Brunswick</option>
+												<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+												<option value="Northwest Territories">Northwest Territories</option>
+												<option value="Nova Scotia">Nova Scotia</option>
+
+												<option value="Nunavut">Nunavut</option>
+												<option value="Ontario" selected="selected">Ontario</option>
+												<option value="Prince Edward Island">Prince Edward Island</option>
+												<option value="Quebec">Quebec</option>
+												<option value="Saskatchewan">Saskatchewan</option>
+
+												<option value="Yukon">Yukon</option>
+											</select>
+
+										</div>
+
+										<div class="form-inline">
+											<label for="country" class="label-xs"><span class="field-name">Country:</span></label>
+											<select name="country" id="country" class="form-control">
+												<option value="---">Please select</option>
+												<option value="Canada" selected="selected">Canada</option>
+												<option value="Afghanistan">Afghanistan</option>
+												<option value="Åland Islands">Åland Islands</option>
+												<option value="Albania">Albania</option>
+												<option value="Algeria">Algeria</option>
+												<option value="American Samoa">American Samoa</option>
+												<option value="Andorra">Andorra</option>
+												<option value="Angola">Angola</option>
+												<option value="Anguilla">Anguilla</option>
+												<option value="Antarctica">Antarctica</option>
+												<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+												<option value="Argentina">Argentina</option>
+												<option value="Armenia">Armenia</option>
+												<option value="Aruba">Aruba</option>
+												<option value="Australia">Australia</option>
+												<option value="Austria">Austria</option>
+												<option value="Azerbaijan">Azerbaijan</option>
+												<option value="Bahamas">Bahamas</option>
+												<option value="Bahrain">Bahrain</option>
+												<option value="Bangladesh">Bangladesh</option>
+												<option value="Barbados">Barbados</option>
+												<option value="Belarus">Belarus</option>
+												<option value="Belgium">Belgium</option>
+												<option value="Belize">Belize</option>
+												<option value="Benin">Benin</option>
+												<option value="Bermuda">Bermuda</option>
+												<option value="Bhutan">Bhutan</option>
+												<option value="Bolivia">Bolivia</option>
+												<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+												<option value="Botswana">Botswana</option>
+												<option value="Bouvet Island">Bouvet Island</option>
+												<option value="Brazil">Brazil</option>
+												<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+												<option value="Brunei Darussalam">Brunei Darussalam</option>
+												<option value="Bulgaria">Bulgaria</option>
+												<option value="Burkina Faso">Burkina Faso</option>
+												<option value="Burundi">Burundi</option>
+												<option value="Cambodia">Cambodia</option>
+												<option value="Cameroon">Cameroon</option>
+												<option value="Canada">Canada</option>
+												<option value="Cape Verde">Cape Verde</option>
+												<option value="Cayman Islands">Cayman Islands</option>
+												<option value="Central African Republic">Central African Republic</option>
+												<option value="Chad">Chad</option>
+												<option value="Chile">Chile</option>
+												<option value="China">China</option>
+												<option value="Christmas Island">Christmas Island</option>
+												<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+												<option value="Colombia">Colombia</option>
+												<option value="Comoros">Comoros</option>
+												<option value="Congo">Congo</option>
+												<option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+												<option value="Cook Islands">Cook Islands</option>
+												<option value="Costa Rica">Costa Rica</option>
+												<option value="Cote D'ivoire">Cote D'ivoire</option>
+												<option value="Croatia">Croatia</option>
+												<option value="Cuba">Cuba</option>
+												<option value="Cyprus">Cyprus</option>
+												<option value="Czech Republic">Czech Republic</option>
+												<option value="Denmark">Denmark</option>
+												<option value="Djibouti">Djibouti</option>
+												<option value="Dominica">Dominica</option>
+												<option value="Dominican Republic">Dominican Republic</option>
+												<option value="Ecuador">Ecuador</option>
+												<option value="Egypt">Egypt</option>
+												<option value="El Salvador">El Salvador</option>
+												<option value="Equatorial Guinea">Equatorial Guinea</option>
+												<option value="Eritrea">Eritrea</option>
+												<option value="Estonia">Estonia</option>
+												<option value="Ethiopia">Ethiopia</option>
+												<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+												<option value="Faroe Islands">Faroe Islands</option>
+												<option value="Fiji">Fiji</option>
+												<option value="Finland">Finland</option>
+												<option value="France">France</option>
+												<option value="French Guiana">French Guiana</option>
+												<option value="French Polynesia">French Polynesia</option>
+												<option value="French Southern Territories">French Southern Territories</option>
+												<option value="Gabon">Gabon</option>
+												<option value="Gambia">Gambia</option>
+												<option value="Georgia">Georgia</option>
+												<option value="Germany">Germany</option>
+												<option value="Ghana">Ghana</option>
+												<option value="Gibraltar">Gibraltar</option>
+												<option value="Greece">Greece</option>
+												<option value="Greenland">Greenland</option>
+												<option value="Grenada">Grenada</option>
+												<option value="Guadeloupe">Guadeloupe</option>
+												<option value="Guam">Guam</option>
+												<option value="Guatemala">Guatemala</option>
+												<option value="Guernsey">Guernsey</option>
+												<option value="Guinea">Guinea</option>
+												<option value="Guinea-bissau">Guinea-bissau</option>
+												<option value="Guyana">Guyana</option>
+												<option value="Haiti">Haiti</option>
+												<option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+												<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+												<option value="Honduras">Honduras</option>
+												<option value="Hong Kong">Hong Kong</option>
+												<option value="Hungary">Hungary</option>
+												<option value="Iceland">Iceland</option>
+												<option value="India">India</option>
+												<option value="Indonesia">Indonesia</option>
+												<option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+												<option value="Iraq">Iraq</option>
+												<option value="Ireland">Ireland</option>
+												<option value="Isle of Man">Isle of Man</option>
+												<option value="Israel">Israel</option>
+												<option value="Italy">Italy</option>
+												<option value="Jamaica">Jamaica</option>
+												<option value="Japan">Japan</option>
+												<option value="Jersey">Jersey</option>
+												<option value="Jordan">Jordan</option>
+												<option value="Kazakhstan">Kazakhstan</option>
+												<option value="Kenya">Kenya</option>
+												<option value="Kiribati">Kiribati</option>
+												<option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+												<option value="Korea, Republic of">Korea, Republic of</option>
+												<option value="Kuwait">Kuwait</option>
+												<option value="Kyrgyzstan">Kyrgyzstan</option>
+												<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+												<option value="Latvia">Latvia</option>
+												<option value="Lebanon">Lebanon</option>
+												<option value="Lesotho">Lesotho</option>
+												<option value="Liberia">Liberia</option>
+												<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+												<option value="Liechtenstein">Liechtenstein</option>
+												<option value="Lithuania">Lithuania</option>
+												<option value="Luxembourg">Luxembourg</option>
+												<option value="Macao">Macao</option>
+												<option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+												<option value="Madagascar">Madagascar</option>
+												<option value="Malawi">Malawi</option>
+												<option value="Malaysia">Malaysia</option>
+												<option value="Maldives">Maldives</option>
+												<option value="Mali">Mali</option>
+												<option value="Malta">Malta</option>
+												<option value="Marshall Islands">Marshall Islands</option>
+												<option value="Martinique">Martinique</option>
+												<option value="Mauritania">Mauritania</option>
+												<option value="Mauritius">Mauritius</option>
+												<option value="Mayotte">Mayotte</option>
+												<option value="Mexico">Mexico</option>
+												<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+												<option value="Moldova, Republic of">Moldova, Republic of</option>
+												<option value="Monaco">Monaco</option>
+												<option value="Mongolia">Mongolia</option>
+												<option value="Montenegro">Montenegro</option>
+												<option value="Montserrat">Montserrat</option>
+												<option value="Morocco">Morocco</option>
+												<option value="Mozambique">Mozambique</option>
+												<option value="Myanmar">Myanmar</option>
+												<option value="Namibia">Namibia</option>
+												<option value="Nauru">Nauru</option>
+												<option value="Nepal">Nepal</option>
+												<option value="Netherlands">Netherlands</option>
+												<option value="Netherlands Antilles">Netherlands Antilles</option>
+												<option value="New Caledonia">New Caledonia</option>
+												<option value="New Zealand">New Zealand</option>
+												<option value="Nicaragua">Nicaragua</option>
+												<option value="Niger">Niger</option>
+												<option value="Nigeria">Nigeria</option>
+												<option value="Niue">Niue</option>
+												<option value="Norfolk Island">Norfolk Island</option>
+												<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+												<option value="Norway">Norway</option>
+												<option value="Oman">Oman</option>
+												<option value="Pakistan">Pakistan</option>
+												<option value="Palau">Palau</option>
+												<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+												<option value="Panama">Panama</option>
+												<option value="Papua New Guinea">Papua New Guinea</option>
+												<option value="Paraguay">Paraguay</option>
+												<option value="Peru">Peru</option>
+												<option value="Philippines">Philippines</option>
+												<option value="Pitcairn">Pitcairn</option>
+												<option value="Poland">Poland</option>
+												<option value="Portugal">Portugal</option>
+												<option value="Puerto Rico">Puerto Rico</option>
+												<option value="Qatar">Qatar</option>
+												<option value="Reunion">Reunion</option>
+												<option value="Romania">Romania</option>
+												<option value="Russian Federation">Russian Federation</option>
+												<option value="Rwanda">Rwanda</option>
+												<option value="Saint Helena">Saint Helena</option>
+												<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+												<option value="Saint Lucia">Saint Lucia</option>
+												<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+												<option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+												<option value="Samoa">Samoa</option>
+												<option value="San Marino">San Marino</option>
+												<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+												<option value="Saudi Arabia">Saudi Arabia</option>
+												<option value="Senegal">Senegal</option>
+												<option value="Serbia">Serbia</option>
+												<option value="Seychelles">Seychelles</option>
+												<option value="Sierra Leone">Sierra Leone</option>
+												<option value="Singapore">Singapore</option>
+												<option value="Slovakia">Slovakia</option>
+												<option value="Slovenia">Slovenia</option>
+												<option value="Solomon Islands">Solomon Islands</option>
+												<option value="Somalia">Somalia</option>
+												<option value="South Africa">South Africa</option>
+												<option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+												<option value="Spain">Spain</option>
+												<option value="Sri Lanka">Sri Lanka</option>
+												<option value="Sudan">Sudan</option>
+												<option value="Suriname">Suriname</option>
+												<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+												<option value="Swaziland">Swaziland</option>
+												<option value="Sweden">Sweden</option>
+												<option value="Switzerland">Switzerland</option>
+												<option value="Syrian Arab Republic">Syrian Arab Republic</option>
+												<option value="Taiwan">Taiwan</option>
+												<option value="Tajikistan">Tajikistan</option>
+												<option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+												<option value="Thailand">Thailand</option>
+												<option value="Timor-leste">Timor-leste</option>
+												<option value="Togo">Togo</option>
+												<option value="Tokelau">Tokelau</option>
+												<option value="Tonga">Tonga</option>
+												<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+												<option value="Tunisia">Tunisia</option>
+												<option value="Turkey">Turkey</option>
+												<option value="Turkmenistan">Turkmenistan</option>
+												<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+												<option value="Tuvalu">Tuvalu</option>
+												<option value="Uganda">Uganda</option>
+												<option value="Ukraine">Ukraine</option>
+												<option value="United Arab Emirates">United Arab Emirates</option>
+												<option value="United Kingdom">United Kingdom</option>
+												<option value="United States">United States</option>
+												<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+												<option value="Uruguay">Uruguay</option>
+												<option value="Uzbekistan">Uzbekistan</option>
+												<option value="Vanuatu">Vanuatu</option>
+												<option value="Venezuela">Venezuela</option>
+												<option value="Viet Nam">Viet Nam</option>
+												<option value="Virgin Islands, British">Virgin Islands, British</option>
+												<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+												<option value="Wallis and Futuna">Wallis and Futuna</option>
+												<option value="Western Sahara">Western Sahara</option>
+												<option value="Yemen">Yemen</option>
+												<option value="Zambia">Zambia</option>
+												<option value="Zimbabwe">Zimbabwe</option>
+												<option value="Yukon">Yukon</option>
+											</select>
+										</div>
+									</div>
+									<div class="accordion">
+										<div class="at-item">
+											<div class="at-title active text-underline">
+												<h4>Employers Details</h4>
+											</div>
+											<div class="at-tab" style="display: block;">
+												<div class="form-inline">
+													<label for="employerAddress" class="label-xs"><span class="field-name">Address:</span></label>
+													<input class="form-control" id="employerAddress" name="employerAddress" type="text" data-rule-minlength="2" size="30">
+												</div>
+												<div class="form-inline">
+													<label for="employerAddress2" class="label-xs"><span class="field-name">Address 2:</span></label>
+													<input class="form-control" id="employerAddress2" name="employerAddress2" type="text" data-rule-minlength="2" size="30">
+												</div>
+
+
+
+												<div class="form-inline">
+													<label for="employerPostalCode" class="label-xs"><span class="field-name">Postal Code:</span></label>
+													<input class="form-control" id="employerPostalCode" name="employerPostalCode" type="text" data-rule-minlength="6">
+												</div>
+												<div class="form-inline">
+													<label for="employerProvince" class="label-xs"><span class="field-name">Province:</span></label>
+													<select name="employerProvince" id="employerProvince" class="form-control">
+														<option value="---">Please select</option>
+														<option value="Alberta">Alberta</option>
+														<option value="British Columbia">British Columbia</option>
+														<option value="Manitoba">Manitoba</option>
+														<option value="New Brunswick">New Brunswick</option>
+														<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+														<option value="Northwest Territories">Northwest Territories</option>
+														<option value="Nova Scotia">Nova Scotia</option>
+
+														<option value="Nunavut">Nunavut</option>
+														<option value="Ontario" selected="selected">Ontario</option>
+														<option value="Prince Edward Island">Prince Edward Island</option>
+														<option value="Quebec">Quebec</option>
+														<option value="Saskatchewan">Saskatchewan</option>
+
+														<option value="Yukon">Yukon</option>
+													</select>
+
+												</div>
+
+												<div class="form-inline">
+													<label for="employerCountry" class="label-xs"><span class="field-name">Country:</span></label>
+													<select name="employerCountry" id="employerCountry" class="form-control">
+														<option value="---">Please select</option>
+														<option value="Canada" selected="selected">Canada</option>
+														<option value="Afghanistan">Afghanistan</option>
+														<option value="Åland Islands">Åland Islands</option>
+														<option value="Albania">Albania</option>
+														<option value="Algeria">Algeria</option>
+														<option value="American Samoa">American Samoa</option>
+														<option value="Andorra">Andorra</option>
+														<option value="Angola">Angola</option>
+														<option value="Anguilla">Anguilla</option>
+														<option value="Antarctica">Antarctica</option>
+														<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+														<option value="Argentina">Argentina</option>
+														<option value="Armenia">Armenia</option>
+														<option value="Aruba">Aruba</option>
+														<option value="Australia">Australia</option>
+														<option value="Austria">Austria</option>
+														<option value="Azerbaijan">Azerbaijan</option>
+														<option value="Bahamas">Bahamas</option>
+														<option value="Bahrain">Bahrain</option>
+														<option value="Bangladesh">Bangladesh</option>
+														<option value="Barbados">Barbados</option>
+														<option value="Belarus">Belarus</option>
+														<option value="Belgium">Belgium</option>
+														<option value="Belize">Belize</option>
+														<option value="Benin">Benin</option>
+														<option value="Bermuda">Bermuda</option>
+														<option value="Bhutan">Bhutan</option>
+														<option value="Bolivia">Bolivia</option>
+														<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+														<option value="Botswana">Botswana</option>
+														<option value="Bouvet Island">Bouvet Island</option>
+														<option value="Brazil">Brazil</option>
+														<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+														<option value="Brunei Darussalam">Brunei Darussalam</option>
+														<option value="Bulgaria">Bulgaria</option>
+														<option value="Burkina Faso">Burkina Faso</option>
+														<option value="Burundi">Burundi</option>
+														<option value="Cambodia">Cambodia</option>
+														<option value="Cameroon">Cameroon</option>
+														<option value="Canada">Canada</option>
+														<option value="Cape Verde">Cape Verde</option>
+														<option value="Cayman Islands">Cayman Islands</option>
+														<option value="Central African Republic">Central African Republic</option>
+														<option value="Chad">Chad</option>
+														<option value="Chile">Chile</option>
+														<option value="China">China</option>
+														<option value="Christmas Island">Christmas Island</option>
+														<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+														<option value="Colombia">Colombia</option>
+														<option value="Comoros">Comoros</option>
+														<option value="Congo">Congo</option>
+														<option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+														<option value="Cook Islands">Cook Islands</option>
+														<option value="Costa Rica">Costa Rica</option>
+														<option value="Cote D'ivoire">Cote D'ivoire</option>
+														<option value="Croatia">Croatia</option>
+														<option value="Cuba">Cuba</option>
+														<option value="Cyprus">Cyprus</option>
+														<option value="Czech Republic">Czech Republic</option>
+														<option value="Denmark">Denmark</option>
+														<option value="Djibouti">Djibouti</option>
+														<option value="Dominica">Dominica</option>
+														<option value="Dominican Republic">Dominican Republic</option>
+														<option value="Ecuador">Ecuador</option>
+														<option value="Egypt">Egypt</option>
+														<option value="El Salvador">El Salvador</option>
+														<option value="Equatorial Guinea">Equatorial Guinea</option>
+														<option value="Eritrea">Eritrea</option>
+														<option value="Estonia">Estonia</option>
+														<option value="Ethiopia">Ethiopia</option>
+														<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+														<option value="Faroe Islands">Faroe Islands</option>
+														<option value="Fiji">Fiji</option>
+														<option value="Finland">Finland</option>
+														<option value="France">France</option>
+														<option value="French Guiana">French Guiana</option>
+														<option value="French Polynesia">French Polynesia</option>
+														<option value="French Southern Territories">French Southern Territories</option>
+														<option value="Gabon">Gabon</option>
+														<option value="Gambia">Gambia</option>
+														<option value="Georgia">Georgia</option>
+														<option value="Germany">Germany</option>
+														<option value="Ghana">Ghana</option>
+														<option value="Gibraltar">Gibraltar</option>
+														<option value="Greece">Greece</option>
+														<option value="Greenland">Greenland</option>
+														<option value="Grenada">Grenada</option>
+														<option value="Guadeloupe">Guadeloupe</option>
+														<option value="Guam">Guam</option>
+														<option value="Guatemala">Guatemala</option>
+														<option value="Guernsey">Guernsey</option>
+														<option value="Guinea">Guinea</option>
+														<option value="Guinea-bissau">Guinea-bissau</option>
+														<option value="Guyana">Guyana</option>
+														<option value="Haiti">Haiti</option>
+														<option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+														<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+														<option value="Honduras">Honduras</option>
+														<option value="Hong Kong">Hong Kong</option>
+														<option value="Hungary">Hungary</option>
+														<option value="Iceland">Iceland</option>
+														<option value="India">India</option>
+														<option value="Indonesia">Indonesia</option>
+														<option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+														<option value="Iraq">Iraq</option>
+														<option value="Ireland">Ireland</option>
+														<option value="Isle of Man">Isle of Man</option>
+														<option value="Israel">Israel</option>
+														<option value="Italy">Italy</option>
+														<option value="Jamaica">Jamaica</option>
+														<option value="Japan">Japan</option>
+														<option value="Jersey">Jersey</option>
+														<option value="Jordan">Jordan</option>
+														<option value="Kazakhstan">Kazakhstan</option>
+														<option value="Kenya">Kenya</option>
+														<option value="Kiribati">Kiribati</option>
+														<option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+														<option value="Korea, Republic of">Korea, Republic of</option>
+														<option value="Kuwait">Kuwait</option>
+														<option value="Kyrgyzstan">Kyrgyzstan</option>
+														<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+														<option value="Latvia">Latvia</option>
+														<option value="Lebanon">Lebanon</option>
+														<option value="Lesotho">Lesotho</option>
+														<option value="Liberia">Liberia</option>
+														<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+														<option value="Liechtenstein">Liechtenstein</option>
+														<option value="Lithuania">Lithuania</option>
+														<option value="Luxembourg">Luxembourg</option>
+														<option value="Macao">Macao</option>
+														<option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+														<option value="Madagascar">Madagascar</option>
+														<option value="Malawi">Malawi</option>
+														<option value="Malaysia">Malaysia</option>
+														<option value="Maldives">Maldives</option>
+														<option value="Mali">Mali</option>
+														<option value="Malta">Malta</option>
+														<option value="Marshall Islands">Marshall Islands</option>
+														<option value="Martinique">Martinique</option>
+														<option value="Mauritania">Mauritania</option>
+														<option value="Mauritius">Mauritius</option>
+														<option value="Mayotte">Mayotte</option>
+														<option value="Mexico">Mexico</option>
+														<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+														<option value="Moldova, Republic of">Moldova, Republic of</option>
+														<option value="Monaco">Monaco</option>
+														<option value="Mongolia">Mongolia</option>
+														<option value="Montenegro">Montenegro</option>
+														<option value="Montserrat">Montserrat</option>
+														<option value="Morocco">Morocco</option>
+														<option value="Mozambique">Mozambique</option>
+														<option value="Myanmar">Myanmar</option>
+														<option value="Namibia">Namibia</option>
+														<option value="Nauru">Nauru</option>
+														<option value="Nepal">Nepal</option>
+														<option value="Netherlands">Netherlands</option>
+														<option value="Netherlands Antilles">Netherlands Antilles</option>
+														<option value="New Caledonia">New Caledonia</option>
+														<option value="New Zealand">New Zealand</option>
+														<option value="Nicaragua">Nicaragua</option>
+														<option value="Niger">Niger</option>
+														<option value="Nigeria">Nigeria</option>
+														<option value="Niue">Niue</option>
+														<option value="Norfolk Island">Norfolk Island</option>
+														<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+														<option value="Norway">Norway</option>
+														<option value="Oman">Oman</option>
+														<option value="Pakistan">Pakistan</option>
+														<option value="Palau">Palau</option>
+														<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+														<option value="Panama">Panama</option>
+														<option value="Papua New Guinea">Papua New Guinea</option>
+														<option value="Paraguay">Paraguay</option>
+														<option value="Peru">Peru</option>
+														<option value="Philippines">Philippines</option>
+														<option value="Pitcairn">Pitcairn</option>
+														<option value="Poland">Poland</option>
+														<option value="Portugal">Portugal</option>
+														<option value="Puerto Rico">Puerto Rico</option>
+														<option value="Qatar">Qatar</option>
+														<option value="Reunion">Reunion</option>
+														<option value="Romania">Romania</option>
+														<option value="Russian Federation">Russian Federation</option>
+														<option value="Rwanda">Rwanda</option>
+														<option value="Saint Helena">Saint Helena</option>
+														<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+														<option value="Saint Lucia">Saint Lucia</option>
+														<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+														<option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+														<option value="Samoa">Samoa</option>
+														<option value="San Marino">San Marino</option>
+														<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+														<option value="Saudi Arabia">Saudi Arabia</option>
+														<option value="Senegal">Senegal</option>
+														<option value="Serbia">Serbia</option>
+														<option value="Seychelles">Seychelles</option>
+														<option value="Sierra Leone">Sierra Leone</option>
+														<option value="Singapore">Singapore</option>
+														<option value="Slovakia">Slovakia</option>
+														<option value="Slovenia">Slovenia</option>
+														<option value="Solomon Islands">Solomon Islands</option>
+														<option value="Somalia">Somalia</option>
+														<option value="South Africa">South Africa</option>
+														<option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+														<option value="Spain">Spain</option>
+														<option value="Sri Lanka">Sri Lanka</option>
+														<option value="Sudan">Sudan</option>
+														<option value="Suriname">Suriname</option>
+														<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+														<option value="Swaziland">Swaziland</option>
+														<option value="Sweden">Sweden</option>
+														<option value="Switzerland">Switzerland</option>
+														<option value="Syrian Arab Republic">Syrian Arab Republic</option>
+														<option value="Taiwan">Taiwan</option>
+														<option value="Tajikistan">Tajikistan</option>
+														<option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+														<option value="Thailand">Thailand</option>
+														<option value="Timor-leste">Timor-leste</option>
+														<option value="Togo">Togo</option>
+														<option value="Tokelau">Tokelau</option>
+														<option value="Tonga">Tonga</option>
+														<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+														<option value="Tunisia">Tunisia</option>
+														<option value="Turkey">Turkey</option>
+														<option value="Turkmenistan">Turkmenistan</option>
+														<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+														<option value="Tuvalu">Tuvalu</option>
+														<option value="Uganda">Uganda</option>
+														<option value="Ukraine">Ukraine</option>
+														<option value="United Arab Emirates">United Arab Emirates</option>
+														<option value="United Kingdom">United Kingdom</option>
+														<option value="United States">United States</option>
+														<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+														<option value="Uruguay">Uruguay</option>
+														<option value="Uzbekistan">Uzbekistan</option>
+														<option value="Vanuatu">Vanuatu</option>
+														<option value="Venezuela">Venezuela</option>
+														<option value="Viet Nam">Viet Nam</option>
+														<option value="Virgin Islands, British">Virgin Islands, British</option>
+														<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+														<option value="Wallis and Futuna">Wallis and Futuna</option>
+														<option value="Western Sahara">Western Sahara</option>
+														<option value="Yemen">Yemen</option>
+														<option value="Zambia">Zambia</option>
+														<option value="Zimbabwe">Zimbabwe</option>
+														<option value="Yukon">Yukon</option>
+													</select>
+												</div>
 											</div>
 										</div>
-									</section>
+										<div class="at-item">
+											<div class="at-title text-underline">
+												<h4>Suport Recipient Details</h4>
+											</div>
+											<div class="at-tab">
+												<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[5] Support Recipient Surname">
+													<label for="supportRecipientLastnameDetail" class="required label-md"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+													<input class="form-control" id="supportRecipientLastnameDetail" name="supportRecipientLastnameDetail" type="text" data-rule-minlength="2" required="required" value="GABRIEL">
+												</div>
+												<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[6] Support Recipient Given Name:">
+													<label for="supportRecipientFirstnameDetail" class="required label-md"><span class="field-name">Given Name:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+													<input class="form-control" id="supportRecipientFirstnameDetail" name="supportRecipientFirstnameDetail" type="text" data-rule-minlength="2" required="required" value="ALYSON">
+												</div>
+												<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[7] Support Recipient Other given name">
+													<label for="supportRecipientOthername" class="label-md"><span class="field-name">Other Given Name:</span> </label>
+													<input class="form-control" id="supportRecipientOthername" name="supportRecipientOthername" type="text" data-rule-minlength="2">
+												</div>
+											</div>
+										</div>
+									</div>
+								</details>
+							</div>
 
-									<details id="applicantDetails" open="open" class="grid-section">
-										<summary>Application Details</summary>
+							<div class="col-md-6 col-lg-6 border-left-wb-steps">
+								<section>
+									<details id="supportOrderDetails" class="grid-section-black" open="open">
+										<summary>Support Order in Default<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
 										<div>
-											<div class="form-group">
-												<label for="ctrlCode" class="label-caption">Control Code:</label>
-												<span id="ctrlCode" class="label-value">F16695</span>
+											<div class="form-inline">
+												<label for="supportOrderDate" class="required label-lg"><span class="field-name">Date of Support Order:</span>  <strong class="required" aria-hidden="true">(required)</strong><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+												<input class="form-control" id="supportOrderDate" name="supportOrderDate" type="date" required="required" value="2017-09-29">
 											</div>
-											<div class="form-group">
-												<label for="referenceCode" class="label-caption">Reference Code:</label>
-												<span id="referenceCode" class="label-value">2344471</span>
+
+											<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[31] Name of Court">
+												<label for="courtName" class="required label-lg"><span class="field-name">Name of Court:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+												<input class="form-control" id="courtName" name="courtName" type="text" data-rule-minlength="2" required="required" value="Edmonton">
 											</div>
-											<div class="form-group">
-												<label for="serviceRefNo" class="label-caption">Provincial Enforcement Service Reference No:</label>
-												<span class="label-value" id="serviceRefNo"></span>
+											<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[32] Creditor Surname">
+												<label for="creditorSurname" class="required label-lg"><span class="field-name">Creditor Surname:</span>  <strong class="required" aria-hidden="true">(required)</strong></label>
+												<input class="form-control" id="creditorSurname" name="creditorSurname" type="text" required="required" value="Wiebe">
 											</div>
-											<div class="form-group">
-												<label for="noticeDate" class="label-caption">Date Notice Sent to Support Payor:</label>
-												<span class="label-value" id="noticeDate">2023-02-19</span>
+
+											<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[36] Amount of Arrears">
+												<label for="arrearsAmount" class="required label-lg"><span class="field-name">Amount of Arrears:</span><strong class="required" aria-hidden="true">(required)</strong></label>
+												<input class="form-control numeric" id="arrearsAmount" name="arrearsAmount" type="text" required="required" value="56,358.87">
 											</div>
-											<div class="form-group">
-												<label for="summonFileUpload" class="label-caption">
-													Affidavit:
-												</label>
-												<span id="summonDate" class="label-value">AB01-F16695-Quintero.pdf</span>
+
+											<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[34] Number of payments in default">
+												<label for="numberDefaultPayment" class="label-lg">Number of payments in default</label>
+												<input class="form-control" id="numberDefaultPayment" name="numberDefaultPayment" type="number" value="65">
 											</div>
+											<fieldset class="chkbxrdio-grp">
+												<legend class=""><span class="field-name">Payment Period Code:</span> </legend>
+												<div class="radio">
+													<label for="weekly"><input type="radio" name="payperiodcode" value="1" id="weekly" data-rule-required="false" /> Weekly</label>
+												</div>
+												<div class="radio">
+													<label for="biweekly"><input type="radio" name="payperiodcode" value="2" id="biweekly" /> Bi-weekly</label>
+												</div>
+												<div class="radio">
+													<label for="monthly"><input type="radio" name="payperiodcode" value="3" id="monthly" checked="checked" /> Monthly</label>
+												</div>
+												<div class="radio">
+													<label for="quarterly"><input type="radio" name="payperiodcode" value="4" id="quarterly" /> Quarterly</label>
+												</div>
+												<div class="radio">
+													<label for="biAnnually"><input type="radio" name="payperiodcode" value="5" id="biAnnually" /> Semi-annually</label>
+												</div>
+												<div class="radio">
+													<label for="annually"><input type="radio" name="payperiodcode" value="6" id="annually" /> Annually</label>
+												</div>
+												<div class="radio">
+													<label for="semiMonthly"><input type="radio" name="payperiodcode" value="7" id="semiMonthly" /> Semi-monthly</label>
+												</div>
+											</fieldset>
+
 										</div>
 									</details>
-									<details id="debtorDetails" class="grid-section-light">
-										<summary>Debtor's Details</summary>
-										<div>
-											<div class="form-group">
-												<label for="lastnameDetail" class="label-caption">Surname:</label>
-												<span class="label-value" id="lastnameDetail">Chu</span>
-											</div>
-											<div class="form-group">
-												<label for="firstnameDetail" class="label-caption">Given Name:</label>
-												<span class="label-value" id="firstnameDetail">Jeffrey</span>
-											</div>
-											<div class="form-group">
-												<label for="othername">Other Given Name:</label>
-												<span class="label-value" id="othername"></span>
-											</div>
-											<div class="form-group">
-												<label for="dateOfBirth" class="label-caption">Date of Birth:</label>
-												<span class="label-value" id="dateOfBirth">1979/08/23</span>
-											</div>
-											<div class="form-group">
-												<label for="Gender" class="label-caption">Gender: </label>
-												<span id="Gender" class="label-value">Male</span>
-											</div>
-											<div class="form-group">
-												<label for="SIN" class="label-caption">Social Insurance Number: </label>
-												<span id="SIN" class="label-value">123456789</span>
-											</div>
-											<div class="form-group">
-												<label for="phone" class="label-caption">Phone Number:</label>
-												<span class="label-value" id="phone"></span>
-											</div>
-
-											<div class="form-group">
-												<label for="emailaddress" class="label-caption">Email Address:</label>
-												<span class="label-value" id="emailaddress"></span>
-											</div>
-
-											<div class="form-group">
-												<label for="surnameBirthParent" class="label-caption">Surname at Birth of their Parent:</label>
-												<span class="label-value" id="surnameBirthParent"></span>
-											</div>
-
-											<div class="form-group">
-												<label for="height" class="label-caption">Height:</label>
-												<span class="label-value" id="height">175</span>
-												<span class="label-value">cm</span>
-											</div>
-
-											<div class="form-group">
-												<label for="eyecolour" class="label-caption">Colour of eyes:</label>
-												<span class="label-value" id="eyecolour">Brown</span>
-											</div>
-
-											<div class="form-group">
-												<label for="language" class="label-caption">Language of choice: </label>
-												<span id="language" class="label-value">English</span>
-											</div>
-
-											<div class="form-group">
-												<label for="address" class="label-caption">Address:</label>
-												<span id="address" class="label-value">15 Gilmore Ave</span>
-											</div>
-											<div class="form-group">
-												<label for="address2" class="label-caption">Address 2:</label>
-												<span id="address2" class="label-value" />
-											</div>
-											<div class="form-group">
-												<label for="province" class="label-caption">Province:</label>
-												<span id="province" class="label-value">Alberta</span>
-											</div>
-											<div class="form-group">
-												<label for="postalCode" class="label-caption">Postal Code:</label>
-												<span id="postalCode" class="label-value">T8A 3A7</span>
-											</div>
-
-											<div class="form-group">
-												<label for="country" class="label-caption">Country:</label>
-												<span id="country" class="label-value">Canada</span>
-											</div>
-										</div>
-									</details>
-
-									<details id="employerDetails" class="grid-section-black">
-										<summary>Employers Details</summary>
-										<div>
-											<div class="form-group">
-												<label for="employerAddress" class="label-caption">Address:</label>
-												<span id="employerAddress" class="label-value"></span>
-											</div>
-											<div class="form-group">
-												<label for="employerAddress2" class="label-caption">Address 2</label>
-												<span id="employerAddress2" class="label-value" />
-											</div>
-											<div class="form-group">
-												<label for="employerProvince" class="label-caption">Province:</label>
-												<span id="employerProvince" class="label-value"></span>
-											</div>
-											<div class="form-group">
-												<label for="employerPostalCode" class="label-caption">Postal Code:</label>
-												<span id="employerPostalCode" class="label-value"></span>
-											</div>
-
-											<div class="form-group">
-												<label for="employerCountry" class="label-caption">Country:</label>
-												<span id="employerCountry" class="label-value"></span>
-											</div>
-										</div>
-									</details>
-									<details id="supportRecipientDetails" class="grid-section">
-										<summary>Suport Recipient Details</summary>
-										<div>
-											<div class="form-group">
-												<label for="supportRecipientLastnameDetail" class="label-caption">Surname:</label>
-												<span class="label-value" id="supportRecipientLastnameDetail">GABRIEL</span>
-											</div>
-											<div class="form-group">
-												<label for="supportRecipientFirstnameDetail" class="label-caption">Given Name:</label>
-												<span class="label-value" id="supportRecipientFirstnameDetail">ALYSON</span>
-											</div>
-											<div class="form-group">
-												<label for="supportRecipientOthername">Other Given Name:</label>
-												<span class="label-value" id="supportRecipientOthername"></span>
-											</div>
-										</div>
-									</details>
-									<details id="supportOrderDetails" class="grid-section-light">
-										<summary>Support Order in Default</summary>
-										<div>
-											<div class="form-group">
-												<label for="supportOrderDate" class="label-caption">Date of Support Order</label>
-												<span class="label-value" id="supportOrderDate">2017-09-29</span>
-											</div>
-
-											<div class="form-group">
-												<label for="courtName" class="label-caption">Name of Court:</label>
-												<span class="label-value" id="courtName" name="courtName">EDMONTON</span>
-											</div>
-											<div class="form-group">
-												<label for="creditorSurname" lass="label-caption">Creditor Surname:</label>
-												<span class="label-value" id="creditorSurname">WIEBE</span>
-											</div>
-
-											<div class="form-group">
-												<label for="numberDefaultPayment" class="label-caption">Number of payments in default</label>
-												<span class="label-value" id="numberDefaultPayment">65</span>
-											</div>
-
-											<div class="form-group">
-												<label for="arrearsAmount" lass="label-caption">Amount of Arrears:</label>
-												<span class="label-value numeric" id="arrearsAmount">56,358.00</span>
-											</div>
-
-											<div class="form-group">
-												<label for="payperiodcode">Payment Period Code: </label>
-												<span id="payperiodcode" class="label-value">Monthly</span>
-											</div>
-
-										</div>
-									</details>
-									<details id="events-grid" class="grid-section-black">
-										<summary>Event Details</summary>
+									<details id="events-grid" class="grid-section" open="open">
+										<summary>Event Details<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
 										<section class="wb-inview" data-inview="fade-effect">
 											<div class="table-responsive">
 												<table id="eventTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [3, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
@@ -721,7 +1425,10 @@
 													</thead>
 													<tbody>
 														<tr data-id="376064">
-															<td data-sort="1">E12135</td>
+															<td data-sort="1">
+																<a href="View-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">View</span></a>
+																<a href="View-en.html" class="ps-2"> E12135</a>
+															</td>
 															<td>L03</td>
 															<td>AB2E50</td>
 															<td>2023-03-02</td>
@@ -729,7 +1436,10 @@
 															<td>L03 accepted</td>
 														</tr>
 														<tr data-id="373748">
-															<td data-sort="1">T821321</td>
+															<td data-sort="1">
+																<a href="View-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">View</span></a>
+																<a href="View-en.html" class="ps-2"> T821321</a>
+															</td>
 															<td>T01</td>
 															<td>AB2E50</td>
 															<td>2023-01-20</td>
@@ -737,7 +1447,10 @@
 															<td>SIN Confirmed (by the SIN Registry)</td>
 														</tr>
 														<tr data-id="373748">
-															<td data-sort="1">F16695</td>
+															<td data-sort="1">
+																<a href="View-en.html"><i class="fa-solid fa-pen-to-square"></i><span class="sr-only">View</span></a>
+																<a href="View-en.html" class="ps-2"> F16695</a>
+															</td>
 															<td>L01</td>
 															<td>AB2E50</td>
 															<td>2023-01-17</td>
@@ -750,8 +1463,8 @@
 											</div>
 										</section>
 									</details>
-									<details id="linked-grid" class="grid-section" open="">
-										<summary>Linked Application Details</summary>
+									<details id="linked-grid" class="grid-section-light" open="open">
+										<summary>Linked Application Details<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
 										<section class="wb-inview" data-inview="fade-effect">
 											<div class="table-responsive">
 												<table id="linkedAppsTable" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [0, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
@@ -785,7 +1498,7 @@
 										</section>
 									</details>
 									<details id="history-grid" class="grid-section-black">
-										<summary>Suspension History</summary>
+										<summary>Suspension History<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
 										<section class="wb-inview" data-inview="fade-effect">
 											<div class="table-responsive">
 												<table id="historyTables" class="wb-tables table table-striped table-hover" data-wb-tables='{"order": [2, "desc"]}' aria-describedby="dataset-filter1_info" aria-label="Description">
@@ -832,8 +1545,8 @@
 											</div>
 										</section>
 									</details>
-									<details id="sinVerification-grid" class="grid-section-light">
-										<summary>SIN Verification Results</summary>
+									<details id="sinVerification-grid" class="grid-section">
+										<summary>SIN Verification Results<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
 										<section class="wb-inview" data-inview="fade-effect">
 											<div class="table-responsive">
 												<table id="sinVerificationTables" class="wb-tables table table-striped table-hover" aria-describedby="dataset-filter1_info" aria-label="Description">
@@ -869,41 +1582,46 @@
 											</div>
 										</section>
 									</details>
-									<details id="systemDetails" class="grid-section">
-										<summary>System Details</summary>
+									<details id="systemDetails" class="grid-section-light">
+										<summary>System Details<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
 										<div>
-											<div class="form-group">
-												<label for="createDate" class="label-caption">Created Date:</label>
-												<span id="createDate" class="label-value">2023-09-25</span>
+											<div class="form-inline">
+												<label for="createDate" class="label-caption label-sm">Created Date:</label>
+												<input class="form-control" id="createDate" name="createDate" type="date" value="2023-09-25" disabled="disabled">
 											</div>
-											<div class="form-group">
-												<label for="createdBy" class="label-caption">Created By:</label>
-												<span id="createdBy" class="label-value">AB2E51</span>
+											<div class="form-inline">
+												<label for="createdBy" class="label-caption label-sm">Created By:</label>
+												<input class="form-control" id="createdBy" name="createdBy" type="text" value="AB2E51" disabled="disabled">
 											</div>
-											<div class="form-group">
-												<label for="lastUpdatedDate" class="label-caption">Last Updated Date:</label>
-												<span class="label-value" id="lastUpdatedDate">2023-09-27</span>
+											<div class="form-inline">
+												<label for="lastUpdatedDate" class="label-caption label-md">Last Updated Date:</label>
+												<input class="form-control" id="createdBy" name="createdBy" type="date" value="2023-09-27" disabled="disabled">
 											</div>
-											<div class="form-group">
-												<label for="lastUpdatedBy" class="label-caption">Last Updated By:</label>
-												<span class="label-value" id="lastUpdatedBy">AB2E51</span>
+											<div class="form-inline">
+												<label for="lastUpdatedBy" class="label-caption label-md">Last Updated By:</label>
+												<input class="form-control" id="createdBy" name="createdBy" type="text" value="AB2E51" disabled="disabled">
 											</div>
-											<div class="form-group">
-												<label for="enforcementService" class="label-caption">Enforcement Service:</label>
-												<span class="label-value" id="enforcementService">AB01</span>
+											<div class="form-inline">
+												<label for="enforcementService" class="label-caption label-md">Enforcement Service:</label>
+
+												<input class="form-control" id="createdBy" name="createdBy" type="text" value="AB01" disabled="disabled">
 											</div>
-											<div class="form-group">
-												<label for="status" class="label-caption">Status:</label>
-												<span class="label-value" id="status">Active</span>
+											<div class="form-inline">
+												<label for="status" class="label-caption label-xs">Status:</label>
+												<input class="form-control" id="createdBy" name="createdBy" type="text" value="Active" disabled="disabled">
 											</div>
 										</div>
 									</details>
+								</section>
 
-								</form>
+								<section id="menu-bar-bottom">
+									<a id="edit" class="btn btn-primary btn-lg" href="#" role="button"><i class="fa-solid fa-floppy-disk"></i> Save</a>
+								</section>
 							</div>
-						</section>
 
+						</form>
 					</div>
+
 
 
 				</div>
@@ -1077,7 +1795,7 @@
 
 	</section>
 
-	<section id="cancel-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
+	<section id="terminate-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
 		<header class="modal-header status-bg-danger">
 			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Terminate License Denial - F16695</h2>
 		</header>
@@ -1424,8 +2142,43 @@
 			<button class="btn btn-danger overlay-close  pull-left" type="button" id="btnModalSubmit">Confirm</button>
 		</div>
 	</section>
+	<section id="cancel-application-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
+		<header class="modal-header status-bg-danger">
+			<h2 class="modal-title"><i class="bi bi-arrow-left-right pe-2"></i>Cancel License Denial - F16695</h2>
+		</header>
 
+		<div class="modal-body">
+			<div class="wb-frmvld">
+				<form action="#" method="post" id="cancelApplicationForm">
+					<fieldset id="cancelApplicationFormFieldset">
+						<div>
+							<div class="form-group">
+								<label for="cancelReason" class="required"><span class="field-name">Select Cancellation Reason:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
+								<select name="cancelReason" id="cancelReason" class="form-control" required="required">
+									<option label="Please select an option"></option>
+									<option value="1">Creditor info. inconsistent</option>
+									<option value="2">Inconsistent financial terms between application and summons (in lump sum amount, periodic payment or period)</option>
+									<option value="3">Summons not provided in appropriate format</option>
+									<option value="4">At the request of the MEP</option>
+									<option value="5">Due to conflict with previous application</option>
+									<option value="6">Other</option>
+								</select>
+							</div>
+							<div class="form-group hide">
+								<label for="other" class=""><span class="field-name">Other:</span></label>
+								<textarea id="other" class="form-control" rows="5" cols="100" placeholder="Start typing..."></textarea>
+							</div>
 
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-danger overlay-close  pull-left" type="button" id="btnCancelSubmit">Confirm</button>
+		</div>
+
+	</section>
 	<script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script>
 	<script src="../../wwwroot/lib/wet-boew/js/wet-boew.min.js"></script>
 
@@ -1488,6 +2241,12 @@
 				});
 
 
+				$(document).ready(function () {
+					$(".at-title").click(function () {
+						$(this).toggleClass("active").next(".at-tab").slideToggle();
+						/*	.parent().siblings().find(".at-tab").slideUp().prev().removeClass("active");*/
+					});
+				});
 
 			});
 		});
