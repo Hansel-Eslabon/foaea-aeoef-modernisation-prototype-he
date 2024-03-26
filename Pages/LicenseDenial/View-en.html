@@ -350,7 +350,7 @@
 	</header>
 
 	<section id="content" title="content" class="container-fluid container-main-padding-top">
-		<section id="sidepanel" title="sidepanel" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+		<section id="sidepanel" title="sidepanel" class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 			<section id="widget-section" class="visible-lg visible-md visible-sm">
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Click here to see the list">
@@ -402,7 +402,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<label class="col-xs-12">Debtor's</label>
+										<label class="col-xs-12"><strong>Debtor's</strong></label>
 										<div class="col-xs-6 form-group">
 											<label for="dt_fname">Given Name</label>
 											<input type="text" class="form-control" id="dt_fname" name="dt_fname" data-column="5">
@@ -414,7 +414,7 @@
 									</div>
 
 									<div class="row">
-										<label class="col-xs-12">Birthday</label>
+										<label class="col-xs-12"><strong>Birthday</strong></label>
 										<div class="col-xs-6 form-group">
 											<label for="dt_minbirthdate">From</label>
 											<input type="date" class="form-control" id="dt_minbirthdate" name="dt_minbirthdate">
@@ -426,7 +426,7 @@
 									</div>
 
 									<div class="row">
-										<label class="col-xs-12">Date Received</label>
+										<label class="col-xs-12"><strong>Date Received</strong></label>
 										<div class="col-xs-6 form-group">
 											<label for="dt_mindate">From</label>
 											<input type="date" class="form-control" id="dt_mindate" name="dt_mindate" data-column="4">
@@ -515,11 +515,11 @@
 									<div class="row" style="margin-top:10px;">
 										<div class="col-xs-6">
 											<div class="checkbox checkbox-standalone">
-												<label for="dt_viewall"><input id="dt_viewall" name="dt_viewall" type="checkbox"><span>View All</span> <i class="fa-solid fa-circle-info" title="View All Jurisdiction"></i> </label>
+												<label for="dt_viewall" title="View All Jurisdiction"><input id="dt_viewall" name="dt_viewall" type="checkbox"><span>View All</span> <i class="fa-solid fa-circle-info" title="View All Jurisdiction"></i> </label>
 											</div>
 										</div>
 										<div class="col-xs-6 text-right">
-											<button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+											<button type="reset" class="btn btn-link btn-sm p-0" title="Reset to defaults">Reset</button>
 										</div>
 										<div class="col-xs-12 form-group">
 											<button id="filter-btn-submit" type="submit" class="btn btn-primary btn-block" aria-controls="licenseDenialTables">Filter</button>
@@ -533,7 +533,7 @@
 				</div>
 			</section>
 		</section>
-		<div id="mainpanel" class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+		<div id="mainpanel" class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
 			<div class="row">
 				<div class="col-lg-1 col-md-2 col-sm-2  col-xs-2 indicators" title="Click here to see the list">
 					<div class="indicators-summary">
@@ -605,6 +605,53 @@
 
 			
 				<div class="row">
+					<section id="stepper">
+						<div class="container-fluid">
+							<ul class="form-inline list-unstyled">
+								<li class="label-inline">
+									<a href="#applicantDetails" class="link-unstyled">
+										<span class="step"><i class="fa-solid fa-list-check bs-stepper-circle-icon" aria-hidden="true"></i></span><span class="step-label">Application</span>
+									</a>
+
+								</li>
+								<li class="label-inline">
+									<a href="#debtorDetails" class="link-unstyled">
+										<span class="step"><i class="fa-solid fa-user bs-stepper-circle-icon"></i></span><span class="step-label">Debtor's & Recipient</span>
+									</a>
+
+								</li>
+								<li class="label-inline">
+									<a href="#debtorDetails" class="link-unstyled">
+										<span class="step"><i class="fa-solid fa-money-check-dollar bs-stepper-circle-icon" aria-hidden="true"></i></span><span class="step-label">Support Order</span>
+									</a>
+								</li>
+								<li class="label-inline">
+									<a href="#debtorDetails" class="link-unstyled">
+										<span class="step"><i class="fa-solid fa-calendar-days"></i></span><span class="step-label">Event</span>
+									</a>
+								</li>
+								<li class="label-inline">
+									<a href="#debtorDetails" class="link-unstyled">
+										<span class="step"><i class="fa-solid fa-id-card"></i></span><span class="step-label">Suspension</span>
+									</a>
+								</li>
+								<li class="label-inline">
+									<a href="#debtorDetails" class="link-unstyled">
+										<span class="step"><i class="fa-solid fa-certificate"></i></span><span class="step-label">SIN Results</span>
+									</a>
+								</li>
+								<li class="label-inline">
+									<a href="#debtorDetails" class="link-unstyled">
+										<span class="step"><i class="fa-solid fa-gears"></i></span><span class="step-label">System Details</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					
+
+					</section>
+					
 
 					<div class="wb-frmvld">
 						<form action="#" method="get" id="licensedenial-form">
@@ -661,11 +708,6 @@
 								<details id="debtorDetails" class="grid-section-light" open="open">
 									<summary>Debtor's  & Suport Recipient Details<span style="float:right;"><i class="fa-solid fa-check"></i></span></summary>
 									<div>
-										<div style="margin-bottom:5px;">
-											<span class="label label-info">Information concerning the person in respect of whom information is requested</span>
-										</div>
-
-
 										<div class="form-inline" data-toggle="tooltip" data-placement="bottom" title="[5] Surname">
 											<label for="lastnameDetail" class="required label-md"><span class="field-name">Surname:</span> <strong class="required" aria-hidden="true">(required)</strong></label>
 											<input class="form-control" id="lastnameDetail" name="lastnameDetail" type="text" data-rule-minlength="2" required="required" value="Chu">
